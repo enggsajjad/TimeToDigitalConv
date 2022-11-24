@@ -1,0 +1,3 @@
+Place & Route Module chrono48_stop3 . . .
+PAR command line: par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+PAR completed successfully

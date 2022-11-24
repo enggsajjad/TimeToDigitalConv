@@ -1,0 +1,3139 @@
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# Schematic : View Verilog Functional Model
+clk_mul.vf
+# Schematic : View Verilog Functional Model
+counter32bit.vf
+# Schematic : View Verilog Functional Model
+cc24ce.vf
+# Schematic : View Verilog Functional Model
+cc8ce1.vf
+# Schematic : View Verilog Functional Model
+synclogic.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+chrono48_start.ngc
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# XST (Creating Lso File) : 
+inst_decoder.lso
+# xst flow : RunXST
+inst_decoder.syr
+inst_decoder.prj
+inst_decoder.sprj
+inst_decoder.ana
+inst_decoder.stx
+inst_decoder.cmd_log
+inst_decoder.ngc
+inst_decoder.ngr
+# Verilog : Create Schematic Symbol
+inst_decoder.spl
+__projnav/jhdparse.log
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# Verilog : Create Schematic Symbol
+router.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+inst_decoder.lso
+# xst flow : RunXST
+inst_decoder.syr
+inst_decoder.prj
+inst_decoder.sprj
+inst_decoder.ana
+inst_decoder.stx
+inst_decoder.cmd_log
+inst_decoder.ngc
+inst_decoder.ngr
+# Verilog : Create Schematic Symbol
+inst_decoder.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# Verilog : Create Schematic Symbol
+router.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# Verilog : Create Schematic Symbol
+router.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# Verilog : Create Schematic Symbol
+router.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# View RTL Schematic
+router.ngr
+# Verilog : Create Schematic Symbol
+router.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# XST (Creating Lso File) : 
+inst_decoder.lso
+# xst flow : RunXST
+inst_decoder.syr
+inst_decoder.prj
+inst_decoder.sprj
+inst_decoder.ana
+inst_decoder.stx
+inst_decoder.cmd_log
+inst_decoder.ngc
+inst_decoder.ngr
+# Verilog : Create Schematic Symbol
+inst_decoder.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+inst_decoder.lso
+# xst flow : RunXST
+inst_decoder.syr
+inst_decoder.prj
+inst_decoder.sprj
+inst_decoder.ana
+inst_decoder.stx
+inst_decoder.cmd_log
+inst_decoder.ngc
+inst_decoder.ngr
+# Verilog : Create Schematic Symbol
+inst_decoder.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# Verilog : Create Schematic Symbol
+router.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+inst_decoder.lso
+# xst flow : RunXST
+inst_decoder.syr
+inst_decoder.prj
+inst_decoder.sprj
+inst_decoder.ana
+inst_decoder.stx
+inst_decoder.cmd_log
+inst_decoder.ngc
+inst_decoder.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+inst_decoder.ngd
+inst_decoder_ngdbuild.nav
+inst_decoder.bld
+.untf
+inst_decoder.cmd_log
+# Implementation : Map
+inst_decoder_map.ncd
+inst_decoder.ngm
+inst_decoder.pcf
+inst_decoder.nc1
+inst_decoder.mrp
+inst_decoder_map.mrp
+inst_decoder.mdf
+__projnav/map.log
+inst_decoder.cmd_log
+MAP_NO_GUIDE_FILE_CPF "inst_decoder"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+inst_decoder.twr
+inst_decoder.twx
+inst_decoder.tsi
+inst_decoder.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+inst_decoder.ncd
+inst_decoder.par
+inst_decoder.pad
+inst_decoder_pad.txt
+inst_decoder_pad.csv
+inst_decoder.pad_txt
+inst_decoder.dly
+reportgen.log
+inst_decoder.xpi
+inst_decoder.grf
+inst_decoder.itr
+inst_decoder_last_par.ncd
+__projnav/par.log
+inst_decoder.placed_ncd_tracker
+inst_decoder.routed_ncd_tracker
+inst_decoder.cmd_log
+PAR_NO_GUIDE_FILE_CPF "inst_decoder"
+# Generate Programming File
+__projnav/inst_decoder_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+inst_decoder.ut
+# Programming File Generation Report
+inst_decoder.bgn
+inst_decoder.rbt
+inst_decoder.ll
+inst_decoder.msk
+inst_decoder.drc
+inst_decoder.nky
+inst_decoder.bit
+inst_decoder.bin
+inst_decoder.isc
+inst_decoder.cmd_log
+# Verilog : Create Schematic Symbol
+inst_decoder.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# Verilog : Create Schematic Symbol
+router.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# Verilog : Create Schematic Symbol
+router.spl
+__projnav/jhdparse.log
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# Verilog : Create Schematic Symbol
+router.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# Verilog : Create Schematic Symbol
+router.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# XST (Creating Lso File) : 
+router.lso
+# xst flow : RunXST
+router.syr
+router.prj
+router.sprj
+router.ana
+router.stx
+router.cmd_log
+router.ngc
+router.ngr
+# Verilog : Create Schematic Symbol
+router.spl
+__projnav/jhdparse.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624n/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp
+# Schematic : View Verilog Functional Model
+chrono48_start.vf
+# XST (Creating Lso File) : 
+chrono48_start.lso
+# xst flow : RunXST
+chrono48_start.syr
+chrono48_start.prj
+chrono48_start.sprj
+chrono48_start.ana
+chrono48_start.stx
+chrono48_start.cmd_log
+router.ngc
+inst_decoder.ngc
+chrono48_start.ngc
+router.ngr
+inst_decoder.ngr
+chrono48_start.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\tdc48start_20140624n/_ngo
+chrono48_start.ngd
+chrono48_start_ngdbuild.nav
+chrono48_start.bld
+chrono48_start.ucf.untf
+chrono48_start.cmd_log
+# Implementation : Map
+chrono48_start_map.ncd
+chrono48_start.ngm
+chrono48_start.pcf
+chrono48_start.nc1
+chrono48_start.mrp
+chrono48_start_map.mrp
+chrono48_start.mdf
+__projnav/map.log
+chrono48_start.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono48_start"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono48_start.twr
+chrono48_start.twx
+chrono48_start.tsi
+chrono48_start.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono48_start.ncd
+chrono48_start.par
+chrono48_start.pad
+chrono48_start_pad.txt
+chrono48_start_pad.csv
+chrono48_start.pad_txt
+chrono48_start.dly
+reportgen.log
+chrono48_start.xpi
+chrono48_start.grf
+chrono48_start.itr
+chrono48_start_last_par.ncd
+__projnav/par.log
+chrono48_start.placed_ncd_tracker
+chrono48_start.routed_ncd_tracker
+chrono48_start.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono48_start"
+# Generate Programming File
+__projnav/chrono48_start_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono48_start.ut
+# Generate Programming File
+chrono48_start.bgn
+chrono48_start.rbt
+chrono48_start.ll
+chrono48_start.msk
+chrono48_start.drc
+chrono48_start.nky
+chrono48_start.bit
+chrono48_start.bin
+chrono48_start.isc
+chrono48_start.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono48_start.ace
+xilinx.sys
+chrono48_start.mpm
+chrono48_start.mcs
+chrono48_start.prm
+chrono48_start.dst
+chrono48_start.exo
+chrono48_start.tek
+chrono48_start.hex
+chrono48_start.svf
+chrono48_start.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Configure Device (iMPACT)
+chrono48_start.prm
+chrono48_start.isc
+chrono48_start.svf
+xilinx.sys
+chrono48_start.mcs
+chrono48_start.exo
+chrono48_start.hex
+chrono48_start.tek
+chrono48_start.dst
+chrono48_start.dst_compressed
+chrono48_start.mpm
+_impact.cmd
+_impact.log
+# Schematic : PDCL (jhdparse)
+__projnav/Chrono48_start_jhdparse_tcl.rsp

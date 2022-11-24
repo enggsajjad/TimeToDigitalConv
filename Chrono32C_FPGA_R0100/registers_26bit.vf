@@ -1,0 +1,54 @@
+// Verilog model created from registers_26bit.sch - Tue Jun 04 14:59:58 2013
+
+`timescale 1ns / 1ps
+
+module registers_26bit(clk, din, load1, load2, load3, load4, load5, load6,
+      load7, load8, reset, Counter1, Counter2, Counter3, Counter4, Counter5,
+      Counter6, Counter7, Counter8);
+
+    input clk;
+    input [26:0] din;
+    input load1;
+    input load2;
+    input load3;
+    input load4;
+    input load5;
+    input load6;
+    input load7;
+    input load8;
+    input reset;
+   output [26:0] Counter1;
+   output [26:0] Counter2;
+   output [26:0] Counter3;
+   output [26:0] Counter4;
+   output [26:0] Counter5;
+   output [26:0] Counter6;
+   output [26:0] Counter7;
+   output [26:0] Counter8;
+   
+   
+   dff_26bits XLXI_37 (.clock(clk), .din(din[26:0]), .load(load1),
+         .reset(reset), .dout(Counter1[26:0]));
+   // synthesis attribute RLOC of XLXI_37 is "R0C0"
+   dff_26bits XLXI_38 (.clock(clk), .din(din[26:0]), .load(load2),
+         .reset(reset), .dout(Counter2[26:0]));
+   // synthesis attribute RLOC of XLXI_38 is "R1C0"
+   dff_26bits XLXI_39 (.clock(clk), .din(din[26:0]), .load(load3),
+         .reset(reset), .dout(Counter3[26:0]));
+   // synthesis attribute RLOC of XLXI_39 is "R2C0"
+   dff_26bits XLXI_40 (.clock(clk), .din(din[26:0]), .load(load4),
+         .reset(reset), .dout(Counter4[26:0]));
+   // synthesis attribute RLOC of XLXI_40 is "R3C0"
+   dff_26bits XLXI_41 (.clock(clk), .din(din[26:0]), .load(load5),
+         .reset(reset), .dout(Counter5[26:0]));
+   // synthesis attribute RLOC of XLXI_41 is "R4C0"
+   dff_26bits XLXI_42 (.clock(clk), .din(din[26:0]), .load(load6),
+         .reset(reset), .dout(Counter6[26:0]));
+   // synthesis attribute RLOC of XLXI_42 is "R5C0"
+   dff_26bits XLXI_43 (.clock(clk), .din(din[26:0]), .load(load7),
+         .reset(reset), .dout(Counter7[26:0]));
+   // synthesis attribute RLOC of XLXI_43 is "R6C0"
+   dff_26bits XLXI_44 (.clock(clk), .din(din[26:0]), .load(load8),
+         .reset(reset), .dout(Counter8[26:0]));
+   // synthesis attribute RLOC of XLXI_44 is "R7C0"
+endmodule

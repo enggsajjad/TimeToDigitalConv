@@ -1,0 +1,270 @@
+Release 6.1i - xst G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to __projnav
+CPU : 0.00 / 0.16 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.16 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: clk_gen.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : clk_gen.prj
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+Verilog Include Directory          : 
+
+---- Target Parameters
+Output File Name                   : clk_gen
+Output Format                      : NGC
+Target Device                      : xc2s200-6-pq208
+
+---- Source Options
+Top Module Name                    : clk_gen
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Equivalent register Removal        : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+Global Optimization                : AllClockNets
+RTL Output                         : Yes
+Write Timing Constraints           : NO
+Hierarchy Separator                : _
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : clk_gen.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+Optimize Instantiated Primitives   : NO
+
+=========================================================================
+
+WARNING:Xst:1885 - LSO file is empty, default list of libraries is used
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling source file "clk_gen.v"
+Module <clk_gen> compiled
+No errors in compilation
+Analysis of file <clk_gen.prj> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <clk_gen>.
+Module <clk_gen> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <clk_gen>.
+    Related source file is clk_gen.v.
+    Found 8-bit up counter for signal <cnt1>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <clk_gen> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                         : 1
+  8-bit up counter                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <clk_gen> ...
+Loading device for application Xst from file 'v200.nph' in environment C:/Xilinx.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block clk_gen, actual ratio is 0.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : clk_gen.ngr
+Top Level Output File Name         : clk_gen
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 3
+
+Macro Statistics :
+# Counters                         : 1
+#      8-bit up counter            : 1
+
+Cell Usage :
+# BELS                             : 27
+#      GND                         : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 3
+#      LUT3_D                      : 1
+#      LUT4                        : 1
+#      LUT4_D                      : 1
+#      LUT4_L                      : 2
+#      MUXCY                       : 8
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 8
+#      FDCPE                       : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 2
+#      IBUF                        : 1
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2s200pq208-6 
+
+ Number of Slices:                       8  out of   2352     0%  
+ Number of Slice Flip Flops:             8  out of   4704     0%  
+ Number of 4 input LUTs:                 9  out of   4704     0%  
+ Number of bonded IOBs:                  2  out of    144     1%  
+ Number of GCLKs:                        1  out of      4    25%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 8     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: 7.443ns (Maximum Frequency: 134.354MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 10.487ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+-------------------------------------------------------------------------
+Timing constraint: Default period analysis for Clock 'clk'
+Delay:               7.443ns (Levels of Logic = 4)
+  Source:            cnt1_7 (FF)
+  Destination:       cnt1_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cnt1_7 to cnt1_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q            4   1.085   1.440  cnt1_7 (cnt1_7)
+     LUT3:I0->O            2   0.549   1.206  _n0000_SW15 (CHOICE50)
+     LUT4_D:I3->O          1   0.549   1.035  _n0000_SW113 (_n0000)
+     LUT2_L:I1->LO         0   0.549   0.000  cnt1_inst_lut3_71 (cnt1_inst_lut3_7)
+     XORCY:LI->O           1   0.321   0.000  cnt1_inst_sum_7 (cnt1_inst_sum_7)
+     FDCPE:D                   0.709          cnt1_7
+    ----------------------------------------
+    Total                      7.443ns (3.762ns logic, 3.681ns route)
+                                       (50.5% logic, 49.5% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+Offset:              10.487ns (Levels of Logic = 3)
+  Source:            cnt1_6 (FF)
+  Destination:       enable (PAD)
+  Source Clock:      clk rising
+
+  Data Path: cnt1_6 to enable
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q            5   1.085   1.566  cnt1_6 (cnt1_6)
+     LUT3:I1->O            1   0.549   1.035  _n0001_SW0 (N553)
+     LUT4:I3->O            1   0.549   1.035  _n0001 (enable_OBUF)
+     OBUF:I->O                 4.668          enable_OBUF (enable)
+    ----------------------------------------
+    Total                     10.487ns (6.851ns logic, 3.636ns route)
+                                       (65.3% logic, 34.7% route)
+
+=========================================================================
+CPU : 0.92 / 1.25 s | Elapsed : 1.00 / 1.00 s
+ 
+--> 
+
+Total memory usage is 57760 kilobytes
+
+

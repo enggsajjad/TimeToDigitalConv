@@ -1,0 +1,15 @@
+MO gen_sel_signals NULL gen_sel_signals.v vlg29/gen_sel_signals.bin
+MO router NULL router.v vlg79/router.bin
+MO fpga_addr_out NULL fpga_addr_out.v vlg77/fpga_addr_out.bin
+MO clk_mul NULL clk_mul.vf vlg4F/clk_mul.bin
+MO chrono48_start NULL Chrono48_start.vf vlg32/chrono48_start.bin
+MO synclogic NULL synclogic.vf vlg13/synclogic.bin
+MO uart_baud NULL uart_baud.v vlg57/uart_baud.bin
+MO cc8ce1 NULL cc8ce1.vf vlg5F/cc8ce1.bin
+MO inst_decoder NULL inst_decoder.v vlg2B/inst_decoder.bin
+MO cc24ce NULL cc24ce.vf vlg04/cc24ce.bin
+MO testcounter NULL testcounter.v vlg34/testcounter.bin
+MO DAC NULL DAC.v vlg2C/DAC.bin
+MO uart_rx NULL uart_rx.v vlg21/uart_rx.bin
+MO counter32bit NULL counter32bit.vf vlg50/counter32bit.bin
+MO uart_tx NULL uart_tx.v vlg2B/uart_tx.bin

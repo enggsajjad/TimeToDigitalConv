@@ -1,0 +1,5 @@
+select figure at 1573 800 20 -branches -sn=1
+select figure at 1573 800 20 -branches -extend -extend -sn=1
+select figure at 1645 1751 20 -branches -sn=1
+select figure at 1645 1746 20 -branches -extend -extend -sn=1
+select figure at 1575 1792 10 -branches -sn=1

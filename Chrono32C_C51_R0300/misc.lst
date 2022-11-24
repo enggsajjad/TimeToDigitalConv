@@ -1,0 +1,499 @@
+C51 COMPILER V6.11.4C,  MISC                      06/07/113  08:53:08  PAGE  1
+
+QCW(0x00002D1A)
+
+WIN32 C51 COMPILER V6.11.4C, COMPILATION OF MODULE MISC      
+OBJECT MODULE PLACED IN c:\documents and settings\sajjad hussain\desktop\chrono3
+            -2c_c51_r3\misc.obj
+COMPILER INVOKED BY: C51.EXE C:\DOCUMENTS AND SETTINGS\SAJJAD HUSSAIN\DESKTOP\CH
+            -RONO32C_C51_R3\MISC.C OBJECT(C:\DOCUMENTS AND SETTINGS\SAJJAD HUSSA
+            -IN\DESKTOP\CHRONO32C_C51_R3\MISC.OBJ) PIN(C:\FSI\INC) NOAM PR(C:\DO
+            -CUMENTS AND SETTINGS\SAJJAD HUSSAIN\DESKTOP\CHRONO32C_C51_R3\MISC.L
+            -ST) CD SB OE(1) SM FP(NOFLOAT) PW(80) 
+
+stmt level    source
+   1          #include "misc.h"
+   2          #include "t693.h"
+   3          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -   4          //Description: Converts a long value (10 digits) into
+            - ascii
+   5          //Argument 1:	 Value= the long to be converted
+   6          //Argument 2:	 Device_type=1 Characters displayed on LCD
+   7          //				 	 Device_type=0 Characters printed on Printer
+   8          void LongToAscii(unsigned long Value,bit Device_type)
+   9          {
+  10   1       //Handles Upto 10 Digits
+  11   1       unsigned long Divisor = 1000000000;
+  12   1       unsigned char i;
+  13   1       bit isDivisible = 0;
+  14   1       if(Value==0)
+  15   1       {
+  16   2        	if(Device_type)
+  17   2        		gPutc('0');
+  18   2        	else
+  19   2        		PrintChar('0');
+  20   2        	return;
+  21   2       }
+  22   1       
+  23   1       	
+  24   1       for(i=0;i<10;i++)
+  25   1       {
+  26   2       	if (Divisor<=Value) isDivisible=1;
+  27   2      	if(isDivisible)
+  28   2       	{
+  29   3       	 	if(Device_type)
+  30   3        	  		gPutc((Value/Divisor)+48); 
+  31   3      		else
+  32   3      		   PrintChar((Value/Divisor)+48);	
+  33   3       		Value = Value - (Value/Divisor)*Divisor;
+  34   3      	}//End if (isDivisible)
+  35   2      	Divisor = Divisor/10;
+  36   2       }//End for
+  37   1      }
+  38          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  39          //Description: Sends the Character to Serial Port wit
+            -h delays
+  40          //Argument 1:	 c = the character to be printed
+  41          void SendChar(unsigned char c)
+  42          {
+  43   1      	TI=1;
+  44   1      	while (!TI);	TI=0;	SBUF = c;
+  45   1      	while (!TI);	TI=0;
+  46   1      
+  47   1      }
+  48          
+  49          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  50          //Description: Sends a string to Serial Port
+  51          //Argument 1:	 *s = Pointer to the string to be printed
+  52          void PrintString(char *s)
+  53          {
+  54   1      	while (*s)
+  55   1      	{
+  56   2      		PrintChar(*s);
+  57   2      		s++;
+  58   2      	}
+  59   1      }
+  60          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  61          //Description: Delay of 5 milli 0
+  62          void Delay5ms(void)
+  63          {
+  64   1      	TH0 = 0xDC;	//5msec @ 22.1184MHz
+  65   1      	TL0 = 0x00;
+  66   1      	TR0 = 1;
+  67   1      	while(!TF0);
+  68   1      	TR0 = 0;
+  69   1      	TF0 = 0;
+  70   1      }
+  71          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  72          //Description: Delay of 25 milli Sec
+  73          void Delay25ms(void)
+  74          {
+  75   1      	TH0 = 0x4C;	//25msec @ 22.1184MHz
+  76   1      	TL0 = 0x00;
+  77   1      	TR0 = 1;
+  78   1      	while(!TF0);
+  79   1      	TR0 = 0;
+  80   1      	TF0 = 0;
+  81   1      }
+  82          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  83          //Description: Delay of 0.5 Sec
+  84          void DelayHalfSec(void)
+  85          {
+  86   1       unsigned char half;
+  87   1       for(half=0;half<32;half++)//.9sec
+  88   1       	Delay25ms();
+  89   1      }
+  90          
+  91          
+  92          
+  93          
+  94          
+  95          
+  96          
+  97          
+  98          
+  99          
+ 100          
+ 101          
+ 102          
+ 103          
+ 104          
+ 105          
+ 106          
+ 107          
+ 108          
+ 109          
+ 110          
+ 111          
+ 112          
+ 113          
+ 114          
+ 115          
+ 116          
+ 117          
+ 118          
+ 119          
+ 120          
+ 121          
+ 122          
+ 123          
+ 124          
+ 125          
+ 126          
+ 127          
+ 128          
+ 129          
+ 130          
+ 131          
+ 132          
+ 133          
+ 134          
+ 135          
+ 136          
+ 137          
+ 138          
+ 139          
+ 140          
+ 141          
+ 142          
+ 143          
+ 144          
+ 145          
+ 146          
+ 147          
+ 148          
+ 149          
+ 150          
+ 151          
+ 152          
+ 153          
+ 154          
+ 155          
+ 156          
+ 157          
+ 158          
+ 159          
+ 160          
+ 161          
+ 162          
+ 163          
+ 164          
+ 165          
+ 166          
+ 167          
+ 168          
+ 169          
+ 170          
+ 171          
+ 172          
+ 173          
+ 174          
+ 175          
+ 176          
+ 177          
+ 178          
+ 179          
+ 180          
+ 181          
+ 182          
+ 183          
+ 184          
+ 185          
+ 186          
+C51 COMPILER V6.11.4C,  MISC                      06/07/113  08:53:08  PAGE  2
+
+ASSEMBLY LISTING OF GENERATED OBJECT CODE
+
+            ; FUNCTION _LongToAscii (BEGIN)
+                                           ; SOURCE LINE # 35 
+0000 8C00    R      MOV    Value,R4
+0002 8D00    R      MOV    Value+01H,R5
+0004 8E00    R      MOV    Value+02H,R6
+0006 8F00    R      MOV    Value+03H,R7
+                                           ; SOURCE LINE # 11 
+0008 75003B  R      MOV    Divisor,#03BH
+000B 75009A  R      MOV    Divisor+01H,#09AH
+000E 7500CA  R      MOV    Divisor+02H,#0CAH
+0011 E4             CLR    A
+0012 F500    R      MOV    Divisor+03H,A
+                                           ; SOURCE LINE # 13 
+0014 C200    R      CLR    isDivisible
+                                           ; SOURCE LINE # 14 
+0016 EC             MOV    A,R4
+0017 4D             ORL    A,R5
+0018 4E             ORL    A,R6
+0019 4F             ORL    A,R7
+001A 700F           JNZ    ?NXT7
+                                           ; SOURCE LINE # 16 
+001C 300006  R      JNB    Device_type,?ELSE6
+                                           ; SOURCE LINE # 17 
+001F 7F30           MOV    R7,#030H
+0021 120000  R      LCALL  _gPutc
+0024 22             RET    
+0025         ?ELSE6:
+                                           ; SOURCE LINE # 19 
+0025 7F30           MOV    R7,#030H
+0027 120000  R      LCALL  _SendChar
+                                           ; SOURCE LINE # 20 
+002A 22             RET    
+002B         ?NXT7:
+                                           ; SOURCE LINE # 24 
+002B 750000  R      MOV    i,#000H
+002E         ?FOR1:
+                                           ; SOURCE LINE # 26 
+002E C000    R      PUSH   Divisor
+0030 C000    R      PUSH   Divisor+01H
+0032 C000    R      PUSH   Divisor+02H
+0034 C000    R      PUSH   Divisor+03H
+0036 AC00    R      MOV    R4,Value
+0038 AD00    R      MOV    R5,Value+01H
+003A AE00    R      MOV    R6,Value+02H
+003C AF00    R      MOV    R7,Value+03H
+003E 120000  R      LCALL  ?C_CMPL
+0041 BF0102         CJNE   R7,#001H,?LAB7
+0044 8002           SJMP   ?NXT11
+0046         ?LAB7:
+0046 D200    R      SETB   isDivisible
+0048         ?NXT11:
+                                           ; SOURCE LINE # 27 
+0048 300072  R      JNB    isDivisible,?NXT12
+                                           ; SOURCE LINE # 29 
+004B 30001C  R      JNB    Device_type,?ELSE9
+                                           ; SOURCE LINE # 30 
+004E C000    R      PUSH   Value
+0050 C000    R      PUSH   Value+01H
+0052 C000    R      PUSH   Value+02H
+0054 C000    R      PUSH   Value+03H
+0056 AC00    R      MOV    R4,Divisor
+0058 AD00    R      MOV    R5,Divisor+01H
+005A AE00    R      MOV    R6,Divisor+02H
+005C AF00    R      MOV    R7,Divisor+03H
+005E 120000  R      LCALL  ?C_ULDIV_SP
+0061 EF             MOV    A,R7
+0062 2430           ADD    A,#030H
+0064 FF             MOV    R7,A
+0065 120000  R      LCALL  _gPutc
+0068 801A           SJMP   ?NXT13
+006A         ?ELSE9:
+                                           ; SOURCE LINE # 32 
+006A C000    R      PUSH   Value
+006C C000    R      PUSH   Value+01H
+006E C000    R      PUSH   Value+02H
+0070 C000    R      PUSH   Value+03H
+0072 AC00    R      MOV    R4,Divisor
+0074 AD00    R      MOV    R5,Divisor+01H
+0076 AE00    R      MOV    R6,Divisor+02H
+0078 AF00    R      MOV    R7,Divisor+03H
+007A 120000  R      LCALL  ?C_ULDIV_SP
+007D EF             MOV    A,R7
+007E 2430           ADD    A,#030H
+0080 FF             MOV    R7,A
+0081 120000  R      LCALL  _SendChar
+0084         ?NXT13:
+                                           ; SOURCE LINE # 33 
+0084 C000    R      PUSH   Value
+0086 C000    R      PUSH   Value+01H
+0088 C000    R      PUSH   Value+02H
+008A C000    R      PUSH   Value+03H
+008C C000    R      PUSH   Value
+008E C000    R      PUSH   Value+01H
+0090 C000    R      PUSH   Value+02H
+0092 C000    R      PUSH   Value+03H
+0094 AC00    R      MOV    R4,Divisor
+0096 AD00    R      MOV    R5,Divisor+01H
+0098 AE00    R      MOV    R6,Divisor+02H
+009A AF00    R      MOV    R7,Divisor+03H
+009C 120000  R      LCALL  ?C_ULDIV_SP
+009F C004           PUSH   AR4
+00A1 C005           PUSH   AR5
+00A3 C006           PUSH   AR6
+00A5 C007           PUSH   AR7
+00A7 AC00    R      MOV    R4,Divisor
+00A9 AD00    R      MOV    R5,Divisor+01H
+00AB AE00    R      MOV    R6,Divisor+02H
+00AD AF00    R      MOV    R7,Divisor+03H
+00AF 120000  R      LCALL  ?C_LMUL
+00B2 120000  R      LCALL  ?C_LSUB
+00B5 8C00    R      MOV    Value,R4
+00B7 8D00    R      MOV    Value+01H,R5
+00B9 8E00    R      MOV    Value+02H,R6
+00BB 8F00    R      MOV    Value+03H,R7
+00BD         ?NXT12:
+                                           ; SOURCE LINE # 35 
+00BD C000    R      PUSH   Divisor
+00BF C000    R      PUSH   Divisor+01H
+00C1 C000    R      PUSH   Divisor+02H
+00C3 C000    R      PUSH   Divisor+03H
+00C5 E4             CLR    A
+00C6 FC             MOV    R4,A
+00C7 FD             MOV    R5,A
+00C8 FE             MOV    R6,A
+00C9 740A           MOV    A,#00AH
+00CB FF             MOV    R7,A
+00CC 120000  R      LCALL  ?C_ULDIV_SP
+00CF 8C00    R      MOV    Divisor,R4
+00D1 8D00    R      MOV    Divisor+01H,R5
+00D3 8E00    R      MOV    Divisor+02H,R6
+00D5 8F00    R      MOV    Divisor+03H,R7
+                                           ; SOURCE LINE # 24 
+00D7 0500    R      INC    i
+00D9 E500    R      MOV    A,i
+00DB B40A02         CJNE   A,#00AH,$ + 5
+00DE 8003           SJMP   $ + 5
+00E0 020000  R      LJMP   ?FOR1
+00E3 22             RET    
+
+            ; FUNCTION _LongToAscii (END)
+
+            ; FUNCTION _SendChar (BEGIN)
+              ; Register R7 is assigned to parameter c
+                                           ; SOURCE LINE # 43 
+0000 D299           SETB   TI
+0002         ?WHILE2:
+                                           ; SOURCE LINE # 44 
+0002 3099FD         JNB    TI,?WHILE2
+0005 C299           CLR    TI
+0007 8F99           MOV    SBUF,R7
+0009         ?WHILE3:
+                                           ; SOURCE LINE # 45 
+0009 3099FD         JNB    TI,?WHILE3
+000C C299           CLR    TI
+000E 22             RET    
+
+            ; FUNCTION _SendChar (END)
+
+            ; FUNCTION _PrintString (BEGIN)
+              ; Register R0R4R5 is assigned to parameter s
+                                           ; SOURCE LINE # 57 
+0000 EB             MOV    A,R3
+0001 FD             MOV    R5,A
+0002 EA             MOV    A,R2
+0003 FC             MOV    R4,A
+0004 E9             MOV    A,R1
+0005 F8             MOV    R0,A
+0006         ?WHILE5:
+                                           ; SOURCE LINE # 54 
+0006 ED             MOV    A,R5
+0007 FB             MOV    R3,A
+0008 EC             MOV    A,R4
+0009 FA             MOV    R2,A
+000A E8             MOV    A,R0
+000B F9             MOV    R1,A
+000C 120000  R      LCALL  IPGN1?C
+000F 6014           JZ     ?NXT19
+                                           ; SOURCE LINE # 56 
+0011 ED             MOV    A,R5
+0012 FB             MOV    R3,A
+0013 EC             MOV    A,R4
+0014 FA             MOV    R2,A
+0015 E8             MOV    A,R0
+0016 F9             MOV    R1,A
+0017 120000  R      LCALL  IPGN1?C
+001A FF             MOV    R7,A
+001B 120000  R      LCALL  _SendChar
+                                           ; SOURCE LINE # 57 
+001E 08             INC    R0
+001F E8             MOV    A,R0
+0020 70E4           JNZ    ?WHILE5
+0022 0C             INC    R4
+0023 80E1           SJMP   ?WHILE5
+0025         ?NXT19:
+0025 22             RET    
+
+            ; FUNCTION _PrintString (END)
+
+            ; FUNCTION Delay5ms (BEGIN)
+                                           ; SOURCE LINE # 64 
+0000 758CDC         MOV    TH0,#0DCH
+                                           ; SOURCE LINE # 65 
+0003 758A00         MOV    TL0,#000H
+                                           ; SOURCE LINE # 66 
+0006 D28C           SETB   TR0
+0008         ?WHILE7:
+                                           ; SOURCE LINE # 67 
+0008 308DFD         JNB    TF0,?WHILE7
+                                           ; SOURCE LINE # 68 
+000B C28C           CLR    TR0
+                                           ; SOURCE LINE # 69 
+000D C28D           CLR    TF0
+000F 22             RET    
+
+            ; FUNCTION Delay5ms (END)
+
+            ; FUNCTION Delay25ms (BEGIN)
+                                           ; SOURCE LINE # 75 
+0000 758C4C         MOV    TH0,#04CH
+                                           ; SOURCE LINE # 76 
+0003 758A00         MOV    TL0,#000H
+                                           ; SOURCE LINE # 77 
+0006 D28C           SETB   TR0
+0008         ?WHILE9:
+                                           ; SOURCE LINE # 78 
+0008 308DFD         JNB    TF0,?WHILE9
+                                           ; SOURCE LINE # 79 
+000B C28C           CLR    TR0
+                                           ; SOURCE LINE # 80 
+000D C28D           CLR    TF0
+000F 22             RET    
+
+            ; FUNCTION Delay25ms (END)
+
+            ; FUNCTION DelayHalfSec (BEGIN)
+              ; R7 is assigned to half
+                                           ; SOURCE LINE # 87 
+0000 7F00           MOV    R7,#000H
+0002         ?FOR3:
+                                           ; SOURCE LINE # 88 
+0002 120000  R      LCALL  Delay25ms
+                                           ; SOURCE LINE # 87 
+0005 0F             INC    R7
+0006 BF20F9         CJNE   R7,#020H,?FOR3
+0009 22             RET    
+
+            ; FUNCTION DelayHalfSec (END)
+
+C51 COMPILER V6.11.4C,  MISC                      06/07/113  08:53:08  PAGE  3
+
+NAME                                    CLASS   MSPACE  TYPE    OFFSET  SIZE
+====                                    =====   ======  ====    ======  ====
+
+LongToAscii. . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  Value?065. . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   4    
+  Device_type?066. . . . . . . . . . .  PARAM   DATA    BIT     0000H   1    
+  Value?065. . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   4    
+  Device_type?066. . . . . . . . . . .  PARAM   DATA    BIT     0000H   1    
+Divisor?067. . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0004H   4    
+i?068. . . . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0008H   1    
+isDivisible?069. . . . . . . . . . . .  PUBLIC  DATA    BIT     0001H   1    
+SendChar . . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  c?070. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  c?070. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+PrintString. . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  s?071. . . . . . . . . . . . . . . .  PARAM   DATA    PTR     0000H   3    
+  s?071. . . . . . . . . . . . . . . .  PARAM   DATA    PTR     0000H   3    
+Delay5ms . . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+Delay25ms. . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+DelayHalfSec . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+half?075 . . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+gPutc. . . . . . . . . . . . . . . . .  EXTERN  CODE    PROC    -----   -----
+C51 COMPILER V6.11.4C,  MISC                      06/07/113  08:53:08  PAGE  4
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    323    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       6
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----       2
+END OF MODULE INFORMATION.
+
+C51 COMPILATION COMPLETE.  0 WARNING,  0 ERROR

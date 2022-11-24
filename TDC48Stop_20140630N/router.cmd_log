@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn __projnav/router.xst -ofn router.syr

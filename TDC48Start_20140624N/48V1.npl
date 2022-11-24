@@ -1,0 +1,53 @@
+JDF G
+// Created by Project Navigator ver 1.0
+PROJECT Chrono48_start
+DESIGN 48v1
+DEVFAM spartan2
+DEVFAMTIME 0
+DEVICE xc2s200
+DEVICETIME 1166507210
+DEVPKG pq208
+DEVPKGTIME 1221632903
+DEVSPEED -6
+DEVSPEEDTIME 0
+DEVTOPLEVELMODULETYPE HDL
+TOPLEVELMODULETYPETIME 0
+DEVSYNTHESISTOOL XST (VHDL/Verilog)
+SYNTHESISTOOLTIME 0
+DEVSIMULATOR Other
+SIMULATORTIME 0
+DEVGENERATEDSIMULATIONMODEL Verilog
+GENERATEDSIMULATIONMODELTIME 0
+SOURCE testcounter.v
+SOURCE clk_mul.sch
+SOURCE cc8ce1.sch
+SOURCE cc24ce.sch
+SOURCE router.v
+SOURCE Chrono48_start.sch
+SOURCE gen_sel_signals.v
+STIMULUS gen_sel_signals_tf.v
+SOURCE fpga_addr_out.v
+SOURCE DAC.v
+SOURCE counter32bit.sch
+SOURCE synclogic.sch
+STIMULUS chrono48_start_tf.v
+SOURCE uart_tx.v
+SOURCE uart_rx.v
+SOURCE inst_decoder.v
+SOURCE uart_baud.v
+STIMULUS inst_decoder_tf.v
+DEPASSOC chrono48_start chrono48_start.ucf
+[Normal]
+p_xstEquivRegRemoval=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+p_xstSlicePacking=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+p_xstUseSynthConstFile=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+p_xstVerilog2001=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+xilxSynthAddIObuf=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+xilxSynthRegDuplication=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+xilxTriStateBuffTXMode=xstvlg, spartan2, Implementation.t_placeAndRouteDes, 1169534455, On
+_SynthOpt=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, Speed
+[STATUS-ALL]
+chrono48_start.bitgenGroup=OK,1405666134
+counter32bit.vfModel=WARNINGS,1404377686
+[STRATEGY-LIST]
+Normal=True

@@ -1,0 +1,26 @@
+// Verilog model created from vernier40.sch - Tue Jun 04 14:59:49 2013
+
+`timescale 1ns / 1ps
+
+module vernier40(clksync, logic0, reset, sel_ver, startsync, Qout);
+
+    input clksync;
+    input logic0;
+    input reset;
+    input sel_ver;
+    input startsync;
+   output [39:0] Qout;
+   
+   wire [39:0] Q;
+   wire [39:0] XLXN_4;
+   wire [39:0] XLXN_5;
+   
+   imult_andline40 andline (.Vin(startsync), .Vout(XLXN_4[39:0]));
+   // synthesis attribute RLOC of andline is "R0C0"
+   ildce40_1_gebus latchline (.Din(XLXN_4[39:0]), .Gbar(logic0),
+         .GE(XLXN_5[39:0]), .reset(reset), .Qout(Q[39:0]));
+   // synthesis attribute RLOC of latchline is "R1C0"
+   sel_vernier XLXI_1 (.sel_ver(sel_ver), .Vin(Q[39:0]), .Vout(Qout[39:0]));
+   ixorcyline40_d xorline (.Vin(clksync), .Vout(XLXN_5[39:0]));
+   // synthesis attribute RLOC of xorline is "R1C0"
+endmodule

@@ -1,0 +1,91 @@
+// Verilog model created from chrono48_stop3.sch - Fri Jul 18 09:55:20 2014
+
+`timescale 1ns / 1ps
+
+module chrono48_stop3(clk, dev_addr, rx_uc, start_sync_in, stop_pulses,
+      teststop, clk100mhz, DACout, tx_uc);
+
+    input clk;
+    input [3:0] dev_addr;
+    input rx_uc;
+    input start_sync_in;
+    input [3:0] stop_pulses;
+    input teststop;
+   output clk100mhz;
+   output DACout;
+   output tx_uc;
+   
+   wire clk25mhz;
+   wire cmd_dev_sel;
+   wire cmd_inc_dac;
+   wire cmd_read;
+   wire cmd_reset;
+   wire cmd_rst_dac;
+   wire cmd_rst_test;
+   wire [7:0] dev_sel_byte;
+   wire [7:0] dout;
+   wire [7:0] dout_byte;
+   wire dout_byte_rdy;
+   wire enb;
+   wire intr;
+   wire [3:0] load;
+   wire [4:0] pkt_addr;
+   wire rst;
+   wire rx;
+   wire [15:0] sel_cntr_bytes;
+   wire sel_dac_byte;
+   wire sel_fpga_byte;
+   wire sel_penc_byte;
+   wire [4:0] sel_ver_bytes;
+   wire start_clk_sync;
+   wire start_pulse_buf;
+   wire start_sync;
+   wire tx;
+   wire uart_rdy;
+   wire XLXN_60;
+   wire [39:0] XLXN_76;
+   wire XLXN_111;
+   wire XLXN_180;
+   
+   clk_mul Clock_Mul (.clk(clk), .clkdiv(clk25mhz), .clk4x(clk100mhz));
+   IBUF XLXI_10 (.I(start_sync_in), .O(start_pulse_buf));
+   OBUF_F_24 XLXI_13 (.I(XLXN_60), .O(DACout));
+   router XLXI_50 (.dev_sel(cmd_dev_sel), .rx_uc(rx_uc), .tx(tx), .rx(rx),
+         .tx_uc(tx_uc));
+   gen_sel_signals XLXI_97 (.addr(pkt_addr[4:0]),
+         .sel_cntr_bytes(sel_cntr_bytes[15:0]), .sel_dac_byte(sel_dac_byte),
+         .sel_fpga_byte(sel_fpga_byte), .sel_penc_byte(sel_penc_byte),
+         .sel_ver_bytes(sel_ver_bytes[4:0]));
+   fpga_addr_out XLXI_98 (.din(dev_sel_byte[7:0]), .sel(sel_fpga_byte),
+         .dout(dout[7:0]));
+   DAC XLXI_100 (.clk(clk25mhz), .inc_dac(cmd_inc_dac), .rst_dac(cmd_rst_dac),
+         .sel_dac(sel_dac_byte), .DACout(XLXN_60), .dac_val(dout[7:0]));
+   priority_encoder XLXI_101 (.dataIn(XLXN_76[39:0]), .sel(sel_penc_byte),
+         .dataOutz(dout[7:0]));
+   maincount4channel XLXI_103 (.clk(clk100mhz), .load(load[3:0]),
+         .reset(cmd_reset), .sel_cntr_bytes(sel_cntr_bytes[15:0]),
+         .start_sync(start_clk_sync), .count(dout[7:0]), .ovf24_intr(intr));
+   // synthesis attribute RLOC_ORIGIN of XLXI_103 is "R5C26"
+   four_stop_channels XLXI_104 (.clk(clk100mhz), .reset(cmd_reset),
+         .sel_vers(sel_ver_bytes[4:1]), .start_pulse(start_clk_sync),
+         .stop_pulses(stop_pulses[3:0]), .test_stop(teststop),
+         .load_reg(load[3:0]), .stop_clk_sync(), .ver_stop(XLXN_76[39:0]));
+   // synthesis attribute RLOC_ORIGIN of XLXI_104 is "R8C3"
+   inst_decoder XLXI_111 (.clk(clk25mhz), .dev_addr(dev_addr[3:0]),
+         .din(dout_byte[7:0]), .din_rdy(dout_byte_rdy), .res(rst),
+         .cmd_dev_sel(cmd_dev_sel), .cmd_inc_dac(cmd_inc_dac),
+         .cmd_read(cmd_read), .cmd_reset(cmd_reset), .cmd_rst_dac(cmd_rst_dac),
+         .cmd_rst_test(cmd_rst_test), .cmd_startup(XLXN_111),
+         .dev_sel_byte(dev_sel_byte[7:0]), .pkt_addr(pkt_addr[4:0]));
+   uart_baud XLXI_112 (.clk(clk25mhz), .rst(rst), .enable(enb));
+   uart_rx XLXI_113 (.clk(clk25mhz), .enable(enb), .rst(rst), .ser_in(rx),
+         .dout_byte(dout_byte[7:0]), .dout_byte_rdy(dout_byte_rdy));
+   uart_tx XLXI_114 (.clk(clk25mhz), .din_byte(dout[7:0]), .din_rdy(cmd_read),
+         .enable(enb), .rst(rst), .ser_out(tx), .uart_ready(uart_rdy));
+   GND XLXI_115 (.G(rst));
+   start_channel XLXI_131 (.clk(clk100mhz), .pulse(start_pulse_buf),
+         .reset(cmd_reset), .sel_ver(sel_ver_bytes[0]), .test_pulse(XLXN_180),
+         .pulse_clk_sync(start_clk_sync), .pulse_sync(start_sync),
+         .ver_out(XLXN_76[39:0]));
+   // synthesis attribute RLOC_ORIGIN of XLXI_131 is "R27C7"
+endmodule

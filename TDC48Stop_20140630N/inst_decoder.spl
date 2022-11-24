@@ -1,0 +1,20 @@
+[Inputs]
+clk
+res
+din_rdy
+=din[7:0]=
+=dev_addr[3:0]=
+[Outputs]
+cmd_reset
+cmd_rst_dac
+cmd_inc_dac
+cmd_read
+cmd_dev_sel
+cmd_rst_test
+cmd_startup
+=pkt_addr[4:0]=
+=dev_sel_byte[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel inst_decoder
+

@@ -1,0 +1,21 @@
+# Xilinx CORE Generator 6.1i
+# User = dell
+Initializing default project...
+Loading plug-ins...
+All runtime messages will be recorded in D:\Personal\EXP\P\TDC\TDC48Stop_20140630N\coregen.log
+# busformat=BusFormatAngleBracketNotRipped
+# designflow=VHDL
+# expandedprojectpath=D:\Personal\EXP\P\TDC\TDC48Stop_20140630N
+# flowvendor=Foundation_iSE
+# formalverification=None
+# simulationoutputproducts=VHDL
+# xilinxfamily=Virtex2
+# outputoption=DesignFlow
+# overwritefiles=Default
+# simvendor=ModelSim
+# expandedprojectpath=D:\Personal\EXP\P\TDC\TDC48Stop_20140630N
+SETPROJECT .
+Set current Project to D:\Personal\EXP\P\TDC\TDC48Stop_20140630N
+SET BusFormat = BusFormatAngleBracketNotRipped
+SETXIPCPORTHOST 49158
+XIPCPJSENDCORES spartan2

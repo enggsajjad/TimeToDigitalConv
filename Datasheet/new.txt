@@ -1,0 +1,6 @@
+RACOPOWER - TXL 050-05S - PSU, ENCLOSED, 50W, 5V 		1205090
+crimp SMA straight plug-RG174 B cable				546-3210
+GoldPt SMA PCB mount socket					546-3276
+6 way straight ZIF FFC connector,1.25mm				372-453
+2 way top entry SMT header,1mm pitch				515-1529
+ABLE SYSTEMS - 03-AP24XS40 - PRINTER, IMPACT PANEL, MTD		3916042

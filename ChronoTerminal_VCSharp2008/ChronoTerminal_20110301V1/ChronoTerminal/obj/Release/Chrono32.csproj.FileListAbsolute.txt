@@ -1,0 +1,10 @@
+F:\ChronoTerminal_20110301V1\ChronoTerminal\bin\Release\Chrono32.exe.config
+F:\ChronoTerminal_20110301V1\ChronoTerminal\bin\Release\Chrono32.exe
+F:\ChronoTerminal_20110301V1\ChronoTerminal\bin\Release\Chrono32.pdb
+F:\ChronoTerminal_20110301V1\ChronoTerminal\obj\Release\ResolveAssemblyReference.cache
+F:\ChronoTerminal_20110301V1\ChronoTerminal\obj\Release\Chrono32.AboutBox.resources
+F:\ChronoTerminal_20110301V1\ChronoTerminal\obj\Release\Chrono32.frmMain.resources
+F:\ChronoTerminal_20110301V1\ChronoTerminal\obj\Release\Chrono32.Properties.Resources.resources
+F:\ChronoTerminal_20110301V1\ChronoTerminal\obj\Release\Chrono32.csproj.GenerateResource.Cache
+F:\ChronoTerminal_20110301V1\ChronoTerminal\obj\Release\Chrono32.exe
+F:\ChronoTerminal_20110301V1\ChronoTerminal\obj\Release\Chrono32.pdb

@@ -1,0 +1,47 @@
+// Verilog model created from four_stop_channels.sch - Tue Jul 08 11:08:55 2014
+
+`timescale 1ns / 1ps
+
+module four_stop_channels(clk, reset, sel_vers, start_pulse, stop_pulses,
+      test_stop, load_reg, stop_clk_sync, ver_stop);
+
+    input clk;
+    input reset;
+    input [3:0] sel_vers;
+    input start_pulse;
+    input [3:0] stop_pulses;
+    input test_stop;
+   output [3:0] load_reg;
+   output [3:0] stop_clk_sync;
+   output [39:0] ver_stop;
+   
+   wire XLXN_28;
+   wire XLXN_31;
+   wire XLXN_33;
+   wire XLXN_35;
+   
+   stop_channel XLXI_2 (.clk(clk), .reset(reset), .sel_ver(sel_vers[0]),
+         .start_pulse(start_pulse), .stop_pulse(XLXN_28),
+         .test_stop(test_stop), .load_reg(load_reg[0]),
+         .pulse_clk_sync(stop_clk_sync[0]), .ver_out(ver_stop[39:0]));
+   // synthesis attribute RLOC of XLXI_2 is "R14C0"
+   stop_channel XLXI_3 (.clk(clk), .reset(reset), .sel_ver(sel_vers[1]),
+         .start_pulse(start_pulse), .stop_pulse(XLXN_35),
+         .test_stop(test_stop), .load_reg(load_reg[1]),
+         .pulse_clk_sync(stop_clk_sync[1]), .ver_out(ver_stop[39:0]));
+   // synthesis attribute RLOC of XLXI_3 is "R12C0"
+   stop_channel XLXI_4 (.clk(clk), .reset(reset), .sel_ver(sel_vers[2]),
+         .start_pulse(start_pulse), .stop_pulse(XLXN_33),
+         .test_stop(test_stop), .load_reg(load_reg[2]),
+         .pulse_clk_sync(stop_clk_sync[2]), .ver_out(ver_stop[39:0]));
+   // synthesis attribute RLOC of XLXI_4 is "R10C0"
+   stop_channel XLXI_5 (.clk(clk), .reset(reset), .sel_ver(sel_vers[3]),
+         .start_pulse(start_pulse), .stop_pulse(XLXN_31),
+         .test_stop(test_stop), .load_reg(load_reg[3]),
+         .pulse_clk_sync(stop_clk_sync[3]), .ver_out(ver_stop[39:0]));
+   // synthesis attribute RLOC of XLXI_5 is "R8C0"
+   IBUF XLXI_11 (.I(stop_pulses[0]), .O(XLXN_28));
+   IBUF XLXI_12 (.I(stop_pulses[1]), .O(XLXN_35));
+   IBUF XLXI_13 (.I(stop_pulses[2]), .O(XLXN_33));
+   IBUF XLXI_14 (.I(stop_pulses[3]), .O(XLXN_31));
+endmodule

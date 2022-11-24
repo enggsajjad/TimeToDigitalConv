@@ -1,0 +1,126 @@
+{Program	GerbTool for Layout
+	{Version	8.0}
+	{Created	Fri Oct 19 14:51:24 2012}
+}
+{Environment
+	{FilesPath  E:\MUSHTAQ PCB\SAJJAD HUSSAIN\CHRONO32C\CHRONO-32C-TDC_R0}
+}
+{Layers
+	{Layer  1
+		{File        TDC_16TOP.GBR}
+		{LyrName     -}
+		{ApList      }
+		{Visibility  On}
+		{FlashColor  Green}
+		{DrawColor   Green}
+		{Type        Top}
+	}
+	{Layer  2
+		{File        TDC_16IN1.GBR}
+		{LyrName     -}
+		{ApList      }
+		{Visibility  On}
+		{FlashColor  Magenta}
+		{DrawColor   Magenta}
+		{Type        Inner}
+	}
+	{Layer  3
+		{File        TDC_16IN2.GBR}
+		{LyrName     -}
+		{ApList      }
+		{Visibility  On}
+		{FlashColor  Blue}
+		{DrawColor   Blue}
+		{Type        Inner}
+	}
+	{Layer  4
+		{File        TDC_16BOT.GBR}
+		{LyrName     -}
+		{ApList      }
+		{Visibility  On}
+		{FlashColor  Red}
+		{DrawColor   Red}
+		{Type        Bottom}
+	}
+	{Layer  5
+		{File        TDC_16SMT.GBR}
+		{LyrName     -}
+		{ApList      }
+		{Visibility  On}
+		{FlashColor  Green}
+		{DrawColor   Green}
+		{Type        Other}
+	}
+	{Layer  6
+		{File        TDC_16SMB.GBR}
+		{LyrName     -}
+		{ApList      }
+		{Visibility  On}
+		{FlashColor  vga16yellow}
+		{DrawColor   vga16yellow}
+		{Type        Other}
+	}
+	{Layer  7
+		{File        TDC_16SPT.GBR}
+		{LyrName     -}
+		{ApList      }
+		{Visibility  On}
+		{FlashColor  vga16cyan}
+		{DrawColor   vga16cyan}
+		{Type        Other}
+	}
+	{Layer  8
+		{File        TDC_16SPB.GBR}
+		{LyrName     -}
+		{ApList      }
+		{Visibility  On}
+		{FlashColor  vga16red}
+		{DrawColor   vga16red}
+		{Type        Other}
+	}
+	{Layer  9
+		{File        TDC_16SST.GBR}
+		{LyrName     -}
+		{ApList      }
+		{Visibility  On}
+		{FlashColor  White}
+		{DrawColor   White}
+		{Type        Other}
+	}
+	{Layer  10
+		{File        TDC_16SSB.GBR}
+		{LyrName     -}
+		{ApList      }
+		{Visibility  On}
+		{FlashColor  Yellow}
+		{DrawColor   Yellow}
+		{Type        Other}
+	}
+	{Layer  11
+		{File        TDC_16MFG.FAB}
+		{LyrName     -}
+		{ApList      }
+		{Visibility  On}
+		{FlashColor  Green}
+		{DrawColor   Green}
+		{Type        Other}
+	}
+}
+{Format Gerber
+	{Dialect           RS274X}
+	{m.n               3.4}
+	{Mode              Absolute}
+	{ZeroSuppression   Leading}
+	{Terminator        0x2a, 0xD, 0xA}
+	{Metric            No}
+	{Modal             No}
+	{UserData          Yes}
+	{Nets              No}
+	{Gcmds             Yes}
+	{CharSet           ASCII}
+	{Arcs360           No}
+	{ArcsModal         Yes}
+	{HonorCrLf         No}
+	{Comments          Yes}
+	{Flags             0}
+}

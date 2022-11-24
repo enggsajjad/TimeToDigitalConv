@@ -1,0 +1,11 @@
+[Inputs]
+rx_uc
+tx
+dev_sel
+[Outputs]
+rx
+tx_uc
+[BiDir]
+[ATTRIBUTES]
+VeriModel router
+

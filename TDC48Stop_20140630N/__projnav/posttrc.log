@@ -1,0 +1,4 @@
+Post Route Timing Report for Module chrono48_stop3 . . .
+TRACE command line and options:
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+Post Route Timing Report for Module chrono48_stop3 : DONE

@@ -1,0 +1,71 @@
+JDF G
+// Created by Project Navigator ver 1.0
+PROJECT Chrono32b
+DESIGN 32v7
+DEVFAM spartan2
+DEVFAMTIME 0
+DEVICE xc2s200
+DEVICETIME 1166507210
+DEVPKG pq208
+DEVPKGTIME 1221632903
+DEVSPEED -6
+DEVSPEEDTIME 0
+DEVTOPLEVELMODULETYPE HDL
+TOPLEVELMODULETYPETIME 0
+DEVSYNTHESISTOOL XST (VHDL/Verilog)
+SYNTHESISTOOLTIME 0
+DEVSIMULATOR Other
+SIMULATORTIME 0
+DEVGENERATEDSIMULATIONMODEL Verilog
+GENERATEDSIMULATIONMODELTIME 0
+SOURCE imult_andline40.sch
+SOURCE ixorcyline8_d.sch
+SOURCE imult_andline16.sch
+SOURCE ixorcyline16_d.sch
+SOURCE imult_andline8.sch
+SOURCE vernier40.sch
+SOURCE ildce16_1_GEbus.sch
+SOURCE ildce8_1_GEbus.sch
+SOURCE ildce40_1_gebus.sch
+SOURCE synclogic1.sch
+SOURCE sel_vernier.v
+SOURCE stop_channel.sch
+SOURCE start_channel.sch
+SOURCE ixorcyline40_d.sch
+SOURCE DACSimple.v
+SOURCE pencoder40_binary.v
+SOURCE drom.xco
+SOURCE top_drom.sch
+SOURCE select_out.v
+SOURCE clk_gen.v
+SOURCE fpgaselout.v
+SOURCE testcounter.v
+SOURCE clk_mul.sch
+SOURCE UA_Receiver.v
+SOURCE UA_Transmitte1.v
+SOURCE cu_hmiold.v
+SOURCE myfd8ce.sch
+SOURCE DFF_26bits.sch
+SOURCE cc8ce1.sch
+SOURCE cc24ce.sch
+SOURCE IR_decoder.v
+SOURCE router.v
+SOURCE Registers_26bit.sch
+SOURCE Registers26bit_interface.v
+SOURCE MainCount8Channel.sch
+SOURCE Control_Unit.sch
+SOURCE DACs.sch
+SOURCE eight_stop_channels.sch
+SOURCE Chrono32c.sch
+DEPASSOC chrono32c chrono32c.ucf
+[Normal]
+p_xstEquivRegRemoval=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+p_xstSlicePacking=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+p_xstUseSynthConstFile=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+p_xstVerilog2001=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+xilxSynthAddIObuf=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+xilxSynthRegDuplication=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+xilxTriStateBuffTXMode=xstvlg, spartan2, Implementation.t_placeAndRouteDes, 1169534455, On
+_SynthOpt=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, Speed
+[STRATEGY-LIST]
+Normal=True

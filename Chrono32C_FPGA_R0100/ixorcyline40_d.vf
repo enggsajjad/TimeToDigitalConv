@@ -1,0 +1,21 @@
+// Verilog model created from ixorcyline40_d.sch - Tue Jun 04 14:59:54 2013
+
+`timescale 1ns / 1ps
+
+module ixorcyline40_d(Vin, Vout);
+
+    input Vin;
+   output [39:0] Vout;
+   
+   wire XLXN_2;
+   
+   INV XLXI_2 (.I(Vin), .O(XLXN_2));
+   FMAP XLXI_3 (.I1(), .I2(), .I3(), .I4(Vin), .O(XLXN_2));
+   // synthesis attribute RLOC of XLXI_3 is "R0C0.S1"
+   ixorcyline16_d xorline_a (.Vin(XLXN_2), .Vout(Vout[15:0]));
+   // synthesis attribute RLOC of xorline_a is "R0C0"
+   ixorcyline16_d xorline_b (.Vin(Vout[15]), .Vout(Vout[31:16]));
+   // synthesis attribute RLOC of xorline_b is "R0C8"
+   ixorcyline8_d xorline_c (.Vin(Vout[31]), .Vout(Vout[39:32]));
+   // synthesis attribute RLOC of xorline_c is "R0C16"
+endmodule

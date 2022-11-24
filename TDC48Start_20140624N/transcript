@@ -1,0 +1,49 @@
+# Reading C:/Modeltech_xe/tcl/vsim/pref.tcl 
+# do ir_decoder_tf.ndo 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim XE II vlog 5.6e Compiler 2002.10 Oct 22 2002
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# Model Technology ModelSim XE II vlog 5.6e Compiler 2002.10 Oct 22 2002
+# -- Compiling module IR_decoder
+# 
+# Top level modules:
+# 	IR_decoder
+# Model Technology ModelSim XE II vlog 5.6e Compiler 2002.10 Oct 22 2002
+# -- Compiling module ir_decoder_tf
+# 
+# Top level modules:
+# 	ir_decoder_tf
+# vsim -L simprims_ver -lib work -t 1ps ir_decoder_tf glbl 
+# Loading work.ir_decoder_tf
+# Loading work.IR_decoder
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_FF
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_LUT2
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_LUT4
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_LUT3
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_ZERO
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_XOR2
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_ONE
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_MUX2
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_BUF
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_OPAD
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_IPAD
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_CKBUF
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_OR2
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_TRI
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_INV
+# Loading work.glbl
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.ffsrce
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.x_lut2_mux4
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.x_lut4_mux4
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.x_lut3_mux4
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.mux
+# .wave
+# .structure
+# .signals
+run -all
+# Break key hit 
+# Break at ir_decoder_tf.v line 235
+destroy .wave

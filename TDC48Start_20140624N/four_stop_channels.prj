@@ -1,0 +1,14 @@
+verilog work synclogic.vf
+verilog work sel_vernier.v
+verilog work andline8.vf
+verilog work andline16.vf
+verilog work andline40.vf
+verilog work ildceline8.vf
+verilog work ildceline16.vf
+verilog work ildceline40.vf
+verilog work xorcy_dline8.vf
+verilog work xorcy_dline16.vf
+verilog work xorcy_dline40.vf
+verilog work vernier_40_gates.vf
+verilog work stop_channel.vf
+verilog work four_stop_channels.vf

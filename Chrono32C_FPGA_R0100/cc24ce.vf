@@ -1,0 +1,32 @@
+// Verilog model created from cc24ce.sch - Tue Jun 04 14:59:56 2013
+
+`timescale 1ns / 1ps
+
+module cc24ce(ce, clk, res, CO, ovf24, Q);
+
+    input ce;
+    input clk;
+    input res;
+   output CO;
+   output ovf24;
+   output [31:0] Q;
+   
+   wire ovf26;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire XLXN_18;
+   
+   cc8ce1 XLXI_2 (.C(clk), .CE(ce), .CI(ovf24), .CLR(res), .CO(CO), .C2(ovf26),
+         .Q(Q[31:24]));
+   // synthesis attribute RLOC of XLXI_2 is "R0C0"
+   cc8ce1 XLXI_3 (.C(clk), .CE(ce), .CI(XLXN_16), .CLR(res), .CO(ovf24), .C2(),
+         .Q(Q[23:16]));
+   // synthesis attribute RLOC of XLXI_3 is "R4C0"
+   cc8ce1 XLXI_4 (.C(clk), .CE(ce), .CI(XLXN_17), .CLR(res), .CO(XLXN_16),
+         .C2(), .Q(Q[15:8]));
+   // synthesis attribute RLOC of XLXI_4 is "R8C0"
+   cc8ce1 XLXI_7 (.C(clk), .CE(ce), .CI(XLXN_18), .CLR(res), .CO(XLXN_17),
+         .C2(), .Q(Q[7:0]));
+   // synthesis attribute RLOC of XLXI_7 is "R12C0"
+   VCC XLXI_8 (.P(XLXN_18));
+endmodule

@@ -1,0 +1,112 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\tdc_16.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify)
+    (BOM_Scope "0")
+    (BOM_Mode "1")
+    (BOM_Report_File
+       "E:\Mushtaq PCB\Sajjad Hussain\Chrono32C\Chrono-32C-TDC_R0\BOM\Chrono32C_TDC_RO.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_Header "Item\tQuantity\tReference\tPart")
+    (BOM_Include_File "E:\P\TDC\2012\CHRONO32C\CHRONO-32C-TDC_R0000\TDC_16.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "FALSE")
+    (BOM_View_Output "TRUE")
+    (Netlist_TAB "3")
+    (LAYOUT_Netlist_File "TDC_16.MNL")
+    (LAYOUT_PCB_Footprint "{PCB Footprint}")
+    (TRUE)
+    (LAYOUT_Units "0")
+    (TRUE)
+    (TRUE)
+    (TRUE)
+    (TRUE)
+    (TRUE)
+    (TRUE)
+    (TRUE)
+    (TRUE)
+    (TRUE)
+    (TRUE)
+    (TRUE)
+    (Board_sim_option "VHDL_flow")
+    (TRUE)
+    (TRUE))
+  (Folder "Outputs"
+    (File "c:\documents and settings\sajjad hussain\desktop\aaa.bom"
+      (Type "Report"))
+    (File "c:\documents and settings\sajjad hussain\desktop\tdc.bom"
+      (Type "Report"))
+    (File ".\tdc_16.mnl"
+      (Type "LAYOUT Netlist File"))
+    (File ".\new.bom"
+      (Type "Report"))
+    (File ".\bom\chrono32c_tdc_ro.bom"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (RESISTOR
+      (FullPartName "RESISTOR.Normal")
+      (LibraryName "D:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-L
+      (LibraryName "C:\ORCAD\ORCAD_10.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "E:\P\TDC\2013\Chrono32C_67_March2013_CD\PCB Design\Chrono-32C-TDC_R0100\tdc_16.dsn")
+      (Path "Outputs")
+      (Select "Design Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 160 720 -4 -30 0 452 0 676"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 132 1392 174 710")
+        (Scroll "0 540")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "E:\P\TDC\2013\CHRONO32C_67_MARCH2013_CD\PCB DESIGN\CHRONO-32C-TDC_R0100\TDC_16.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "FPGA2"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 154 1414 203 739")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "E:\P\TDC\2013\CHRONO32C_67_MARCH2013_CD\PCB DESIGN\CHRONO-32C-TDC_R0100\TDC_16.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "START_STOP1-8"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 176 1436 232 768")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "E:\P\TDC\2013\CHRONO32C_67_MARCH2013_CD\PCB DESIGN\CHRONO-32C-TDC_R0100\TDC_16.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "STOP9-16")))
+  (MPSSessionName "Sajjad Hussain"))

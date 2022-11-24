@@ -1,0 +1,21 @@
+// Verilog model created from xorcy_dline40.sch - Tue Jul 08 11:09:01 2014
+
+`timescale 1ns / 1ps
+
+module xorcy_dline40(Vin, Vout);
+
+    input Vin;
+   output [39:0] Vout;
+   
+   wire XLXN_2;
+   
+   INV XLXI_2 (.I(Vin), .O(XLXN_2));
+   FMAP XLXI_3 (.I1(), .I2(), .I3(), .I4(Vin), .O(XLXN_2));
+   // synthesis attribute RLOC of XLXI_3 is "R0C0.S1"
+   xorcy_dline8 XLXI_4 (.Vin(Vout[31]), .Vout(Vout[39:32]));
+   // synthesis attribute RLOC of XLXI_4 is "R0C16"
+   xorcy_dline16 XLXI_5 (.Vin(Vout[15]), .Vout(Vout[31:16]));
+   // synthesis attribute RLOC of XLXI_5 is "R0C8"
+   xorcy_dline16 XLXI_6 (.Vin(XLXN_2), .Vout(Vout[15:0]));
+   // synthesis attribute RLOC of XLXI_6 is "R0C0"
+endmodule

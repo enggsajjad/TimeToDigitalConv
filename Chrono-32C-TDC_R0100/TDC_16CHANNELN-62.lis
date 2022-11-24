@@ -1,0 +1,446 @@
+Post Processor Report
+OrCAD FILE: E:\MUSHTAQ PCB\SAJJAD HUSSAIN\CHRONO32C\CHRONO-32C-TDC_R0\TDC_16CHANNELN-62.MAX
+Fri Oct 19 14:51:23 2012
+
+*********************************************************
+
+Output file: TDC_16TOP.GBR
+
+Aperture totals for TDC_16TOP.GBR:
+---------------------------------------------------------
+D10:  0.2000 ROUND  --       0 Draws,      12 Flashes
+D11:  0.5118 ROUND  --       0 Draws,       2 Flashes
+D12:  0.0800 SQUARE --       0 Draws,      36 Flashes
+D13:  0.1050 x 0.1200 RECTANGLE -----       6 Flashes
+D14:  0.0500 SQUARE --       0 Draws,     474 Flashes
+D15:  0.0790 SQUARE --       0 Draws,       2 Flashes
+D16:  0.0600 x 0.0800 RECTANGLE -----      68 Flashes
+D17:  0.0750 ROUND  --       0 Draws,      20 Flashes
+D18:  0.0700 ROUND  --       0 Draws,       2 Flashes
+D19:  0.0700 SQUARE --       0 Draws,       1 Flashes
+D20:  0.0350 ROUND  --       0 Draws,      10 Flashes
+D21:  0.0350 SQUARE --       0 Draws,       2 Flashes
+D22:  0.0650 ROUND  --       0 Draws,      14 Flashes
+D23:  0.0600 SQUARE --       0 Draws,      22 Flashes
+D24:  0.0500 x 0.1500 OBLONG    -----      14 Flashes
+D25:  0.0500 x 0.1500 RECTANGLE -----       2 Flashes
+D26:  0.0920 ROUND  --       0 Draws,      34 Flashes
+D27:  0.0580 ROUND  --       0 Draws,      24 Flashes
+D28:  0.0800 ROUND  --       0 Draws,      17 Flashes
+D29:  0.0520 x 0.0500 RECTANGLE -----       6 Flashes
+D30:  0.0700 x 0.0110 OBLONG    -----     188 Flashes
+D31:  0.0700 x 0.0110 RECTANGLE -----      20 Flashes
+D32:  0.0110 x 0.0700 OBLONG    -----     186 Flashes
+D33:  0.0110 x 0.0700 RECTANGLE -----      22 Flashes
+D34:  0.0250 x 0.0940 OBLONG    -----     119 Flashes
+D35:  0.0250 x 0.0940 RECTANGLE -----      17 Flashes
+D36:  0.0600 ROUND  --       0 Draws,       5 Flashes
+D37:  0.0860 x 0.0250 OBLONG    -----      21 Flashes
+D38:  0.0860 x 0.0250 RECTANGLE -----       3 Flashes
+D39:  0.0866 x 0.1023 RECTANGLE -----       4 Flashes
+D40:  0.0580 SQUARE --       0 Draws,       1 Flashes
+D41:  0.0220 ROUND  --       0 Draws,      65 Flashes
+D42:  0.0300 ROUND  --     138 Draws,       0 Flashes
+D43:  0.0160 ROUND  --     694 Draws,       0 Flashes
+D44:  0.0080 ROUND  --     945 Draws,       0 Flashes
+D45:  0.0120 ROUND  --      88 Draws,       0 Flashes
+D46:  0.0220 ROUND  --       0 Draws,     516 Flashes
+D47:  0.0100 ROUND  --     114 Draws,       0 Flashes
+D48:  0.0150 ROUND  --       3 Draws,       0 Flashes
+D49:  0.0200 ROUND  --     244 Draws,       0 Flashes
+D50:  0.0500 ROUND  --       0 Draws,       6 Flashes
+D51:  0.0400 ROUND  --       4 Draws,       0 Flashes
+D52:  0.0220 ROUND  --       0 Draws,       3 Flashes
+D53:  0.0060 ROUND  --     314 Draws,       0 Flashes
+---------------------------------------------------------
+ 44 D-Codes      -----    2544 Draws,    1944 Flashes
+
+*********************************************************
+
+Output file: TDC_16BOT.GBR
+
+Aperture totals for TDC_16BOT.GBR:
+---------------------------------------------------------
+D42:  0.0300 ROUND  --      10 Draws,       0 Flashes
+D43:  0.0160 ROUND  --     154 Draws,       0 Flashes
+D44:  0.0080 ROUND  --     695 Draws,       0 Flashes
+D45:  0.0120 ROUND  --       9 Draws,       0 Flashes
+D46:  0.0220 ROUND  --       0 Draws,     495 Flashes
+D49:  0.0200 ROUND  --      43 Draws,       0 Flashes
+D50:  0.0500 ROUND  --       0 Draws,       6 Flashes
+D51:  0.0400 ROUND  --       2 Draws,       0 Flashes
+D52:  0.0220 ROUND  --       0 Draws,      23 Flashes
+D53:  0.0060 ROUND  --      62 Draws,       0 Flashes
+D54:  0.2000 ROUND  --       0 Draws,      12 Flashes
+D55:  0.5118 ROUND  --       0 Draws,       2 Flashes
+D56:  0.0800 SQUARE --       0 Draws,      18 Flashes
+D57:  0.1200 x 0.1050 RECTANGLE -----       4 Flashes
+D58:  0.0500 SQUARE --       0 Draws,     186 Flashes
+D59:  0.0600 SQUARE --       0 Draws,      54 Flashes
+D60:  0.0750 ROUND  --       0 Draws,      20 Flashes
+D61:  0.0700 ROUND  --       0 Draws,       2 Flashes
+D62:  0.0700 SQUARE --       0 Draws,       1 Flashes
+D63:  0.0350 ROUND  --       0 Draws,      10 Flashes
+D64:  0.0350 SQUARE --       0 Draws,       2 Flashes
+D65:  0.0650 ROUND  --       0 Draws,      14 Flashes
+D66:  0.0920 ROUND  --       0 Draws,      34 Flashes
+D67:  0.0580 ROUND  --       0 Draws,      24 Flashes
+D68:  0.0800 ROUND  --       0 Draws,      17 Flashes
+D69:  0.0650 x 0.0160 OBLONG    -----      14 Flashes
+D70:  0.0650 x 0.0160 RECTANGLE -----       2 Flashes
+D71:  0.0900 x 0.0160 OBLONG    -----      38 Flashes
+D72:  0.0900 x 0.0160 RECTANGLE -----       2 Flashes
+D73:  0.0600 ROUND  --       0 Draws,       5 Flashes
+D74:  0.0580 SQUARE --       0 Draws,       1 Flashes
+D75:  0.0220 ROUND  --       0 Draws,      65 Flashes
+D76:  0.0220 ROUND  --       0 Draws,       1 Flashes
+---------------------------------------------------------
+ 33 D-Codes      -----     975 Draws,    1052 Flashes
+
+*********************************************************
+
+Output file: TDC_16IN1.GBR
+
+Aperture totals for TDC_16IN1.GBR:
+---------------------------------------------------------
+D47:  0.0100 ROUND  --   16278 Draws,       0 Flashes
+D52:  0.0220 ROUND  --       0 Draws,     471 Flashes
+D53:  0.0060 ROUND  --      27 Draws,       0 Flashes
+D54:  0.2000 ROUND  --       0 Draws,      12 Flashes
+D55:  0.5118 ROUND  --       0 Draws,       2 Flashes
+D59:  0.0600 SQUARE --       0 Draws,      22 Flashes
+D60:  0.0750 ROUND  --       0 Draws,      20 Flashes
+D61:  0.0700 ROUND  --       0 Draws,       2 Flashes
+D62:  0.0700 SQUARE --       0 Draws,       1 Flashes
+D63:  0.0350 ROUND  --       0 Draws,      10 Flashes
+D64:  0.0350 SQUARE --       0 Draws,       2 Flashes
+D65:  0.0650 ROUND  --       0 Draws,      14 Flashes
+D66:  0.0920 ROUND  --       0 Draws,      34 Flashes
+D67:  0.0580 ROUND  --       0 Draws,      24 Flashes
+D68:  0.0800 ROUND  --       0 Draws,      17 Flashes
+D73:  0.0600 ROUND  --       0 Draws,       5 Flashes
+D74:  0.0580 SQUARE --       0 Draws,       1 Flashes
+D75:  0.0220 ROUND  --       0 Draws,      65 Flashes
+D76:  0.0220 ROUND  --       0 Draws,      48 Flashes
+D77:  0.0250 ROUND  --     264 Draws,       0 Flashes
+D78:  0.0010 ROUND  --    3429 Draws,       0 Flashes
+D80:  0.0500 ROUND  --       0 Draws,       6 Flashes
+---------------------------------------------------------
+ 22 D-Codes      -----   19998 Draws,     756 Flashes
+
+*********************************************************
+
+Output file: TDC_16IN2.GBR
+
+Aperture totals for TDC_16IN2.GBR:
+---------------------------------------------------------
+D47:  0.0100 ROUND  --     477 Draws,       0 Flashes
+D52:  0.0220 ROUND  --       0 Draws,     471 Flashes
+D53:  0.0060 ROUND  --      30 Draws,       0 Flashes
+D54:  0.2000 ROUND  --       0 Draws,      12 Flashes
+D55:  0.5118 ROUND  --       0 Draws,       2 Flashes
+D59:  0.0600 SQUARE --       0 Draws,      22 Flashes
+D60:  0.0750 ROUND  --       0 Draws,      20 Flashes
+D61:  0.0700 ROUND  --       0 Draws,       2 Flashes
+D62:  0.0700 SQUARE --       0 Draws,       1 Flashes
+D63:  0.0350 ROUND  --       0 Draws,      10 Flashes
+D64:  0.0350 SQUARE --       0 Draws,       2 Flashes
+D65:  0.0650 ROUND  --       0 Draws,      14 Flashes
+D66:  0.0920 ROUND  --       0 Draws,      34 Flashes
+D67:  0.0580 ROUND  --       0 Draws,      24 Flashes
+D68:  0.0800 ROUND  --       0 Draws,      17 Flashes
+D73:  0.0600 ROUND  --       0 Draws,       5 Flashes
+D74:  0.0580 SQUARE --       0 Draws,       1 Flashes
+D75:  0.0220 ROUND  --       0 Draws,      65 Flashes
+D76:  0.0220 ROUND  --       0 Draws,      48 Flashes
+D77:  0.0250 ROUND  --      35 Draws,       0 Flashes
+D78:  0.0010 ROUND  --  121481 Draws,       0 Flashes
+D80:  0.0500 ROUND  --       0 Draws,       6 Flashes
+---------------------------------------------------------
+ 22 D-Codes      -----  122023 Draws,     756 Flashes
+
+*********************************************************
+
+Output file: TDC_16SMT.GBR
+
+Aperture totals for TDC_16SMT.GBR:
+---------------------------------------------------------
+D52:  0.0220 ROUND  --       0 Draws,     471 Flashes
+D54:  0.2000 ROUND  --       0 Draws,      12 Flashes
+D55:  0.5118 ROUND  --       0 Draws,       2 Flashes
+D56:  0.0800 SQUARE --       0 Draws,      37 Flashes
+D58:  0.0500 SQUARE --       0 Draws,     474 Flashes
+D60:  0.0750 ROUND  --       0 Draws,      20 Flashes
+D61:  0.0700 ROUND  --       0 Draws,       5 Flashes
+D62:  0.0700 SQUARE --       0 Draws,       1 Flashes
+D65:  0.0650 ROUND  --       0 Draws,      14 Flashes
+D67:  0.0580 ROUND  --       0 Draws,       7 Flashes
+D68:  0.0800 ROUND  --       0 Draws,       2 Flashes
+D74:  0.0580 SQUARE --       0 Draws,       1 Flashes
+D75:  0.0220 ROUND  --       0 Draws,      65 Flashes
+D76:  0.0220 ROUND  --       0 Draws,      48 Flashes
+D81:  0.1050 x 0.1200 RECTANGLE -----       6 Flashes
+D82:  0.0790 SQUARE --       0 Draws,       2 Flashes
+D83:  0.0600 x 0.0800 RECTANGLE -----      68 Flashes
+D84:  0.0370 ROUND  --       0 Draws,      10 Flashes
+D85:  0.0370 SQUARE --       0 Draws,       2 Flashes
+D86:  0.0650 SQUARE --       0 Draws,      21 Flashes
+D87:  0.0500 x 0.1500 OBLONG    -----      14 Flashes
+D88:  0.0500 x 0.1500 RECTANGLE -----       2 Flashes
+D89:  0.0620 ROUND  --       0 Draws,      17 Flashes
+D90:  0.0900 ROUND  --       0 Draws,      17 Flashes
+D91:  0.0520 x 0.0500 RECTANGLE -----       6 Flashes
+D92:  0.0700 x 0.0110 OBLONG    -----     188 Flashes
+D93:  0.0700 x 0.0110 RECTANGLE -----      20 Flashes
+D94:  0.0110 x 0.0700 OBLONG    -----     186 Flashes
+D95:  0.0110 x 0.0700 RECTANGLE -----      22 Flashes
+D96:  0.0250 x 0.0940 OBLONG    -----     119 Flashes
+D97:  0.0250 x 0.0940 RECTANGLE -----      17 Flashes
+D98:  0.0860 x 0.0250 OBLONG    -----      21 Flashes
+D99:  0.0860 x 0.0250 RECTANGLE -----       3 Flashes
+D100: 0.0945 x 0.1102 RECTANGLE -----       4 Flashes
+D102: 0.0550 ROUND  --       0 Draws,       6 Flashes
+---------------------------------------------------------
+ 35 D-Codes      -----       0 Draws,    1910 Flashes
+
+*********************************************************
+
+Output file: TDC_16SMB.GBR
+
+Aperture totals for TDC_16SMB.GBR:
+---------------------------------------------------------
+D52:  0.0220 ROUND  --       0 Draws,     471 Flashes
+D54:  0.2000 ROUND  --       0 Draws,      12 Flashes
+D55:  0.5118 ROUND  --       0 Draws,       2 Flashes
+D56:  0.0800 SQUARE --       0 Draws,      19 Flashes
+D57:  0.1200 x 0.1050 RECTANGLE -----       4 Flashes
+D58:  0.0500 SQUARE --       0 Draws,     186 Flashes
+D59:  0.0600 SQUARE --       0 Draws,      32 Flashes
+D60:  0.0750 ROUND  --       0 Draws,      20 Flashes
+D61:  0.0700 ROUND  --       0 Draws,       5 Flashes
+D62:  0.0700 SQUARE --       0 Draws,       1 Flashes
+D65:  0.0650 ROUND  --       0 Draws,      14 Flashes
+D67:  0.0580 ROUND  --       0 Draws,       7 Flashes
+D68:  0.0800 ROUND  --       0 Draws,       2 Flashes
+D69:  0.0650 x 0.0160 OBLONG    -----      14 Flashes
+D70:  0.0650 x 0.0160 RECTANGLE -----       2 Flashes
+D71:  0.0900 x 0.0160 OBLONG    -----      38 Flashes
+D72:  0.0900 x 0.0160 RECTANGLE -----       2 Flashes
+D74:  0.0580 SQUARE --       0 Draws,       1 Flashes
+D75:  0.0220 ROUND  --       0 Draws,      65 Flashes
+D76:  0.0220 ROUND  --       0 Draws,      48 Flashes
+D84:  0.0370 ROUND  --       0 Draws,      10 Flashes
+D85:  0.0370 SQUARE --       0 Draws,       2 Flashes
+D86:  0.0650 SQUARE --       0 Draws,      21 Flashes
+D89:  0.0620 ROUND  --       0 Draws,      17 Flashes
+D90:  0.0900 ROUND  --       0 Draws,      17 Flashes
+D102: 0.0550 ROUND  --       0 Draws,       6 Flashes
+---------------------------------------------------------
+ 26 D-Codes      -----       0 Draws,    1018 Flashes
+
+*********************************************************
+
+Output file: TDC_16SPT.GBR
+
+Aperture totals for TDC_16SPT.GBR:
+---------------------------------------------------------
+D54:  0.2000 ROUND  --       0 Draws,      12 Flashes
+D56:  0.0800 SQUARE --       0 Draws,      37 Flashes
+D58:  0.0500 SQUARE --       0 Draws,     474 Flashes
+D65:  0.0650 ROUND  --       0 Draws,      14 Flashes
+D68:  0.0800 ROUND  --       0 Draws,       2 Flashes
+D81:  0.1050 x 0.1200 RECTANGLE -----       6 Flashes
+D82:  0.0790 SQUARE --       0 Draws,       2 Flashes
+D83:  0.0600 x 0.0800 RECTANGLE -----      68 Flashes
+D86:  0.0650 SQUARE --       0 Draws,      21 Flashes
+D87:  0.0500 x 0.1500 OBLONG    -----      14 Flashes
+D88:  0.0500 x 0.1500 RECTANGLE -----       2 Flashes
+D90:  0.0900 ROUND  --       0 Draws,      17 Flashes
+D91:  0.0520 x 0.0500 RECTANGLE -----       6 Flashes
+D92:  0.0700 x 0.0110 OBLONG    -----     188 Flashes
+D93:  0.0700 x 0.0110 RECTANGLE -----      20 Flashes
+D94:  0.0110 x 0.0700 OBLONG    -----     186 Flashes
+D95:  0.0110 x 0.0700 RECTANGLE -----      22 Flashes
+D96:  0.0250 x 0.0940 OBLONG    -----     119 Flashes
+D97:  0.0250 x 0.0940 RECTANGLE -----      17 Flashes
+D98:  0.0860 x 0.0250 OBLONG    -----      21 Flashes
+D99:  0.0860 x 0.0250 RECTANGLE -----       3 Flashes
+---------------------------------------------------------
+ 21 D-Codes      -----       0 Draws,    1251 Flashes
+
+*********************************************************
+
+Output file: TDC_16SPB.GBR
+
+Aperture totals for TDC_16SPB.GBR:
+---------------------------------------------------------
+D54:  0.2000 ROUND  --       0 Draws,      12 Flashes
+D56:  0.0800 SQUARE --       0 Draws,      19 Flashes
+D57:  0.1200 x 0.1050 RECTANGLE -----       4 Flashes
+D58:  0.0500 SQUARE --       0 Draws,     186 Flashes
+D59:  0.0600 SQUARE --       0 Draws,      32 Flashes
+D65:  0.0650 ROUND  --       0 Draws,      14 Flashes
+D68:  0.0800 ROUND  --       0 Draws,       2 Flashes
+D69:  0.0650 x 0.0160 OBLONG    -----      14 Flashes
+D70:  0.0650 x 0.0160 RECTANGLE -----       2 Flashes
+D71:  0.0900 x 0.0160 OBLONG    -----      38 Flashes
+D72:  0.0900 x 0.0160 RECTANGLE -----       2 Flashes
+D86:  0.0650 SQUARE --       0 Draws,      21 Flashes
+D90:  0.0900 ROUND  --       0 Draws,      17 Flashes
+---------------------------------------------------------
+ 13 D-Codes      -----       0 Draws,     363 Flashes
+
+*********************************************************
+
+Output file: TDC_16SST.GBR
+
+Aperture totals for TDC_16SST.GBR:
+---------------------------------------------------------
+D44:  0.0080 ROUND  --    1065 Draws,       0 Flashes
+D47:  0.0100 ROUND  --     440 Draws,       0 Flashes
+D53:  0.0060 ROUND  --    9693 Draws,       0 Flashes
+D56:  0.0800 SQUARE --       0 Draws,       1 Flashes
+D65:  0.0650 ROUND  --       0 Draws,      14 Flashes
+D68:  0.0800 ROUND  --       0 Draws,       2 Flashes
+D78:  0.0010 ROUND  --       8 Draws,       0 Flashes
+D86:  0.0650 SQUARE --       0 Draws,      21 Flashes
+D90:  0.0900 ROUND  --       0 Draws,      17 Flashes
+D103: 0.0050 ROUND  --      94 Draws,       0 Flashes
+---------------------------------------------------------
+ 10 D-Codes      -----   11300 Draws,      55 Flashes
+
+*********************************************************
+
+Output file: TDC_16SSB.GBR
+
+Aperture totals for TDC_16SSB.GBR:
+---------------------------------------------------------
+D47:  0.0100 ROUND  --      54 Draws,       0 Flashes
+D53:  0.0060 ROUND  --    2962 Draws,       0 Flashes
+D56:  0.0800 SQUARE --       0 Draws,       1 Flashes
+D65:  0.0650 ROUND  --       0 Draws,      14 Flashes
+D68:  0.0800 ROUND  --       0 Draws,       2 Flashes
+D86:  0.0650 SQUARE --       0 Draws,      21 Flashes
+D90:  0.0900 ROUND  --       0 Draws,      17 Flashes
+D103: 0.0050 ROUND  --      46 Draws,       0 Flashes
+---------------------------------------------------------
+  8 D-Codes      -----    3062 Draws,      55 Flashes
+
+*********************************************************
+
+Output file: TDC_16MFG.FAB
+
+Aperture totals for TDC_16MFG.FAB:
+---------------------------------------------------------
+D47:  0.0100 ROUND  --       4 Draws,       0 Flashes
+D104: 0.0140 ROUND  --       0 Draws,      65 Flashes
+D105: 0.0140 ROUND  --       0 Draws,      39 Flashes
+D106: 0.0140 ROUND  --       0 Draws,     480 Flashes
+---------------------------------------------------------
+  4 D-Codes      -----       4 Draws,     584 Flashes
+
+
+*********************************************************
+
+Aperture totals for entire project:
+---------------------------------------------------------
+D10:  0.2000 ROUND  --       0 Draws,      12 Flashes
+D11:  0.5118 ROUND  --       0 Draws,       2 Flashes
+D12:  0.0800 SQUARE --       0 Draws,      36 Flashes
+D13:  0.1050 x 0.1200 RECTANGLE -----       6 Flashes
+D14:  0.0500 SQUARE --       0 Draws,     474 Flashes
+D15:  0.0790 SQUARE --       0 Draws,       2 Flashes
+D16:  0.0600 x 0.0800 RECTANGLE -----      68 Flashes
+D17:  0.0750 ROUND  --       0 Draws,      20 Flashes
+D18:  0.0700 ROUND  --       0 Draws,       2 Flashes
+D19:  0.0700 SQUARE --       0 Draws,       1 Flashes
+D20:  0.0350 ROUND  --       0 Draws,      10 Flashes
+D21:  0.0350 SQUARE --       0 Draws,       2 Flashes
+D22:  0.0650 ROUND  --       0 Draws,      14 Flashes
+D23:  0.0600 SQUARE --       0 Draws,      22 Flashes
+D24:  0.0500 x 0.1500 OBLONG    -----      14 Flashes
+D25:  0.0500 x 0.1500 RECTANGLE -----       2 Flashes
+D26:  0.0920 ROUND  --       0 Draws,      34 Flashes
+D27:  0.0580 ROUND  --       0 Draws,      24 Flashes
+D28:  0.0800 ROUND  --       0 Draws,      17 Flashes
+D29:  0.0520 x 0.0500 RECTANGLE -----       6 Flashes
+D30:  0.0700 x 0.0110 OBLONG    -----     188 Flashes
+D31:  0.0700 x 0.0110 RECTANGLE -----      20 Flashes
+D32:  0.0110 x 0.0700 OBLONG    -----     186 Flashes
+D33:  0.0110 x 0.0700 RECTANGLE -----      22 Flashes
+D34:  0.0250 x 0.0940 OBLONG    -----     119 Flashes
+D35:  0.0250 x 0.0940 RECTANGLE -----      17 Flashes
+D36:  0.0600 ROUND  --       0 Draws,       5 Flashes
+D37:  0.0860 x 0.0250 OBLONG    -----      21 Flashes
+D38:  0.0860 x 0.0250 RECTANGLE -----       3 Flashes
+D39:  0.0866 x 0.1023 RECTANGLE -----       4 Flashes
+D40:  0.0580 SQUARE --       0 Draws,       1 Flashes
+D41:  0.0220 ROUND  --       0 Draws,      65 Flashes
+D42:  0.0300 ROUND  --     148 Draws,       0 Flashes
+D43:  0.0160 ROUND  --     848 Draws,       0 Flashes
+D44:  0.0080 ROUND  --    2705 Draws,       0 Flashes
+D45:  0.0120 ROUND  --      97 Draws,       0 Flashes
+D46:  0.0220 ROUND  --       0 Draws,    1011 Flashes
+D47:  0.0100 ROUND  --   17367 Draws,       0 Flashes
+D48:  0.0150 ROUND  --       3 Draws,       0 Flashes
+D49:  0.0200 ROUND  --     287 Draws,       0 Flashes
+D50:  0.0500 ROUND  --       0 Draws,      12 Flashes
+D51:  0.0400 ROUND  --       6 Draws,       0 Flashes
+D52:  0.0220 ROUND  --       0 Draws,    1910 Flashes
+D53:  0.0060 ROUND  --   13088 Draws,       0 Flashes
+D54:  0.2000 ROUND  --       0 Draws,      84 Flashes
+D55:  0.5118 ROUND  --       0 Draws,      10 Flashes
+D56:  0.0800 SQUARE --       0 Draws,     132 Flashes
+D57:  0.1200 x 0.1050 RECTANGLE -----      12 Flashes
+D58:  0.0500 SQUARE --       0 Draws,    1506 Flashes
+D59:  0.0600 SQUARE --       0 Draws,     162 Flashes
+D60:  0.0750 ROUND  --       0 Draws,     100 Flashes
+D61:  0.0700 ROUND  --       0 Draws,      16 Flashes
+D62:  0.0700 SQUARE --       0 Draws,       5 Flashes
+D63:  0.0350 ROUND  --       0 Draws,      30 Flashes
+D64:  0.0350 SQUARE --       0 Draws,       6 Flashes
+D65:  0.0650 ROUND  --       0 Draws,     126 Flashes
+D66:  0.0920 ROUND  --       0 Draws,     102 Flashes
+D67:  0.0580 ROUND  --       0 Draws,      86 Flashes
+D68:  0.0800 ROUND  --       0 Draws,      63 Flashes
+D69:  0.0650 x 0.0160 OBLONG    -----      42 Flashes
+D70:  0.0650 x 0.0160 RECTANGLE -----       6 Flashes
+D71:  0.0900 x 0.0160 OBLONG    -----     114 Flashes
+D72:  0.0900 x 0.0160 RECTANGLE -----       6 Flashes
+D73:  0.0600 ROUND  --       0 Draws,      15 Flashes
+D74:  0.0580 SQUARE --       0 Draws,       5 Flashes
+D75:  0.0220 ROUND  --       0 Draws,     325 Flashes
+D76:  0.0220 ROUND  --       0 Draws,     193 Flashes
+D77:  0.0250 ROUND  --     299 Draws,       0 Flashes
+D78:  0.0010 ROUND  --  124918 Draws,       0 Flashes
+D80:  0.0500 ROUND  --       0 Draws,      12 Flashes
+D81:  0.1050 x 0.1200 RECTANGLE -----      12 Flashes
+D82:  0.0790 SQUARE --       0 Draws,       4 Flashes
+D83:  0.0600 x 0.0800 RECTANGLE -----     136 Flashes
+D84:  0.0370 ROUND  --       0 Draws,      20 Flashes
+D85:  0.0370 SQUARE --       0 Draws,       4 Flashes
+D86:  0.0650 SQUARE --       0 Draws,     126 Flashes
+D87:  0.0500 x 0.1500 OBLONG    -----      28 Flashes
+D88:  0.0500 x 0.1500 RECTANGLE -----       4 Flashes
+D89:  0.0620 ROUND  --       0 Draws,      34 Flashes
+D90:  0.0900 ROUND  --       0 Draws,     102 Flashes
+D91:  0.0520 x 0.0500 RECTANGLE -----      12 Flashes
+D92:  0.0700 x 0.0110 OBLONG    -----     376 Flashes
+D93:  0.0700 x 0.0110 RECTANGLE -----      40 Flashes
+D94:  0.0110 x 0.0700 OBLONG    -----     372 Flashes
+D95:  0.0110 x 0.0700 RECTANGLE -----      44 Flashes
+D96:  0.0250 x 0.0940 OBLONG    -----     238 Flashes
+D97:  0.0250 x 0.0940 RECTANGLE -----      34 Flashes
+D98:  0.0860 x 0.0250 OBLONG    -----      42 Flashes
+D99:  0.0860 x 0.0250 RECTANGLE -----       6 Flashes
+D100: 0.0945 x 0.1102 RECTANGLE -----       4 Flashes
+D102: 0.0550 ROUND  --       0 Draws,      12 Flashes
+D103: 0.0050 ROUND  --     140 Draws,       0 Flashes
+D104: 0.0140 ROUND  --       0 Draws,      65 Flashes
+D105: 0.0140 ROUND  --       0 Draws,      39 Flashes
+D106: 0.0140 ROUND  --       0 Draws,     480 Flashes
+---------------------------------------------------------
+ 95 D-Codes      -----  159906 Draws,    9744 Flashes
+
+
+No warnings or errors.

@@ -1,0 +1,150 @@
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd e:\p\tdc\2014\chrono48a\code\v3\tdc48stop_20140630/_ngo -i  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd e:\p\tdc\2014\chrono48a\code\v3\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630n/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630n/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630n/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630n/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area  -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+xst -intstyle ise -ifn __projnav/chrono48_stop3.xst -ofn chrono48_stop3.syr
+ngdbuild -intstyle ise -dd d:\tdc48stop_20140630n/_ngo -uc chrono48_stop.ucf  -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+par -w -intstyle ise -ol std -t 1 chrono48_stop3_map.ncd chrono48_stop3.ncd chrono48_stop3.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono48_stop3 chrono48_stop3.ncd -o chrono48_stop3.twr chrono48_stop3.pcf
+bitgen -intstyle ise -f chrono48_stop3.ut chrono48_stop3.ncd

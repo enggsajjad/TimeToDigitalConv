@@ -1,0 +1,1 @@
+set allSynthModules {clk_mul.MOD testcounter.MOD router.MOD gen_sel_signals.MOD fpga_addr_out.MOD DAC.MOD cc8ce1.MOD cc24ce.MOD counter32bit.MOD inst_decoder.MOD uart_baud.MOD uart_rx.MOD uart_tx.MOD synclogic.MOD chrono48_start.MOD}

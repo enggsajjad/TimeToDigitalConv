@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn __projnav/chrono32c.xst -ofn chrono32c.syr
+ngdbuild -intstyle ise -dd e:\p\tdc\2013\chrono32c_fpga_r2/_ngo -uc chrono32c.ucf  -p xc2s200-pq208-6 chrono32c.ngc chrono32c.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono32c_map.ncd chrono32c.ngd chrono32c.pcf
+par -w -intstyle ise -ol std -t 1 chrono32c_map.ncd chrono32c.ncd chrono32c.pcf
+trce -intstyle ise -e 3 -l 3 -xml chrono32c chrono32c.ncd -o chrono32c.twr chrono32c.pcf
+bitgen -intstyle ise -f chrono32c.ut chrono32c.ncd

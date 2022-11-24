@@ -1,0 +1,39 @@
+// Verilog model created from stop_channel.sch - Wed Jul 02 08:49:07 2014
+
+`timescale 1ns / 1ps
+
+module stop_channel(clk, reset, sel_ver, start_pulse, stop_pulse, test_stop,
+      load_reg, pulse_clk_sync, ver_out);
+
+    input clk;
+    input reset;
+    input sel_ver;
+    input start_pulse;
+    input stop_pulse;
+    input test_stop;
+   output load_reg;
+   output pulse_clk_sync;
+   output [39:0] ver_out;
+   
+   wire logic0;
+   wire XLXN_10;
+   wire XLXN_12;
+   wire XLXN_16;
+   
+   GND XLXI_9 (.G(logic0));
+   XOR2 XLXI_15 (.I0(start_pulse), .I1(XLXN_12), .O(load_reg));
+   AND2 XLXI_16 (.I0(start_pulse), .I1(stop_pulse), .O(XLXN_10));
+   FDC XLXI_17 (.C(clk), .CLR(reset), .D(pulse_clk_sync), .Q(XLXN_12));
+   // synthesis attribute INIT of XLXI_17 is "0"
+   // synopsys translate_off
+   defparam XLXI_17.INIT = 1'b0;
+   // synopsys translate_on
+   synclogic XLXI_18 (.clk(clk), .pulse(XLXN_10), .reset(reset),
+         .test_pulse(test_stop), .pulse_clk_sync(pulse_clk_sync),
+         .pulse_sync(XLXN_16));
+   // synthesis attribute RLOC of XLXI_18 is "R1C0"
+   vernier_40_gates XLXI_19 (.logic0(logic0), .pulse_clk_sync(pulse_clk_sync),
+         .pulse_sync(XLXN_16), .reset(reset), .sel_ver(sel_ver),
+         .Qout(ver_out[39:0]));
+   // synthesis attribute RLOC of XLXI_19 is "R0C1"
+endmodule

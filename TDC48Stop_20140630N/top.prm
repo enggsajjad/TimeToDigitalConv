@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o d:\tdc48stop_20140630n//top -u 0 D:\TDC48Stop_20140630N\chrono48_stop3.bit -x xc17v01 
+
+PROM d:\tdc48stop_20140630n//top.prm map: Fri Jul 18 11:52:30 2014
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          205K
+PROM start    0000:0000
+PROM end      0003:33ff
+PROM checksum 01520b47
+
+        Addr1        Addr2 File(s)
+    0000:0000    0002:8c43 D:/TDC48Stop_20140630N/chrono48_stop3.bit

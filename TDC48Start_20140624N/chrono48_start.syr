@@ -1,0 +1,823 @@
+Release 6.1i - xst G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to __projnav
+CPU : 0.00 / 0.16 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.16 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: chrono48_start.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : chrono48_start.prj
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+Verilog Include Directory          : 
+
+---- Target Parameters
+Output File Name                   : chrono48_start
+Output Format                      : NGC
+Target Device                      : xc2s200-6-pq208
+
+---- Source Options
+Top Module Name                    : chrono48_start
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Equivalent register Removal        : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+Global Optimization                : AllClockNets
+RTL Output                         : Yes
+Write Timing Constraints           : NO
+Hierarchy Separator                : _
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : chrono48_start.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+Optimize Instantiated Primitives   : NO
+
+=========================================================================
+
+WARNING:Xst:1885 - LSO file is empty, default list of libraries is used
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling source file "clk_mul.vf"
+Module <clk_mul> compiled
+Compiling source file "testcounter.v"
+Module <testcounter> compiled
+Compiling source file "router.v"
+Module <router> compiled
+Compiling source file "gen_sel_signals.v"
+Module <gen_sel_signals> compiled
+Compiling source file "fpga_addr_out.v"
+Module <fpga_addr_out> compiled
+Compiling source file "DAC.v"
+Module <DAC> compiled
+Compiling source file "cc8ce1.vf"
+Module <cc8ce1> compiled
+Compiling source file "cc24ce.vf"
+Module <cc24ce> compiled
+Compiling source file "counter32bit.vf"
+Module <counter32bit> compiled
+Compiling source file "inst_decoder.v"
+Compiling source file "uart_baud.v"
+Module <inst_decoder> compiled
+Module <uart_baud> compiled
+Compiling source file "uart_rx.v"
+Module <uart_rx> compiled
+Compiling source file "uart_tx.v"
+Module <uart_tx> compiled
+Compiling source file "synclogic.vf"
+Module <synclogic> compiled
+Compiling source file "Chrono48_start.vf"
+Module <chrono48_start> compiled
+No errors in compilation
+Analysis of file <chrono48_start.prj> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <chrono48_start>.
+WARNING:Xst:852 - Chrono48_start.vf line 109: Unconnected input port 'test_pulse' of instance 'XLXI_122' is tied to GND.
+Module <chrono48_start> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_4> in unit <chrono48_start>.
+    Set user-defined property "RLOC_ORIGIN =  R27C7" for instance <XLXI_120> in unit <chrono48_start>.
+Analyzing module <clk_mul>.
+Module <clk_mul> is correct for synthesis.
+ 
+    Set user-defined property "LOC =  dll0" for instance <XLXI_1> in unit <clk_mul>.
+    Set user-defined property "CLKDV_DIVIDE =  16.000000" for instance <XLXI_1> in unit <clk_mul>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  true" for instance <XLXI_1> in unit <clk_mul>.
+    Set user-defined property "LOC =  dll1" for instance <XLXI_2> in unit <clk_mul>.
+    Set user-defined property "CLKDV_DIVIDE =  16.000000" for instance <XLXI_2> in unit <clk_mul>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  true" for instance <XLXI_2> in unit <clk_mul>.
+    Set user-defined property "LOC =  gclkbuf0" for instance <XLXI_4> in unit <clk_mul>.
+    Set user-defined property "LOC =  gclkbuf1" for instance <XLXI_5> in unit <clk_mul>.
+Analyzing module <CLKDLL>.
+Analyzing module <IBUFG>.
+Analyzing module <BUFG>.
+Analyzing module <INV>.
+Analyzing module <FDC>.
+Analyzing module <IBUF>.
+Analyzing module <OBUF_F_24>.
+Analyzing module <router>.
+Module <router> is correct for synthesis.
+ 
+Analyzing module <OBUF>.
+Analyzing module <testcounter>.
+Module <testcounter> is correct for synthesis.
+ 
+Analyzing module <OR2>.
+Analyzing module <gen_sel_signals>.
+Module <gen_sel_signals> is correct for synthesis.
+ 
+Analyzing module <fpga_addr_out>.
+Module <fpga_addr_out> is correct for synthesis.
+ 
+Analyzing module <DAC>.
+Module <DAC> is correct for synthesis.
+ 
+Analyzing module <counter32bit>.
+Module <counter32bit> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C0" for instance <XLXI_1> in unit <counter32bit>.
+    Set user-defined property "INIT =  0" for instance <XLXI_5> in unit <counter32bit>.
+    Set user-defined property "INIT =  0" for instance <XLXI_9> in unit <counter32bit>.
+Analyzing module <cc24ce>.
+Module <cc24ce> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C0" for instance <XLXI_2> in unit <cc24ce>.
+    Set user-defined property "RLOC =  R4C0" for instance <XLXI_3> in unit <cc24ce>.
+    Set user-defined property "RLOC =  R8C0" for instance <XLXI_4> in unit <cc24ce>.
+    Set user-defined property "RLOC =  R12C0" for instance <XLXI_7> in unit <cc24ce>.
+Analyzing module <cc8ce1>.
+Module <cc8ce1> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R3C0.S0" for instance <I_36_4> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R3C0.S0" for instance <I_36_26> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R3C0.S0" for instance <I_36_35> in unit <cc8ce1>.
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R3C0.S0" for instance <I_36_36> in unit <cc8ce1>.
+    Set user-defined property "INIT =  0" for instance <I_36_36> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R2C0.S0" for instance <I_36_224> in unit <cc8ce1>.
+    Set user-defined property "INIT =  0" for instance <I_36_224> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R2C0.S0" for instance <I_36_233> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R2C0.S0" for instance <I_36_237> in unit <cc8ce1>.
+    Set user-defined property "INIT =  0" for instance <I_36_237> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R2C0.S0" for instance <I_36_246> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R1C0.S0" for instance <I_36_250> in unit <cc8ce1>.
+    Set user-defined property "INIT =  0" for instance <I_36_250> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R1C0.S0" for instance <I_36_259> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R1C0.S0" for instance <I_36_263> in unit <cc8ce1>.
+    Set user-defined property "INIT =  0" for instance <I_36_263> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R1C0.S0" for instance <I_36_272> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R0C0.S0" for instance <I_36_276> in unit <cc8ce1>.
+    Set user-defined property "INIT =  0" for instance <I_36_276> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R0C0.S0" for instance <I_36_285> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R0C0.S0" for instance <I_36_289> in unit <cc8ce1>.
+    Set user-defined property "INIT =  0" for instance <I_36_289> in unit <cc8ce1>.
+    Set user-defined property "RLOC =  R0C0.S0" for instance <I_36_298> in unit <cc8ce1>.
+Analyzing module <MUXCY_L>.
+Analyzing module <XORCY>.
+Analyzing module <MUXCY>.
+Analyzing module <AND2B1>.
+Analyzing module <FDCE>.
+Analyzing module <inst_decoder>.
+Module <inst_decoder> is correct for synthesis.
+ 
+Analyzing module <uart_baud>.
+Module <uart_baud> is correct for synthesis.
+ 
+Analyzing module <uart_rx>.
+Module <uart_rx> is correct for synthesis.
+ 
+Analyzing module <uart_tx>.
+Module <uart_tx> is correct for synthesis.
+ 
+Analyzing module <GND>.
+Analyzing module <synclogic>.
+Module <synclogic> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C0.S0" for instance <ff_clksyn> in unit <synclogic>.
+    Set user-defined property "INIT =  0" for instance <ff_clksyn> in unit <synclogic>.
+    Set user-defined property "RLOC =  R0C0.S1" for instance <XLXI_4> in unit <synclogic>.
+    Set user-defined property "INIT =  0" for instance <XLXI_4> in unit <synclogic>.
+    Set user-defined property "RLOC =  R0C0.S1" for instance <XLXI_6> in unit <synclogic>.
+Analyzing module <FMAP>.
+Analyzing module <VCC>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <cc8ce1>.
+    Related source file is cc8ce1.vf.
+Unit <cc8ce1> synthesized.
+
+
+Synthesizing Unit <cc24ce>.
+    Related source file is cc24ce.vf.
+WARNING:Xst:646 - Signal <ovf26> is assigned but never used.
+Unit <cc24ce> synthesized.
+
+
+Synthesizing Unit <synclogic>.
+    Related source file is synclogic.vf.
+Unit <synclogic> synthesized.
+
+
+Synthesizing Unit <uart_tx>.
+    Related source file is uart_tx.v.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0001                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit register for signal <data_buf>.
+    Found 8-bit register for signal <datareg>.
+    Found 1-bit register for signal <din_rdyreg>.
+    Found 4-bit up counter for signal <sample_count>.
+    Found 4-bit up counter for signal <shift_count>.
+    Found 9 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+Unit <uart_tx> synthesized.
+
+
+Synthesizing Unit <uart_rx>.
+    Related source file is uart_rx.v.
+WARNING:Xst:646 - Signal <dout_byte_temp<0>> is assigned but never used.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Clock enable       | enable (positive)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00001                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <dout_byte>.
+    Found 4-bit up counter for signal <bit_count>.
+    Found 10-bit register for signal <dout_byte_temp>.
+    Found 4-bit up counter for signal <sample_count>.
+    Found 3-bit register for signal <ser_in_reg>.
+    Found 1-bit register for signal <start>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  22 D-type flip-flop(s).
+Unit <uart_rx> synthesized.
+
+
+Synthesizing Unit <uart_baud>.
+    Related source file is uart_baud.v.
+    Found 8-bit up counter for signal <cnt1>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <uart_baud> synthesized.
+
+
+Synthesizing Unit <inst_decoder>.
+    Related source file is inst_decoder.v.
+WARNING:Xst:646 - Signal <data_reg<5>> is assigned but never used.
+WARNING:Xst:646 - Signal <shift<5>> is assigned but never used.
+    Found finite state machine <FSM_2> for signal <cstate>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 20                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | res (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000000001                                    |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit register for signal <pkt_addr>.
+    Found 4-bit comparator equal for signal <$n0025> created at line 210.
+    Found 8-bit register for signal <data_reg>.
+    Found 4-bit register for signal <dev_addr_reg>.
+    Found 6-bit register for signal <shift>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <inst_decoder> synthesized.
+
+
+Synthesizing Unit <counter32bit>.
+    Related source file is counter32bit.vf.
+Unit <counter32bit> synthesized.
+
+
+Synthesizing Unit <DAC>.
+    Related source file is DAC.v.
+    Found 16x8-bit ROM for signal <dacinreg>.
+    Found 8-bit tristate buffer for signal <dac_val>.
+    Found 8-bit adder carry out for signal <$n0002>.
+    Found 8-bit register for signal <Accum>.
+    Found 4-bit up counter for signal <DACaddr>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Adder/Subtracter(s).
+	inferred   8 Tristate(s).
+Unit <DAC> synthesized.
+
+
+Synthesizing Unit <fpga_addr_out>.
+    Related source file is fpga_addr_out.v.
+    Found 8-bit tristate buffer for signal <dout>.
+    Summary:
+	inferred   8 Tristate(s).
+Unit <fpga_addr_out> synthesized.
+
+
+Synthesizing Unit <gen_sel_signals>.
+    Related source file is gen_sel_signals.v.
+WARNING:Xst:646 - Signal <sel_out<31:24>> is assigned but never used.
+    Found 32x32-bit ROM for signal <sel_out>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <gen_sel_signals> synthesized.
+
+
+Synthesizing Unit <testcounter>.
+    Related source file is testcounter.v.
+    Found 1-bit register for signal <testing>.
+    Found 20-bit up counter for signal <test_cntr>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <testcounter> synthesized.
+
+
+Synthesizing Unit <router>.
+    Related source file is router.v.
+    Found 1-bit tristate buffer for signal <tx_uc>.
+    Found 1-bit 4-to-1 multiplexer for signal <tx_uc1>.
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   1 Tristate(s).
+Unit <router> synthesized.
+
+
+Synthesizing Unit <clk_mul>.
+    Related source file is clk_mul.vf.
+Unit <clk_mul> synthesized.
+
+
+Synthesizing Unit <chrono48_start>.
+    Related source file is Chrono48_start.vf.
+WARNING:Xst:653 - Signal <XLXN_154> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <testing> is assigned but never used.
+WARNING:Xst:646 - Signal <uart_rdy> is assigned but never used.
+Unit <chrono48_start> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# FSMs                             : 3
+# ROMs                             : 2
+  16x8-bit ROM                     : 1
+  32x32-bit ROM                    : 1
+# Registers                        : 29
+  1-bit register                   : 22
+  5-bit register                   : 1
+  8-bit register                   : 4
+  9-bit register                   : 1
+  4-bit register                   : 1
+# Counters                         : 7
+  4-bit up counter                 : 5
+  8-bit up counter                 : 1
+  20-bit up counter                : 1
+# Multiplexers                     : 2
+  2-to-1 multiplexer               : 1
+  1-bit 4-to-1 multiplexer         : 1
+# Tristates                        : 3
+  1-bit tristate buffer            : 1
+  8-bit tristate buffer            : 2
+# Adders/Subtractors               : 1
+  8-bit adder carry out            : 1
+# Comparators                      : 1
+  4-bit comparator equal           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Selecting encoding for FSM_2 ...
+Optimizing FSM <FSM_2> on signal <cstate> with one-hot encoding.
+Selecting encoding for FSM_1 ...
+Optimizing FSM <FSM_1> on signal <state> with one-hot encoding.
+Selecting encoding for FSM_0 ...
+Optimizing FSM <FSM_0> on signal <state> with one-hot encoding.
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1291 - FF/Latch <data_reg_5> is unconnected in block <inst_decoder>.
+WARNING:Xst:1291 - FF/Latch <testing> is unconnected in block <XLXI_85>.
+WARNING:Xst:1291 - FF/Latch <dout_byte_5> is unconnected in block <XLXI_108>.
+
+Optimizing unit <chrono48_start> ...
+
+Optimizing unit <DAC> ...
+
+Optimizing unit <inst_decoder> ...
+
+Optimizing unit <uart_baud> ...
+
+Optimizing unit <uart_rx> ...
+
+Optimizing unit <synclogic> ...
+
+Optimizing unit <cc8ce1> ...
+
+Optimizing unit <testcounter> ...
+
+Optimizing unit <cc24ce> ...
+
+Optimizing unit <uart_tx> ...
+Loading device for application Xst from file 'v200.nph' in environment C:/Xilinx.
+
+Mapping all equations...
+INFO:Xst:1730 - Xst has found some RLOC properties in element XLXI_122 which is instantiated several times. To handle this constraint Xst will add the property "hu_set XLXI_122" on each element with RLOC.
+WARNING:Xst:1291 - FF/Latch <XLXI_108_dout_byte_5> is unconnected in block <chrono48_start>.
+WARNING:Xst:1291 - FF/Latch <XLXI_85_testing> is unconnected in block <chrono48_start>.
+Building and optimizing final netlist ...
+WARNING:Xst:1291 - FF/Latch <XLXI_100_Accum_0> is unconnected in block <chrono48_start>.
+Found area constraint ratio of 100 (+ 5) on block chrono48_start, actual ratio is 5.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : chrono48_start.ngr
+Top Level Output File Name         : chrono48_start
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 24
+
+Macro Statistics :
+# ROMs                             : 2
+#      16x8-bit ROM                : 1
+#      32x32-bit ROM               : 1
+# Registers                        : 28
+#      1-bit register              : 19
+#      20-bit register             : 2
+#      4-bit register              : 1
+#      5-bit register              : 1
+#      8-bit register              : 4
+#      9-bit register              : 1
+# Counters                         : 5
+#      4-bit up counter            : 4
+#      8-bit up counter            : 1
+# Multiplexers                     : 2
+#      1-bit 4-to-1 multiplexer    : 1
+#      2-to-1 multiplexer          : 1
+# Tristates                        : 3
+#      1-bit tristate buffer       : 1
+#      8-bit tristate buffer       : 2
+# Adders/Subtractors               : 3
+#      20-bit adder                : 2
+#      8-bit adder carry out       : 1
+# Comparators                      : 1
+#      4-bit comparator equal      : 1
+
+Cell Usage :
+# BELS                             : 367
+#      AND2b1                      : 1
+#      GND                         : 6
+#      INV                         : 2
+#      LUT1                        : 59
+#      LUT2                        : 30
+#      LUT3                        : 40
+#      LUT4                        : 52
+#      MUXCY                       : 57
+#      MUXCY_L                     : 28
+#      MUXF5                       : 1
+#      OR2                         : 3
+#      VCC                         : 4
+#      XORCY                       : 84
+# FlipFlops/Latches                : 172
+#      FDC                         : 31
+#      FDCE                        : 83
+#      FDCPE                       : 24
+#      FDP                         : 2
+#      FDPE                        : 12
+#      FDRE                        : 20
+# Tri-States                       : 16
+#      BUFT                        : 16
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 24
+#      IBUF                        : 11
+#      IBUFG                       : 1
+#      OBUF                        : 10
+#      OBUF_F_24                   : 1
+#      OBUFT                       : 1
+# DLLs                             : 2
+#      CLKDLL                      : 2
+# Others                           : 2
+#      FMAP                        : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2s200pq208-6 
+
+ Number of Slices:                     127  out of   2352     5%  
+ Number of Slice Flip Flops:           172  out of   4704     3%  
+ Number of 4 input LUTs:               181  out of   4704     3%  
+ Number of bonded IOBs:                 24  out of    144    16%  
+ Number of TBUFs:                       16  out of   2352     0%  
+ Number of GCLKs:                        2  out of      4    50%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+cmd_dev_sel(XLXI_106_Mcompar__n0025_AEB54:O)| NONE(*)(XLXI_4)        | 1     |
+clk                                | Clock_Mul_XLXI_1:CLK2X+Clock_Mul_XLXI_2:CLK2X| 36    |
+clk                                | IBUFG                  | 127   |
+out_pulse(XLXI_120/XLXI_5:O)       | NONE(*)(XLXI_120/XLXI_4)| 1     |
+XLXI_106_cstate_FFd3:Q             | NONE                   | 4     |
+XLXI_108_startbitsync(XLXI_108__n00091:O)| NONE(*)(XLXI_108_start)| 1     |
+XLXI_122_out_pulse(XLXI_122_XLXI_5:O)| NONE(*)(XLXI_122_XLXI_4)| 1     |
+XLXI_106_cstate_FFd6:Q             | NONE                   | 1     |
+-----------------------------------+------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: 28.584ns (Maximum Frequency: 34.985MHz)
+   Minimum input arrival time before clock: 3.699ns
+   Maximum output required time after clock: 13.676ns
+   Maximum combinational path delay: 13.473ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+-------------------------------------------------------------------------
+Timing constraint: Default period analysis for Clock 'clk'
+Delay:               7.146ns (Levels of Logic = 2)
+  Source:            XLXI_102_XLXI_5 (FF)
+  Destination:       XLXI_102_XLXI_1/XLXI_2/I_36_35 (FF)
+  Source Clock:      clk rising 4.0X
+  Destination Clock: clk rising 4.0X
+
+  Data Path: XLXI_102_XLXI_5 to XLXI_102_XLXI_1/XLXI_2/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   1.085   1.206  XLXI_102_XLXI_5 (XLXI_102_XLXN_13)
+     AND2b1:I0->O         32   0.549   3.420  XLXI_102_XLXI_4 (XLXI_102_XLXN_17)
+     begin scope: 'XLXI_102_XLXI_1'
+     begin scope: 'XLXI_2'
+     FDCE:CE                   0.886          I_36_35
+    ----------------------------------------
+    Total                      7.146ns (2.520ns logic, 4.626ns route)
+                                       (35.3% logic, 64.7% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default period analysis for Clock 'XLXI_106_cstate_FFd3:Q'
+Delay:               5.456ns (Levels of Logic = 6)
+  Source:            XLXI_100_DACaddr_0 (FF)
+  Destination:       XLXI_100_DACaddr_3 (FF)
+  Source Clock:      XLXI_106_cstate_FFd3:Q rising
+  Destination Clock: XLXI_106_cstate_FFd3:Q rising
+
+  Data Path: XLXI_100_DACaddr_0 to XLXI_100_DACaddr_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q            9   1.085   1.908  XLXI_100_DACaddr_0 (XLXI_100_DACaddr_0)
+     LUT4:I0->O            1   0.549   0.000  XLXI_100__n00001 (XLXI_100__n0000)
+     MUXCY:S->O            1   0.659   0.000  XLXI_100_DACaddr_inst_cy_20 (XLXI_100_DACaddr_inst_cy_20)
+     MUXCY:CI->O           1   0.042   0.000  XLXI_100_DACaddr_inst_cy_21 (XLXI_100_DACaddr_inst_cy_21)
+     MUXCY:CI->O           1   0.042   0.000  XLXI_100_DACaddr_inst_cy_22 (XLXI_100_DACaddr_inst_cy_22)
+     MUXCY:CI->O           0   0.042   0.000  XLXI_100_DACaddr_inst_cy_23 (XLXI_100_DACaddr_inst_cy_23)
+     XORCY:CI->O           1   0.420   0.000  XLXI_100_DACaddr_inst_sum_23 (XLXI_100_DACaddr_inst_sum_23)
+     FDCPE:D                   0.709          XLXI_100_DACaddr_3
+    ----------------------------------------
+    Total                      5.456ns (3.548ns logic, 1.908ns route)
+                                       (65.0% logic, 35.0% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+Offset:              3.699ns (Levels of Logic = 2)
+  Source:            sel0 (PAD)
+  Destination:       XLXI_108_ser_in_reg_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sel0 to XLXI_108_ser_in_reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.776   1.665  sel0_IBUF (sel0_IBUF)
+     LUT3:I0->O            1   0.549   0.000  XLXI_50_rx1 (rx)
+     FDCE:D                    0.709          XLXI_108_ser_in_reg_0
+    ----------------------------------------
+    Total                      3.699ns (2.034ns logic, 1.665ns route)
+                                       (55.0% logic, 45.0% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_120/XLXI_5:O'
+Offset:              7.085ns (Levels of Logic = 2)
+  Source:            XLXI_120/XLXI_4 (FF)
+  Destination:       startout1 (PAD)
+  Source Clock:      XLXI_120/XLXI_5:O rising
+
+  Data Path: XLXI_120/XLXI_4 to startout1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   1.085   1.332  XLXI_4 (pulse_sync)
+     end scope: 'XLXI_120'
+     OBUF:I->O                 4.668          XLXI_88 (startout1)
+    ----------------------------------------
+    Total                      7.085ns (5.753ns logic, 1.332ns route)
+                                       (81.2% logic, 18.8% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_122_XLXI_5:O'
+Offset:              6.959ns (Levels of Logic = 1)
+  Source:            XLXI_122_XLXI_4 (FF)
+  Destination:       tst_stop_pulse (PAD)
+  Source Clock:      XLXI_122_XLXI_5:O rising
+
+  Data Path: XLXI_122_XLXI_4 to tst_stop_pulse
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   1.085   1.206  XLXI_122_XLXI_4 (XLXN_170)
+     OBUF:I->O                 4.668          XLXI_123 (tst_stop_pulse)
+    ----------------------------------------
+    Total                      6.959ns (5.753ns logic, 1.206ns route)
+                                       (82.7% logic, 17.3% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_106_Mcompar__n0025_AEB54:O'
+Offset:              6.788ns (Levels of Logic = 1)
+  Source:            XLXI_4 (FF)
+  Destination:       cmd_dev_sel1 (PAD)
+  Source Clock:      XLXI_106_Mcompar__n0025_AEB54:O rising
+
+  Data Path: XLXI_4 to cmd_dev_sel1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   1.085   1.035  XLXI_4 (cmd_dev_sel1_OBUF)
+     OBUF:I->O                 4.668          cmd_dev_sel1_OBUF (cmd_dev_sel1)
+    ----------------------------------------
+    Total                      6.788ns (5.753ns logic, 1.035ns route)
+                                       (84.8% logic, 15.2% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+Offset:              13.676ns (Levels of Logic = 8)
+  Source:            XLXI_85_test_cntr_18 (FF)
+  Destination:       XLXI_120/XLXI_6:O (PAD)
+  Source Clock:      clk rising
+
+  Data Path: XLXI_85_test_cntr_18 to XLXI_120/XLXI_6:O
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   1.085   1.332  XLXI_85_test_cntr_18 (XLXI_85_test_cntr_18)
+     LUT4:I0->O            1   0.549   1.035  XLXI_85_Ker486021 (CHOICE411)
+     LUT4:I0->O            1   0.549   1.035  XLXI_85_Ker486067_SW0 (N10064)
+     LUT4:I3->O            2   0.549   1.206  XLXI_85_Ker486067 (XLXI_85_N4862)
+     LUT2:I1->O            1   0.549   1.035  XLXI_85__n0002_SW0 (N8884)
+     LUT4:I3->O            1   0.549   1.035  XLXI_85__n0002 (tst_start_pulse)
+     OR2:I0->O             1   0.549   1.035  XLXI_95 (start_pulse_buf)
+     begin scope: 'XLXI_120'
+     OR2:I1->O             1   0.549   1.035  XLXI_5 (out_pulse)
+    FMAP:O                     0.000          XLXI_6
+    ----------------------------------------
+    Total                     13.676ns (4.928ns logic, 8.748ns route)
+                                       (36.0% logic, 64.0% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_106_cstate_FFd3:Q'
+Offset:              9.710ns (Levels of Logic = 10)
+  Source:            XLXI_100_DACaddr_0 (FF)
+  Destination:       DACout (PAD)
+  Source Clock:      XLXI_106_cstate_FFd3:Q rising
+
+  Data Path: XLXI_100_DACaddr_0 to DACout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q            9   1.085   1.908  XLXI_100_DACaddr_0 (XLXI_100_DACaddr_0)
+     LUT4:I0->O            1   0.549   1.035  XLXI_100_Mrom_dacinreg_inst_lut4_651 (XLXI_100_dacinreg<1>)
+     LUT2:I1->O            2   0.549   0.000  XLXI_100_Madd__n0002_inst_lut2_211 (XLXI_100_Madd__n0002_inst_lut2_21)
+     MUXCY:S->O            1   0.659   0.000  XLXI_100_Madd__n0002_inst_cy_26 (XLXI_100_Madd__n0002_inst_cy_26)
+     MUXCY:CI->O           1   0.042   0.000  XLXI_100_Madd__n0002_inst_cy_27 (XLXI_100_Madd__n0002_inst_cy_27)
+     MUXCY:CI->O           1   0.042   0.000  XLXI_100_Madd__n0002_inst_cy_28 (XLXI_100_Madd__n0002_inst_cy_28)
+     MUXCY:CI->O           1   0.042   0.000  XLXI_100_Madd__n0002_inst_cy_29 (XLXI_100_Madd__n0002_inst_cy_29)
+     MUXCY:CI->O           1   0.042   0.000  XLXI_100_Madd__n0002_inst_cy_30 (XLXI_100_Madd__n0002_inst_cy_30)
+     MUXCY:CI->O           1   0.042   0.000  XLXI_100_Madd__n0002_inst_cy_31 (XLXI_100_Madd__n0002_inst_cy_31)
+     MUXCY:CI->O           1   0.042   1.035  XLXI_100_Madd__n0002_inst_cy_32 (XLXN_60)
+     OBUF_F_24:I->O            2.638          XLXI_13 (DACout)
+    ----------------------------------------
+    Total                      9.710ns (5.732ns logic, 3.978ns route)
+                                       (59.0% logic, 41.0% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default path analysis
+Delay:               13.473ns (Levels of Logic = 2)
+  Source:            clk (PAD)
+  Destination:       clkout1 (PAD)
+
+  Data Path: clk to clkout1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUFG:I->O          129   1.425   7.380  Clock_Mul_XLXI_3 (clk25mhz)
+     OBUF:I->O                 4.668          XLXI_54 (clkout1)
+    ----------------------------------------
+    Total                     13.473ns (6.093ns logic, 7.380ns route)
+                                       (45.2% logic, 54.8% route)
+
+=========================================================================
+CPU : 10.05 / 10.38 s | Elapsed : 10.00 / 10.00 s
+ 
+--> 
+
+Total memory usage is 62880 kilobytes
+
+

@@ -1,0 +1,5 @@
+MODULE stop_channel
+	SUBMODULE synclogic
+		INSTANCE XLXI_18
+	SUBMODULE vernier_40_gates
+		INSTANCE XLXI_19

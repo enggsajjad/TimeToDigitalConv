@@ -1,0 +1,29 @@
+// Verilog model created from andline8.sch - Tue Jul 08 11:08:58 2014
+
+`timescale 1ns / 1ps
+
+module andline8(Vin, Vout);
+
+    input Vin;
+   output [7:0] Vout;
+   
+   wire XLXN_18;
+   
+   MULT_AND and_0 (.I0(XLXN_18), .I1(Vin), .LO(Vout[0]));
+   // synthesis attribute RLOC of and_0 is "R0C0.S1"
+   MULT_AND and_1 (.I0(XLXN_18), .I1(Vout[0]), .LO(Vout[1]));
+   // synthesis attribute RLOC of and_1 is "R0C0.S0"
+   MULT_AND and_2 (.I0(XLXN_18), .I1(Vout[1]), .LO(Vout[2]));
+   // synthesis attribute RLOC of and_2 is "R0C1.S1"
+   MULT_AND and_3 (.I0(XLXN_18), .I1(Vout[2]), .LO(Vout[3]));
+   // synthesis attribute RLOC of and_3 is "R0C1.S0"
+   MULT_AND and_4 (.I0(XLXN_18), .I1(Vout[3]), .LO(Vout[4]));
+   // synthesis attribute RLOC of and_4 is "R0C2.S1"
+   MULT_AND and_5 (.I0(XLXN_18), .I1(Vout[4]), .LO(Vout[5]));
+   // synthesis attribute RLOC of and_5 is "R0C2.S0"
+   MULT_AND and_6 (.I0(XLXN_18), .I1(Vout[5]), .LO(Vout[6]));
+   // synthesis attribute RLOC of and_6 is "R0C3.S1"
+   MULT_AND and_7 (.I0(XLXN_18), .I1(Vout[6]), .LO(Vout[7]));
+   // synthesis attribute RLOC of and_7 is "R0C3.S0"
+   VCC XLXI_33 (.P(XLXN_18));
+endmodule

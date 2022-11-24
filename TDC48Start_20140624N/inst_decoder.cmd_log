@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn __projnav/inst_decoder.xst -ofn inst_decoder.syr
+xst -intstyle ise -ifn __projnav/inst_decoder.xst -ofn inst_decoder.syr
+xst -intstyle ise -ifn __projnav/inst_decoder.xst -ofn inst_decoder.syr
+xst -intstyle ise -ifn __projnav/inst_decoder.xst -ofn inst_decoder.syr
+xst -intstyle ise -ifn __projnav/inst_decoder.xst -ofn inst_decoder.syr
+ngdbuild -intstyle ise -dd d:\tdc48start_20140624/_ngo -i  -p xc2s200-pq208-6 inst_decoder.ngc inst_decoder.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o inst_decoder_map.ncd inst_decoder.ngd inst_decoder.pcf
+par -w -intstyle ise -ol std -t 1 inst_decoder_map.ncd inst_decoder.ncd inst_decoder.pcf
+trce -intstyle ise -e 3 -l 3 -xml inst_decoder inst_decoder.ncd -o inst_decoder.twr inst_decoder.pcf
+bitgen -intstyle ise -f inst_decoder.ut inst_decoder.ncd

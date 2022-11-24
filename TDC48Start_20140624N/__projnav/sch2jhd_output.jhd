@@ -1,0 +1,15 @@
+MODULE chrono32c
+	SUBMODULE control_unit
+		INSTANCE Control_Unit1
+	SUBMODULE dacs
+		INSTANCE DACS1
+	SUBMODULE fpgaselout
+		INSTANCE FPGA_SEL
+	SUBMODULE start_channel
+		INSTANCE start_vernier
+	SUBMODULE maincount8channel
+		INSTANCE Main_Reading
+	SUBMODULE pencoder40_binary
+		INSTANCE XLXI_28
+	SUBMODULE eight_stop_channels
+		INSTANCE XLXI_29

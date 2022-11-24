@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SimpleInterest2.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PortName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1</Value>
+    </Setting>
+    <Setting Name="TotChannels" Type="System.String" Scope="User">
+      <Value Profile="(Default)">32</Value>
+    </Setting>
+    <Setting Name="TotSystems" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="TestName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NIL</Value>
+    </Setting>
+    <Setting Name="DetLot" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NIL</Value>
+    </Setting>
+    <Setting Name="FU" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NIL</Value>
+    </Setting>
+    <Setting Name="Sig0" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Observer No. 1</Value>
+    </Setting>
+    <Setting Name="Sig1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Observer No. 2</Value>
+    </Setting>
+    <Setting Name="Sig2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Observer No. 3</Value>
+    </Setting>
+    <Setting Name="Sig3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Observer No. 4</Value>
+    </Setting>
+    <Setting Name="Sig4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Optional Observer</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

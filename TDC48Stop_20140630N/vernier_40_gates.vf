@@ -1,0 +1,27 @@
+// Verilog model created from vernier_40_gates.sch - Tue Jul 08 11:08:57 2014
+
+`timescale 1ns / 1ps
+
+module vernier_40_gates(logic0, pulse_clk_sync, pulse_sync, reset, sel_ver,
+      Qout);
+
+    input logic0;
+    input pulse_clk_sync;
+    input pulse_sync;
+    input reset;
+    input sel_ver;
+   output [39:0] Qout;
+   
+   wire [39:0] Q;
+   wire [39:0] XLXN_4;
+   wire [39:0] XLXN_5;
+   
+   sel_vernier XLXI_1 (.sel_ver(sel_ver), .Vin(Q[39:0]), .Vout(Qout[39:0]));
+   andline40 XLXI_2 (.Vin(pulse_sync), .Vout(XLXN_4[39:0]));
+   // synthesis attribute RLOC of XLXI_2 is "R0C0"
+   ildceline40 XLXI_3 (.Din(XLXN_4[39:0]), .Gbar(logic0), .GE(XLXN_5[39:0]),
+         .reset(reset), .Qout(Q[39:0]));
+   // synthesis attribute RLOC of XLXI_3 is "R1C0"
+   xorcy_dline40 XLXI_4 (.Vin(pulse_clk_sync), .Vout(XLXN_5[39:0]));
+   // synthesis attribute RLOC of XLXI_4 is "R1C0"
+endmodule

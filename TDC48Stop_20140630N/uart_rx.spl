@@ -1,0 +1,12 @@
+[Inputs]
+clk
+rst
+enable
+ser_in
+[Outputs]
+dout_byte_rdy
+=dout_byte[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel uart_rx
+

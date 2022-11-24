@@ -1,0 +1,15 @@
+verilog work clk_mul.vf
+verilog work testcounter.v
+verilog work router.v
+verilog work gen_sel_signals.v
+verilog work fpga_addr_out.v
+verilog work DAC.v
+verilog work cc8ce1.vf
+verilog work cc24ce.vf
+verilog work counter32bit.vf
+verilog work inst_decoder.v
+verilog work uart_baud.v
+verilog work uart_rx.v
+verilog work uart_tx.v
+verilog work synclogic.vf
+verilog work Chrono48_start.vf

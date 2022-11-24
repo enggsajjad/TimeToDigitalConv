@@ -1,0 +1,27 @@
+// Verilog model created from dacs.sch - Tue Jun 04 14:59:48 2013
+
+`timescale 1ns / 1ps
+
+module dacs(clkdiv, loaddac1, loaddac2, resdac, sel_dac1, sel_dac2, DAC1_stop,
+      DAC2_start, dout);
+
+    input clkdiv;
+    input loaddac1;
+    input loaddac2;
+    input resdac;
+    input sel_dac1;
+    input sel_dac2;
+   output DAC1_stop;
+   output DAC2_start;
+   output [7:0] dout;
+   
+   wire XLXN_38;
+   wire XLXN_97;
+   
+   DACSimple XLXI_9 (.Clk(clkdiv), .loaddac(loaddac1), .resdac(resdac),
+         .sel_dac(sel_dac1), .DACout(XLXN_38), .dac_val(dout[7:0]));
+   OBUF_F_24 XLXI_13 (.I(XLXN_38), .O(DAC1_stop));
+   DACSimple XLXI_26 (.Clk(clkdiv), .loaddac(loaddac2), .resdac(resdac),
+         .sel_dac(sel_dac2), .DACout(XLXN_97), .dac_val(dout[7:0]));
+   OBUF_F_24 XLXI_27 (.I(XLXN_97), .O(DAC2_start));
+endmodule

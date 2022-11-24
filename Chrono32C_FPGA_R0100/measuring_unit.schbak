@@ -1,0 +1,293 @@
+VERSION 6
+BEGIN SCHEMATIC
+    BEGIN ATTR DeviceFamilyName "spartan2"
+        DELETE all:0
+        EDITNAME all:0
+        EDITTRAIT all:0
+    END ATTR
+    BEGIN NETLIST
+        SIGNAL clk2x
+        SIGNAL reset
+        SIGNAL XLXN_12(39:0)
+        SIGNAL start_clksync
+        SIGNAL XLXN_19(7:0)
+        SIGNAL sel_cntr_tbuf(31:0)
+        SIGNAL stop_pulses_buf(7:0)
+        SIGNAL dout(7:0)
+        SIGNAL StopSync(7:0)
+        SIGNAL StartSync
+        SIGNAL start_pulse_buf
+        SIGNAL sel_pencoder
+        SIGNAL sel_ver(8:0)
+        SIGNAL sel_ver(0)
+        SIGNAL sel_ver(8:1)
+        PORT Input clk2x
+        PORT Input reset
+        PORT Input sel_cntr_tbuf(31:0)
+        PORT Input stop_pulses_buf(7:0)
+        PORT Output dout(7:0)
+        PORT Output StopSync(7:0)
+        PORT Output StartSync
+        PORT Input start_pulse_buf
+        PORT Input sel_pencoder
+        PORT Input sel_ver(8:0)
+        BEGIN BLOCKDEF start_channel
+            TIMESTAMP 2011 3 7 3 25 4
+            LINE N 64 160 0 160 
+            LINE N 384 96 448 96 
+            LINE N 64 32 0 32 
+            LINE N 64 -160 0 -160 
+            LINE N 64 -96 0 -96 
+            LINE N 64 -32 0 -32 
+            LINE N 384 -224 448 -224 
+            RECTANGLE N 384 -236 448 -212 
+            LINE N 384 -32 448 -32 
+            RECTANGLE N 64 -256 384 192 
+        END BLOCKDEF
+        BEGIN BLOCKDEF stop_channels_eight
+            TIMESTAMP 2011 3 7 3 30 10
+            LINE N 64 96 0 96 
+            LINE N 352 32 416 32 
+            RECTANGLE N 352 20 416 44 
+            LINE N 64 -288 0 -288 
+            LINE N 64 -224 0 -224 
+            LINE N 64 -160 0 -160 
+            LINE N 64 -96 0 -96 
+            RECTANGLE N 0 -108 64 -84 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 0 -44 64 -20 
+            LINE N 352 -288 416 -288 
+            RECTANGLE N 352 -300 416 -276 
+            LINE N 352 -128 416 -128 
+            RECTANGLE N 352 -140 416 -116 
+            RECTANGLE N 64 -320 352 128 
+        END BLOCKDEF
+        BEGIN BLOCKDEF pencoder40_binary
+            TIMESTAMP 2007 6 4 11 23 40
+            RECTANGLE N 64 -128 320 0 
+            LINE N 64 -96 0 -96 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 0 -44 64 -20 
+            LINE N 320 -96 384 -96 
+            RECTANGLE N 320 -108 384 -84 
+        END BLOCKDEF
+        BEGIN BLOCKDEF maincount8channel
+            TIMESTAMP 2011 3 3 4 44 40
+            RECTANGLE N 64 -384 352 0 
+            LINE N 352 -160 416 -160 
+            RECTANGLE N 352 -172 416 -148 
+            LINE N 64 -368 0 -368 
+            LINE N 64 -304 0 -304 
+            LINE N 64 -240 0 -240 
+            LINE N 64 -176 0 -176 
+            RECTANGLE N 0 -188 64 -164 
+            LINE N 64 -32 0 -32 
+            LINE N 64 -112 0 -112 
+            RECTANGLE N 0 -124 64 -100 
+        END BLOCKDEF
+        BEGIN BLOCK stop_verniers stop_channels_eight
+            BEGIN ATTR RLOC_ORIGIN "R8C1"
+                VERILOG all:0 wsynth:1
+                VHDL all:0 wa:1 wd:1
+            END ATTR
+            PIN clk clk2x
+            PIN reset reset
+            PIN star_pulse start_clksync
+            PIN sel_vers_stop(7:0) sel_ver(8:1)
+            PIN stop_pulses(7:0) stop_pulses_buf(7:0)
+            PIN ver_stop_10bits_out(39:0) XLXN_12(39:0)
+            PIN CE_Counters(7:0) XLXN_19(7:0)
+            PIN PulseSyncOut(7:0) StopSync(7:0)
+            PIN teststop
+        END BLOCK
+        BEGIN BLOCK start_vernier start_channel
+            BEGIN ATTR RLOC_ORIGIN "R27C7"
+                VERILOG all:0 wsynth:1
+                VHDL all:0 wa:1 wd:1
+            END ATTR
+            PIN sel_ver sel_ver(0)
+            PIN start_pulse start_pulse_buf
+            PIN clk clk2x
+            PIN reset reset
+            PIN ver_out_10bits(39:0) XLXN_12(39:0)
+            PIN star_sync_out StartSync
+            PIN start_clk_sync start_clksync
+            PIN teststart
+        END BLOCK
+        BEGIN BLOCK Main_Reading maincount8channel
+            BEGIN ATTR RLOC_ORIGIN "R5C26"
+                VERILOG all:0 wsynth:1
+                VHDL all:0 wa:1 wd:1
+            END ATTR
+            PIN count(7:0) dout(7:0)
+            PIN reset reset
+            PIN clk clk2x
+            PIN startsynch start_clksync
+            PIN load(7:0) XLXN_19(7:0)
+            PIN sel_flag
+            PIN sel_cntr_tbuf(31:0) sel_cntr_tbuf(31:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_28 pencoder40_binary
+            PIN sel sel_pencoder
+            PIN dataIn(39:0) XLXN_12(39:0)
+            PIN dataOutz(7:0) dout(7:0)
+        END BLOCK
+    END NETLIST
+    BEGIN SHEET 1 3520 2720
+        BEGIN INSTANCE start_vernier 1072 1136 R0
+            BEGIN DISPLAY 0 -376 ATTR RLOC_ORIGIN
+                FONT 28 "Arial"
+                DISPLAYFORMAT NAMEEQUALSVALUE
+            END DISPLAY
+        END INSTANCE
+        BEGIN BRANCH clk2x
+            WIRE 800 1040 1072 1040
+        END BRANCH
+        BEGIN BRANCH reset
+            WIRE 800 1104 1072 1104
+        END BRANCH
+        BEGIN BRANCH sel_cntr_tbuf(31:0)
+            WIRE 784 1968 1456 1968
+            WIRE 1456 1968 1632 1968
+            WIRE 1632 1712 1776 1712
+            WIRE 1632 1712 1632 1968
+            BEGIN DISPLAY 1456 1968 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH start_clksync
+            WIRE 1520 1232 1664 1232
+            BEGIN DISPLAY 1664 1232 ATTR Name
+                ALIGNMENT SOFT-LEFT
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH StartSync
+            WIRE 1520 1104 1536 1104
+            WIRE 1536 1088 1536 1104
+            WIRE 1536 1088 2368 1088
+        END BRANCH
+        BEGIN BRANCH start_clksync
+            WIRE 1712 1584 1744 1584
+            WIRE 1744 1584 1776 1584
+            BEGIN DISPLAY 1744 1584 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN INSTANCE Main_Reading 1776 1824 R0
+            BEGIN DISPLAY 76 -472 ATTR RLOC_ORIGIN
+                FONT 28 "Arial"
+                DISPLAYFORMAT NAMEEQUALSVALUE
+            END DISPLAY
+        END INSTANCE
+        BEGIN BRANCH reset
+            WIRE 1696 1456 1776 1456
+            BEGIN DISPLAY 1696 1456 ATTR Name
+                ALIGNMENT SOFT-RIGHT
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH clk2x
+            WIRE 1680 1520 1696 1520
+            WIRE 1696 1520 1776 1520
+            BEGIN DISPLAY 1696 1520 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH dout(7:0)
+            WIRE 2192 1664 2256 1664
+            WIRE 2256 1664 2320 1664
+            BEGIN DISPLAY 2256 1664 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 2368 1088 StartSync R0 28
+        BEGIN BRANCH start_pulse_buf
+            WIRE 848 976 1072 976
+        END BRANCH
+        IOMARKER 848 976 start_pulse_buf R180 28
+        IOMARKER 800 1040 clk2x R180 28
+        IOMARKER 800 1104 reset R180 28
+        IOMARKER 784 1744 stop_pulses_buf(7:0) R180 28
+        BEGIN BRANCH stop_pulses_buf(7:0)
+            WIRE 784 1744 1056 1744
+        END BRANCH
+        BEGIN BRANCH reset
+            WIRE 1024 1552 1056 1552
+            BEGIN DISPLAY 1024 1552 ATTR Name
+                ALIGNMENT SOFT-RIGHT
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH clk2x
+            WIRE 1008 1488 1056 1488
+            BEGIN DISPLAY 1008 1488 ATTR Name
+                ALIGNMENT SOFT-RIGHT
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH XLXN_19(7:0)
+            WIRE 1472 1648 1776 1648
+        END BRANCH
+        BEGIN BRANCH StopSync(7:0)
+            WIRE 1472 1808 1600 1808
+            WIRE 1600 1808 1600 1904
+            WIRE 1600 1904 1760 1904
+            WIRE 1760 1904 2560 1904
+            BEGIN DISPLAY 1760 1904 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN INSTANCE stop_verniers 1056 1776 R0
+            BEGIN DISPLAY 152 -416 ATTR RLOC_ORIGIN
+                FONT 28 "Arial"
+                DISPLAYFORMAT NAMEEQUALSVALUE
+            END DISPLAY
+        END INSTANCE
+        IOMARKER 784 1968 sel_cntr_tbuf(31:0) R180 28
+        BEGIN BRANCH XLXN_12(39:0)
+            WIRE 1472 1488 1568 1488
+            WIRE 1520 912 1568 912
+            WIRE 1568 912 1568 1488
+            WIRE 1568 816 1760 816
+            WIRE 1568 816 1568 912
+        END BRANCH
+        BEGIN INSTANCE XLXI_28 1760 848 R0
+        END INSTANCE
+        BEGIN BRANCH sel_pencoder
+            WIRE 1584 752 1760 752
+        END BRANCH
+        BEGIN BRANCH dout(7:0)
+            WIRE 2144 752 2480 752
+        END BRANCH
+        IOMARKER 1584 752 sel_pencoder R180 28
+        BEGIN BRANCH start_clksync
+            WIRE 976 1616 992 1616
+            WIRE 992 1616 1056 1616
+            BEGIN DISPLAY 992 1616 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 2480 752 dout(7:0) R0 28
+        IOMARKER 2560 1904 StopSync(7:0) R0 28
+        BEGIN BRANCH sel_ver(8:0)
+            WIRE 608 1152 816 1152
+            WIRE 816 1152 816 1168
+            WIRE 816 1168 816 1680
+            WIRE 816 1680 816 1696
+        END BRANCH
+        IOMARKER 608 1152 sel_ver(8:0) R180 28
+        BUSTAP 816 1168 912 1168
+        BUSTAP 816 1680 912 1680
+        BEGIN BRANCH sel_ver(0)
+            WIRE 912 1168 960 1168
+            WIRE 960 1168 1072 1168
+            BEGIN DISPLAY 960 1168 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH sel_ver(8:1)
+            WIRE 912 1680 944 1680
+            WIRE 944 1680 1056 1680
+            BEGIN DISPLAY 944 1680 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+    END SHEET
+END SCHEMATIC

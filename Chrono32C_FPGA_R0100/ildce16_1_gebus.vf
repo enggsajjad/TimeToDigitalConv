@@ -1,0 +1,116 @@
+// Verilog model created from ildce16_1_gebus.sch - Tue Jun 04 14:59:51 2013
+
+`timescale 1ns / 1ps
+
+module ildce16_1_gebus(Din, Gbar, GE, reset, Qout);
+
+    input [15:0] Din;
+    input Gbar;
+    input [15:0] GE;
+    input reset;
+   output [15:0] Qout;
+   
+   
+   LDCE_1 latch_0 (.CLR(reset), .D(Din[0]), .G(Gbar), .GE(GE[0]), .Q(Qout[0]));
+   // synthesis attribute RLOC of latch_0 is "R0C0.S1"
+   // synthesis attribute INIT of latch_0 is "0"
+   // synopsys translate_off
+   defparam latch_0.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_1 (.CLR(reset), .D(Din[1]), .G(Gbar), .GE(GE[1]), .Q(Qout[1]));
+   // synthesis attribute RLOC of latch_1 is "R0C0.S0"
+   // synthesis attribute INIT of latch_1 is "0"
+   // synopsys translate_off
+   defparam latch_1.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_2 (.CLR(reset), .D(Din[2]), .G(Gbar), .GE(GE[2]), .Q(Qout[2]));
+   // synthesis attribute RLOC of latch_2 is "R0C1.S1"
+   // synthesis attribute INIT of latch_2 is "0"
+   // synopsys translate_off
+   defparam latch_2.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_3 (.CLR(reset), .D(Din[3]), .G(Gbar), .GE(GE[3]), .Q(Qout[3]));
+   // synthesis attribute RLOC of latch_3 is "R0C1.S0"
+   // synthesis attribute INIT of latch_3 is "0"
+   // synopsys translate_off
+   defparam latch_3.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_4 (.CLR(reset), .D(Din[4]), .G(Gbar), .GE(GE[4]), .Q(Qout[4]));
+   // synthesis attribute RLOC of latch_4 is "R0C2.S1"
+   // synthesis attribute INIT of latch_4 is "0"
+   // synopsys translate_off
+   defparam latch_4.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_5 (.CLR(reset), .D(Din[5]), .G(Gbar), .GE(GE[5]), .Q(Qout[5]));
+   // synthesis attribute RLOC of latch_5 is "R0C2.S0"
+   // synthesis attribute INIT of latch_5 is "0"
+   // synopsys translate_off
+   defparam latch_5.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_6 (.CLR(reset), .D(Din[6]), .G(Gbar), .GE(GE[6]), .Q(Qout[6]));
+   // synthesis attribute RLOC of latch_6 is "R0C3.S1"
+   // synthesis attribute INIT of latch_6 is "0"
+   // synopsys translate_off
+   defparam latch_6.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_7 (.CLR(reset), .D(Din[7]), .G(Gbar), .GE(GE[7]), .Q(Qout[7]));
+   // synthesis attribute RLOC of latch_7 is "R0C3.S0"
+   // synthesis attribute INIT of latch_7 is "0"
+   // synopsys translate_off
+   defparam latch_7.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_8 (.CLR(reset), .D(Din[8]), .G(Gbar), .GE(GE[8]), .Q(Qout[8]));
+   // synthesis attribute RLOC of latch_8 is "R0C4.S1"
+   // synthesis attribute INIT of latch_8 is "0"
+   // synopsys translate_off
+   defparam latch_8.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_9 (.CLR(reset), .D(Din[9]), .G(Gbar), .GE(GE[9]), .Q(Qout[9]));
+   // synthesis attribute RLOC of latch_9 is "R0C4.S0"
+   // synthesis attribute INIT of latch_9 is "0"
+   // synopsys translate_off
+   defparam latch_9.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_10 (.CLR(reset), .D(Din[10]), .G(Gbar), .GE(GE[10]),
+         .Q(Qout[10]));
+   // synthesis attribute RLOC of latch_10 is "R0C5.S1"
+   // synthesis attribute INIT of latch_10 is "0"
+   // synopsys translate_off
+   defparam latch_10.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_11 (.CLR(reset), .D(Din[11]), .G(Gbar), .GE(GE[11]),
+         .Q(Qout[11]));
+   // synthesis attribute RLOC of latch_11 is "R0C5.S0"
+   // synthesis attribute INIT of latch_11 is "0"
+   // synopsys translate_off
+   defparam latch_11.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_12 (.CLR(reset), .D(Din[12]), .G(Gbar), .GE(GE[12]),
+         .Q(Qout[12]));
+   // synthesis attribute RLOC of latch_12 is "R0C6.S1"
+   // synthesis attribute INIT of latch_12 is "0"
+   // synopsys translate_off
+   defparam latch_12.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_13 (.CLR(reset), .D(Din[13]), .G(Gbar), .GE(GE[13]),
+         .Q(Qout[13]));
+   // synthesis attribute RLOC of latch_13 is "R0C6.S0"
+   // synthesis attribute INIT of latch_13 is "0"
+   // synopsys translate_off
+   defparam latch_13.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_14 (.CLR(reset), .D(Din[14]), .G(Gbar), .GE(GE[14]),
+         .Q(Qout[14]));
+   // synthesis attribute RLOC of latch_14 is "R0C7.S1"
+   // synthesis attribute INIT of latch_14 is "0"
+   // synopsys translate_off
+   defparam latch_14.INIT = 1'b0;
+   // synopsys translate_on
+   LDCE_1 latch_15 (.CLR(reset), .D(Din[15]), .G(Gbar), .GE(GE[15]),
+         .Q(Qout[15]));
+   // synthesis attribute RLOC of latch_15 is "R0C7.S0"
+   // synthesis attribute INIT of latch_15 is "0"
+   // synopsys translate_off
+   defparam latch_15.INIT = 1'b0;
+   // synopsys translate_on
+endmodule

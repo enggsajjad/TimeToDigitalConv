@@ -1,0 +1,23 @@
+// Verilog model created from ildce40_1_gebus.sch - Tue Jun 04 14:59:50 2013
+
+`timescale 1ns / 1ps
+
+module ildce40_1_gebus(Din, Gbar, GE, reset, Qout);
+
+    input [39:0] Din;
+    input Gbar;
+    input [39:0] GE;
+    input reset;
+   output [39:0] Qout;
+   
+   
+   ildce16_1_gebus latchline_a (.Din(Din[15:0]), .Gbar(Gbar), .GE(GE[15:0]),
+         .reset(reset), .Qout(Qout[15:0]));
+   // synthesis attribute RLOC of latchline_a is "R0C0"
+   ildce16_1_gebus latchline_b (.Din(Din[31:16]), .Gbar(Gbar), .GE(GE[31:16]),
+         .reset(reset), .Qout(Qout[31:16]));
+   // synthesis attribute RLOC of latchline_b is "R0C8"
+   ildce8_1_gebus latchline_c (.Din(Din[39:32]), .Gbar(Gbar), .GE(GE[39:32]),
+         .reset(reset), .Qout(Qout[39:32]));
+   // synthesis attribute RLOC of latchline_c is "R0C16"
+endmodule

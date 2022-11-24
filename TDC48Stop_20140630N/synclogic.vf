@@ -1,0 +1,33 @@
+// Verilog model created from synclogic.sch - Tue Jul 08 11:08:56 2014
+
+`timescale 1ns / 1ps
+
+module synclogic(clk, pulse, reset, test_pulse, pulse_clk_sync, pulse_sync);
+
+    input clk;
+    input pulse;
+    input reset;
+    input test_pulse;
+   output pulse_clk_sync;
+   output pulse_sync;
+   
+   wire out_pulse;
+   wire XLXN_15;
+   
+   FDC ff_clksyn (.C(clk), .CLR(reset), .D(pulse_sync), .Q(pulse_clk_sync));
+   // synthesis attribute rloc of ff_clksyn is "R0C0.S0"
+   // synthesis attribute INIT of ff_clksyn is "0"
+   // synopsys translate_off
+   defparam ff_clksyn.INIT = 1'b0;
+   // synopsys translate_on
+   VCC supply_sync (.P(XLXN_15));
+   FDC XLXI_4 (.C(out_pulse), .CLR(reset), .D(XLXN_15), .Q(pulse_sync));
+   // synthesis attribute rloc of XLXI_4 is "R0C0.S1"
+   // synthesis attribute INIT of XLXI_4 is "0"
+   // synopsys translate_off
+   defparam XLXI_4.INIT = 1'b0;
+   // synopsys translate_on
+   OR2 XLXI_5 (.I0(test_pulse), .I1(pulse), .O(out_pulse));
+   FMAP XLXI_6 (.I1(test_pulse), .I2(pulse), .I3(), .I4(), .O(out_pulse));
+   // synthesis attribute RLOC of XLXI_6 is "R0C0.S1"
+endmodule

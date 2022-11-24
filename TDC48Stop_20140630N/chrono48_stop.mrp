@@ -1,0 +1,402 @@
+Release 6.1i Map G.23
+Xilinx Mapping Report File for Design 'chrono48_stop'
+
+Design Information
+------------------
+Command Line   : C:/Xilinx/bin/nt/map.exe -intstyle ise -p xc2s200-pq208-6 -cm
+area -pr b -k 4 -c 100 -tx on -o chrono48_stop_map.ncd chrono48_stop.ngd
+chrono48_stop.pcf 
+Target Device  : x2s200
+Target Package : pq208
+Target Speed   : -6
+Mapper Version : spartan2 -- $Revision: 1.16 $
+Mapped Date    : Wed Jul 02 11:06:51 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   53
+Logic Utilization:
+  Total Number Slice Registers:     424 out of  4,704    9%
+    Number used as Flip Flops:                    264
+    Number used as Latches:                       160
+  Number of 4 input LUTs:           432 out of  4,704    9%
+Logic Distribution:
+    Number of occupied Slices:                         715 out of  2,352   30%
+    Number of Slices containing only related logic:    715 out of    715  100%
+    Number of Slices containing unrelated logic:         0 out of    715    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number 4 input LUTs:          628 out of  4,704   13%
+      Number used as logic:                       432
+      Number used as a route-thru:                196
+   Number of bonded IOBs:            17 out of    140   12%
+      IOB Flip Flops:                               2
+   Number of GCLKs:                   2 out of      4   50%
+   Number of GCLKIOBs:                1 out of      4   25%
+   Number of DLLs:                    2 out of      4   50%
+
+   Number of RPM macros:            2
+Total equivalent gate count for design:  21,403
+Additional JTAG gate count for IOBs:  864
+Peak Memory Usage:  71 MB
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity -
+   e.g. two LUTs are "related" if they share common inputs.
+   When assembling slices, Map gives priority to combine logic that
+   is related.  Doing so results in the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin
+   packing unrelated logic into a slice once 99% of the slices are
+   occupied through related logic packing.
+
+   Note that once logic distribution reaches the 99% level through
+   related logic packing, this does not mean the device is completely
+   utilized.  Unrelated logic packing will then begin, continuing until
+   all usable LUTs and FFs are occupied.  Depending on your timing
+   budget, increased levels of unrelated logic packing may adversely
+   affect the overall timing performance of your design.
+
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:MapLib:163 - Bus XLXN_76<36> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<38> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<39> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<37> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<0> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<1> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<2> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<3> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<4> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<5> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<6> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<7> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<8> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<9> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<10> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<11> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<12> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<13> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<14> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<15> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<16> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<17> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<18> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<19> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<20> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<21> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<22> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<23> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<24> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<25> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<26> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<27> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<28> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<29> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<30> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<31> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<32> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<33> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<34> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus XLXN_76<35> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:164 - Bus dout<4> driven by tbufs will be transformed to use
+   carry chain structure.
+WARNING:MapLib:164 - Bus dout<6> driven by tbufs will be transformed to use
+   carry chain structure.
+WARNING:MapLib:164 - Bus dout<7> driven by tbufs will be transformed to use
+   carry chain structure.
+WARNING:MapLib:164 - Bus dout<5> driven by tbufs will be transformed to use
+   carry chain structure.
+WARNING:MapLib:164 - Bus dout<3> driven by tbufs will be transformed to use
+   carry chain structure.
+WARNING:MapLib:164 - Bus dout<2> driven by tbufs will be transformed to use
+   carry chain structure.
+WARNING:MapLib:164 - Bus dout<1> driven by tbufs will be transformed to use
+   carry chain structure.
+WARNING:MapLib:164 - Bus dout<0> driven by tbufs will be transformed to use
+   carry chain structure.
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net
+   XLXI_104/XLXI_4/XLXI_18/out_pulse is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net
+   XLXI_104/XLXI_3/XLXI_18/out_pulse is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net
+   XLXI_104/XLXI_2/XLXI_18/out_pulse is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net
+   XLXI_104/XLXI_5/XLXI_18/out_pulse is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net
+   XLXI_41_u2_startbitsync is sourced by a combinatorial pin. This is not good
+   design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:533 - The following XORCY(s) is/are demoted to LUTs because there is
+   no MUXCY associated with them. Therefore, we cannot recognize the standard
+   carry chain structure (5 of 160 are listed):
+   XORCY_D symbol "XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_4/xor_0" (output
+   signal=XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_4/XLXN_1),
+   XORCY_D symbol "XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_4/xor_1" (output
+   signal=XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_4/XLXN_2),
+   XORCY_D symbol "XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_4/xor_2" (output
+   signal=XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_4/XLXN_3),
+   XORCY_D symbol "XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_4/xor_3" (output
+   signal=XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_4/XLXN_4),
+   XORCY_D symbol "XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_4/xor_4" (output
+   signal=XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_4/XLXN_5)
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  23 block(s) removed
+  54 block(s) optimized away
+  23 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "XLXI_103/ovf24_intr" is sourceless and has been removed.
+The signal "XLXI_103/XLXI_13_XLXN_25" is sourceless and has been removed.
+ Sourceless block "XLXI_103/XLXI_13_XLXI_7" (BUF) removed.
+The signal "XLXI_103/XLXI_13_XLXI_1/CO" is sourceless and has been removed.
+The signal "XLXI_103/XLXI_13_XLXI_1/Q<31>" is sourceless and has been removed.
+ Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/Q<7>_rt" (ROM) removed.
+  The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/Q<7>_rt" is sourceless and has been
+removed.
+   Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_298" (MUX) removed.
+   Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_291" (XOR) removed.
+    The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/TQ7" is sourceless and has been
+removed.
+     Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_289" (FF) removed.
+The signal "XLXI_103/XLXI_13_XLXI_1/Q<30>" is sourceless and has been removed.
+ Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/Q<6>_rt" (ROM) removed.
+  The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/Q<6>_rt" is sourceless and has been
+removed.
+   Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_278" (XOR) removed.
+    The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/TQ6" is sourceless and has been
+removed.
+     Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_276" (FF) removed.
+   Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_285" (MUX) removed.
+    The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_285/O" is sourceless and has
+been removed.
+The signal "XLXI_103/XLXI_13_XLXI_1/Q<29>" is sourceless and has been removed.
+ Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/Q<5>_rt" (ROM) removed.
+  The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/Q<5>_rt" is sourceless and has been
+removed.
+   Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_265" (XOR) removed.
+    The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/TQ5" is sourceless and has been
+removed.
+     Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_263" (FF) removed.
+   Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_272" (MUX) removed.
+    The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_272/O" is sourceless and has
+been removed.
+The signal "XLXI_103/XLXI_13_XLXI_1/Q<28>" is sourceless and has been removed.
+ Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/Q<4>_rt" (ROM) removed.
+  The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/Q<4>_rt" is sourceless and has been
+removed.
+   Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_252" (XOR) removed.
+    The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/TQ4" is sourceless and has been
+removed.
+     Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_250" (FF) removed.
+   Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_259" (MUX) removed.
+    The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_259/O" is sourceless and has
+been removed.
+The signal "XLXI_103/XLXI_13_XLXI_1/Q<27>" is sourceless and has been removed.
+ Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/Q<3>_rt" (ROM) removed.
+  The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/Q<3>_rt" is sourceless and has been
+removed.
+   Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_239" (XOR) removed.
+    The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/TQ3" is sourceless and has been
+removed.
+     Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_237" (FF) removed.
+   Sourceless block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_246" (MUX) removed.
+    The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_246/O" is sourceless and has
+been removed.
+The signal "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_233/O" is sourceless and has
+been removed.
+Unused block "XLXI_103/XLXI_13_XLXI_9" (FF) removed.
+Unused block "XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_233" (MUX) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XLXI_103/XLXI_13_XLXI_1/XLXI_2/I_36_886
+GND 		XLXI_103/XLXI_13_XLXI_1/XLXI_3/I_36_886
+GND 		XLXI_103/XLXI_13_XLXI_1/XLXI_4/I_36_886
+GND 		XLXI_103/XLXI_13_XLXI_1/XLXI_7/I_36_886
+VCC 		XLXI_103/XLXI_13_XLXI_1/XLXI_8
+GND 		XLXI_103/XST_GND
+VCC 		XLXI_103/XST_VCC
+VCC 		XLXI_104/XLXI_2/XLXI_18/supply_sync
+VCC 		XLXI_104/XLXI_2/XLXI_19/XLXI_2/XLXI_1/XLXI_33
+GND 		XLXI_104/XLXI_2/XLXI_19/XLXI_2/XLXI_1/XST_GND
+VCC 		XLXI_104/XLXI_2/XLXI_19/XLXI_2/XLXI_2/XLXI_33
+GND 		XLXI_104/XLXI_2/XLXI_19/XLXI_2/XLXI_2/XST_GND
+VCC 		XLXI_104/XLXI_2/XLXI_19/XLXI_2/XLXI_3/XLXI_33
+GND 		XLXI_104/XLXI_2/XLXI_19/XLXI_2/XLXI_3/XST_GND
+GND 		XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_4/XLXI_30
+GND 		XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_5/XLXI_30
+GND 		XLXI_104/XLXI_2/XLXI_19/XLXI_4/XLXI_6/XLXI_30
+GND 		XLXI_104/XLXI_2/XLXI_9
+VCC 		XLXI_104/XLXI_3/XLXI_18/supply_sync
+VCC 		XLXI_104/XLXI_3/XLXI_19/XLXI_2/XLXI_1/XLXI_33
+GND 		XLXI_104/XLXI_3/XLXI_19/XLXI_2/XLXI_1/XST_GND
+VCC 		XLXI_104/XLXI_3/XLXI_19/XLXI_2/XLXI_2/XLXI_33
+GND 		XLXI_104/XLXI_3/XLXI_19/XLXI_2/XLXI_2/XST_GND
+VCC 		XLXI_104/XLXI_3/XLXI_19/XLXI_2/XLXI_3/XLXI_33
+GND 		XLXI_104/XLXI_3/XLXI_19/XLXI_2/XLXI_3/XST_GND
+GND 		XLXI_104/XLXI_3/XLXI_19/XLXI_4/XLXI_4/XLXI_30
+GND 		XLXI_104/XLXI_3/XLXI_19/XLXI_4/XLXI_5/XLXI_30
+GND 		XLXI_104/XLXI_3/XLXI_19/XLXI_4/XLXI_6/XLXI_30
+GND 		XLXI_104/XLXI_3/XLXI_9
+VCC 		XLXI_104/XLXI_4/XLXI_18/supply_sync
+VCC 		XLXI_104/XLXI_4/XLXI_19/XLXI_2/XLXI_1/XLXI_33
+GND 		XLXI_104/XLXI_4/XLXI_19/XLXI_2/XLXI_1/XST_GND
+VCC 		XLXI_104/XLXI_4/XLXI_19/XLXI_2/XLXI_2/XLXI_33
+GND 		XLXI_104/XLXI_4/XLXI_19/XLXI_2/XLXI_2/XST_GND
+VCC 		XLXI_104/XLXI_4/XLXI_19/XLXI_2/XLXI_3/XLXI_33
+GND 		XLXI_104/XLXI_4/XLXI_19/XLXI_2/XLXI_3/XST_GND
+GND 		XLXI_104/XLXI_4/XLXI_19/XLXI_4/XLXI_4/XLXI_30
+GND 		XLXI_104/XLXI_4/XLXI_19/XLXI_4/XLXI_5/XLXI_30
+GND 		XLXI_104/XLXI_4/XLXI_19/XLXI_4/XLXI_6/XLXI_30
+GND 		XLXI_104/XLXI_4/XLXI_9
+VCC 		XLXI_104/XLXI_5/XLXI_18/supply_sync
+VCC 		XLXI_104/XLXI_5/XLXI_19/XLXI_2/XLXI_1/XLXI_33
+GND 		XLXI_104/XLXI_5/XLXI_19/XLXI_2/XLXI_1/XST_GND
+VCC 		XLXI_104/XLXI_5/XLXI_19/XLXI_2/XLXI_2/XLXI_33
+GND 		XLXI_104/XLXI_5/XLXI_19/XLXI_2/XLXI_2/XST_GND
+VCC 		XLXI_104/XLXI_5/XLXI_19/XLXI_2/XLXI_3/XLXI_33
+GND 		XLXI_104/XLXI_5/XLXI_19/XLXI_2/XLXI_3/XST_GND
+GND 		XLXI_104/XLXI_5/XLXI_19/XLXI_4/XLXI_4/XLXI_30
+GND 		XLXI_104/XLXI_5/XLXI_19/XLXI_4/XLXI_5/XLXI_30
+GND 		XLXI_104/XLXI_5/XLXI_19/XLXI_4/XLXI_6/XLXI_30
+GND 		XLXI_104/XLXI_5/XLXI_9
+GND 		XLXI_43
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type    | Direction | IO Standard | Drive    | Slew | Reg (s)  | Resistor | IOB   |
+|                                    |         |           |             | Strength | Rate |          |          | Delay |
++------------------------------------------------------------------------------------------------------------------------+
+| clk                                | GCLKIOB | INPUT     | LVTTL       |          |      |          |          |       |
+| DACout                             | IOB     | OUTPUT    | LVTTL       | 24       | FAST |          |          |       |
+| cmd_dev_sel                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| cmd_inc_dac                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| cmd_reset                          | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| cmd_rst_dac                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| cmd_rst_test                       | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| dev_addr<0>                        | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| dev_addr<1>                        | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| dev_addr<2>                        | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| rx_uc                              | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| start_clk_sync                     | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| stop_pulses<0>                     | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| stop_pulses<1>                     | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| stop_pulses<2>                     | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| stop_pulses<3>                     | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| teststop                           | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| tx_uc                              | IOB     | OUTPUT    | LVTTL       | 12       | SLOW | OUTFF    |          |       |
++------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+XLXI_104/hset                           
+XLXI_103/hset                           
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group Summary
+------------------------------
+No area groups were found in this design.
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.

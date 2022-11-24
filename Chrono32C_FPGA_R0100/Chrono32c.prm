@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o e:\p\tdc\2013\chrono32c_fpga_r2//Chrono32c -u 0 E:\P\TDC\2013\Chrono32C_FPGA_R2\chrono32c.bit -x xc17v01 
+
+PROM e:\p\tdc\2013\chrono32c_fpga_r2//Chrono32c.prm map: Tue Jun 04 15:00:49 2013
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          205K
+PROM start    0000:0000
+PROM end      0003:33ff
+PROM checksum 0152a90f
+
+        Addr1        Addr2 File(s)
+    0000:0000    0002:8c43 E:/P/TDC/2013/Chrono32C_FPGA_R2/chrono32c.bit

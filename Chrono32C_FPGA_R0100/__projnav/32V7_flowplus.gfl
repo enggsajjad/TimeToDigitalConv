@@ -1,0 +1,6 @@
+# XST flow : Creating project file
+chrono32c.prj
+# xst flow : RunXST
+chrono32c.prj
+__projnav/chrono32c.xst
+./xst

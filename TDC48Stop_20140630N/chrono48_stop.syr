@@ -1,0 +1,167 @@
+Release 6.1i - xst G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to __projnav
+CPU : 0.00 / 0.09 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.09 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: chrono48_stop.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : chrono48_stop.prj
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+Verilog Include Directory          : 
+
+---- Target Parameters
+Output File Name                   : chrono48_stop
+Output Format                      : NGC
+Target Device                      : xc2s200-6-pq208
+
+---- Source Options
+Top Module Name                    : chrono48_stop
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Equivalent register Removal        : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+Global Optimization                : AllClockNets
+RTL Output                         : Yes
+Write Timing Constraints           : NO
+Hierarchy Separator                : _
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : chrono48_stop.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+Optimize Instantiated Primitives   : NO
+
+=========================================================================
+
+WARNING:Xst:1885 - LSO file is empty, default list of libraries is used
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling source file "clk_mul.vf"
+Module <clk_mul> compiled
+Compiling source file "router.v"
+Module <router> compiled
+Compiling source file "gen_sel_signals.v"
+Module <gen_sel_signals> compiled
+Compiling source file "fpga_addr_out.v"
+Module <fpga_addr_out> compiled
+Compiling source file "DAC.v"
+Module <DAC> compiled
+Compiling source file "priority_encoder.v"
+Module <priority_encoder> compiled
+Compiling source file "myfd8ce.vf"
+Module <myfd8ce> compiled
+Compiling source file "DFF_26bits.vf"
+Module <dff_26bits> compiled
+Compiling source file "cntr_registers.vf"
+Module <cntr_registers> compiled
+Compiling source file "cntr_reg_interface.v"
+Module <cntr_reg_interface> compiled
+Compiling source file "cc8ce1.vf"
+Module <cc8ce1> compiled
+Compiling source file "cc24ce.vf"
+Module <cc24ce> compiled
+Compiling source file "counter32bit.vf"
+Module <counter32bit> compiled
+Compiling source file "MainCount4Channel.vf"
+Module <maincount4channel> compiled
+Compiling source file "synclogic.vf"
+Module <synclogic> compiled
+Compiling source file "sel_vernier.v"
+Module <sel_vernier> compiled
+Compiling source file "andline8.vf"
+Module <andline8> compiled
+Compiling source file "andline16.vf"
+Module <andline16> compiled
+Compiling source file "andline40.vf"
+Module <andline40> compiled
+Compiling source file "ildceline8.vf"
+Module <ildceline8> compiled
+Compiling source file "ildceline16.vf"
+Module <ildceline16> compiled
+Compiling source file "ildceline40.vf"
+Module <ildceline40> compiled
+Compiling source file "xorcy_dline8.vf"
+Module <xorcy_dline8> compiled
+Compiling source file "xorcy_dline16.vf"
+Module <xorcy_dline16> compiled
+Compiling source file "xorcy_dline40.vf"
+Module <xorcy_dline40> compiled
+Compiling source file "vernier_40_gates.vf"
+Module <vernier_40_gates> compiled
+Compiling source file "stop_channel.vf"
+Module <stop_channel> compiled
+Compiling source file "four_stop_channels.vf"
+Module <four_stop_channels> compiled
+Compiling source file "Chrono48_stop.vf"
+Module <chrono48_stop> compiled
+No errors in compilation
+Analysis of file <chrono48_stop.prj> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+ERROR:HDLCompilers:87 - Chrono48_stop.vf line 69 Could not find module/primitive 'inst_decoder'
+ERROR:HDLCompilers:87 - Chrono48_stop.vf line 75 Could not find module/primitive 'uart_baud'
+ERROR:HDLCompilers:87 - Chrono48_stop.vf line 76 Could not find module/primitive 'uart_rx'
+ERROR:HDLCompilers:87 - Chrono48_stop.vf line 78 Could not find module/primitive 'uart_tx'
+--> 
+
+Total memory usage is 49656 kilobytes
+
+

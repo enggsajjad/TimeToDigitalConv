@@ -1,0 +1,3 @@
+set ADucfFile {chrono48_stop.ucf}
+set AD {}
+set ADcdcFile {}

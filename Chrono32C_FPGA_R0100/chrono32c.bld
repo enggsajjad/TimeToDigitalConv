@@ -1,0 +1,69 @@
+Release 6.1i - ngdbuild G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -intstyle ise -dd e:\p\tdc\2013\chrono32c_fpga_r2/_ngo
+-uc chrono32c.ucf -p xc2s200-pq208-6 chrono32c.ngc chrono32c.ngd 
+
+Reading NGO file "E:/P/TDC/2013/Chrono32C_FPGA_R2/chrono32c.ngc" ...
+Reading component libraries for design expansion...
+Launcher: Executing edif2ngd -noa "drom.edn"
+"e:\p\tdc\2013\chrono32c_fpga_r2\_ngo\drom.ngo"
+INFO:NgdBuild - Release 6.1i - edif2ngd G.23
+INFO:NgdBuild - Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+Writing the design to "e:/p/tdc/2013/chrono32c_fpga_r2/_ngo/drom.ngo"...
+Loading design module "e:\p\tdc\2013\chrono32c_fpga_r2\_ngo\drom.ngo"...
+blkmemsp_v5_0, Coregen 6.1i
+
+Annotating constraints to design from file "chrono32c.ucf" ...
+
+Checking timing specifications ...
+Checking expanded design ...
+WARNING:NgdBuild:454 - logical net 'Main_Reading/XLXI_1/CO' has no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<51>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<46>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<52>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<47>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<53>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<54>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<55>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<56>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<57>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<58>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<59>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<60>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<61>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<62>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<63>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<48>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<43>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<49>' has
+   no load
+WARNING:NgdBuild:454 - logical net 'Control_Unit1_XLXI_40_XLXI_1/dout<50>' has
+   no load
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  20
+
+Total memory usage is 43924 kilobytes
+
+Writing NGD file "chrono32c.ngd" ...
+
+Writing NGDBUILD log file "chrono32c.bld"...

@@ -1,0 +1,27 @@
+SCHEMATIC START ;
+// created by map version G.23 on Wed Jul 02 11:06:53 2014 
+MACRO "XLXI_103/hset" LOCATE = SITE "CLB_R7C26.S0" LEVEL 1;
+MACRO "XLXI_104/hset" LOCATE = SITE "CLB_R16C4.S1" LEVEL 1;
+COMP "cmd_rst_test" LOCATE =  SITE "P120" LEVEL 1; 
+COMP "start_clk_sync" LOCATE =  SITE "P58" LEVEL 1; 
+COMP "cmd_dev_sel" LOCATE =  SITE "P14" LEVEL 1; 
+COMP "teststop" LOCATE =  SITE "P71" LEVEL 1; 
+COMP "cmd_rst_dac" LOCATE =  SITE "P22" LEVEL 1; 
+COMP "cmd_inc_dac" LOCATE =  SITE "P18" LEVEL 1; 
+COMP "stop_pulses<0>" LOCATE =  SITE "P48" LEVEL 1; 
+COMP "stop_pulses<1>" LOCATE =  SITE "P44" LEVEL 1; 
+COMP "stop_pulses<2>" LOCATE =  SITE "P37" LEVEL 1; 
+COMP "stop_pulses<3>" LOCATE =  SITE "P33" LEVEL 1; 
+COMP "rx_uc" LOCATE =  SITE "P127" LEVEL 1; 
+COMP "tx_uc" LOCATE =  SITE "P133" LEVEL 1; 
+COMP "DACout" LOCATE =  SITE "P99" LEVEL 1; 
+COMP "cmd_reset" LOCATE =  SITE "P29" LEVEL 1; 
+COMP "clk" LOCATE =  SITE "P80" LEVEL 1; 
+COMP "dev_addr<0>" LOCATE =  SITE "P109" LEVEL 1; 
+COMP "dev_addr<1>" LOCATE =  SITE "P111" LEVEL 1; 
+COMP "dev_addr<2>" LOCATE =  SITE "P113" LEVEL 1; 
+COMP "Clock_Mul_XLXI_1" LOCATE =  SITE "DLL0" LEVEL 1; 
+COMP "Clock_Mul_XLXI_2" LOCATE =  SITE "DLL1" LEVEL 1; 
+COMP "Clock_Mul_XLXI_4" LOCATE =  SITE "GCLKBUF0" LEVEL 1; 
+COMP "Clock_Mul_XLXI_5" LOCATE =  SITE "GCLKBUF1" LEVEL 1; 
+SCHEMATIC END ;

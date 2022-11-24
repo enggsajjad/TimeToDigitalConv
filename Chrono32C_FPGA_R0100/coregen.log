@@ -1,0 +1,21 @@
+# Xilinx CORE Generator 6.1i
+# User = Sajjad Hussain
+Initializing default project...
+Loading plug-ins...
+All runtime messages will be recorded in E:\P\TDC\2013\Chrono32C_FPGA_R1\coregen.log
+# busformat=BusFormatAngleBracketNotRipped
+# designflow=VHDL
+# expandedprojectpath=E:\P\TDC\2013\Chrono32C_FPGA_R1
+# flowvendor=Foundation_iSE
+# formalverification=None
+# simulationoutputproducts=VHDL
+# xilinxfamily=Virtex2
+# outputoption=DesignFlow
+# overwritefiles=true
+# simvendor=ModelSim
+# expandedprojectpath=E:\P\TDC\2013\Chrono32C_FPGA_R1
+SETPROJECT .
+Set current Project to E:\P\TDC\2013\Chrono32C_FPGA_R1
+SET BusFormat = BusFormatAngleBracketNotRipped
+SETXIPCPORTHOST 1419
+XIPCPJSENDCORES spartan2

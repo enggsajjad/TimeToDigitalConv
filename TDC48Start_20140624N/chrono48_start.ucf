@@ -1,0 +1,46 @@
+# Clock input 25MHz		INPUT
+NET "clk" 				LOC = "p80";
+# Clock for Stop Card Board		OUTPUT
+NET "clkout1" 			LOC = "p97";
+# Clock for 2nd Start Card		OUTPUT
+NET "clkout2" 			LOC = "p94";
+# Threshold Channel				OUTPUT
+NET "DACout" 		LOC = "p3";
+#NET "DIN" 		LOC = "p3";
+#NET "SCLK" 		LOC = "p4";
+#NET "SYNC" 		LOC = "p5";
+# Address of the FPGA			INPUT
+NET "dev_addr<0>" 		LOC = "p135";
+NET "dev_addr<1>" 		LOC = "p134";
+NET "dev_addr<2>" 		LOC = "p133";
+NET "dev_addr<3>" 		LOC = "p132";
+# Recieve from PC			INPUT
+NET "rx_pc" 			LOC = "p120";
+# Recieve from Printer		INPUT
+NET "rx_pr" 			LOC = "p115";
+# Recieve from Microcontroller		INPUT
+NET "rx_uc" 			LOC = "p161";
+# Transmit to PC		OUTPUT
+NET "tx_pc" 			LOC = "p119";
+# Transmit to Printer	OUTPUT
+NET "tx_pr" 			LOC = "p114";
+# Transmit to Microcontroller		OUTPUT
+NET "tx_uc" 			LOC = "p162";
+# Select Lines for the Multiplexer		INPUT
+NET "sel0" 				LOC = "p150";
+NET "sel1" 				LOC = "p149";
+# Actual Start Pulse		INPUT
+NET "start_pulse" 	LOC = "p48";
+# Synch Start Pulse for Stop Cards		OUTPUT
+NET "startout1" 		LOC = "p68";	
+# Synch Start Pulse for 2nd Start Cards		OUTPUT
+NET "startout2" 		LOC = "p71";
+# Interrupt Signal when Start/Stop pulse occur (counter overflow)	OUTPUT
+NET "intr" 				LOC = "p148";
+# test pulse from test counter		OUTPUT
+NET "tst_stop_pulse" LOC = "p112"; 
+
+NET "tx_stop" LOC = "p110"; 
+NET "rx_stop" LOC = "p108"; 
+
+ 

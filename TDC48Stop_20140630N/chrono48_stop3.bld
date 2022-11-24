@@ -1,0 +1,33 @@
+Release 6.1i - ngdbuild G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -intstyle ise -dd d:\tdc48stop_20140630n/_ngo -uc
+chrono48_stop.ucf -p xc2s200-pq208-6 chrono48_stop3.ngc chrono48_stop3.ngd 
+
+Reading NGO file "D:/TDC48Stop_20140630N/chrono48_stop3.ngc" ...
+Reading component libraries for design expansion...
+
+Annotating constraints to design from file "chrono48_stop.ucf" ...
+
+Checking timing specifications ...
+Checking expanded design ...
+WARNING:NgdBuild:477 - clock net 'XLXI_111_dev_addrf<2>' has non-clock
+   connections. These problematic connections include:
+     pin I2 on block XLXI_50_I0_EnableTr_INV53 with type LUT4
+WARNING:NgdBuild:478 - clock net 'XLXI_111_dev_addrf<2>' drives no clock pins
+WARNING:NgdBuild:454 - logical net 'XLXI_103/ovf24_intr' has no load
+WARNING:NgdBuild:454 - logical net 'XLXI_103/XLXI_13_XLXI_1/CO' has no load
+WARNING:NgdBuild:479 - The input pad net 'teststop' is driving one or more clock
+   loads that should only use a dedicated clock buffer. This could result in
+   large clock skews on this net. Check whether the correct type of BUF is being
+   used to drive the clock buffer.
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   5
+
+Total memory usage is 41036 kilobytes
+
+Writing NGD file "chrono48_stop3.ngd" ...
+
+Writing NGDBUILD log file "chrono48_stop3.bld"...

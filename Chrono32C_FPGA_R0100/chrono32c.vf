@@ -1,0 +1,86 @@
+// Verilog model created from chrono32c.sch - Tue Jun 04 14:59:46 2013
+
+`timescale 1ns / 1ps
+
+module chrono32c(clk, fpgasel, rx_pc, rx_pr, rx_uc, sel0, sel1, start_pulse,
+      stop_pulses, clkout1, clkout2, DAC1_stop, DAC2_start, intr, startout1,
+      startout2, tx_pc, tx_pr, tx_uc);
+
+    input clk;
+    input [2:0] fpgasel;
+    input rx_pc;
+    input rx_pr;
+    input rx_uc;
+    input sel0;
+    input sel1;
+    input start_pulse;
+    input [7:0] stop_pulses;
+   output clkout1;
+   output clkout2;
+   output DAC1_stop;
+   output DAC2_start;
+   output intr;
+   output startout1;
+   output startout2;
+   output tx_pc;
+   output tx_pr;
+   output tx_uc;
+   
+   wire clkdiv;
+   wire clk2x;
+   wire [7:0] d;
+   wire [7:0] dout;
+   wire loaddac1;
+   wire loaddac2;
+   wire resdac;
+   wire reset;
+   wire [31:0] sel_cntr_tbuf;
+   wire sel_dac1;
+   wire sel_dac2;
+   wire sel_fpga;
+   wire sel_pencoder;
+   wire [8:0] sel_ver;
+   wire StartSync;
+   wire start_clksync;
+   wire start_pulse_buf;
+   wire [7:0] StopSync;
+   wire [7:0] stop_pulse_buf;
+   wire teststart;
+   wire teststop;
+   wire [39:0] XLXN_12;
+   wire [7:0] XLXN_19;
+   
+   control_unit Control_Unit1 (.clk(clk), .data_in(dout[7:0]),
+         .fpgasel(fpgasel[2:0]), .rx_pc(rx_pc), .rx_pr(rx_pr), .rx_uc(rx_uc),
+         .sel0(sel0), .sel1(sel1), .StartSync(StartSync),
+         .start_pulse(start_pulse), .stop_pulses(stop_pulses[7:0]),
+         .clkdiv(clkdiv), .clkout1(clkout1), .clkout2(clkout2), .clk2x(clk2x),
+         .d(d[7:0]), .loaddac1(loaddac1), .loaddac2(loaddac2), .resdac(resdac),
+         .reset(reset), .sel_counts(sel_cntr_tbuf[31:0]), .sel_dac1(sel_dac1),
+         .sel_dac2(sel_dac2), .sel_fpga(sel_fpga), .sel_pencoder(sel_pencoder),
+         .sel_ver(sel_ver[8:0]), .startout1(startout1), .startout2(startout2),
+         .start_pulse_buf(start_pulse_buf),
+         .stop_pulses_buf(stop_pulse_buf[7:0]), .teststart(teststart),
+         .teststop(teststop), .tx_pc(tx_pc), .tx_pr(tx_pr), .tx_uc(tx_uc));
+   dacs DACS1 (.clkdiv(clkdiv), .loaddac1(loaddac1), .loaddac2(loaddac2),
+         .resdac(resdac), .sel_dac1(sel_dac1), .sel_dac2(sel_dac2),
+         .DAC1_stop(DAC1_stop), .DAC2_start(DAC2_start), .dout(dout[7:0]));
+   fpgaselout FPGA_SEL (.din(d[7:0]), .sel(sel_fpga), .dout(dout[7:0]));
+   maincount8channel Main_Reading (.clk(clk2x), .load(XLXN_19[7:0]),
+         .reset(reset), .sel_cntr_tbuf(sel_cntr_tbuf[31:0]), .sel_flag(),
+         .startsynch(start_clksync), .count(dout[7:0]), .ovf24_intr(intr));
+   // synthesis attribute RLOC_ORIGIN of Main_Reading is "R5C26"
+   start_channel start_vernier (.clk(clk2x), .reset(reset),
+         .sel_ver(sel_ver[0]), .start_pulse(start_pulse_buf), .teststart(),
+         .start_clk_sync(start_clksync), .star_sync_out(StartSync),
+         .ver_out_10bits(XLXN_12[39:0]));
+   // synthesis attribute RLOC_ORIGIN of start_vernier is "R27C7"
+   pencoder40_binary XLXI_28 (.dataIn(XLXN_12[39:0]), .sel(sel_pencoder),
+         .dataOutz(dout[7:0]));
+   eight_stop_channels XLXI_29 (.clk(clk2x), .reset(reset),
+         .sel_vers_stop(sel_ver[8:1]), .start_pulse(start_clksync),
+         .stop_pulses(stop_pulse_buf[7:0]), .test_stop(teststop),
+         .load_reg(XLXN_19[7:0]), .PulseSyncOut(StopSync[7:0]),
+         .ver_stop_10bits_out(XLXN_12[39:0]));
+   // synthesis attribute RLOC_ORIGIN of XLXI_29 is "R8C3"
+endmodule

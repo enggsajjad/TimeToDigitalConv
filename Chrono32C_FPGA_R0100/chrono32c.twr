@@ -1,0 +1,103 @@
+--------------------------------------------------------------------------------
+Release 6.1i Trace G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+
+C:/Xilinx/bin/nt/trce.exe -intstyle ise -e 3 -l 3 -xml chrono32c chrono32c.ncd
+-o chrono32c.twr chrono32c.pcf
+
+
+Design file:              chrono32c.ncd
+Physical constraint file: chrono32c.pcf
+Device,speed:             xc2s200,-6 (PRODUCTION 1.27 2003-06-19)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  |  Clock |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) |  Phase |
+------------+------------+------------+------------------+--------+
+fpgasel<0>  |    4.709(R)|    0.733(R)|clkdiv            |   0.000|
+fpgasel<1>  |    4.831(R)|   -3.363(R)|clkdiv            |   0.000|
+fpgasel<2>  |    3.826(R)|    0.535(R)|clkdiv            |   0.000|
+rx_uc       |   -1.748(R)|    2.448(R)|clkdiv            |   0.000|
+sel0        |   -1.719(R)|    2.419(R)|clkdiv            |   0.000|
+sel1        |   -2.571(R)|    3.271(R)|clkdiv            |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  |  Clock |
+Destination | to PAD     |Internal Clock(s) |  Phase |
+------------+------------+------------------+--------+
+DAC1_stop   |   14.692(R)|clkdiv            |   0.000|
+DAC2_start  |   13.188(R)|clkdiv            |   0.000|
+intr        |   10.214(R)|clk2x             |   0.000|
+startout1   |   13.434(R)|clkdiv            |   0.000|
+startout2   |   14.781(R)|clkdiv            |   0.000|
+tx_uc       |   14.967(R)|clkdiv            |   0.000|
+------------+------------+------------------+--------+
+
+Clock start_pulse to Pad
+------------+------------+------------------------------+--------+
+            | clk (edge) |                              |  Clock |
+Destination | to PAD     |Internal Clock(s)             |  Phase |
+------------+------------+------------------------------+--------+
+startout1   |   12.006(R)|start_vernier/XLXI_2/out_pulse|   0.000|
+startout2   |   13.353(R)|start_vernier/XLXI_2/out_pulse|   0.000|
+------------+------------+------------------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   28.896|         |         |         |
+start_pulse    |    2.802|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+clk            |clkout1        |    6.626|
+clk            |clkout2        |    8.723|
+fpgasel<0>     |tx_pc          |   10.107|
+fpgasel<0>     |tx_pr          |    9.660|
+fpgasel<0>     |tx_uc          |   10.181|
+fpgasel<1>     |tx_pc          |   10.043|
+fpgasel<1>     |tx_pr          |    9.596|
+fpgasel<1>     |tx_uc          |   10.303|
+fpgasel<2>     |tx_pc          |    9.838|
+fpgasel<2>     |tx_pr          |    9.391|
+fpgasel<2>     |tx_uc          |    8.846|
+rx_pc          |tx_uc          |    8.587|
+rx_pr          |tx_uc          |    8.708|
+rx_uc          |tx_pc          |    9.012|
+rx_uc          |tx_pr          |    8.180|
+sel0           |tx_pc          |    9.134|
+sel0           |tx_pr          |    8.193|
+sel0           |tx_uc          |    8.933|
+sel1           |tx_pc          |    8.177|
+sel1           |tx_pr          |    8.492|
+sel1           |tx_uc          |    9.101|
+---------------+---------------+---------+
+
+Analysis completed Tue Jun 04 15:00:26 2013
+--------------------------------------------------------------------------------
+
+Peak Memory Usage: 67 MB

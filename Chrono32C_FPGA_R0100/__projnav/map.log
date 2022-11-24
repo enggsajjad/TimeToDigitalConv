@@ -1,0 +1,4 @@
+Mapping Module chrono32c . . .
+MAP command line:
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono32c_map.ncd chrono32c.ngd chrono32c.pcf
+Mapping Module chrono32c: DONE

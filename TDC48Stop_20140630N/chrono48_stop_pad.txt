@@ -1,0 +1,230 @@
+Release 6.1i - Par G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+
+Wed Jul 02 11:07:02 2014
+
+
+INPUT FILE:       chrono48_stop_map.ncd
+OUTPUT FILE:      chrono48_stop_pad.txt
+PART TYPE:        xc2s200
+SPEED GRADE:      -6
+PACKAGE:          pq208
+
+Pinout by Pin Number:
+
+-----     |-----         |-----    |-----       |-----    |-----      |-----         |-----     |-----    |-----      |-----    |-----  |-----     |
+Pin Number|Signal Name   |Pin Usage|Pin Name    |Direction|IO Standard|IO Bank Number|Drive (mA)|Slew Rate|Termination|IOB Delay|Voltage|Constraint|
+P1        |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P10       |              |IOB      |            |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P100      |              |IOB      |IO_VREF_4   |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P101      |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P102      |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P103      |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P104      |              |         |DONE        |         |           |              |          |         |           |         |       |          |
+P105      |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P106      |              |         |PROGRAM     |         |           |              |          |         |           |         |       |          |
+P107      |              |IOB      |IO_INIT     |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P108      |              |IOB      |IO_D7       |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P109      |dev_addr<0>   |IOB      |IO_VREF_3   |INPUT    |LVTTL      |(0,3)***      |          |         |           |NONE     |       |LOCATED   |
+P11       |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P110      |              |IOB      |            |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P111      |dev_addr<1>   |IOB      |IO_VREF_3   |INPUT    |LVTTL      |(0,3)***      |          |         |           |NONE     |       |LOCATED   |
+P112      |              |IOB      |            |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P113      |dev_addr<2>   |IOB      |            |INPUT    |LVTTL      |(0,3)***      |          |         |           |NONE     |       |LOCATED   |
+P114      |              |IOB      |IO_VREF_3   |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P115      |              |IOB      |IO_D6       |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P116      |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P117      |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P118      |              |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |
+P119      |              |IOB      |IO_D5       |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P12       |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P120      |cmd_rst_test  |IOB      |            |OUTPUT   |LVTTL      |(0,3)***      |12        |SLOW     |NONE**     |         |       |LOCATED   |
+P121      |              |IOB      |            |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P122      |              |IOB      |            |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P123      |              |IOB      |            |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P124      |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P125      |              |IOB      |IO_VREF_3   |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P126      |              |IOB      |IO_D4       |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P127      |rx_uc         |IOB      |            |INPUT    |LVTTL      |(0,3)***      |          |         |           |IFD      |       |LOCATED   |
+P128      |              |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |
+P129      |              |PCIIOB   |IO_TRDY     |UNUSED   |           |(0,3)***      |          |         |           |         |       |          |
+P13       |              |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |
+P130      |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P131      |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P132      |              |PCIIOB   |IO_IRDY     |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P133      |tx_uc         |IOB      |            |TRISTATE |LVTTL      |(0,2)***      |12        |SLOW     |NONE**     |         |       |LOCATED   |
+P134      |              |IOB      |            |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P135      |              |IOB      |IO_D3       |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P136      |              |IOB      |IO_VREF_2   |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P137      |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P138      |              |IOB      |            |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P139      |              |IOB      |            |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P14       |cmd_dev_sel   |IOB      |            |OUTPUT   |LVTTL      |(0,7)***      |12        |SLOW     |NONE**     |         |       |LOCATED   |
+P140      |              |IOB      |            |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P141      |              |IOB      |            |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P142      |              |IOB      |IO_D2       |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P143      |              |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |
+P144      |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P145      |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P146      |              |IOB      |IO_D1       |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P147      |              |IOB      |IO_VREF_2   |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P148      |              |IOB      |            |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P149      |              |IOB      |            |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P15       |              |IOB      |            |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P150      |              |IOB      |IO_VREF_2   |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P151      |              |IOB      |            |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P152      |              |IOB      |IO_VREF_2   |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P153      |              |IOB      |IO_DIN_D0   |UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P154      |              |IOB      |IO_DOUT_BUSY|UNUSED   |           |(0,2)***      |          |         |           |         |       |          |
+P155      |              |         |CCLK        |         |           |              |          |         |           |         |       |          |
+P156      |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P157      |              |         |TDO         |         |           |              |          |         |           |         |       |          |
+P158      |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P159      |              |         |TDI         |         |           |              |          |         |           |         |       |          |
+P16       |              |IOB      |            |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P160      |              |IOB      |IO_CS       |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P161      |              |IOB      |IO_WRITE    |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P162      |              |IOB      |IO_VREF_1   |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P163      |              |IOB      |            |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P164      |              |IOB      |IO_VREF_1   |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P165      |              |IOB      |            |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P166      |              |IOB      |            |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P167      |              |IOB      |IO_VREF_1   |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P168      |              |IOB      |            |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P169      |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P17       |              |IOB      |            |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P170      |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P171      |              |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |
+P172      |              |IOB      |            |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P173      |              |IOB      |            |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P174      |              |IOB      |            |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P175      |              |IOB      |            |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P176      |              |IOB      |            |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P177      |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P178      |              |IOB      |IO_VREF_1   |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P179      |              |IOB      |            |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P18       |cmd_inc_dac   |IOB      |            |OUTPUT   |LVTTL      |(0,7)***      |12        |SLOW     |NONE**     |         |       |LOCATED   |
+P180      |              |IOB      |            |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P181      |              |IOB      |            |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P182      |              |GCLKIOB  |GCK2        |UNUSED   |           |(0,1)***      |          |         |           |         |       |          |
+P183      |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P184      |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P185      |              |GCLKIOB  |GCK3        |UNUSED   |           |0             |          |         |           |         |       |          |
+P186      |              |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |
+P187      |              |IOB      |            |UNUSED   |           |0             |          |         |           |         |       |          |
+P188      |              |IOB      |            |UNUSED   |           |0             |          |         |           |         |       |          |
+P189      |              |IOB      |IO_VREF_0   |UNUSED   |           |0             |          |         |           |         |       |          |
+P19       |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P190      |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P191      |              |IOB      |            |UNUSED   |           |0             |          |         |           |         |       |          |
+P192      |              |IOB      |            |UNUSED   |           |0             |          |         |           |         |       |          |
+P193      |              |IOB      |            |UNUSED   |           |0             |          |         |           |         |       |          |
+P194      |              |IOB      |            |UNUSED   |           |0             |          |         |           |         |       |          |
+P195      |              |IOB      |            |UNUSED   |           |0             |          |         |           |         |       |          |
+P196      |              |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |
+P197      |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P198      |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P199      |              |IOB      |            |UNUSED   |           |0             |          |         |           |         |       |          |
+P2        |              |         |TMS         |         |           |              |          |         |           |         |       |          |
+P20       |              |IOB      |IO_VREF_7   |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P200      |              |IOB      |IO_VREF_0   |UNUSED   |           |0             |          |         |           |         |       |          |
+P201      |              |IOB      |            |UNUSED   |           |0             |          |         |           |         |       |          |
+P202      |              |IOB      |            |UNUSED   |           |0             |          |         |           |         |       |          |
+P203      |              |IOB      |IO_VREF_0   |UNUSED   |           |0             |          |         |           |         |       |          |
+P204      |              |IOB      |            |UNUSED   |           |0             |          |         |           |         |       |          |
+P205      |              |IOB      |IO_VREF_0   |UNUSED   |           |0             |          |         |           |         |       |          |
+P206      |              |IOB      |            |UNUSED   |           |0             |          |         |           |         |       |          |
+P207      |              |         |TCK         |         |           |              |          |         |           |         |       |          |
+P208      |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P21       |              |IOB      |            |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P22       |cmd_rst_dac   |IOB      |            |OUTPUT   |LVTTL      |(0,7)***      |12        |SLOW     |NONE**     |         |       |LOCATED   |
+P23       |              |IOB      |            |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P24       |              |PCIIOB   |IO_IRDY     |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P25       |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P26       |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P27       |              |PCIIOB   |IO_TRDY     |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P28       |              |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |
+P29       |cmd_reset     |IOB      |            |OUTPUT   |LVTTL      |(0,6)***      |12        |SLOW     |NONE**     |         |       |LOCATED   |
+P3        |              |IOB      |            |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P30       |              |IOB      |            |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P31       |              |IOB      |IO_VREF_6   |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P32       |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P33       |stop_pulses<3>|IOB      |            |INPUT    |LVTTL      |(0,6)***      |          |         |           |NONE     |       |LOCATED   |
+P34       |              |IOB      |            |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P35       |              |IOB      |            |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P36       |              |IOB      |            |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P37       |stop_pulses<2>|IOB      |            |INPUT    |LVTTL      |(0,6)***      |          |         |           |NONE     |       |LOCATED   |
+P38       |              |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |
+P39       |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P4        |              |IOB      |IO_VREF_7   |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P40       |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P41       |              |IOB      |            |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P42       |              |IOB      |IO_VREF_6   |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P43       |              |IOB      |            |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P44       |stop_pulses<1>|IOB      |            |INPUT    |LVTTL      |(0,6)***      |          |         |           |NONE     |       |LOCATED   |
+P45       |              |IOB      |IO_VREF_6   |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P46       |              |IOB      |            |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P47       |              |IOB      |IO_VREF_6   |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P48       |stop_pulses<0>|IOB      |            |INPUT    |LVTTL      |(0,6)***      |          |         |           |NONE     |       |LOCATED   |
+P49       |              |IOB      |            |UNUSED   |           |(0,6)***      |          |         |           |         |       |          |
+P5        |              |IOB      |            |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P50       |              |         |M1          |         |           |              |          |         |           |         |       |          |
+P51       |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P52       |              |         |M0          |         |           |              |          |         |           |         |       |          |
+P53       |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P54       |              |         |M2          |         |           |              |          |         |           |         |       |          |
+P57       |              |IOB      |IO_VREF_5   |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P58       |start_clk_sync|IOB      |            |INPUT    |LVTTL      |(0,5)***      |          |         |           |NONE     |       |LOCATED   |
+P59       |              |IOB      |IO_VREF_5   |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P6        |              |IOB      |IO_VREF_7   |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P60       |              |IOB      |            |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P61       |              |IOB      |            |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P62       |              |IOB      |IO_VREF_5   |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P63       |              |IOB      |            |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P64       |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P65       |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P66       |              |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |
+P67       |              |IOB      |            |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P68       |              |IOB      |            |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P69       |              |IOB      |            |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P7        |              |IOB      |            |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P70       |              |IOB      |            |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P71       |teststop      |IOB      |            |INPUT    |LVTTL      |(0,5)***      |          |         |           |NONE     |       |LOCATED   |
+P72       |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P73       |              |IOB      |IO_VREF_5   |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P74       |              |IOB      |            |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P75       |              |IOB      |            |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P76       |              |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |
+P77       |              |GCLKIOB  |GCK1        |UNUSED   |           |(0,5)***      |          |         |           |         |       |          |
+P78       |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P79       |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P8        |              |IOB      |            |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P80       |clk           |GCLKIOB  |GCK0        |INPUT    |LVTTL      |(0,4)***      |          |         |           |         |       |LOCATED   |
+P81       |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P82       |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P83       |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P84       |              |IOB      |IO_VREF_4   |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P85       |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P86       |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P87       |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P88       |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P89       |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P9        |              |IOB      |IO_VREF_7   |UNUSED   |           |(0,7)***      |          |         |           |         |       |          |
+P90       |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P91       |              |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |
+P92       |              |         |VCCO        |         |           |0             |          |         |           |         |na     |          |
+P93       |              |         |GND         |         |           |              |          |         |           |         |       |          |
+P94       |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P95       |              |IOB      |IO_VREF_4   |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P96       |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P97       |              |IOB      |            |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P98       |              |IOB      |IO_VREF_4   |UNUSED   |           |(0,4)***      |          |         |           |         |       |          |
+P99       |DACout        |IOB      |            |OUTPUT   |LVTTL      |(0,4)***      |24        |FAST     |NONE**     |         |       |LOCATED   |
+
+-----     |-----         |-----    |-----       |-----    |-----      |-----         |-----     |-----    |-----      |-----    |-----  |-----     |
+
+* Default value.
+** This default Pullup/Pulldown value can be overridden in Bitgen.
+*** In some smaller packages, the VCCO bank number of a pin may trail
+     the VREF bank number (VCCO,VREF).
+

@@ -1,0 +1,28 @@
+// Verilog model created from start_channel.sch - Tue Jun 04 14:59:49 2013
+
+`timescale 1ns / 1ps
+
+module start_channel(clk, reset, sel_ver, start_pulse, teststart,
+      start_clk_sync, star_sync_out, ver_out_10bits);
+
+    input clk;
+    input reset;
+    input sel_ver;
+    input start_pulse;
+    input teststart;
+   output start_clk_sync;
+   output star_sync_out;
+   output [39:0] ver_out_10bits;
+   
+   wire logic0;
+   
+   vernier40 XLXI_1 (.clksync(start_clk_sync), .logic0(logic0), .reset(reset),
+         .sel_ver(sel_ver), .startsync(star_sync_out),
+         .Qout(ver_out_10bits[39:0]));
+   // synthesis attribute RLOC of XLXI_1 is "R0C2"
+   synclogic1 XLXI_2 (.clk(clk), .reset(reset), .start(start_pulse),
+         .test_pulse(teststart), .clk_sync1(start_clk_sync),
+         .startsync(star_sync_out));
+   // synthesis attribute RLOC of XLXI_2 is "R1C0"
+   GND XLXI_3 (.G(logic0));
+endmodule

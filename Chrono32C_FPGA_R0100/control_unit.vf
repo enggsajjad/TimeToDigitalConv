@@ -1,0 +1,109 @@
+// Verilog model created from C:\Xilinx\spartan2\data\drawing\ibuf8.sch - Tue Jun 04 14:59:47 2013
+
+`timescale 1ns / 1ps
+
+module IBUF8_MXILINX_control_unit(I, O);
+
+    input [7:0] I;
+   output [7:0] O;
+   
+   
+   IBUF I_36_30 (.I(I[4]), .O(O[4]));
+   IBUF I_36_31 (.I(I[5]), .O(O[5]));
+   IBUF I_36_32 (.I(I[6]), .O(O[6]));
+   IBUF I_36_33 (.I(I[7]), .O(O[7]));
+   IBUF I_36_34 (.I(I[3]), .O(O[3]));
+   IBUF I_36_35 (.I(I[2]), .O(O[2]));
+   IBUF I_36_36 (.I(I[1]), .O(O[1]));
+   IBUF I_36_37 (.I(I[0]), .O(O[0]));
+endmodule
+// Verilog model created from control_unit.sch - Tue Jun 04 14:59:47 2013
+
+`timescale 1ns / 1ps
+
+module control_unit(clk, data_in, fpgasel, rx_pc, rx_pr, rx_uc, sel0, sel1,
+      StartSync, start_pulse, stop_pulses, clkdiv, clkout1, clkout2, clk2x, d,
+      loaddac1, loaddac2, resdac, reset, sel_counts, sel_dac1, sel_dac2,
+      sel_fpga, sel_pencoder, sel_ver, startout1, startout2, start_pulse_buf,
+      stop_pulses_buf, teststart, teststop, tx_pc, tx_pr, tx_uc);
+
+    input clk;
+    input [7:0] data_in;
+    input [2:0] fpgasel;
+    input rx_pc;
+    input rx_pr;
+    input rx_uc;
+    input sel0;
+    input sel1;
+    input StartSync;
+    input start_pulse;
+    input [7:0] stop_pulses;
+   output clkdiv;
+   output clkout1;
+   output clkout2;
+   output clk2x;
+   output [7:0] d;
+   output loaddac1;
+   output loaddac2;
+   output resdac;
+   output reset;
+   output [31:0] sel_counts;
+   output sel_dac1;
+   output sel_dac2;
+   output sel_fpga;
+   output sel_pencoder;
+   output [8:0] sel_ver;
+   output startout1;
+   output startout2;
+   output start_pulse_buf;
+   output [7:0] stop_pulses_buf;
+   output teststart;
+   output teststop;
+   output tx_pc;
+   output tx_pr;
+   output tx_uc;
+   
+   wire [5:0] count_sel;
+   wire doutrdy;
+   wire fpga_sel;
+   wire restest;
+   wire rst;
+   wire rx;
+   wire rx1out;
+   wire startup;
+   wire testing;
+   wire tx;
+   wire XLXN_17;
+   wire XLXN_23;
+   
+   clk_mul Clock_Mul (.clk(clk), .clkdiv(clkdiv), .clk4x(clk2x));
+   IBUF XLXI_10 (.I(start_pulse), .O(XLXN_17));
+   IBUF8_MXILINX_control_unit XLXI_14 (.I(stop_pulses[7:0]),
+         .O(stop_pulses_buf[7:0]));
+   // synthesis attribute HU_SET of XLXI_14 is "XLXI_14_0"
+   top_drom XLXI_40 (.address(count_sel[5:0]), .clk(clkdiv),
+         .sel_counters(sel_counts[31:0]), .sel_dac1(sel_dac1),
+         .sel_dac2(sel_dac2), .sel_fpgasel(sel_fpga),
+         .sel_pencoder(sel_pencoder), .sel_status(), .sel_vers(sel_ver[8:0]));
+   IR_decoder XLXI_41 (.clk(clkdiv), .data_in(data_in[7:0]), .rst(rst),
+         .rx(rx), .sel_val(fpgasel[2:0]), .address(count_sel[5:0]),
+         .doutrdy(doutrdy), .fpga_sel(fpga_sel), .fpga_sel_status(d[7:0]),
+         .inc_dac1(loaddac1), .inc_dac2(loaddac2), .read(), .res(reset),
+         .restest(restest), .res_dac(resdac), .startup(startup), .tx(tx),
+         .uart_ready());
+   GND XLXI_43 (.G(rst));
+   OBUF XLXI_48 (.I(rx), .O(rx1out));
+   router XLXI_50 (.fpga_addr(fpgasel[2:0]), .rx_fpga(tx), .rx_pc(rx_pc),
+         .rx_pr(rx_pr), .rx_uc(rx_uc), .selfpga(fpga_sel), .sel0(sel0),
+         .sel1(sel1), .tx_fpga(rx), .tx_pc(tx_pc), .tx_pr(tx_pr),
+         .tx_uc(tx_uc));
+   OBUF XLXI_54 (.I(clkdiv), .O(clkout1));
+   OBUF XLXI_55 (.I(clkdiv), .O(clkout2));
+   testcounter XLXI_85 (.clk(clkdiv), .reset(reset), .res_test(restest),
+         .startup(startup), .testing(testing), .teststart(teststart),
+         .teststop(teststop));
+   OBUF XLXI_88 (.I(XLXN_23), .O(startout1));
+   OBUF XLXI_89 (.I(XLXN_23), .O(startout2));
+   OR2 XLXI_95 (.I0(teststart), .I1(XLXN_17), .O(start_pulse_buf));
+   AND2B1 XLXI_96 (.I0(testing), .I1(StartSync), .O(XLXN_23));
+endmodule

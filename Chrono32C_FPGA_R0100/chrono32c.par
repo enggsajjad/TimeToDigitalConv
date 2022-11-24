@@ -1,0 +1,195 @@
+
+Constraints file: chrono32c.pcf
+
+Loading device database for application Par from file "chrono32c_map.ncd".
+   "chrono32c" is an NCD, version 2.38, device xc2s200, package pq208, speed -6
+Loading device for application Par from file 'v200.nph' in environment
+C:/Xilinx.
+Device speed data version:  PRODUCTION 1.27 2003-06-19.
+
+
+Resolved that macro <start_vernier/hset> must be placed at site CLB_R27C9.S1.
+Resolved that macro <Main_Reading/hset> must be placed at site CLB_R7C26.S0.
+Resolved that macro <XLXI_29/hset> must be placed at site CLB_R8C4.S1.
+Resolved that IOB <clkout1> must be placed at site P88.
+Resolved that IOB <clkout2> must be placed at site P178.
+Resolved that IOB <startout1> must be placed at site P71.
+Resolved that IOB <startout2> must be placed at site P194.
+Resolved that IOB <DAC2_start> must be placed at site P99.
+Resolved that IOB <stop_pulses<0>> must be placed at site P48.
+Resolved that IOB <stop_pulses<1>> must be placed at site P44.
+Resolved that IOB <stop_pulses<2>> must be placed at site P37.
+Resolved that IOB <stop_pulses<3>> must be placed at site P33.
+Resolved that IOB <stop_pulses<4>> must be placed at site P29.
+Resolved that IOB <stop_pulses<5>> must be placed at site P22.
+Resolved that IOB <stop_pulses<6>> must be placed at site P18.
+Resolved that IOB <stop_pulses<7>> must be placed at site P14.
+Resolved that IOB <rx_pc> must be placed at site P148.
+Resolved that IOB <rx_uc> must be placed at site P127.
+Resolved that IOB <rx_pr> must be placed at site P136.
+Resolved that IOB <start_pulse> must be placed at site P58.
+Resolved that IOB <tx_pc> must be placed at site P150.
+Resolved that IOB <tx_uc> must be placed at site P133.
+Resolved that IOB <tx_pr> must be placed at site P139.
+Resolved that IOB <DAC1_stop> must be placed at site P200.
+Resolved that IOB <sel0> must be placed at site P134.
+Resolved that IOB <sel1> must be placed at site P122.
+Resolved that IOB <intr> must be placed at site P120.
+Resolved that GCLKIOB <clk> must be placed at site P80.
+Resolved that IOB <fpgasel<0>> must be placed at site P109.
+Resolved that IOB <fpgasel<1>> must be placed at site P111.
+Resolved that IOB <fpgasel<2>> must be placed at site P113.
+Resolved that DLL <Control_Unit1_Clock_Mul_XLXI_1> must be placed at site DLL0.
+Resolved that DLL <Control_Unit1_Clock_Mul_XLXI_2> must be placed at site DLL1.
+Resolved that GCLK <Control_Unit1_Clock_Mul_XLXI_4> must be placed at site
+GCLKBUF0.
+Resolved that GCLK <Control_Unit1_Clock_Mul_XLXI_5> must be placed at site
+GCLKBUF1.
+
+
+Device utilization summary:
+
+   Number of External GCLKIOBs         1 out of 4      25%
+   Number of External IOBs            27 out of 140    19%
+      Number of LOCed External IOBs   27 out of 27    100%
+
+   Number of BLOCKRAMs                 2 out of 14     14%
+   Number of SLICEs                 1332 out of 2352   56%
+
+   Number of DLLs                      2 out of 4      50%
+   Number of GCLKs                     2 out of 4      50%
+
+
+
+Overall effort level (-ol):   Standard (set by user)
+Placer effort level (-pl):    Standard (set by user)
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard (set by user)
+
+
+Phase 1.1
+Phase 1.1 (Checksum:98a2cd) REAL time: 0 secs 
+
+Phase 2.23
+Phase 2.23 (Checksum:1312cfe) REAL time: 0 secs 
+
+Phase 3.3
+Phase 3.3 (Checksum:1c9c37d) REAL time: 0 secs 
+
+Phase 4.5
+Phase 4.5 (Checksum:26259fc) REAL time: 0 secs 
+
+Phase 5.8
+.................................
+Phase 5.8 (Checksum:d3840b) REAL time: 0 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 0 secs 
+
+Phase 7.18
+Phase 7.18 (Checksum:42c1d79) REAL time: 0 secs 
+
+Writing design to file chrono32c.ncd.
+
+Total REAL time to Placer completion: 0 secs 
+Total CPU time to Placer completion: 1 secs 
+
+
+Phase 1: 6093 unrouted;       REAL time: 0 secs 
+
+Phase 2: 4951 unrouted;       REAL time: 4 secs 
+
+Phase 3: 1150 unrouted;       REAL time: 4 secs 
+
+Phase 4: 0 unrouted;       REAL time: 4 secs 
+
+Total REAL time to Router completion: 5 secs 
+Total CPU time to Router completion: 4 secs 
+
+Generating "par" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++----------------------------+----------+--------+------------+-------------+
+|         Clock Net          | Resource | Fanout |Net Skew(ns)|Max Delay(ns)|
++----------------------------+----------+--------+------------+-------------+
+|             clk2x          |  Global  |  250   |  0.078     |  0.544      |
++----------------------------+----------+--------+------------+-------------+
+|start_vernier/XLXI_2/out    |          |        |            |             |
+|                  _pulse    |   Local  |    1   |  0.000     |  0.573      |
++----------------------------+----------+--------+------------+-------------+
+|XLXI_29/XLXI_4/synclogic    |          |        |            |             |
+|        _stop3/out_pulse    |   Local  |    1   |  0.000     |  0.573      |
++----------------------------+----------+--------+------------+-------------+
+|XLXI_29/XLXI_3/synclogic    |          |        |            |             |
+|        _stop3/out_pulse    |   Local  |    1   |  0.000     |  0.573      |
++----------------------------+----------+--------+------------+-------------+
+|XLXI_29/XLXI_2/synclogic    |          |        |            |             |
+|        _stop3/out_pulse    |   Local  |    1   |  0.000     |  0.573      |
++----------------------------+----------+--------+------------+-------------+
+|XLXI_29/XLXI_8/synclogic    |          |        |            |             |
+|        _stop3/out_pulse    |   Local  |    1   |  0.000     |  0.573      |
++----------------------------+----------+--------+------------+-------------+
+|XLXI_29/XLXI_7/synclogic    |          |        |            |             |
+|        _stop3/out_pulse    |   Local  |    1   |  0.000     |  0.583      |
++----------------------------+----------+--------+------------+-------------+
+|XLXI_29/XLXI_6/synclogic    |          |        |            |             |
+|        _stop3/out_pulse    |   Local  |    1   |  0.000     |  0.573      |
++----------------------------+----------+--------+------------+-------------+
+|XLXI_29/XLXI_5/synclogic    |          |        |            |             |
+|        _stop3/out_pulse    |   Local  |    1   |  0.000     |  0.592      |
++----------------------------+----------+--------+------------+-------------+
+|XLXI_29/XLXI_9/synclogic    |          |        |            |             |
+|        _stop3/out_pulse    |   Local  |    1   |  0.000     |  0.573      |
++----------------------------+----------+--------+------------+-------------+
+|            clkdiv          |   Local  |   87   |  1.563     |  4.562      |
++----------------------------+----------+--------+------------+-------------+
+|Control_Unit1_XLXI_41_c2    |          |        |            |             |
+|            _cstate_FFd4    |   Local  |    4   |  0.036     |  3.096      |
++----------------------------+----------+--------+------------+-------------+
+|Control_Unit1_XLXI_41_c2    |          |        |            |             |
+|            _cstate_FFd3    |   Local  |    4   |  0.036     |  3.080      |
++----------------------------+----------+--------+------------+-------------+
+|Control_Unit1_XLXI_41_c2    |          |        |            |             |
+|            _cstate_FFd7    |   Local  |    2   |  0.000     |  1.769      |
++----------------------------+----------+--------+------------+-------------+
+|Control_Unit1_XLXI_41_u2    |          |        |            |             |
+|           _startbitsync    |   Local  |    1   |  0.000     |  0.702      |
++----------------------------+----------+--------+------------+-------------+
+
+
+   The Delay Summary Report
+
+   The SCORE FOR THIS DESIGN is: 314
+
+
+The NUMBER OF SIGNALS NOT COMPLETELY ROUTED for this design is: 0
+
+   The AVERAGE CONNECTION DELAY for this design is:        1.902
+   The MAXIMUM PIN DELAY IS:                               6.848
+   The AVERAGE CONNECTION DELAY on the 10 WORST NETS is:   6.175
+
+   Listing Pin Delays by value: (nsec)
+
+    d < 1.00   < d < 2.00  < d < 3.00  < d < 4.00  < d < 7.00  d >= 7.00
+   ---------   ---------   ---------   ---------   ---------   ---------
+        2117        1710         988         717         561           0
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 5 secs 
+Total CPU time to PAR completion: 4 secs 
+
+Peak Memory Usage:  73 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Writing design to file chrono32c.ncd.
+
+
+PAR done.

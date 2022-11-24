@@ -1,0 +1,31 @@
+# Clock input 25MHz from start card	INPUT
+NET "clk" 				LOC = "p80";
+# Threshold Channel	OUTPUT
+NET "DACout" 		LOC = "p191";
+#NET "DIN" 		LOC = "p191";
+#NET "SCLK" 		LOC = "p194";
+#NET "SYNC" 		LOC = "p199";
+# Address of the FPGA	INPUT
+NET "dev_addr<0>" 		LOC = "p189";
+NET "dev_addr<1>" 		LOC = "p187";
+NET "dev_addr<2>" 		LOC = "p182";
+NET "dev_addr<3>" 		LOC = "p175";
+# Recieve from Microcontroller	INPUT
+NET "rx_uc" 			LOC = "p133";
+# Transmit to Microcontroller		OUTPUT
+NET "tx_uc" 			LOC = "p132";
+# Synch Start Pulse from start card	INPUT
+NET "start_sync_in" 	LOC = "p63";
+#Stop Pulses	INPUT
+NET "stop_pulses<0>" LOC = "p44"; 
+NET "stop_pulses<1>" LOC = "p36"; 
+NET "stop_pulses<2>" LOC = "p20"; 
+NET "stop_pulses<3>" LOC = "p10"; 
+# test pulse from testcounter from start card INPUT
+#NET "teststop" LOC = "p71"; 
+NET "teststop" LOC = "p138"; 
+
+# Test Signals
+#NET "intr" 				LOC = "p120";
+#NET "start_sync" LOC = "p22"; 
+#NET "start_clk_sync" LOC = "p18"; 

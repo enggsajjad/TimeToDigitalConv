@@ -1,0 +1,13 @@
+[Inputs]
+clk
+rst
+enable
+din_rdy
+=din_byte[7:0]=
+[Outputs]
+ser_out
+uart_ready
+[BiDir]
+[ATTRIBUTES]
+VeriModel uart_tx
+

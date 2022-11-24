@@ -1,0 +1,722 @@
+Release 6.1i - xst G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to __projnav
+CPU : 0.00 / 0.16 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.16 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: four_stop_channels.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : four_stop_channels.prj
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+Verilog Include Directory          : 
+
+---- Target Parameters
+Output File Name                   : four_stop_channels
+Output Format                      : NGC
+Target Device                      : xc2s200-6-pq208
+
+---- Source Options
+Top Module Name                    : four_stop_channels
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Equivalent register Removal        : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+Global Optimization                : AllClockNets
+RTL Output                         : Yes
+Write Timing Constraints           : NO
+Hierarchy Separator                : _
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : four_stop_channels.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+Optimize Instantiated Primitives   : NO
+
+=========================================================================
+
+WARNING:Xst:1885 - LSO file is empty, default list of libraries is used
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling source file "synclogic.vf"
+Module <synclogic> compiled
+Compiling source file "sel_vernier.v"
+Module <sel_vernier> compiled
+Compiling source file "andline8.vf"
+Module <andline8> compiled
+Compiling source file "andline16.vf"
+Module <andline16> compiled
+Compiling source file "andline40.vf"
+Module <andline40> compiled
+Compiling source file "ildceline8.vf"
+Module <ildceline8> compiled
+Compiling source file "ildceline16.vf"
+Module <ildceline16> compiled
+Compiling source file "ildceline40.vf"
+Module <ildceline40> compiled
+Compiling source file "xorcy_dline8.vf"
+Module <xorcy_dline8> compiled
+Compiling source file "xorcy_dline16.vf"
+Module <xorcy_dline16> compiled
+Compiling source file "xorcy_dline40.vf"
+Module <xorcy_dline40> compiled
+Compiling source file "vernier_40_gates.vf"
+Module <vernier_40_gates> compiled
+Compiling source file "stop_channel.vf"
+Module <stop_channel> compiled
+Compiling source file "four_stop_channels.vf"
+Module <four_stop_channels> compiled
+No errors in compilation
+Analysis of file <four_stop_channels.prj> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <four_stop_channels>.
+Module <four_stop_channels> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R14C0" for instance <XLXI_2> in unit <four_stop_channels>.
+    Set user-defined property "RLOC =  R12C0" for instance <XLXI_3> in unit <four_stop_channels>.
+    Set user-defined property "RLOC =  R10C0" for instance <XLXI_4> in unit <four_stop_channels>.
+    Set user-defined property "RLOC =  R8C0" for instance <XLXI_5> in unit <four_stop_channels>.
+Analyzing module <stop_channel>.
+Module <stop_channel> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_17> in unit <stop_channel>.
+    Set user-defined property "RLOC =  R1C0" for instance <XLXI_18> in unit <stop_channel>.
+    Set user-defined property "RLOC =  R0C1" for instance <XLXI_19> in unit <stop_channel>.
+Analyzing module <GND>.
+Analyzing module <XOR2>.
+Analyzing module <AND2>.
+Analyzing module <FDC>.
+Analyzing module <synclogic>.
+Module <synclogic> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C0.S0" for instance <ff_clksyn> in unit <synclogic>.
+    Set user-defined property "INIT =  0" for instance <ff_clksyn> in unit <synclogic>.
+    Set user-defined property "RLOC =  R0C0.S1" for instance <XLXI_4> in unit <synclogic>.
+    Set user-defined property "INIT =  0" for instance <XLXI_4> in unit <synclogic>.
+    Set user-defined property "RLOC =  R0C0.S1" for instance <XLXI_6> in unit <synclogic>.
+Analyzing module <VCC>.
+Analyzing module <OR2>.
+Analyzing module <FMAP>.
+Analyzing module <vernier_40_gates>.
+Module <vernier_40_gates> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C0" for instance <XLXI_2> in unit <vernier_40_gates>.
+    Set user-defined property "RLOC =  R1C0" for instance <XLXI_3> in unit <vernier_40_gates>.
+    Set user-defined property "RLOC =  R1C0" for instance <XLXI_4> in unit <vernier_40_gates>.
+Analyzing module <sel_vernier>.
+Module <sel_vernier> is correct for synthesis.
+ 
+Analyzing module <andline40>.
+Module <andline40> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C16" for instance <XLXI_1> in unit <andline40>.
+    Set user-defined property "RLOC =  R0C8" for instance <XLXI_2> in unit <andline40>.
+    Set user-defined property "RLOC =  R0C0" for instance <XLXI_3> in unit <andline40>.
+Analyzing module <andline8>.
+Module <andline8> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C0.S1" for instance <and_0> in unit <andline8>.
+    Set user-defined property "RLOC =  R0C0.S0" for instance <and_1> in unit <andline8>.
+    Set user-defined property "RLOC =  R0C1.S1" for instance <and_2> in unit <andline8>.
+    Set user-defined property "RLOC =  R0C1.S0" for instance <and_3> in unit <andline8>.
+    Set user-defined property "RLOC =  R0C2.S1" for instance <and_4> in unit <andline8>.
+    Set user-defined property "RLOC =  R0C2.S0" for instance <and_5> in unit <andline8>.
+    Set user-defined property "RLOC =  R0C3.S1" for instance <and_6> in unit <andline8>.
+    Set user-defined property "RLOC =  R0C3.S0" for instance <and_7> in unit <andline8>.
+Analyzing module <MULT_AND>.
+Analyzing module <andline16>.
+Module <andline16> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C0.S1" for instance <and_0> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C0.S0" for instance <and_1> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C1.S1" for instance <and_2> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C1.S0" for instance <and_3> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C2.S1" for instance <and_4> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C2.S0" for instance <and_5> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C3.S1" for instance <and_6> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C3.S0" for instance <and_7> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C4.S1" for instance <and_8> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C4.S0" for instance <and_9> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C5.S1" for instance <and_10> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C5.S0" for instance <and_11> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C6.S1" for instance <and_12> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C6.S0" for instance <and_13> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C7.S1" for instance <and_14> in unit <andline16>.
+    Set user-defined property "RLOC =  R0C7.S0" for instance <and_15> in unit <andline16>.
+Analyzing module <ildceline40>.
+Module <ildceline40> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C16" for instance <XLXI_4> in unit <ildceline40>.
+    Set user-defined property "RLOC =  R0C8" for instance <XLXI_5> in unit <ildceline40>.
+    Set user-defined property "RLOC =  R0C0" for instance <XLXI_6> in unit <ildceline40>.
+Analyzing module <ildceline8>.
+Module <ildceline8> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C0.S1" for instance <latch_0> in unit <ildceline8>.
+    Set user-defined property "INIT =  0" for instance <latch_0> in unit <ildceline8>.
+    Set user-defined property "RLOC =  R0C0.S0" for instance <latch_1> in unit <ildceline8>.
+    Set user-defined property "INIT =  0" for instance <latch_1> in unit <ildceline8>.
+    Set user-defined property "RLOC =  R0C1.S1" for instance <latch_2> in unit <ildceline8>.
+    Set user-defined property "INIT =  0" for instance <latch_2> in unit <ildceline8>.
+    Set user-defined property "RLOC =  R0C1.S0" for instance <latch_3> in unit <ildceline8>.
+    Set user-defined property "INIT =  0" for instance <latch_3> in unit <ildceline8>.
+    Set user-defined property "RLOC =  R0C2.S1" for instance <latch_4> in unit <ildceline8>.
+    Set user-defined property "INIT =  0" for instance <latch_4> in unit <ildceline8>.
+    Set user-defined property "RLOC =  R0C2.S0" for instance <latch_5> in unit <ildceline8>.
+    Set user-defined property "INIT =  0" for instance <latch_5> in unit <ildceline8>.
+    Set user-defined property "RLOC =  R0C3.S1" for instance <latch_6> in unit <ildceline8>.
+    Set user-defined property "INIT =  0" for instance <latch_6> in unit <ildceline8>.
+    Set user-defined property "RLOC =  R0C3.S0" for instance <latch_7> in unit <ildceline8>.
+    Set user-defined property "INIT =  0" for instance <latch_7> in unit <ildceline8>.
+Analyzing module <LDCE_1>.
+Analyzing module <ildceline16>.
+Module <ildceline16> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C0.S1" for instance <latch_0> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_0> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C0.S0" for instance <latch_1> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_1> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C1.S1" for instance <latch_2> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_2> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C1.S0" for instance <latch_3> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_3> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C2.S1" for instance <latch_4> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_4> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C2.S0" for instance <latch_5> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_5> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C3.S1" for instance <latch_6> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_6> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C3.S0" for instance <latch_7> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_7> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C4.S1" for instance <latch_8> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_8> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C4.S0" for instance <latch_9> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_9> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C5.S1" for instance <latch_10> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_10> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C5.S0" for instance <latch_11> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_11> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C6.S1" for instance <latch_12> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_12> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C6.S0" for instance <latch_13> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_13> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C7.S1" for instance <latch_14> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_14> in unit <ildceline16>.
+    Set user-defined property "RLOC =  R0C7.S0" for instance <latch_15> in unit <ildceline16>.
+    Set user-defined property "INIT =  0" for instance <latch_15> in unit <ildceline16>.
+Analyzing module <xorcy_dline40>.
+Module <xorcy_dline40> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C0.S1" for instance <XLXI_3> in unit <xorcy_dline40>.
+    Set user-defined property "RLOC =  R0C16" for instance <XLXI_4> in unit <xorcy_dline40>.
+    Set user-defined property "RLOC =  R0C8" for instance <XLXI_5> in unit <xorcy_dline40>.
+    Set user-defined property "RLOC =  R0C0" for instance <XLXI_6> in unit <xorcy_dline40>.
+Analyzing module <INV>.
+Analyzing module <xorcy_dline8>.
+Module <xorcy_dline8> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C0.S1" for instance <xor_0> in unit <xorcy_dline8>.
+    Set user-defined property "RLOC =  R0C0.S0" for instance <xor_1> in unit <xorcy_dline8>.
+    Set user-defined property "RLOC =  R0C1.S1" for instance <xor_2> in unit <xorcy_dline8>.
+    Set user-defined property "RLOC =  R0C1.S0" for instance <xor_3> in unit <xorcy_dline8>.
+    Set user-defined property "RLOC =  R0C2.S1" for instance <xor_4> in unit <xorcy_dline8>.
+    Set user-defined property "RLOC =  R0C2.S0" for instance <xor_5> in unit <xorcy_dline8>.
+    Set user-defined property "RLOC =  R0C3.S1" for instance <xor_6> in unit <xorcy_dline8>.
+    Set user-defined property "RLOC =  R0C3.S0" for instance <xor_7> in unit <xorcy_dline8>.
+Analyzing module <XORCY_D>.
+Analyzing module <xorcy_dline16>.
+Module <xorcy_dline16> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  R0C0.S1" for instance <xor_0> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C0.S0" for instance <xor_1> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C1.S1" for instance <xor_2> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C1.S0" for instance <xor_3> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C2.S1" for instance <xor_4> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C2.S0" for instance <xor_5> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C3.S1" for instance <xor_6> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C3.S0" for instance <xor_7> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C4.S1" for instance <xor_8> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C4.S0" for instance <xor_9> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C5.S1" for instance <xor_10> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C5.S0" for instance <xor_11> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C6.S1" for instance <xor_12> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C6.S0" for instance <xor_13> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C7.S1" for instance <xor_14> in unit <xorcy_dline16>.
+    Set user-defined property "RLOC =  R0C7.S0" for instance <xor_15> in unit <xorcy_dline16>.
+Analyzing module <XORCY>.
+Analyzing module <IBUF>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <xorcy_dline16>.
+    Related source file is xorcy_dline16.vf.
+Unit <xorcy_dline16> synthesized.
+
+
+Synthesizing Unit <xorcy_dline8>.
+    Related source file is xorcy_dline8.vf.
+Unit <xorcy_dline8> synthesized.
+
+
+Synthesizing Unit <ildceline16>.
+    Related source file is ildceline16.vf.
+Unit <ildceline16> synthesized.
+
+
+Synthesizing Unit <ildceline8>.
+    Related source file is ildceline8.vf.
+Unit <ildceline8> synthesized.
+
+
+Synthesizing Unit <andline16>.
+    Related source file is andline16.vf.
+Unit <andline16> synthesized.
+
+
+Synthesizing Unit <andline8>.
+    Related source file is andline8.vf.
+Unit <andline8> synthesized.
+
+
+Synthesizing Unit <xorcy_dline40>.
+    Related source file is xorcy_dline40.vf.
+Unit <xorcy_dline40> synthesized.
+
+
+Synthesizing Unit <ildceline40>.
+    Related source file is ildceline40.vf.
+Unit <ildceline40> synthesized.
+
+
+Synthesizing Unit <andline40>.
+    Related source file is andline40.vf.
+Unit <andline40> synthesized.
+
+
+Synthesizing Unit <sel_vernier>.
+    Related source file is sel_vernier.v.
+    Found 40-bit tristate buffer for signal <Vout>.
+    Summary:
+	inferred  40 Tristate(s).
+Unit <sel_vernier> synthesized.
+
+
+Synthesizing Unit <vernier_40_gates>.
+    Related source file is vernier_40_gates.vf.
+Unit <vernier_40_gates> synthesized.
+
+
+Synthesizing Unit <synclogic>.
+    Related source file is synclogic.vf.
+Unit <synclogic> synthesized.
+
+
+Synthesizing Unit <stop_channel>.
+    Related source file is stop_channel.vf.
+Unit <stop_channel> synthesized.
+
+
+Synthesizing Unit <four_stop_channels>.
+    Related source file is four_stop_channels.vf.
+Unit <four_stop_channels> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Tristates                        : 4
+  40-bit tristate buffer           : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <four_stop_channels> ...
+
+Optimizing unit <synclogic> ...
+
+Optimizing unit <sel_vernier> ...
+
+Optimizing unit <andline8> ...
+
+Optimizing unit <andline16> ...
+
+Optimizing unit <ildceline8> ...
+
+Optimizing unit <ildceline16> ...
+
+Optimizing unit <xorcy_dline8> ...
+
+Optimizing unit <xorcy_dline16> ...
+
+Optimizing unit <andline40> ...
+
+Optimizing unit <ildceline40> ...
+
+Optimizing unit <xorcy_dline40> ...
+
+Optimizing unit <vernier_40_gates> ...
+
+Optimizing unit <stop_channel> ...
+Loading device for application Xst from file 'v200.nph' in environment C:/Xilinx.
+
+Mapping all equations...
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<39>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<38>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<37>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<36>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<35>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<34>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<33>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<32>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<31>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<30>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<29>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<28>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<27>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<26>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<25>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<24>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<23>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<22>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<21>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<20>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<19>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<18>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<17>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<16>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<15>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<14>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<13>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<12>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<11>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<10>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<9>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<8>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<7>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<6>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<5>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<4>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<3>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<2>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<1>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+WARNING:Xst:1492 - Inserting OBUF on port <ver_stop<0>> driven by tristate(s) located in different units having KEEP_HIERARCHY constraints. Possible simulation mismatch.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block four_stop_channels, actual ratio is 11.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : four_stop_channels.ngr
+Top Level Output File Name         : four_stop_channels
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 60
+
+Macro Statistics :
+# Tristates                        : 4
+#      40-bit tristate buffer      : 4
+
+Cell Usage :
+# BELS                             : 540
+#      AND2                        : 4
+#      GND                         : 28
+#      INV                         : 4
+#      MULT_AND                    : 160
+#      MUXCY                       : 160
+#      OR2                         : 4
+#      VCC                         : 16
+#      XOR2                        : 4
+#      XORCY                       : 8
+#      XORCY_D                     : 152
+# FlipFlops/Latches                : 172
+#      FDC                         : 12
+#      LDCE_1                      : 160
+# Tri-States                       : 160
+#      BUFT                        : 160
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 59
+#      IBUF                        : 11
+#      OBUF                        : 48
+# Others                           : 8
+#      FMAP                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2s200pq208-6 
+
+ Number of Slices:                     264  out of   2352    11%  
+ Number of Slice Flip Flops:           172  out of   4704     3%  
+ Number of bonded IOBs:                 59  out of    144    40%  
+ Number of TBUFs:                      160  out of   2352     6%  
+ Number of GCLKs:                        1  out of      4    25%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 8     |
+out_pulse(XLXI_2/XLXI_18/XLXI_5:O) | NONE(*)(XLXI_2/XLXI_18/XLXI_4)| 1     |
+XLXI_2/XLXI_9:G                    | NONE                   | 40    |
+out_pulse(XLXI_3/XLXI_18/XLXI_5:O) | NONE(*)(XLXI_3/XLXI_18/XLXI_4)| 1     |
+XLXI_3/XLXI_9:G                    | NONE                   | 40    |
+out_pulse(XLXI_4/XLXI_18/XLXI_5:O) | NONE(*)(XLXI_4/XLXI_18/XLXI_4)| 1     |
+XLXI_4/XLXI_9:G                    | NONE                   | 40    |
+out_pulse(XLXI_5/XLXI_18/XLXI_5:O) | NONE(*)(XLXI_5/XLXI_18/XLXI_4)| 1     |
+XLXI_5/XLXI_9:G                    | NONE                   | 40    |
+-----------------------------------+------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: 3.126ns (Maximum Frequency: 319.898MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 8.372ns
+   Maximum combinational path delay: 10.357ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+-------------------------------------------------------------------------
+Timing constraint: Default period analysis for Clock 'clk'
+Delay:               3.126ns (Levels of Logic = 1)
+  Source:            XLXI_2/XLXI_18/ff_clksyn (FF)
+  Destination:       XLXI_2/XLXI_17 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: XLXI_2/XLXI_18/ff_clksyn to XLXI_2/XLXI_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   1.085   1.332  ff_clksyn (pulse_clk_sync)
+     end scope: 'XLXI_18'
+     FDC:D                     0.709          XLXI_17
+    ----------------------------------------
+    Total                      3.126ns (1.794ns logic, 1.332ns route)
+                                       (57.4% logic, 42.6% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_9:G'
+Offset:              7.931ns (Levels of Logic = 4)
+  Source:            XLXI_2/XLXI_19/XLXI_3/XLXI_4/latch_7 (LATCH)
+  Destination:       ver_stop<39> (PAD)
+  Source Clock:      XLXI_2/XLXI_9:G rising
+
+  Data Path: XLXI_2/XLXI_19/XLXI_3/XLXI_4/latch_7 to ver_stop<39>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE_1:G->Q           1   1.194   1.035  latch_7 (Qout<7>)
+     end scope: 'XLXI_4'
+     end scope: 'XLXI_3'
+     BUFT:I->O             1   0.000   1.035  XLXI_1_I0_0 (Qout<39>)
+     end scope: 'XLXI_19'
+     end scope: 'XLXI_2'
+     OBUF:I->O                 4.668          ver_stop_39_OBUF (ver_stop<39>)
+    ----------------------------------------
+    Total                      7.931ns (5.862ns logic, 2.070ns route)
+                                       (73.9% logic, 26.1% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_3/XLXI_9:G'
+Offset:              7.931ns (Levels of Logic = 4)
+  Source:            XLXI_3/XLXI_19/XLXI_3/XLXI_4/latch_7 (LATCH)
+  Destination:       ver_stop<39> (PAD)
+  Source Clock:      XLXI_3/XLXI_9:G rising
+
+  Data Path: XLXI_3/XLXI_19/XLXI_3/XLXI_4/latch_7 to ver_stop<39>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE_1:G->Q           1   1.194   1.035  latch_7 (Qout<7>)
+     end scope: 'XLXI_4'
+     end scope: 'XLXI_3'
+     BUFT:I->O             1   0.000   1.035  XLXI_1_I0_0 (Qout<39>)
+     end scope: 'XLXI_19'
+     end scope: 'XLXI_3'
+     OBUF:I->O                 4.668          ver_stop_39_OBUF (ver_stop<39>)
+    ----------------------------------------
+    Total                      7.931ns (5.862ns logic, 2.070ns route)
+                                       (73.9% logic, 26.1% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_4/XLXI_9:G'
+Offset:              7.931ns (Levels of Logic = 4)
+  Source:            XLXI_4/XLXI_19/XLXI_3/XLXI_4/latch_7 (LATCH)
+  Destination:       ver_stop<39> (PAD)
+  Source Clock:      XLXI_4/XLXI_9:G rising
+
+  Data Path: XLXI_4/XLXI_19/XLXI_3/XLXI_4/latch_7 to ver_stop<39>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE_1:G->Q           1   1.194   1.035  latch_7 (Qout<7>)
+     end scope: 'XLXI_4'
+     end scope: 'XLXI_3'
+     BUFT:I->O             1   0.000   1.035  XLXI_1_I0_0 (Qout<39>)
+     end scope: 'XLXI_19'
+     end scope: 'XLXI_4'
+     OBUF:I->O                 4.668          ver_stop_39_OBUF (ver_stop<39>)
+    ----------------------------------------
+    Total                      7.931ns (5.862ns logic, 2.070ns route)
+                                       (73.9% logic, 26.1% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_5/XLXI_9:G'
+Offset:              7.931ns (Levels of Logic = 4)
+  Source:            XLXI_5/XLXI_19/XLXI_3/XLXI_4/latch_7 (LATCH)
+  Destination:       ver_stop<39> (PAD)
+  Source Clock:      XLXI_5/XLXI_9:G rising
+
+  Data Path: XLXI_5/XLXI_19/XLXI_3/XLXI_4/latch_7 to ver_stop<39>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE_1:G->Q           1   1.194   1.035  latch_7 (Qout<7>)
+     end scope: 'XLXI_4'
+     end scope: 'XLXI_3'
+     BUFT:I->O             1   0.000   1.035  XLXI_1_I0_0 (Qout<39>)
+     end scope: 'XLXI_19'
+     end scope: 'XLXI_5'
+     OBUF:I->O                 4.668          ver_stop_39_OBUF (ver_stop<39>)
+    ----------------------------------------
+    Total                      7.931ns (5.862ns logic, 2.070ns route)
+                                       (73.9% logic, 26.1% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+Offset:              8.372ns (Levels of Logic = 3)
+  Source:            XLXI_5/XLXI_17 (FF)
+  Destination:       load_reg<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: XLXI_5/XLXI_17 to load_reg<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   1.085   1.035  XLXI_17 (XLXN_12)
+     XOR2:I1->O            1   0.549   1.035  XLXI_15 (load_reg)
+     end scope: 'XLXI_5'
+     OBUF:I->O                 4.668          load_reg_3_OBUF (load_reg<3>)
+    ----------------------------------------
+    Total                      8.372ns (6.302ns logic, 2.070ns route)
+                                       (75.3% logic, 24.7% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default path analysis
+Delay:               10.357ns (Levels of Logic = 5)
+  Source:            sel_vers<0> (PAD)
+  Destination:       ver_stop<39> (PAD)
+
+  Data Path: sel_vers<0> to ver_stop<39>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            40   0.776   3.780  sel_vers_0_IBUF (sel_vers_0_IBUF)
+     begin scope: 'XLXI_2'
+     begin scope: 'XLXI_19'
+     BUFT:T->O             1   0.098   1.035  XLXI_1_I0_39 (Qout<0>)
+     end scope: 'XLXI_19'
+     end scope: 'XLXI_2'
+     OBUF:I->O                 4.668          ver_stop_0_OBUF (ver_stop<0>)
+    ----------------------------------------
+    Total                     10.357ns (5.542ns logic, 4.815ns route)
+                                       (53.5% logic, 46.5% route)
+
+=========================================================================
+CPU : 4.69 / 5.01 s | Elapsed : 5.00 / 5.00 s
+ 
+--> 
+
+Total memory usage is 66144 kilobytes
+
+

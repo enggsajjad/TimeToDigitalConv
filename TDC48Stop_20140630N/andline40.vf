@@ -1,0 +1,17 @@
+// Verilog model created from andline40.sch - Tue Jul 08 11:08:57 2014
+
+`timescale 1ns / 1ps
+
+module andline40(Vin, Vout);
+
+    input Vin;
+   output [39:0] Vout;
+   
+   
+   andline8 XLXI_1 (.Vin(Vout[31]), .Vout(Vout[39:32]));
+   // synthesis attribute RLOC of XLXI_1 is "R0C16"
+   andline16 XLXI_2 (.Vin(Vout[15]), .Vout(Vout[31:16]));
+   // synthesis attribute RLOC of XLXI_2 is "R0C8"
+   andline16 XLXI_3 (.Vin(Vin), .Vout(Vout[15:0]));
+   // synthesis attribute RLOC of XLXI_3 is "R0C0"
+endmodule

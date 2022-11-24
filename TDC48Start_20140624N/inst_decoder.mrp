@@ -1,0 +1,158 @@
+Release 6.1i Map G.23
+Xilinx Mapping Report File for Design 'inst_decoder'
+
+Design Information
+------------------
+Command Line   : C:/Xilinx/bin/nt/map.exe -intstyle ise -p xc2s200-pq208-6 -cm
+area -pr b -k 4 -c 100 -tx on -o inst_decoder_map.ncd inst_decoder.ngd
+inst_decoder.pcf 
+Target Device  : x2s200
+Target Package : pq208
+Target Speed   : -6
+Mapper Version : spartan2 -- $Revision: 1.16 $
+Mapped Date    : Tue Jul 15 14:49:13 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:        18 out of  4,704    1%
+  Number of 4 input LUTs:            19 out of  4,704    1%
+Logic Distribution:
+    Number of occupied Slices:                          16 out of  2,352    1%
+    Number of Slices containing only related logic:     16 out of     16  100%
+    Number of Slices containing unrelated logic:         0 out of     16    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:        19 out of  4,704    1%
+   Number of bonded IOBs:            33 out of    140   23%
+      IOB Flip Flops:                              13
+   Number of GCLKs:                   1 out of      4   25%
+   Number of GCLKIOBs:                1 out of      4   25%
+
+Total equivalent gate count for design:  362
+Additional JTAG gate count for IOBs:  1,632
+Peak Memory Usage:  61 MB
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity -
+   e.g. two LUTs are "related" if they share common inputs.
+   When assembling slices, Map gives priority to combine logic that
+   is related.  Doing so results in the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin
+   packing unrelated logic into a slice once 99% of the slices are
+   occupied through related logic packing.
+
+   Note that once logic distribution reaches the 99% level through
+   related logic packing, this does not mean the device is completely
+   utilized.  Unrelated logic packing will then begin, continuing until
+   all usable LUTs and FFs are occupied.  Depending on your timing
+   budget, increased levels of unrelated logic packing may adversely
+   affect the overall timing performance of your design.
+
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:95 - All of the external outputs in this design are using slew rate
+   limited output drivers. The delay on speed critical outputs can be
+   dramatically reduced by designating them as fast outputs in the schematic.
+INFO:MapLib:562 - No environment variables are currently set.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type    | Direction | IO Standard | Drive    | Slew | Reg (s)  | Resistor | IOB   |
+|                                    |         |           |             | Strength | Rate |          |          | Delay |
++------------------------------------------------------------------------------------------------------------------------+
+| clk                                | GCLKIOB | INPUT     | LVTTL       |          |      |          |          |       |
+| cmd_dev_sel                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| cmd_inc_dac                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| cmd_read                           | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| cmd_reset                          | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| cmd_rst_dac                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| cmd_rst_test                       | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| cmd_startup                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| dev_addr<0>                        | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| dev_addr<1>                        | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| dev_addr<2>                        | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| dev_addr<3>                        | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| dev_sel_byte<0>                    | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| dev_sel_byte<1>                    | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| dev_sel_byte<2>                    | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| dev_sel_byte<3>                    | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| dev_sel_byte<4>                    | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| dev_sel_byte<5>                    | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| dev_sel_byte<6>                    | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| dev_sel_byte<7>                    | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| din<0>                             | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| din<1>                             | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| din<2>                             | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| din<3>                             | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| din<4>                             | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| din<6>                             | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| din<7>                             | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| din_rdy                            | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| pkt_addr<0>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW | OUTFF    |          |       |
+| pkt_addr<1>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW | OUTFF    |          |       |
+| pkt_addr<2>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW | OUTFF    |          |       |
+| pkt_addr<3>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW | OUTFF    |          |       |
+| pkt_addr<4>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW | OUTFF    |          |       |
+| res                                | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
++------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group Summary
+------------------------------
+No area groups were found in this design.
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.

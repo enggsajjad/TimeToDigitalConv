@@ -1,0 +1,281 @@
+Release 6.1i Map G.23
+Xilinx Mapping Report File for Design 'chrono48_start'
+
+Design Information
+------------------
+Command Line   : C:/Xilinx/bin/nt/map.exe -intstyle ise -p xc2s200-pq208-6 -cm
+area -pr b -k 4 -c 100 -tx on -o chrono48_start_map.ncd chrono48_start.ngd
+chrono48_start.pcf 
+Target Device  : x2s200
+Target Package : pq208
+Target Speed   : -6
+Mapper Version : spartan2 -- $Revision: 1.16 $
+Mapped Date    : Fri Jul 18 11:48:40 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   12
+Logic Utilization:
+  Number of Slice Flip Flops:       162 out of  4,704    3%
+  Number of 4 input LUTs:           134 out of  4,704    2%
+Logic Distribution:
+    Number of occupied Slices:                         130 out of  2,352    5%
+    Number of Slices containing only related logic:    130 out of    130  100%
+    Number of Slices containing unrelated logic:         0 out of    130    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number 4 input LUTs:          190 out of  4,704    4%
+      Number used as logic:                       134
+      Number used as a route-thru:                 56
+   Number of bonded IOBs:            23 out of    140   16%
+      IOB Flip Flops:                               1
+   Number of GCLKs:                   2 out of      4   50%
+   Number of GCLKIOBs:                1 out of      4   25%
+   Number of DLLs:                    2 out of      4   50%
+
+   Number of RPM macros:            2
+Total equivalent gate count for design:  16,573
+Additional JTAG gate count for IOBs:  1,152
+Peak Memory Usage:  66 MB
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity -
+   e.g. two LUTs are "related" if they share common inputs.
+   When assembling slices, Map gives priority to combine logic that
+   is related.  Doing so results in the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin
+   packing unrelated logic into a slice once 99% of the slices are
+   occupied through related logic packing.
+
+   Note that once logic distribution reaches the 99% level through
+   related logic packing, this does not mean the device is completely
+   utilized.  Unrelated logic packing will then begin, continuing until
+   all usable LUTs and FFs are occupied.  Depending on your timing
+   budget, increased levels of unrelated logic packing may adversely
+   affect the overall timing performance of your design.
+
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:MapLib:163 - Bus dout<4> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus dout<6> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus dout<7> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus dout<5> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus dout<0> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus dout<1> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus dout<2> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:MapLib:163 - Bus dout<3> driven by tbufs will be transformed to use
+   combinational drivers.
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net XLXI_120/out_pulse is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net cmd_dev_sel is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net XLXI_108_startbitsync
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net XLXI_122_out_pulse is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  34 block(s) removed
+   9 block(s) optimized away
+  34 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "XLXI_122_ff_clksyn" (FF) removed.
+The signal "XLXI_102_XLXI_1/CO" is sourceless and has been removed.
+The signal "XLXI_102_XLXI_1/Q<31>" is sourceless and has been removed.
+ Sourceless block "XLXI_102_XLXI_1/XLXI_2/Q<7>_rt" (ROM) removed.
+  The signal "XLXI_102_XLXI_1/XLXI_2/Q<7>_rt" is sourceless and has been removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_298" (MUX) removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_291" (XOR) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/TQ7" is sourceless and has been removed.
+     Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_289" (FF) removed.
+The signal "XLXI_102_XLXI_1/Q<30>" is sourceless and has been removed.
+ Sourceless block "XLXI_102_XLXI_1/XLXI_2/Q<6>_rt" (ROM) removed.
+  The signal "XLXI_102_XLXI_1/XLXI_2/Q<6>_rt" is sourceless and has been removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_278" (XOR) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/TQ6" is sourceless and has been removed.
+     Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_276" (FF) removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_285" (MUX) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/I_36_285/O" is sourceless and has been
+removed.
+The signal "XLXI_102_XLXI_1/Q<29>" is sourceless and has been removed.
+ Sourceless block "XLXI_102_XLXI_1/XLXI_2/Q<5>_rt" (ROM) removed.
+  The signal "XLXI_102_XLXI_1/XLXI_2/Q<5>_rt" is sourceless and has been removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_265" (XOR) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/TQ5" is sourceless and has been removed.
+     Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_263" (FF) removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_272" (MUX) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/I_36_272/O" is sourceless and has been
+removed.
+The signal "XLXI_102_XLXI_1/Q<28>" is sourceless and has been removed.
+ Sourceless block "XLXI_102_XLXI_1/XLXI_2/Q<4>_rt" (ROM) removed.
+  The signal "XLXI_102_XLXI_1/XLXI_2/Q<4>_rt" is sourceless and has been removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_252" (XOR) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/TQ4" is sourceless and has been removed.
+     Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_250" (FF) removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_259" (MUX) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/I_36_259/O" is sourceless and has been
+removed.
+The signal "XLXI_102_XLXI_1/Q<27>" is sourceless and has been removed.
+ Sourceless block "XLXI_102_XLXI_1/XLXI_2/Q<3>_rt" (ROM) removed.
+  The signal "XLXI_102_XLXI_1/XLXI_2/Q<3>_rt" is sourceless and has been removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_239" (XOR) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/TQ3" is sourceless and has been removed.
+     Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_237" (FF) removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_246" (MUX) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/I_36_246/O" is sourceless and has been
+removed.
+The signal "XLXI_102_XLXI_1/Q<26>" is sourceless and has been removed.
+ Sourceless block "XLXI_102_XLXI_1/XLXI_2/Q<2>_rt" (ROM) removed.
+  The signal "XLXI_102_XLXI_1/XLXI_2/Q<2>_rt" is sourceless and has been removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_226" (XOR) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/TQ2" is sourceless and has been removed.
+     Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_224" (FF) removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_233" (MUX) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/I_36_233/O" is sourceless and has been
+removed.
+The signal "XLXI_102_XLXI_1/Q<25>" is sourceless and has been removed.
+ Sourceless block "XLXI_102_XLXI_1/XLXI_2/_n0002_rt" (ROM) removed.
+  The signal "XLXI_102_XLXI_1/XLXI_2/_n0002_rt" is sourceless and has been
+removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_28" (XOR) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/TQ1" is sourceless and has been removed.
+     Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_35" (FF) removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_26" (MUX) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/I_36_26/O" is sourceless and has been
+removed.
+The signal "XLXI_102_XLXI_1/Q<24>" is sourceless and has been removed.
+ Sourceless block "XLXI_102_XLXI_1/XLXI_2/Q<0>_rt" (ROM) removed.
+  The signal "XLXI_102_XLXI_1/XLXI_2/Q<0>_rt" is sourceless and has been removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_6" (XOR) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/TQ0" is sourceless and has been removed.
+     Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_36" (FF) removed.
+   Sourceless block "XLXI_102_XLXI_1/XLXI_2/I_36_4" (MUX) removed.
+    The signal "XLXI_102_XLXI_1/XLXI_2/I_36_4/O" is sourceless and has been removed.
+The signal "XLXI_102_XLXI_1/XLXI_2/XLXN_1" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "rst" is unused and has been removed.
+Unused block "XLXI_102_XLXI_1/XLXI_2/I_36_886" (ZERO) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XLXI_102_XLXI_1/XLXI_3/I_36_886
+GND 		XLXI_102_XLXI_1/XLXI_4/I_36_886
+GND 		XLXI_102_XLXI_1/XLXI_7/I_36_886
+VCC 		XLXI_102_XLXI_1/XLXI_8
+GND 		XLXI_110
+VCC 		XLXI_120/supply_sync
+VCC 		XLXI_125
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type    | Direction | IO Standard | Drive    | Slew | Reg (s)  | Resistor | IOB   |
+|                                    |         |           |             | Strength | Rate |          |          | Delay |
++------------------------------------------------------------------------------------------------------------------------+
+| clk                                | GCLKIOB | INPUT     | LVTTL       |          |      |          |          |       |
+| DACout                             | IOB     | OUTPUT    | LVTTL       | 24       | FAST |          |          |       |
+| clkout1                            | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| clkout2                            | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| cmd_dev_sel1                       | IOB     | OUTPUT    | LVTTL       | 12       | SLOW | OUTFF    |          |       |
+| dev_addr<0>                        | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| dev_addr<1>                        | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| dev_addr<2>                        | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| dev_addr<3>                        | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| intr                               | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| rx_pc                              | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| rx_pr                              | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| rx_stop                            | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| rx_uc                              | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| sel0                               | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| sel1                               | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| start_pulse                        | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| startout1                          | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| startout2                          | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tst_stop_pulse                     | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tx_pc                              | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tx_pr                              | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tx_stop                            | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tx_uc                              | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
++------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+XLXI_122                                
+XLXI_120/hset                           
+hset                                    
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group Summary
+------------------------------
+No area groups were found in this design.
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.

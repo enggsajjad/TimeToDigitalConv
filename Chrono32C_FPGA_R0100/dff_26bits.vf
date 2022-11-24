@@ -1,0 +1,41 @@
+// Verilog model created from dff_26bits.sch - Tue Jun 04 14:59:58 2013
+
+`timescale 1ns / 1ps
+
+module dff_26bits(clock, din, load, reset, dout);
+
+    input clock;
+    input [26:0] din;
+    input load;
+    input reset;
+   output [26:0] dout;
+   
+   
+   myfd8ce XLXI_5 (.C(clock), .CE(load), .CLR(reset), .D(din[15:8]),
+         .Q(dout[15:8]));
+   // synthesis attribute RLOC of XLXI_5 is "R0C4"
+   myfd8ce XLXI_6 (.C(clock), .CE(load), .CLR(reset), .D(din[23:16]),
+         .Q(dout[23:16]));
+   // synthesis attribute RLOC of XLXI_6 is "R0C8"
+   FDCE XLXI_7 (.C(clock), .CE(load), .CLR(reset), .D(din[24]), .Q(dout[24]));
+   // synthesis attribute RLOC of XLXI_7 is "R0C12.S1"
+   // synthesis attribute INIT of XLXI_7 is "0"
+   // synopsys translate_off
+   defparam XLXI_7.INIT = 1'b0;
+   // synopsys translate_on
+   FDCE XLXI_8 (.C(clock), .CE(load), .CLR(reset), .D(din[25]), .Q(dout[25]));
+   // synthesis attribute RLOC of XLXI_8 is "R0C12.S0"
+   // synthesis attribute INIT of XLXI_8 is "0"
+   // synopsys translate_off
+   defparam XLXI_8.INIT = 1'b0;
+   // synopsys translate_on
+   myfd8ce XLXI_9 (.C(clock), .CE(load), .CLR(reset), .D(din[7:0]),
+         .Q(dout[7:0]));
+   // synthesis attribute RLOC of XLXI_9 is "R0C0"
+   FDCE XLXI_10 (.C(clock), .CE(load), .CLR(reset), .D(din[26]), .Q(dout[26]));
+   // synthesis attribute RLOC of XLXI_10 is "R0C13.S1"
+   // synthesis attribute INIT of XLXI_10 is "0"
+   // synopsys translate_off
+   defparam XLXI_10.INIT = 1'b0;
+   // synopsys translate_on
+endmodule

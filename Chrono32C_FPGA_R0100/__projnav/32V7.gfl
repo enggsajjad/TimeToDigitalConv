@@ -1,0 +1,142 @@
+# Schematic : View Verilog Functional Model
+chrono32c.vf
+# Schematic : View Verilog Functional Model
+control_unit.vf
+# Schematic : View Verilog Functional Model
+top_drom.vf
+# Schematic : View Verilog Functional Model
+clk_mul.vf
+# Schematic : View Verilog Functional Model
+dacs.vf
+# Schematic : View Verilog Functional Model
+start_channel.vf
+# Schematic : View Verilog Functional Model
+vernier40.vf
+# Schematic : View Verilog Functional Model
+ildce40_1_gebus.vf
+# Schematic : View Verilog Functional Model
+ildce16_1_gebus.vf
+# Schematic : View Verilog Functional Model
+ildce8_1_gebus.vf
+# Schematic : View Verilog Functional Model
+imult_andline40.vf
+# Schematic : View Verilog Functional Model
+imult_andline16.vf
+# Schematic : View Verilog Functional Model
+imult_andline8.vf
+# Schematic : View Verilog Functional Model
+ixorcyline40_d.vf
+# Schematic : View Verilog Functional Model
+ixorcyline16_d.vf
+# Schematic : View Verilog Functional Model
+ixorcyline8_d.vf
+# Schematic : View Verilog Functional Model
+synclogic1.vf
+# Schematic : View Verilog Functional Model
+maincount8channel.vf
+# Schematic : View Verilog Functional Model
+cc24ce.vf
+# Schematic : View Verilog Functional Model
+cc8ce1.vf
+# Schematic : View Verilog Functional Model
+registers_26bit.vf
+# Schematic : View Verilog Functional Model
+dff_26bits.vf
+# Schematic : View Verilog Functional Model
+myfd8ce.vf
+# Schematic : View Verilog Functional Model
+eight_stop_channels.vf
+# Schematic : View Verilog Functional Model
+stop_channel.vf
+# XST (Creating Lso File) : 
+chrono32c.lso
+# xst flow : RunXST
+chrono32c.syr
+chrono32c.prj
+chrono32c.sprj
+chrono32c.ana
+chrono32c.stx
+chrono32c.cmd_log
+chrono32c.ngc
+chrono32c.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+e:\p\tdc\2013\chrono32c_fpga_r2/_ngo
+chrono32c.ngd
+chrono32c_ngdbuild.nav
+chrono32c.bld
+chrono32c.ucf.untf
+chrono32c.cmd_log
+# Implementation : Map
+chrono32c_map.ncd
+chrono32c.ngm
+chrono32c.pcf
+chrono32c.nc1
+chrono32c.mrp
+chrono32c_map.mrp
+chrono32c.mdf
+__projnav/map.log
+chrono32c.cmd_log
+MAP_NO_GUIDE_FILE_CPF "chrono32c"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+chrono32c.twr
+chrono32c.twx
+chrono32c.tsi
+chrono32c.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+chrono32c.ncd
+chrono32c.par
+chrono32c.pad
+chrono32c_pad.txt
+chrono32c_pad.csv
+chrono32c.pad_txt
+chrono32c.dly
+reportgen.log
+chrono32c.xpi
+chrono32c.grf
+chrono32c.itr
+chrono32c_last_par.ncd
+__projnav/par.log
+chrono32c.placed_ncd_tracker
+chrono32c.routed_ncd_tracker
+chrono32c.cmd_log
+PAR_NO_GUIDE_FILE_CPF "chrono32c"
+# Generate Programming File
+__projnav/chrono32c_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+chrono32c.ut
+# Generate Programming File
+chrono32c.bgn
+chrono32c.rbt
+chrono32c.ll
+chrono32c.msk
+chrono32c.drc
+chrono32c.nky
+chrono32c.bit
+chrono32c.bin
+chrono32c.isc
+chrono32c.cmd_log
+# Generate PROM, ACE, or JTAG File
+chrono32c.ace
+xilinx.sys
+chrono32c.mpm
+chrono32c.mcs
+chrono32c.prm
+chrono32c.dst
+chrono32c.exo
+chrono32c.tek
+chrono32c.hex
+chrono32c.svf
+chrono32c.stapl
+impact.cmd
+_impact.log
+_impact.cmd
+# Schematic : PDCL (jhdparse)
+__projnav/Control_Unit_jhdparse_tcl.rsp
+# Schematic : PDCL (jhdparse)
+__projnav/Control_Unit_jhdparse_tcl.rsp

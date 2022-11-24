@@ -1,0 +1,25 @@
+// Verilog model created from top_drom.sch - Tue Jun 04 14:59:47 2013
+
+`timescale 1ns / 1ps
+
+module top_drom(address, clk, sel_counters, sel_dac1, sel_dac2, sel_fpgasel,
+      sel_pencoder, sel_status, sel_vers);
+
+    input [5:0] address;
+    input clk;
+   output [31:0] sel_counters;
+   output sel_dac1;
+   output sel_dac2;
+   output sel_fpgasel;
+   output sel_pencoder;
+   output sel_status;
+   output [8:0] sel_vers;
+   
+   wire [63:0] XLXN_5;
+   
+   drom XLXI_1 (.addr(address[5:0]), .clk(clk), .dout(XLXN_5[63:0]));
+   select_out XLXI_2 (.sel_in(XLXN_5[63:0]), .sel_counters(sel_counters[31:0]),
+         .sel_dac1(sel_dac1), .sel_dac2(sel_dac2), .sel_fpgasel(sel_fpgasel),
+         .sel_pencoder(sel_pencoder), .sel_status(sel_status),
+         .sel_vers(sel_vers[8:0]));
+endmodule

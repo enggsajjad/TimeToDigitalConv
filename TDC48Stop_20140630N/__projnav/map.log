@@ -1,0 +1,4 @@
+Mapping Module chrono48_stop3 . . .
+MAP command line:
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx on -o chrono48_stop3_map.ncd chrono48_stop3.ngd chrono48_stop3.pcf
+Mapping Module chrono48_stop3: DONE

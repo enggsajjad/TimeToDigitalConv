@@ -1,0 +1,79 @@
+**********************************************************************************************
+*                                                                                            *
+* Through Hole Top Report                                                                    *
+*                                                                                            *
+* C:\DOCUMENTS AND SETTINGS\MUSHTAQ KHAN\DESKTOP\CHRONO-32C-TDC_R0000\TDC_16CHANNELN-57.MAX  *
+* Wed Sep 26 15:23:50 2012                                                                   *
+*                                                                                            *
+**********************************************************************************************
+
+ REF DES    VALUE            PACKAGE          FOOTPRINT                      X INSERT   Y INSERT   ROTATION
+------------------------------------------------------------------------------------------------------------
+420                                          MTHOLE                          454.00 m   6413.00 m 0       
+421                                          MTHOLE                          454.00 m   3402.00 m 0       
+424                                          MTHOLE                          16455.0..  6413.00 m 0       
+425                                          MTHOLE                          16451.0..  3401.00 m 0       
+426                                          MTHOLE                          8826.00 m  6414.00 m 0       
+427                                          MTHOLE                          8431.00 m  6414.00 m 0       
+428                                          MTHOLE                          4210.00 m  6414.00 m 0       
+429                                          MTHOLE                          4011.00 m  394.00 m  0       
+430                                          MTHOLE                          7892.00 m  394.00 m  0       
+431                                          MTHOLE                          12742.0..  394.00 m  0       
+432                                          MTHOLE                          8037.00 m  6414.00 m 0       
+433                                          MTHOLE                          12655.0..  6414.00 m 0       
+455                                          MTHOLE350                       15031.0..  4992.00 m 0       
+456                                          MTHOLE350                       15734.0..  4510.00 m 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+J4         sma              HEADER_5         RF/SMA/V_REV4                   13951.0..  4934.00 m 90      
+J6         sma              HEADER_5         RF/SMA/V_REV3                   14418.0..  4735.00 m 0       
+J7         POWER HEADER     HEADER_3         3PIN_CON1_200_REV1              15395.0..  6487.00 m 0       
+J8         sma              HEADER_5         RF/SMA/V                        15691.0..  3947.00 m 0       
+J9         CON6             CON6             FPGA_PROG_CONN_REV1             11249.0..  3792.00 m 0       
+J10        sma              HEADER_5         RF/SMA/V_REV2                   15682.0..  3525.00 m 0       
+J12        HEADER 2         HEADER_2         2PIN_CON                        10240.0..  4903.00 m 90      
+J18        HEADER 2         HEADER_2         2PIN_CON                        3357.00 m  4938.00 m 90      
+J21        CON6             CON6             FPGA_PROG_CONN                  3613.37 m  3899.37 m 0       
+J22        BNC              BNC              BNC_REV1                        16272.0..  485.00 m  0       
+J23        BNC              BNC              BNC_REV1                        11287.0..  485.00 m  0       
+J24        BNC              BNC              BNC_REV1                        15167.0..  485.00 m  0       
+J25        BNC              BNC              BNC_REV1                        10317.0..  485.00 m  0       
+J26        BNC              BNC              BNC_REV1                        14197.0..  485.00 m  0       
+J27        BNC              BNC              BNC_REV1                        9347.00 m  485.00 m  0       
+J28        BNC              BNC              BNC_REV1                        13227.0..  485.00 m  0       
+J29        BNC              BNC              BNC_REV1                        8377.00 m  485.00 m  0       
+J30        BNC              BNC              BNC_REV1                        12257.0..  485.00 m  0       
+J31        BNC              BNC              BNC_REV1                        7407.00 m  485.00 m  0       
+J32        BNC              BNC              BNC_REV1                        3527.00 m  485.00 m  0       
+J33        BNC              BNC              BNC_REV1                        6437.00 m  485.00 m  0       
+J34        BNC              BNC              BNC_REV1                        2557.00 m  485.00 m  0       
+J35        BNC              BNC              BNC_REV1                        5467.00 m  485.00 m  0       
+J36        BNC              BNC              BNC_REV1                        1587.00 m  485.00 m  0       
+J37        BNC              BNC              BNC_REV1                        4497.00 m  485.00 m  0       
+J38        BNC              BNC              BNC_REV1                        617.00 m   485.00 m  0       
+J49        CONN PLUG 1      CONN_PLUG_1      TEST_POINT_REV8                 7600.00 m  3860.00 m 0       
+J50        CONN PLUG 1      CONN_PLUG_1      TEST_POINT_REV8                 13278.0..  6228.00 m 0       
+J51        CONN PLUG 1      CONN_PLUG_1      TEST_POINT_REV8                 6145.00 m  5195.00 m 0       
+J52        CON14A           CON14A           CONN_14PIN_REV1                 10073.0..  6380.00 m 0       
+J53        CONN PLUG 1      CONN_PLUG_1      TEST_POINT_REV9                 16100.0..  5940.00 m 0       
+J54        CONN PLUG 1      CONN_PLUG_1      TEST_POINT_REV9                 1227.00 m  6701.00 m 0       
+J55        CONN PLUG 1      CONN_PLUG_1      TEST_POINT_REV8                 16100.0..  5740.00 m 0       
+J60        CONN PLUG 1      CONN_PLUG_1      TEST_POINT_REV10                1081.00 m  6250.00 m 0       
+J63        CONN PLUG 1      CONN_PLUG_1      TEST_POINT_REV13                16100.0..  5340.00 m 0       
+J64        CONN PLUG 1      CONN_PLUG_1      TEST_POINT_REV13                9140.00 m  5250.00 m 0       
+J65        CONN PLUG 1      CONN_PLUG_1      TEST_POINT_REV13                5914.00 m  4974.00 m 0       
+J66        CONN PLUG 1      CONN_PLUG_1      TEST_POINT_REV13                300.00 m   4640.00 m 0       
+TP8        TEST POINT       TEST_POINT       TEST_POINT_REV14                13132.0..  5540.00 m 0       
+TP9        TEST POINT       TEST_POINT       TEST_POINT_REV15                12975.0..  4354.00 m 0       
+TP10       TEST POINT       TEST_POINT       TEST_POINT_REV14                10662.0..  5367.00 m 0       
+TP11       TEST POINT       TEST_POINT       TEST_POINT_REV13                16100.0..  5540.00 m 0       
+TP12       TEST POINT       TEST_POINT       TEST_POINT_REV16                5447.00 m  4929.00 m 0       
+TP17       TEST POINT       TEST_POINT       TEST_POINT_REV13                300.00 m   4440.00 m 0       
+TP18       TEST POINT       TEST_POINT       TEST_POINT_REV13                7600.00 m  3660.00 m 0       
+TP19       TEST POINT       TEST_POINT       TEST_POINT_REV13                7750.00 m  3000.00 m 0       
+TP20       TEST POINT       TEST_POINT       TEST_POINT_REV13                7550.00 m  3000.00 m 0       
+U30        BNX002           BNX002           BNX002                          14794.7..  5458.15 m 0       

@@ -1,0 +1,23 @@
+// Verilog model created from ildceline40.sch - Tue Jul 08 11:08:59 2014
+
+`timescale 1ns / 1ps
+
+module ildceline40(Din, Gbar, GE, reset, Qout);
+
+    input [39:0] Din;
+    input Gbar;
+    input [39:0] GE;
+    input reset;
+   output [39:0] Qout;
+   
+   
+   ildceline8 XLXI_4 (.Din(Din[39:32]), .Gbar(Gbar), .GE(GE[39:32]),
+         .reset(reset), .Qout(Qout[39:32]));
+   // synthesis attribute RLOC of XLXI_4 is "R0C16"
+   ildceline16 XLXI_5 (.Din(Din[31:16]), .Gbar(Gbar), .GE(GE[31:16]),
+         .reset(reset), .Qout(Qout[31:16]));
+   // synthesis attribute RLOC of XLXI_5 is "R0C8"
+   ildceline16 XLXI_6 (.Din(Din[15:0]), .Gbar(Gbar), .GE(GE[15:0]),
+         .reset(reset), .Qout(Qout[15:0]));
+   // synthesis attribute RLOC of XLXI_6 is "R0C0"
+endmodule

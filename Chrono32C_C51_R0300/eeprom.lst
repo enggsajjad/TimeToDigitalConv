@@ -1,0 +1,549 @@
+C51 COMPILER V6.11.4C,  EEPROM                    06/07/113  08:53:08  PAGE  1
+
+QCW(0x00002D1A)
+
+WIN32 C51 COMPILER V6.11.4C, COMPILATION OF MODULE EEPROM    
+OBJECT MODULE PLACED IN c:\documents and settings\sajjad hussain\desktop\chrono3
+            -2c_c51_r3\eeprom.obj
+COMPILER INVOKED BY: C51.EXE C:\DOCUMENTS AND SETTINGS\SAJJAD HUSSAIN\DESKTOP\CH
+            -RONO32C_C51_R3\EEPROM.C OBJECT(C:\DOCUMENTS AND SETTINGS\SAJJAD HUS
+            -SAIN\DESKTOP\CHRONO32C_C51_R3\EEPROM.OBJ) PIN(C:\FSI\INC) NOAM PR(C
+            -:\DOCUMENTS AND SETTINGS\SAJJAD HUSSAIN\DESKTOP\CHRONO32C_C51_R3\EE
+            -PROM.LST) CD SB OE(1) SM FP(NOFLOAT) PW(80) 
+
+stmt level    source
+   1          #include "eeprom.h"
+   2          #include "misc.h"
+   3          //====== 		E E P R O M 		F U N C T I O N 		D E F I N I T I O N S		
+            -	=======
+   4          
+   5          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -   6          //Description:	I2C Start Condition
+   7          void I2C_start(void)
+   8          {
+   9   1      	if(eSCL)
+  10   1      	eSCL = 0;				// Clear eSCL  
+  11   1      	eSDA = 1;        		// Set eSDA  
+  12   1      	eSCL = 1;				// Set eSCL  
+  13   1      	eSDA = 0;        		// Clear eSDA  
+  14   1      	eSCL = 0;        		// Clear eSCL  
+  15   1      }
+  16          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  17          //Description:	I2C Stop Condition 
+  18          void I2C_stop(void)
+  19          {
+  20   1      	if(eSCL)	
+  21   1      	eSCL = 0;			// Clear eSCL  
+  22   1      	eSDA = 0;			// Clear eSDA  
+  23   1      	eSCL = 1;			// Set eSCL  
+  24   1      	eSDA = 1;			// Set eSDA  
+  25   1      }
+  26          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  27          //Description:	Send sigle byte via I2C interface
+  28          //Argument:		byte to be sent
+  29          bit I2C_write(unsigned char dat)
+  30          {
+  31   1      	bit data_bit;		
+  32   1      	unsigned char i;	
+  33   1      	for(i=0;i<8;i++)					// For loop 8 time(send data 1 byte)  
+  34   1      	{
+  35   2      		data_bit = dat & 0x80;		// Filter MSB bit keep to data_bit  
+  36   2      		eSDA = data_bit;				// Send data_bit to eSDA  
+  37   2      		eSCL = 1;						// Start clock  
+  38   2      		eSCL = 0;						// Clear eSCL
+  39   2      		dat = dat<<1;  
+  40   2      	}
+  41   1      	eSDA = 1;							// Set eSDA  
+  42   1      	eSCL = 1;							// Set eSCL  
+  43   1      	data_bit = eSDA;   				// Check acknowledge  
+  44   1      	eSCL = 0;							// Clear eSCL  
+  45   1      	return data_bit;					// If send_bit = 0 i2c is valid  		 	
+  46   1      }
+  47          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  48          //Description:	Read sigle byte via I2C interface
+  49          //Return:		byte read from I2C interface 
+  50          unsigned char I2C_read(void)
+  51          {
+  52   1      	bit rd_bit;	
+  53   1      	unsigned char i, dat;
+  54   1      	dat = 0x00;	
+  55   1      	for(i=0;i<8;i++)						// For loop read data 1 byte  
+  56   1      	{
+  57   2      		eSCL = 1;							// Set eSCL  
+  58   2      		rd_bit = eSDA;						// Keep for check acknowledge	 
+  59   2      		dat = dat<<1;		
+  60   2      		dat = dat + rd_bit;				// Keep bit data in dat  
+  61   2      		eSCL = 0;							// Clear eSCL  
+  62   2      	}
+  63   1      	return dat;
+  64   1      }
+  65          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  66          //Description:	No Acknowledge Condition for I2C
+  67          void I2C_noack()
+  68          {
+  69   1      	eSDA = 1;									// Set eSDA  
+  70   1      	eSCL = 1;									// Start clock  
+  71   1      	eSCL = 0;									// Clear eSCL
+  72   1      	eSCL = 1;									// Set eSCL  
+  73   1      }
+  74          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  75          //Description:	Read a single byte from I2C EEPROM at 
+            -Particular Address
+  76          //Argument:		Address: from where to read
+  77          unsigned char ROM_Read(unsigned int addr)
+  78          {
+  79   1      	unsigned char dat;	
+  80   1      	I2C_start();            				// Start i2c bus  
+  81   1      	I2C_write(0xA0);   						// Connect to EEPROM  
+  82   1      	I2C_write((addr&0xFF00)/0xFF);	 	// Request RAM address (Hight by
+            -te)  
+  83   1      	I2C_write(addr&0x00FF);	 				// Request RAM address (Low byte)  
+
+            -  84   1      	I2C_start();								// Start i2c bus  
+  85   1      	I2C_write(0xA1);							// Connect to EEPROM for Read  
+  86   1      	dat = I2C_read();							// Receive data  
+  87   1      	I2C_noack();
+  88   1      	I2C_stop();									// Stop i2c bus  
+  89   1         return dat;			
+  90   1      }
+  91          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  92          //Description:	Write a single byte to I2C EEPROM at P
+            -articular Address
+  93          //Argument:		Address: Address at which to write
+  94          //					val:		Byte to be Written 
+  95          void ROM_Write(unsigned int addr, unsigned char val)
+  96          {
+  97   1      	I2C_start(); 
+  98   1      	I2C_write(0xA0);   						// Connect to EEPROM  
+  99   1      	I2C_write((addr&0xFF00)/0xFF);	 	// Request RAM address (Hight by
+            -te)  
+ 100   1      	I2C_write(addr&0x00FF);	 				// Request RAM address (Low byte) 
+ 101   1      	I2C_write(val);							// Write sec on RAM specified address
+ 102   1      	I2C_stop();           					// Stop i2c bus
+ 103   1      	Delay5ms();  
+ 104   1      }
+ 105          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            - 106          //Description:	Write Data at a Particular address in 
+            -Page formate
+ 107          //Argument:		Address: address 
+ 108          /*void ROM_WritePage(unsigned int addr)
+ 109          {
+ 110          	unsigned char pp;
+ 111          	
+ 112          	// Save Measurement Intervals values from 0-15 (FPGA 1 and 2 Data
+            -)
+ 113          	I2C_start(); 
+ 114          	I2C_write(0xA0);
+ 115          	I2C_write((addr&0xFF00)/0xFF);
+ 116          	I2C_write(addr&0x00FF);	 		
+ 117          	for (pp=0;pp<16;pp++)
+ 118          	{
+ 119          		I2C_write((Interval[pp]&0xFF));
+ 120          		I2C_write(((Interval[pp]>>8)&0xFF));
+ 121          		I2C_write(((Interval[pp]>>16)&0xFF));
+ 122          		I2C_write(((Interval[pp]>>24)&0xFF));
+ 123          	}
+ 124          	I2C_stop();           			
+ 125          	//Delay5ms();
+ 126          	//Delay5ms();
+ 127          	// Save Measurement Intervals values from 16-31 (FPGA 3 and 4 Dat
+            -a)
+ 128          	I2C_start(); 
+ 129          	I2C_write(0xA0);   				
+ 130          	I2C_write(((addr+64)&0xFF00)/0xFF);
+ 131          	I2C_write((addr+64)&0x00FF);	 	
+ 132          	for (pp=16;pp<32;pp++)
+ 133          	{
+ 134          		I2C_write((Interval[pp]&0xFF));
+ 135          		I2C_write(((Interval[pp]>>8)&0xFF));
+ 136          		I2C_write(((Interval[pp]>>16)&0xFF));
+ 137          		I2C_write(((Interval[pp]>>24)&0xFF));
+ 138          	}				
+ 139          	I2C_stop();           				
+ 140          	//Delay5ms();
+ 141          	//Delay5ms();
+ 142          	// Misc
+ 143          	// Save Threshold Values
+ 144          	ROM_Write(addr+384,StopTh1);
+ 145          	ROM_Write(addr+385,StartTh2);
+ 146          	// Save the Time of Occurance
+ 147          	ROM_Write(addr+386,tSave[0]);
+ 148          	ROM_Write(addr+387,tSave[1]);
+ 149          	ROM_Write(addr+388,tSave[2]);
+ 150          	ROM_Write(addr+389,tSave[3]);	
+ 151          	ROM_Write(addr+390,tSave[4]);
+ 152          	ROM_Write(addr+391,tSave[5]);
+ 153          	ROM_Write(addr+392,tSave[6]);
+ 154          	// Save the Minimum Value for Measurement Intervals
+ 155          	ROM_Write(addr+393,(min&0xFF));
+ 156          	ROM_Write(addr+394,((min>>8)&0xFF));
+ 157          	ROM_Write(addr+395,((min>>16)&0xFF));
+ 158          	ROM_Write(addr+396,((min>>24)&0xFF));
+ 159          	// Save the Maximum Value for Measurement Intervals
+ 160          	ROM_Write(addr+397,(max&0xFF));
+ 161          	ROM_Write(addr+398,((max>>8)&0xFF));
+ 162          	ROM_Write(addr+399,((max>>16)&0xFF));
+ 163          	ROM_Write(addr+400,((max>>24)&0xFF));
+ 164          }*/
+ 165          
+ 166          
+ 167          
+ 168          
+ 169          
+ 170          
+ 171          
+ 172          
+ 173          
+ 174          
+ 175          
+ 176          
+ 177          
+ 178          
+ 179          
+ 180          
+ 181          
+ 182          
+ 183          
+ 184          
+ 185          
+ 186          
+ 187          
+ 188          
+ 189          
+ 190          
+ 191          
+ 192          
+ 193          
+ 194          
+ 195          
+ 196          
+ 197          
+ 198          
+ 199          
+ 200          
+ 201          
+ 202          
+ 203          
+ 204          
+ 205          
+ 206          
+ 207          
+ 208          
+ 209          
+ 210          
+ 211          
+ 212          
+ 213          
+ 214          
+ 215          
+ 216          
+ 217          
+ 218          
+ 219          
+ 220          
+ 221          
+ 222          
+ 223          
+ 224          
+ 225          
+ 226          
+ 227          
+ 228          
+ 229          
+ 230          
+ 231          
+ 232          
+ 233          
+ 234          
+ 235          
+ 236          
+ 237          
+ 238          
+ 239          
+ 240          
+ 241          
+ 242          
+ 243          
+ 244          
+ 245          
+ 246          
+ 247          
+ 248          
+ 249          
+ 250          
+ 251          
+ 252          
+ 253          
+ 254          
+ 255          
+ 256          
+ 257          
+ 258          
+ 259          
+ 260          
+ 261          
+ 262          
+ 263          
+ 264          
+ 265          
+ 266          
+ 267          
+ 268          
+ 269          
+ 270          
+ 271          
+ 272          
+ 273          
+ 274          
+ 275          
+ 276          
+ 277          
+ 278          
+ 279          
+ 280          
+ 281          
+C51 COMPILER V6.11.4C,  EEPROM                    06/07/113  08:53:08  PAGE  2
+
+ASSEMBLY LISTING OF GENERATED OBJECT CODE
+
+            ; FUNCTION I2C_start (BEGIN)
+                                           ; SOURCE LINE # 9 
+0000 308602         JNB    eSCL,?NXT1
+                                           ; SOURCE LINE # 10 
+0003 C286           CLR    eSCL
+0005         ?NXT1:
+                                           ; SOURCE LINE # 11 
+0005 D285           SETB   eSDA
+                                           ; SOURCE LINE # 12 
+0007 D286           SETB   eSCL
+                                           ; SOURCE LINE # 13 
+0009 C285           CLR    eSDA
+                                           ; SOURCE LINE # 14 
+000B C286           CLR    eSCL
+000D 22             RET    
+
+            ; FUNCTION I2C_start (END)
+
+            ; FUNCTION I2C_stop (BEGIN)
+                                           ; SOURCE LINE # 20 
+0000 308602         JNB    eSCL,?NXT3
+                                           ; SOURCE LINE # 21 
+0003 C286           CLR    eSCL
+0005         ?NXT3:
+                                           ; SOURCE LINE # 22 
+0005 C285           CLR    eSDA
+                                           ; SOURCE LINE # 23 
+0007 D286           SETB   eSCL
+                                           ; SOURCE LINE # 24 
+0009 D285           SETB   eSDA
+000B 22             RET    
+
+            ; FUNCTION I2C_stop (END)
+
+            ; FUNCTION _I2C_write (BEGIN)
+              ; Register R7 is assigned to parameter dat
+              ; R6 is assigned to i
+                                           ; SOURCE LINE # 33 
+0000 7E00           MOV    R6,#000H
+0002         ?FOR1:
+                                           ; SOURCE LINE # 35 
+0002 EF             MOV    A,R7
+0003 5480           ANL    A,#080H
+0005 24FF           ADD    A,#0FFH
+0007 9200    R      MOV    data_bit,C
+                                           ; SOURCE LINE # 36 
+0009 9285           MOV    eSDA,C
+                                           ; SOURCE LINE # 37 
+000B D286           SETB   eSCL
+                                           ; SOURCE LINE # 38 
+000D C286           CLR    eSCL
+                                           ; SOURCE LINE # 39 
+000F EF             MOV    A,R7
+0010 C3             CLR    C
+0011 33             RLC    A
+0012 FF             MOV    R7,A
+                                           ; SOURCE LINE # 33 
+0013 0E             INC    R6
+0014 BE08EB         CJNE   R6,#008H,?FOR1
+                                           ; SOURCE LINE # 41 
+0017 D285           SETB   eSDA
+                                           ; SOURCE LINE # 42 
+0019 D286           SETB   eSCL
+                                           ; SOURCE LINE # 43 
+001B A285           MOV    C,eSDA
+001D 9200    R      MOV    data_bit,C
+                                           ; SOURCE LINE # 44 
+001F C286           CLR    eSCL
+                                           ; SOURCE LINE # 45 
+0021 22             RET    
+
+            ; FUNCTION _I2C_write (END)
+
+            ; FUNCTION I2C_read (BEGIN)
+              ; R6 is assigned to dat
+                                           ; SOURCE LINE # 54 
+0000 E4             CLR    A
+0001 FE             MOV    R6,A
+0002 FF             MOV    R7,A
+              ; R7 is assigned to i
+0003         ?FOR3:
+                                           ; SOURCE LINE # 57 
+0003 D286           SETB   eSCL
+                                           ; SOURCE LINE # 58 
+0005 A285           MOV    C,eSDA
+0007 9200    R      MOV    rd_bit,C
+                                           ; SOURCE LINE # 59 
+0009 EE             MOV    A,R6
+000A C3             CLR    C
+000B 33             RLC    A
+000C FE             MOV    R6,A
+                                           ; SOURCE LINE # 60 
+000D A200    R      MOV    C,rd_bit
+000F E4             CLR    A
+0010 33             RLC    A
+0011 2E             ADD    A,R6
+0012 FE             MOV    R6,A
+                                           ; SOURCE LINE # 61 
+0013 C286           CLR    eSCL
+                                           ; SOURCE LINE # 55 
+0015 0F             INC    R7
+0016 BF08EA         CJNE   R7,#008H,?FOR3
+                                           ; SOURCE LINE # 63 
+0019 FF             MOV    R7,A
+001A 22             RET    
+
+            ; FUNCTION I2C_read (END)
+
+            ; FUNCTION I2C_noack (BEGIN)
+                                           ; SOURCE LINE # 69 
+0000 D285           SETB   eSDA
+                                           ; SOURCE LINE # 70 
+0002 D286           SETB   eSCL
+                                           ; SOURCE LINE # 71 
+0004 C286           CLR    eSCL
+                                           ; SOURCE LINE # 72 
+0006 D286           SETB   eSCL
+0008 22             RET    
+
+            ; FUNCTION I2C_noack (END)
+
+            ; FUNCTION _ROM_Read (BEGIN)
+                                           ; SOURCE LINE # 89 
+0000 8E00    R      MOV    addr,R6
+0002 8F00    R      MOV    addr+01H,R7
+                                           ; SOURCE LINE # 80 
+0004 120000  R      LCALL  I2C_start
+                                           ; SOURCE LINE # 81 
+0007 7FA0           MOV    R7,#0A0H
+0009 120000  R      LCALL  _I2C_write
+                                           ; SOURCE LINE # 82 
+000C E4             CLR    A
+000D FF             MOV    R7,A
+000E FC             MOV    R4,A
+000F AE00    R      MOV    R6,addr
+0011 7DFF           MOV    R5,#0FFH
+0013 120000  R      LCALL  ?C_UIDIV
+0016 120000  R      LCALL  _I2C_write
+                                           ; SOURCE LINE # 83 
+0019 AF00    R      MOV    R7,addr+01H
+001B 120000  R      LCALL  _I2C_write
+                                           ; SOURCE LINE # 84 
+001E 120000  R      LCALL  I2C_start
+                                           ; SOURCE LINE # 85 
+0021 7FA1           MOV    R7,#0A1H
+0023 120000  R      LCALL  _I2C_write
+              ; R5 is assigned to dat
+                                           ; SOURCE LINE # 86 
+0026 120000  R      LCALL  I2C_read
+                                           ; SOURCE LINE # 87 
+0029 120000  R      LCALL  I2C_noack
+                                           ; SOURCE LINE # 88 
+002C 120000  R      LCALL  I2C_stop
+                                           ; SOURCE LINE # 89 
+002F 22             RET    
+
+            ; FUNCTION _ROM_Read (END)
+
+            ; FUNCTION _ROM_Write (BEGIN)
+                                           ; SOURCE LINE # 103 
+0000 8E00    R      MOV    addr,R6
+0002 8F00    R      MOV    addr+01H,R7
+              ; Register R2 is assigned to parameter val
+0004 8D02           MOV    AR2,R5
+                                           ; SOURCE LINE # 97 
+0006 120000  R      LCALL  I2C_start
+                                           ; SOURCE LINE # 98 
+0009 7FA0           MOV    R7,#0A0H
+000B 120000  R      LCALL  _I2C_write
+                                           ; SOURCE LINE # 99 
+000E E4             CLR    A
+000F FF             MOV    R7,A
+0010 FC             MOV    R4,A
+0011 AE00    R      MOV    R6,addr
+0013 7DFF           MOV    R5,#0FFH
+0015 120000  R      LCALL  ?C_UIDIV
+0018 120000  R      LCALL  _I2C_write
+                                           ; SOURCE LINE # 100 
+001B AF00    R      MOV    R7,addr+01H
+001D 120000  R      LCALL  _I2C_write
+                                           ; SOURCE LINE # 101 
+0020 8A07           MOV    AR7,R2
+0022 120000  R      LCALL  _I2C_write
+                                           ; SOURCE LINE # 102 
+0025 120000  R      LCALL  I2C_stop
+                                           ; SOURCE LINE # 103 
+0028 120000  R      LCALL  Delay5ms
+002B 22             RET    
+
+            ; FUNCTION _ROM_Write (END)
+
+C51 COMPILER V6.11.4C,  EEPROM                    06/07/113  08:53:08  PAGE  3
+
+NAME                                    CLASS   MSPACE  TYPE    OFFSET  SIZE
+====                                    =====   ======  ====    ======  ====
+
+I2C_start. . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+I2C_stop . . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+I2C_write. . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  dat?055. . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  dat?055. . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+data_bit?056 . . . . . . . . . . . . .  PUBLIC  DATA    BIT     0000H   1    
+i?057. . . . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+I2C_read . . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+rd_bit?059 . . . . . . . . . . . . . .  PUBLIC  DATA    BIT     0000H   1    
+i?060. . . . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+dat?061. . . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+I2C_noack. . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+ROM_Read . . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  addr?062 . . . . . . . . . . . . . .  PARAM   DATA    U_INT  0000H   2    
+  addr?062 . . . . . . . . . . . . . .  PARAM   DATA    U_INT  0000H   2    
+dat?063. . . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+ROM_Write. . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  addr?064 . . . . . . . . . . . . . .  PARAM   DATA    U_INT  0000H   2    
+  val?065. . . . . . . . . . . . . . .  PARAM   DATA    BASE    0002H   1    
+  addr?064 . . . . . . . . . . . . . .  PARAM   DATA    U_INT  0000H   2    
+  val?065. . . . . . . . . . . . . . .  PARAM   DATA    BASE    0002H   1    
+Delay5ms . . . . . . . . . . . . . . .  EXTERN  CODE    PROC    -----   -----
+C51 COMPILER V6.11.4C,  EEPROM                    06/07/113  08:53:08  PAGE  4
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    188    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----       2
+END OF MODULE INFORMATION.
+
+C51 COMPILATION COMPLETE.  0 WARNING,  0 ERROR

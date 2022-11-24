@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoTerminal", "ChronoTerminal.csproj", "{265687D1-FAC9-4227-9C51-19DFE3EE09BC}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ChronoTerminalSetup", "..\ChronoTerminal_Setup\ChronoSetup\ChronoSetup.vdproj", "{0AD6CEC8-EFC5-49AB-8968-995F8C254744}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{265687D1-FAC9-4227-9C51-19DFE3EE09BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{265687D1-FAC9-4227-9C51-19DFE3EE09BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{265687D1-FAC9-4227-9C51-19DFE3EE09BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{265687D1-FAC9-4227-9C51-19DFE3EE09BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD6CEC8-EFC5-49AB-8968-995F8C254744}.Debug|Any CPU.ActiveCfg = Debug
+		{0AD6CEC8-EFC5-49AB-8968-995F8C254744}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

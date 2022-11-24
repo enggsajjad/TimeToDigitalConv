@@ -1,0 +1,159 @@
+
+Constraints file: chrono48_start.pcf
+
+Loading device database for application Par from file "chrono48_start_map.ncd".
+   "chrono48_start" is an NCD, version 2.38, device xc2s200, package pq208,
+speed -6
+Loading device for application Par from file 'v200.nph' in environment
+C:/Xilinx.
+Device speed data version:  PRODUCTION 1.27 2003-06-19.
+
+
+Resolved that macro <XLXI_120/hset> must be placed at site CLB_R27C7.S1.
+Resolved that IOB <clkout1> must be placed at site P97.
+Resolved that IOB <clkout2> must be placed at site P94.
+Resolved that IOB <startout1> must be placed at site P68.
+Resolved that IOB <startout2> must be placed at site P71.
+Resolved that IOB <rx_stop> must be placed at site P108.
+Resolved that IOB <tx_stop> must be placed at site P110.
+Resolved that IOB <rx_pc> must be placed at site P120.
+Resolved that IOB <rx_uc> must be placed at site P161.
+Resolved that IOB <rx_pr> must be placed at site P115.
+Resolved that IOB <start_pulse> must be placed at site P48.
+Resolved that IOB <tx_pc> must be placed at site P119.
+Resolved that IOB <tx_uc> must be placed at site P162.
+Resolved that IOB <tx_pr> must be placed at site P114.
+Resolved that IOB <DACout> must be placed at site P3.
+Resolved that IOB <sel0> must be placed at site P150.
+Resolved that IOB <sel1> must be placed at site P149.
+Resolved that IOB <intr> must be placed at site P148.
+Resolved that GCLKIOB <clk> must be placed at site P80.
+Resolved that IOB <dev_addr<0>> must be placed at site P135.
+Resolved that IOB <dev_addr<1>> must be placed at site P134.
+Resolved that IOB <dev_addr<2>> must be placed at site P133.
+Resolved that IOB <tst_stop_pulse> must be placed at site P112.
+Resolved that IOB <dev_addr<3>> must be placed at site P132.
+Resolved that DLL <Clock_Mul_XLXI_1> must be placed at site DLL0.
+Resolved that DLL <Clock_Mul_XLXI_2> must be placed at site DLL1.
+Resolved that GCLK <Clock_Mul_XLXI_4> must be placed at site GCLKBUF0.
+Resolved that GCLK <Clock_Mul_XLXI_5> must be placed at site GCLKBUF1.
+
+
+Device utilization summary:
+
+   Number of External GCLKIOBs         1 out of 4      25%
+   Number of External IOBs            23 out of 140    16%
+      Number of LOCed External IOBs   22 out of 23     95%
+
+   Number of SLICEs                  130 out of 2352    5%
+
+   Number of DLLs                      2 out of 4      50%
+   Number of GCLKs                     2 out of 4      50%
+
+
+
+Overall effort level (-ol):   Standard (set by user)
+Placer effort level (-pl):    Standard (set by user)
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard (set by user)
+
+
+Phase 1.1
+Phase 1.1 (Checksum:989c2b) REAL time: 0 secs 
+
+Phase 2.23
+Phase 2.23 (Checksum:1312cfe) REAL time: 0 secs 
+
+Phase 3.3
+Phase 3.3 (Checksum:1c9c37d) REAL time: 0 secs 
+
+Phase 4.5
+Phase 4.5 (Checksum:26259fc) REAL time: 0 secs 
+
+Phase 5.8
+...
+Phase 5.8 (Checksum:a1f1cf) REAL time: 0 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 0 secs 
+
+Phase 7.18
+Phase 7.18 (Checksum:42c1d79) REAL time: 0 secs 
+
+Writing design to file chrono48_start.ncd.
+
+Total REAL time to Placer completion: 0 secs 
+Total CPU time to Placer completion: 0 secs 
+
+
+Phase 1: 786 unrouted;       REAL time: 0 secs 
+
+Phase 2: 675 unrouted;       REAL time: 9 secs 
+
+Phase 3: 143 unrouted;       REAL time: 9 secs 
+
+Phase 4: 0 unrouted;       REAL time: 9 secs 
+
+Total REAL time to Router completion: 9 secs 
+Total CPU time to Router completion: 9 secs 
+
+Generating "par" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++----------------------------+----------+--------+------------+-------------+
+|         Clock Net          | Resource | Fanout |Net Skew(ns)|Max Delay(ns)|
++----------------------------+----------+--------+------------+-------------+
+|         clk100mhz          |  Global  |   16   |  0.082     |  0.541      |
++----------------------------+----------+--------+------------+-------------+
+|          clk25mhz          |Low-Skew  |   79   |  0.773     |  4.435      |
++----------------------------+----------+--------+------------+-------------+
+|XLXI_120/out_pulse          |   Local  |    1   |  0.000     |  0.573      |
++----------------------------+----------+--------+------------+-------------+
+|    XLXI_106_cstate_FFd3    |   Local  |    4   |  0.058     |  3.202      |
++----------------------------+----------+--------+------------+-------------+
+|    XLXI_106_cstate_FFd6    |   Local  |    2   |  0.000     |  0.729      |
++----------------------------+----------+--------+------------+-------------+
+|       cmd_dev_sel          |   Local  |    1   |  0.000     |  0.566      |
++----------------------------+----------+--------+------------+-------------+
+|   XLXI_108_startbitsync    |   Local  |    1   |  0.000     |  0.587      |
++----------------------------+----------+--------+------------+-------------+
+|XLXI_122_out_pulse          |   Local  |    1   |  0.000     |  0.573      |
++----------------------------+----------+--------+------------+-------------+
+
+
+   The Delay Summary Report
+
+   The SCORE FOR THIS DESIGN is: 205
+
+
+The NUMBER OF SIGNALS NOT COMPLETELY ROUTED for this design is: 0
+
+   The AVERAGE CONNECTION DELAY for this design is:        1.409
+   The MAXIMUM PIN DELAY IS:                               4.460
+   The AVERAGE CONNECTION DELAY on the 10 WORST NETS is:   3.187
+
+   Listing Pin Delays by value: (nsec)
+
+    d < 1.00   < d < 2.00  < d < 3.00  < d < 4.00  < d < 5.00  d >= 5.00
+   ---------   ---------   ---------   ---------   ---------   ---------
+         369         276          54          30          57           0
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 10 secs 
+Total CPU time to PAR completion: 9 secs 
+
+Peak Memory Usage:  63 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Writing design to file chrono48_start.ncd.
+
+
+PAR done.

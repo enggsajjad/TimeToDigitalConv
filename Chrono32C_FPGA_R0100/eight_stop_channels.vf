@@ -1,0 +1,67 @@
+// Verilog model created from eight_stop_channels.sch - Tue Jun 04 14:59:59 2013
+
+`timescale 1ns / 1ps
+
+module eight_stop_channels(clk, reset, sel_vers_stop, start_pulse, stop_pulses,
+      test_stop, load_reg, PulseSyncOut, ver_stop_10bits_out);
+
+    input clk;
+    input reset;
+    input [7:0] sel_vers_stop;
+    input start_pulse;
+    input [7:0] stop_pulses;
+    input test_stop;
+   output [7:0] load_reg;
+   output [7:0] PulseSyncOut;
+   output [39:0] ver_stop_10bits_out;
+   
+   
+   stop_channel XLXI_2 (.clk(clk), .reset(reset), .sel_ver(sel_vers_stop[0]),
+         .start_pulse(start_pulse), .stop_pulse(stop_pulses[0]),
+         .teststop(test_stop), .load_reg(load_reg[0]),
+         .PulseSyncOut(PulseSyncOut[0]),
+         .ver_out_10bits(ver_stop_10bits_out[39:0]));
+   // synthesis attribute RLOC of XLXI_2 is "R14C0"
+   stop_channel XLXI_3 (.clk(clk), .reset(reset), .sel_ver(sel_vers_stop[1]),
+         .start_pulse(start_pulse), .stop_pulse(stop_pulses[1]),
+         .teststop(test_stop), .load_reg(load_reg[1]),
+         .PulseSyncOut(PulseSyncOut[1]),
+         .ver_out_10bits(ver_stop_10bits_out[39:0]));
+   // synthesis attribute RLOC of XLXI_3 is "R12C0"
+   stop_channel XLXI_4 (.clk(clk), .reset(reset), .sel_ver(sel_vers_stop[2]),
+         .start_pulse(start_pulse), .stop_pulse(stop_pulses[2]),
+         .teststop(test_stop), .load_reg(load_reg[2]),
+         .PulseSyncOut(PulseSyncOut[2]),
+         .ver_out_10bits(ver_stop_10bits_out[39:0]));
+   // synthesis attribute RLOC of XLXI_4 is "R10C0"
+   stop_channel XLXI_5 (.clk(clk), .reset(reset), .sel_ver(sel_vers_stop[3]),
+         .start_pulse(start_pulse), .stop_pulse(stop_pulses[3]),
+         .teststop(test_stop), .load_reg(load_reg[3]),
+         .PulseSyncOut(PulseSyncOut[3]),
+         .ver_out_10bits(ver_stop_10bits_out[39:0]));
+   // synthesis attribute RLOC of XLXI_5 is "R8C0"
+   stop_channel XLXI_6 (.clk(clk), .reset(reset), .sel_ver(sel_vers_stop[4]),
+         .start_pulse(start_pulse), .stop_pulse(stop_pulses[4]),
+         .teststop(test_stop), .load_reg(load_reg[4]),
+         .PulseSyncOut(PulseSyncOut[4]),
+         .ver_out_10bits(ver_stop_10bits_out[39:0]));
+   // synthesis attribute RLOC of XLXI_6 is "R6C0"
+   stop_channel XLXI_7 (.clk(clk), .reset(reset), .sel_ver(sel_vers_stop[5]),
+         .start_pulse(start_pulse), .stop_pulse(stop_pulses[5]),
+         .teststop(test_stop), .load_reg(load_reg[5]),
+         .PulseSyncOut(PulseSyncOut[5]),
+         .ver_out_10bits(ver_stop_10bits_out[39:0]));
+   // synthesis attribute RLOC of XLXI_7 is "R4C0"
+   stop_channel XLXI_8 (.clk(clk), .reset(reset), .sel_ver(sel_vers_stop[6]),
+         .start_pulse(start_pulse), .stop_pulse(stop_pulses[6]),
+         .teststop(test_stop), .load_reg(load_reg[6]),
+         .PulseSyncOut(PulseSyncOut[6]),
+         .ver_out_10bits(ver_stop_10bits_out[39:0]));
+   // synthesis attribute RLOC of XLXI_8 is "R2C0"
+   stop_channel XLXI_9 (.clk(clk), .reset(reset), .sel_ver(sel_vers_stop[7]),
+         .start_pulse(start_pulse), .stop_pulse(stop_pulses[7]),
+         .teststop(test_stop), .load_reg(load_reg[7]),
+         .PulseSyncOut(PulseSyncOut[7]),
+         .ver_out_10bits(ver_stop_10bits_out[39:0]));
+   // synthesis attribute RLOC of XLXI_9 is "R0C0"
+endmodule

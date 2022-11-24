@@ -1,0 +1,78 @@
+--------------------------------------------------------------------------------
+Release 6.1i Trace G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+
+C:/Xilinx/bin/nt/trce.exe -intstyle ise -e 3 -l 3 -xml chrono48_stop
+chrono48_stop.ncd -o chrono48_stop.twr chrono48_stop.pcf
+
+
+Design file:              chrono48_stop.ncd
+Physical constraint file: chrono48_stop.pcf
+Device,speed:             xc2s200,-6 (PRODUCTION 1.27 2003-06-19)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+--------------+------------+------------+------------------+--------+
+              |  Setup to  |  Hold to   |                  |  Clock |
+Source        | clk (edge) | clk (edge) |Internal Clock(s) |  Phase |
+--------------+------------+------------+------------------+--------+
+dev_addr<0>   |    4.092(R)|    0.122(R)|clk25mhz          |   0.000|
+dev_addr<1>   |    4.228(R)|   -0.876(R)|clk25mhz          |   0.000|
+dev_addr<2>   |    1.922(R)|    1.129(R)|clk25mhz          |   0.000|
+rx_uc         |    0.201(R)|    1.304(R)|clk25mhz          |   0.000|
+start_clk_sync|    6.860(R)|   -2.807(R)|clk100mhz         |   0.000|
+--------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  |  Clock |
+Destination | to PAD     |Internal Clock(s) |  Phase |
+------------+------------+------------------+--------+
+DACout      |   14.489(R)|clk25mhz          |   0.000|
+cmd_dev_sel |   17.566(R)|clk25mhz          |   0.000|
+cmd_inc_dac |   14.351(R)|clk25mhz          |   0.000|
+cmd_reset   |   14.289(R)|clk25mhz          |   0.000|
+cmd_rst_dac |   14.842(R)|clk25mhz          |   0.000|
+cmd_rst_test|   14.007(R)|clk25mhz          |   0.000|
+tx_uc       |   14.657(R)|clk25mhz          |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   27.500|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+dev_addr<0>    |cmd_dev_sel    |   14.372|
+dev_addr<0>    |tx_uc          |   11.463|
+dev_addr<1>    |cmd_dev_sel    |   14.508|
+dev_addr<1>    |tx_uc          |   11.599|
+dev_addr<2>    |cmd_dev_sel    |   11.183|
+dev_addr<2>    |tx_uc          |    9.408|
+---------------+---------------+---------+
+
+Analysis completed Wed Jul 02 11:07:04 2014
+--------------------------------------------------------------------------------
+
+Peak Memory Usage: 57 MB

@@ -1,0 +1,74 @@
+// Verilog model created from maincount8channel.sch - Tue Jun 04 14:59:56 2013
+
+`timescale 1ns / 1ps
+
+module maincount8channel(clk, load, reset, sel_cntr_tbuf, sel_flag, startsynch,
+      count, ovf24_intr);
+
+    input clk;
+    input [7:0] load;
+    input reset;
+    input [31:0] sel_cntr_tbuf;
+    input sel_flag;
+    input startsynch;
+   output [7:0] count;
+   output ovf24_intr;
+   
+   wire [31:0] Q;
+   wire [26:0] XLXN_1;
+   wire [26:0] XLXN_2;
+   wire [26:0] XLXN_3;
+   wire [26:0] XLXN_4;
+   wire [26:0] XLXN_5;
+   wire [26:0] XLXN_6;
+   wire [26:0] XLXN_7;
+   wire [26:0] XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_13;
+   wire XLXN_17;
+   wire XLXN_20;
+   wire XLXN_25;
+   
+   cc24ce XLXI_1 (.ce(XLXN_17), .clk(clk), .res(reset), .CO(), .ovf24(XLXN_10),
+         .Q(Q[31:0]));
+   // synthesis attribute RLOC of XLXI_1 is "R0C0"
+   registers_26bit XLXI_2 (.clk(clk), .din(Q[26:0]), .load1(load[0]),
+         .load2(load[1]), .load3(load[2]), .load4(load[3]), .load5(load[4]),
+         .load6(load[5]), .load7(load[6]), .load8(load[7]), .reset(reset),
+         .Counter1(XLXN_1[26:0]), .Counter2(XLXN_2[26:0]),
+         .Counter3(XLXN_3[26:0]), .Counter4(XLXN_4[26:0]),
+         .Counter5(XLXN_5[26:0]), .Counter6(XLXN_6[26:0]),
+         .Counter7(XLXN_7[26:0]), .Counter8(XLXN_8[26:0]));
+   // synthesis attribute RLOC of XLXI_2 is "R5C3"
+   Registers26bit_interface XLXI_3 (.counter1(XLXN_1[26:0]),
+         .counter2(XLXN_2[26:0]), .counter3(XLXN_3[26:0]),
+         .counter4(XLXN_4[26:0]), .counter5(XLXN_5[26:0]),
+         .counter6(XLXN_6[26:0]), .counter7(XLXN_7[26:0]),
+         .counter8(XLXN_8[26:0]), .reset(reset),
+         .sel_cntr_tbuf1(sel_cntr_tbuf[3:0]),
+         .sel_cntr_tbuf2(sel_cntr_tbuf[7:4]),
+         .sel_cntr_tbuf3(sel_cntr_tbuf[11:8]),
+         .sel_cntr_tbuf4(sel_cntr_tbuf[15:12]),
+         .sel_cntr_tbuf5(sel_cntr_tbuf[19:16]),
+         .sel_cntr_tbuf6(sel_cntr_tbuf[23:20]),
+         .sel_cntr_tbuf7(sel_cntr_tbuf[27:24]),
+         .sel_cntr_tbuf8(sel_cntr_tbuf[31:28]), .sel_flag(sel_flag), .tc(),
+         .count1(count[7:0]), .count2(count[7:0]), .count3(count[7:0]),
+         .count4(count[7:0]), .count5(count[7:0]), .count6(count[7:0]),
+         .count7(count[7:0]), .count8(count[7:0]), .tc_flag());
+   AND2B1 XLXI_4 (.I0(XLXN_13), .I1(startsynch), .O(XLXN_17));
+   FDCE XLXI_5 (.C(clk), .CE(XLXN_10), .CLR(reset), .D(XLXN_9), .Q(XLXN_13));
+   // synthesis attribute INIT of XLXI_5 is "0"
+   // synopsys translate_off
+   defparam XLXI_5.INIT = 1'b0;
+   // synopsys translate_on
+   VCC XLXI_6 (.P(XLXN_9));
+   INV XLXI_7 (.I(XLXN_25), .O(ovf24_intr));
+   FDCE XLXI_9 (.C(clk), .CE(XLXN_13), .CLR(reset), .D(XLXN_20), .Q(XLXN_25));
+   // synthesis attribute INIT of XLXI_9 is "0"
+   // synopsys translate_off
+   defparam XLXI_9.INIT = 1'b0;
+   // synopsys translate_on
+   VCC XLXI_10 (.P(XLXN_20));
+endmodule

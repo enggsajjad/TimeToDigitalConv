@@ -1,0 +1,131 @@
+**********************************************************************************************
+*                                                                                            *
+* Surface Mount Bottom Report                                                                *
+*                                                                                            *
+* C:\DOCUMENTS AND SETTINGS\MUSHTAQ KHAN\DESKTOP\CHRONO-32C-TDC_R0000\TDC_16CHANNELN-57.MAX  *
+* Wed Sep 26 15:23:50 2012                                                                   *
+*                                                                                            *
+**********************************************************************************************
+
+ REF DES    VALUE            PACKAGE          FOOTPRINT                      X INSERT   Y INSERT   ROTATION
+------------------------------------------------------------------------------------------------------------
+C3         1uF              CAP              SM/C_1206                       12181.0..  3434.00 m 90      
+C4         1uF              CAP              SM/C_1206                       12649.0..  3466.00 m 90      
+C5         1uF              CAP              SM/C_1206                       12059.0..  3515.00 m 90      
+C6         1uF              CAP              SM/C_1206                       4828.00 m  3609.00 m 90      
+C7         100uF            CAP_POL          CASEC_POLAR                     15568.0..  5670.00 m 180     
+C9         0.01uF           CAP_NP           SM/C_0805                       13906.0..  3950.00 m 0       
+C10        0.01uF           CAP_NP           SM/C_0805                       15039.0..  4320.00 m 180     
+C11        1uF              CAP              SM/C_1206                       4369.00 m  3562.00 m 90      
+C12        1uF              CAP              SM/C_1206                       4258.00 m  3659.00 m 90      
+C15        0.1uF            CAP_NP           SM/C_0805_REV32                 11798.0..  4797.00 m 0       
+C17        0.1uF            CAP_NP           SM/C_0805_REV14                 11598.0..  4872.00 m 180     
+C18        0.1uF            CAP_NP           SM/C_0805                       11823.0..  5121.00 m 90      
+C19        0.1uF            CAP_NP           SM/C_0805_REV2                  12118.0..  5110.00 m 90      
+C20        0.1uF            CAP_NP           SM/C_0805_REV15                 12531.0..  4891.00 m 0       
+C21        0.1uF            CAP_NP           SM/C_0805_REV13                 12544.0..  4596.00 m 0       
+C22        0.1uF            CAP_NP           SM/C_0805_REV13                 12543.0..  4413.00 m 0       
+C23        0.1uF            CAP_NP           SM/C_0805_REV2                  12279.0..  5108.00 m 90      
+C24        0.1uF            CAP_NP           SM/C_0805_REV12                 12286.0..  4180.00 m 270     
+C25        0.1uF            CAP_NP           SM/C_0805_REV12                 12115.0..  4177.00 m 270     
+C26        0.1uF            CAP_NP           SM/C_0805_REV14                 11846.0..  4179.00 m 270     
+C27        0.1uF            CAP_NP           SM/C_0805_REV14                 11754.0..  4182.00 m 270     
+C28        0.1uF            CAP_NP           SM/C_0805_REV12                 12025.0..  4176.00 m 270     
+C29        0.1uF            CAP_NP           SM/C_0805_REV12                 12374.0..  4181.00 m 270     
+C30        0.1uF            CAP_NP           SM/C_0805_REV17                 12373.0..  5108.00 m 90      
+C31        0.1uF            CAP_NP           SM/C_0805_REV13                 12543.0..  4322.00 m 0       
+C32        0.1uF            CAP_NP           SM/C_0805_REV13                 12544.0..  4689.00 m 0       
+C33        0.1uF            CAP_NP           SM/C_0805_REV15                 12531.0..  4986.00 m 0       
+C34        0.1uF            CAP_NP           SM/C_0805_REV2                  12024.0..  5108.00 m 90      
+C35        0.1uF            CAP_NP           SM/C_0805                       11731.0..  5122.00 m 90      
+C36        0.1uF            CAP_NP           SM/C_0805                       11567.0..  5121.00 m 90      
+C37        0.1uF            CAP_NP           SM/C_0805_REV14                 11599.0..  4959.00 m 180     
+C38        0.1uF            CAP_NP           SM/C_0805_REV14                 11598.0..  4329.00 m 180     
+C39        0.1uF            CAP_NP           SM/C_0805_REV14                 11594.0..  4143.00 m 180     
+C40        0.1uF            CAP_NP           SM/C_0805_REV13                 12542.0..  4143.00 m 0       
+C41        0.1uF            CAP_NP           SM/C_0805_REV16                 12572.0..  5122.00 m 90      
+C42        0.1uF            CAP_NP           SM/C_0805_REV14                 11596.0..  4577.00 m 180     
+C43        0.1uF            CAP_NP           SM/C_0805_REV14                 11597.0..  4675.00 m 180     
+C44        0.1uF            CAP_NP           SM/C_0805_REV14                 11597.0..  4422.00 m 180     
+C45        47uF             CAP              CASEC                           12227.0..  5437.00 m 0       
+C46        47uF             CAP              CASEC                           11309.0..  4830.00 m 90      
+C47        47uF             CAP              CASEC                           12828.0..  4478.00 m 270     
+C48        47uF             CAP              CASEC                           11803.0..  3771.00 m 90      
+C49        47uF             CAP              CASEC                           11725.0..  5401.00 m 0       
+C50        47uF             CAP              CASEC                           11312.0..  4479.00 m 90      
+C51        47uF             CAP              CASEC                           12815.0..  4797.00 m 90      
+C52        47uF             CAP              CASEC                           12039.0..  3895.00 m 0       
+C53        1uF              CAP              SM/C_0805_REV38                 15120.0..  5374.00 m 180     
+C55        1uF              CAP              SM/C_0805_REV38                 15120.0..  5458.00 m 180     
+C58        0.1uF            CAP_NP           SM/C_0805_REV33                 4293.00 m  4772.00 m 0       
+C59        0.1uF            CAP_NP           SM/C_0805_REV19                 4371.00 m  4179.00 m 270     
+C60        0.1uF            CAP_NP           SM/C_0805_REV20                 4648.00 m  4182.00 m 270     
+C61        0.1uF            CAP_NP           SM/C_0805_REV21                 4796.00 m  4181.00 m 270     
+C62        0.1uF            CAP_NP           SM/C_0805_REV23                 5025.00 m  4466.00 m 0       
+C63        0.1uF            CAP_NP           SM/C_0805_REV24                 5025.00 m  4596.00 m 0       
+C64        0.1uF            CAP_NP           SM/C_0805_REV19                 4284.00 m  4179.00 m 270     
+C65        0.1uF            CAP_NP           SM/C_0805_REV20                 4559.00 m  4183.00 m 270     
+C66        0.1uF            CAP_NP           SM/C_0805_REV21                 4887.00 m  4184.00 m 270     
+C67        0.1uF            CAP_NP           SM/C_0805_REV22                 5032.00 m  4144.00 m 0       
+C68        0.1uF            CAP_NP           SM/C_0805_REV23                 5025.00 m  4379.00 m 0       
+C69        0.1uF            CAP_NP           SM/C_0805_REV25                 5026.00 m  4686.00 m 0       
+C70        0.1uF            CAP_NP           SM/C_0805_REV27                 5030.00 m  4941.00 m 0       
+C71        0.1uF            CAP_NP           SM/C_0805                       5071.00 m  5125.00 m 90      
+C72        0.1uF            CAP_NP           SM/C_0805_REV28                 4834.00 m  5105.00 m 90      
+C73        0.1uF            CAP_NP           SM/C_0805_REV29                 4529.00 m  5107.00 m 90      
+C74        0.1uF            CAP_NP           SM/C_0805_REV30                 4304.00 m  5100.75 m 90      
+C75        0.1uF            CAP_NP           SM/C_0805_REV31                 4067.00 m  5101.00 m 90      
+C76        0.1uF            CAP_NP           SM/C_0805_REV28                 4742.00 m  5106.00 m 90      
+C77        0.1uF            CAP_NP           SM/C_0805_REV29                 4618.00 m  5107.00 m 90      
+C78        0.1uF            CAP_NP           SM/C_0805_REV30                 4399.00 m  5102.00 m 90      
+C79        0.1uF            CAP_NP           SM/C_0805_REV34                 4103.00 m  4803.00 m 180     
+C80        0.1uF            CAP_NP           SM/C_0805_REV35                 4104.00 m  4527.00 m 180     
+C81        0.1uF            CAP_NP           SM/C_0805_REV36                 4104.00 m  4380.00 m 180     
+C82        0.1uF            CAP_NP           SM/C_0805_REV34                 4104.00 m  4891.00 m 180     
+C83        0.1uF            CAP_NP           SM/C_0805_REV35                 4105.00 m  4616.00 m 180     
+C84        0.1uF            CAP_NP           SM/C_0805_REV36                 4104.00 m  4289.00 m 180     
+C85        0.1uF            CAP_NP           SM/C_0805_REV18                 4091.00 m  4143.00 m 180     
+C86        0.1uF            CAP_NP           SM/C_0805_REV26                 5028.00 m  4850.00 m 0       
+C87        47uF             CAP              CASEC                           4561.00 m  5393.00 m 0       
+C88        47uF             CAP              CASEC                           3809.00 m  4774.00 m 90      
+C89        47uF             CAP              CASEC                           4205.00 m  3898.00 m 0       
+C90        47uF             CAP              CASEC                           5340.00 m  4481.00 m 90      
+C91        47uF             CAP              CASEC                           4205.00 m  5393.00 m 0       
+C92        47uF             CAP              CASEC                           3813.00 m  4424.00 m 90      
+C93        47uF             CAP              CASEC                           4908.00 m  3900.00 m 180     
+C94        47uF             CAP              CASEC                           5331.00 m  4838.00 m 90      
+C147       4.7uF            CAP              SM/C_1206_REV14                 13883.0..  3837.00 m 0       
+C149       4.7uF            CAP              SM/C_1206_REV11                 15062.0..  4436.00 m 180     
+C161       100pF            CAP_NP           SM/C_0805_REV9                  2598.00 m  375.00 m  0       
+C162       100pF            CAP_NP           SM/C_0805_REV9                  3568.00 m  380.00 m  0       
+C163       100pF            CAP_NP           SM/C_0805_REV9                  1628.00 m  380.00 m  0       
+C164       100pF            CAP_NP           SM/C_0805_REV9                  658.00 m   385.00 m  0       
+C165       100pF            CAP_NP           SM/C_0805_REV9                  4538.00 m  380.00 m  0       
+C166       100pF            CAP_NP           SM/C_0805_REV9                  5508.00 m  380.00 m  0       
+C167       100pF            CAP_NP           SM/C_0805_REV9                  6478.00 m  385.00 m  0       
+C168       100pF            CAP_NP           SM/C_0805_REV9                  7448.00 m  369.00 m  0       
+C169       100pF            CAP_NP           SM/C_0805_REV9                  16313.0..  385.00 m  0       
+C170       100pF            CAP_NP           SM/C_0805_REV9                  15208.0..  390.00 m  0       
+C171       100pF            CAP_NP           SM/C_0805_REV9                  14238.0..  385.00 m  0       
+C172       100pF            CAP_NP           SM/C_0805_REV9                  13273.0..  385.00 m  0       
+C173       100pF            CAP_NP           SM/C_0805_REV9                  12298.0..  395.00 m  0       
+C174       100pF            CAP_NP           SM/C_0805_REV9                  8420.00 m  377.00 m  0       
+C175       100pF            CAP_NP           SM/C_0805_REV9                  9388.00 m  380.00 m  0       
+C176       100pF            CAP_NP           SM/C_0805_REV9                  10358.0..  385.00 m  0       
+C177       100pF            CAP_NP           SM/C_0805_REV9                  11328.0..  390.00 m  0       
+R12        4.7k             R                SM/C_0805                       12326.0..  4676.00 m 0       
+R13        4.7K             RESISTOR         SM/C_0805                       12327.0..  4590.00 m 0       
+R14        10K              R                SM/R_0805                       5242.00 m  5753.00 m 90      
+R15        10K              R                SM/R_0805                       5143.00 m  5753.00 m 90      
+R16        10K              R                SM/R_0805                       5044.00 m  5753.00 m 90      
+R17        10K              R                SM/R_0805                       4943.00 m  5752.00 m 90      
+R18        10K              R                SM/R_0805                       12866.0..  5913.00 m 90      
+R19        10K              R                SM/R_0805                       12765.0..  5914.00 m 90      
+R20        10K              R                SM/R_0805                       12664.0..  5913.00 m 90      
+R21        10K              R                SM/R_0805                       12567.0..  5914.00 m 90      
+R26        4.7k             R                SM/C_0805                       4810.00 m  4664.00 m 0       
+R27        4.7K             RESISTOR         SM/C_0805                       4809.00 m  4575.00 m 0       
+U2         LP2966           LP2966           REG_LP2966                      12392.0..  3541.60 m 90      
+U4         XCF02S_Flash     XCFXXS_FLASH     EPROM_XCF02S                    12048.0..  4681.80 m 90      
+U5         LP2966           LP2966           REG_LP2966                      4581.00 m  3685.60 m 90      
+U7         XCF02S_Flash     XCFXXS_FLASH     EPROM_XCF02S                    4549.50 m  4682.30 m 90      

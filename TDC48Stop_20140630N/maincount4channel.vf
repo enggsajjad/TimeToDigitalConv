@@ -1,0 +1,37 @@
+// Verilog model created from maincount4channel.sch - Tue Jul 08 11:08:51 2014
+
+`timescale 1ns / 1ps
+
+module maincount4channel(clk, load, reset, sel_cntr_bytes, start_sync, count,
+      ovf24_intr);
+
+    input clk;
+    input [3:0] load;
+    input reset;
+    input [15:0] sel_cntr_bytes;
+    input start_sync;
+   output [7:0] count;
+   output ovf24_intr;
+   
+   wire [31:0] Q;
+   wire [26:0] XLXN_37;
+   wire [26:0] XLXN_38;
+   wire [26:0] XLXN_39;
+   wire [26:0] XLXN_40;
+   
+   cntr_registers XLXI_11 (.clk(clk), .din(Q[26:0]), .load1(load[0]),
+         .load2(load[1]), .load3(load[2]), .load4(load[3]), .reset(reset),
+         .cntr1_val_reg(XLXN_37[26:0]), .cntr2_val_reg(XLXN_38[26:0]),
+         .cntr3_val_reg(XLXN_39[26:0]), .cntr4_val_reg(XLXN_40[26:0]));
+   // synthesis attribute RLOC of XLXI_11 is "R5C3"
+   cntr_reg_interface XLXI_12 (.cntr1_val_reg(XLXN_37[26:0]),
+         .cntr2_val_reg(XLXN_38[26:0]), .cntr3_val_reg(XLXN_39[26:0]),
+         .cntr4_val_reg(XLXN_40[26:0]), .sel_cntr_bytes1(sel_cntr_bytes[3:0]),
+         .sel_cntr_bytes2(sel_cntr_bytes[7:4]),
+         .sel_cntr_bytes3(sel_cntr_bytes[11:8]),
+         .sel_cntr_bytes4(sel_cntr_bytes[15:12]), .cntr1_in_byte(count[7:0]),
+         .cntr2_in_byte(count[7:0]), .cntr3_in_byte(count[7:0]),
+         .cntr4_in_byte(count[7:0]));
+   counter32bit XLXI_13 (.clk(clk), .enb(start_sync), .reset(reset),
+         .cntr(Q[31:0]), .ovf24_intr(ovf24_intr));
+endmodule

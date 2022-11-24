@@ -1,0 +1,60 @@
+// Verilog model created from xorcy_dline16.sch - Tue Jul 08 11:09:02 2014
+
+`timescale 1ns / 1ps
+
+module xorcy_dline16(Vin, Vout);
+
+    input Vin;
+   output [15:0] Vout;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_16;
+   wire XLXN_31;
+   
+   GND XLXI_30 (.G(XLXN_31));
+   XORCY_D xor_0 (.CI(XLXN_31), .LI(Vin), .LO(Vout[0]), .O(XLXN_1));
+   // synthesis attribute RLOC of xor_0 is "R0C0.S1"
+   XORCY_D xor_1 (.CI(XLXN_31), .LI(XLXN_1), .LO(Vout[1]), .O(XLXN_2));
+   // synthesis attribute RLOC of xor_1 is "R0C0.S0"
+   XORCY_D xor_2 (.CI(XLXN_31), .LI(XLXN_2), .LO(Vout[2]), .O(XLXN_3));
+   // synthesis attribute RLOC of xor_2 is "R0C1.S1"
+   XORCY_D xor_3 (.CI(XLXN_31), .LI(XLXN_3), .LO(Vout[3]), .O(XLXN_4));
+   // synthesis attribute RLOC of xor_3 is "R0C1.S0"
+   XORCY_D xor_4 (.CI(XLXN_31), .LI(XLXN_4), .LO(Vout[4]), .O(XLXN_5));
+   // synthesis attribute RLOC of xor_4 is "R0C2.S1"
+   XORCY_D xor_5 (.CI(XLXN_31), .LI(XLXN_5), .LO(Vout[5]), .O(XLXN_6));
+   // synthesis attribute RLOC of xor_5 is "R0C2.S0"
+   XORCY_D xor_6 (.CI(XLXN_31), .LI(XLXN_6), .LO(Vout[6]), .O(XLXN_7));
+   // synthesis attribute RLOC of xor_6 is "R0C3.S1"
+   XORCY_D xor_7 (.CI(XLXN_31), .LI(XLXN_7), .LO(Vout[7]), .O(XLXN_8));
+   // synthesis attribute RLOC of xor_7 is "R0C3.S0"
+   XORCY_D xor_8 (.CI(XLXN_31), .LI(XLXN_8), .LO(Vout[8]), .O(XLXN_9));
+   // synthesis attribute RLOC of xor_8 is "R0C4.S1"
+   XORCY_D xor_9 (.CI(XLXN_31), .LI(XLXN_9), .LO(Vout[9]), .O(XLXN_11));
+   // synthesis attribute RLOC of xor_9 is "R0C4.S0"
+   XORCY_D xor_10 (.CI(XLXN_31), .LI(XLXN_11), .LO(Vout[10]), .O(XLXN_10));
+   // synthesis attribute RLOC of xor_10 is "R0C5.S1"
+   XORCY_D xor_11 (.CI(XLXN_31), .LI(XLXN_10), .LO(Vout[11]), .O(XLXN_12));
+   // synthesis attribute RLOC of xor_11 is "R0C5.S0"
+   XORCY_D xor_12 (.CI(XLXN_31), .LI(XLXN_12), .LO(Vout[12]), .O(XLXN_13));
+   // synthesis attribute RLOC of xor_12 is "R0C6.S1"
+   XORCY_D xor_13 (.CI(XLXN_31), .LI(XLXN_13), .LO(Vout[13]), .O(XLXN_14));
+   // synthesis attribute RLOC of xor_13 is "R0C6.S0"
+   XORCY_D xor_14 (.CI(XLXN_31), .LI(XLXN_14), .LO(Vout[14]), .O(XLXN_16));
+   // synthesis attribute RLOC of xor_14 is "R0C7.S1"
+   XORCY xor_15 (.CI(XLXN_31), .LI(XLXN_16), .O(Vout[15]));
+   // synthesis attribute RLOC of xor_15 is "R0C7.S0"
+endmodule

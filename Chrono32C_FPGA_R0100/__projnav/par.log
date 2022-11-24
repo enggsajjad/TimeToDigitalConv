@@ -1,0 +1,3 @@
+Place & Route Module chrono32c . . .
+PAR command line: par -w -intstyle ise -ol std -t 1 chrono32c_map.ncd chrono32c.ncd chrono32c.pcf
+PAR completed successfully

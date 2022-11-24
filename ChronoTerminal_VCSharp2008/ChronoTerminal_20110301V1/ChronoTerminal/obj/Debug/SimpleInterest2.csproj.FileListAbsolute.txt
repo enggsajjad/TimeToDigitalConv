@@ -1,0 +1,12 @@
+D:\SimpleInterest2\SimpleInterest2\bin\Debug\SimpleInterest2.exe
+D:\SimpleInterest2\SimpleInterest2\bin\Debug\SimpleInterest2.pdb
+D:\SimpleInterest2\SimpleInterest2\obj\Debug\ResolveAssemblyReference.cache
+D:\SimpleInterest2\SimpleInterest2\obj\Debug\SimpleInterest2.Evaluation.resources
+D:\SimpleInterest2\SimpleInterest2\obj\Debug\SimpleInterest2.Properties.Resources.resources
+D:\SimpleInterest2\SimpleInterest2\obj\Debug\SimpleInterest2.csproj.GenerateResource.Cache
+D:\SimpleInterest2\SimpleInterest2\obj\Debug\SimpleInterest2.exe
+D:\SimpleInterest2\SimpleInterest2\obj\Debug\SimpleInterest2.pdb
+D:\SimpleInterest2\SimpleInterest2\bin\Debug\SimpleInterest2.exe.config
+D:\Chrono\ChronoTerminal2\SimpleInterest2\bin\Debug\SimpleInterest2.exe.config
+D:\Chrono\ChronoTerminal2\SimpleInterest2\obj\Debug\SimpleInterest2.exe
+D:\Chrono\ChronoTerminal2\SimpleInterest2\obj\Debug\SimpleInterest2.pdb

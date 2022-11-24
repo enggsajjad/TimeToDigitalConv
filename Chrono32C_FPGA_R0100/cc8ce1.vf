@@ -1,0 +1,104 @@
+// Verilog model created from cc8ce1.sch - Tue Jun 04 14:59:57 2013
+
+`timescale 1ns / 1ps
+
+module cc8ce1(C, CE, CI, CLR, CO, C2, Q);
+
+    input C;
+    input CE;
+    input CI;
+    input CLR;
+   output CO;
+   output C2;
+   output [7:0] Q;
+   
+   wire C1;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C7;
+   wire TQ0;
+   wire TQ1;
+   wire TQ2;
+   wire TQ3;
+   wire TQ4;
+   wire TQ5;
+   wire TQ6;
+   wire TQ7;
+   wire XLXN_1;
+   
+   MUXCY_L I_36_4 (.CI(CI), .DI(XLXN_1), .S(Q[0]), .LO(C1));
+   // synthesis attribute RLOC of I_36_4 is "R3C0.S0"
+   XORCY I_36_6 (.CI(CI), .LI(Q[0]), .O(TQ0));
+   MUXCY_L I_36_26 (.CI(C1), .DI(XLXN_1), .S(Q[1]), .LO(C2));
+   // synthesis attribute RLOC of I_36_26 is "R3C0.S0"
+   XORCY I_36_28 (.CI(C1), .LI(Q[1]), .O(TQ1));
+   FDCE I_36_35 (.C(C), .CE(CE), .CLR(CLR), .D(TQ1), .Q(Q[1]));
+   // synthesis attribute RLOC of I_36_35 is "R3C0.S0"
+   // synthesis attribute INIT of I_36_35 is "0"
+   // synopsys translate_off
+   defparam I_36_35.INIT = 1'b0;
+   // synopsys translate_on
+   FDCE I_36_36 (.C(C), .CE(CE), .CLR(CLR), .D(TQ0), .Q(Q[0]));
+   // synthesis attribute RLOC of I_36_36 is "R3C0.S0"
+   // synthesis attribute INIT of I_36_36 is "0"
+   // synopsys translate_off
+   defparam I_36_36.INIT = 1'b0;
+   // synopsys translate_on
+   FDCE I_36_224 (.C(C), .CE(CE), .CLR(CLR), .D(TQ2), .Q(Q[2]));
+   // synthesis attribute RLOC of I_36_224 is "R2C0.S0"
+   // synthesis attribute INIT of I_36_224 is "0"
+   // synopsys translate_off
+   defparam I_36_224.INIT = 1'b0;
+   // synopsys translate_on
+   XORCY I_36_226 (.CI(C2), .LI(Q[2]), .O(TQ2));
+   MUXCY_L I_36_233 (.CI(C2), .DI(XLXN_1), .S(Q[2]), .LO(C3));
+   // synthesis attribute RLOC of I_36_233 is "R2C0.S0"
+   FDCE I_36_237 (.C(C), .CE(CE), .CLR(CLR), .D(TQ3), .Q(Q[3]));
+   // synthesis attribute RLOC of I_36_237 is "R2C0.S0"
+   // synthesis attribute INIT of I_36_237 is "0"
+   // synopsys translate_off
+   defparam I_36_237.INIT = 1'b0;
+   // synopsys translate_on
+   XORCY I_36_239 (.CI(C3), .LI(Q[3]), .O(TQ3));
+   MUXCY_L I_36_246 (.CI(C3), .DI(XLXN_1), .S(Q[3]), .LO(C4));
+   // synthesis attribute RLOC of I_36_246 is "R2C0.S0"
+   FDCE I_36_250 (.C(C), .CE(CE), .CLR(CLR), .D(TQ4), .Q(Q[4]));
+   // synthesis attribute RLOC of I_36_250 is "R1C0.S0"
+   // synthesis attribute INIT of I_36_250 is "0"
+   // synopsys translate_off
+   defparam I_36_250.INIT = 1'b0;
+   // synopsys translate_on
+   XORCY I_36_252 (.CI(C4), .LI(Q[4]), .O(TQ4));
+   MUXCY_L I_36_259 (.CI(C4), .DI(XLXN_1), .S(Q[4]), .LO(C5));
+   // synthesis attribute RLOC of I_36_259 is "R1C0.S0"
+   FDCE I_36_263 (.C(C), .CE(CE), .CLR(CLR), .D(TQ5), .Q(Q[5]));
+   // synthesis attribute RLOC of I_36_263 is "R1C0.S0"
+   // synthesis attribute INIT of I_36_263 is "0"
+   // synopsys translate_off
+   defparam I_36_263.INIT = 1'b0;
+   // synopsys translate_on
+   XORCY I_36_265 (.CI(C5), .LI(Q[5]), .O(TQ5));
+   MUXCY_L I_36_272 (.CI(C5), .DI(XLXN_1), .S(Q[5]), .LO(C6));
+   // synthesis attribute RLOC of I_36_272 is "R1C0.S0"
+   FDCE I_36_276 (.C(C), .CE(CE), .CLR(CLR), .D(TQ6), .Q(Q[6]));
+   // synthesis attribute RLOC of I_36_276 is "R0C0.S0"
+   // synthesis attribute INIT of I_36_276 is "0"
+   // synopsys translate_off
+   defparam I_36_276.INIT = 1'b0;
+   // synopsys translate_on
+   XORCY I_36_278 (.CI(C6), .LI(Q[6]), .O(TQ6));
+   MUXCY_L I_36_285 (.CI(C6), .DI(XLXN_1), .S(Q[6]), .LO(C7));
+   // synthesis attribute RLOC of I_36_285 is "R0C0.S0"
+   FDCE I_36_289 (.C(C), .CE(CE), .CLR(CLR), .D(TQ7), .Q(Q[7]));
+   // synthesis attribute RLOC of I_36_289 is "R0C0.S0"
+   // synthesis attribute INIT of I_36_289 is "0"
+   // synopsys translate_off
+   defparam I_36_289.INIT = 1'b0;
+   // synopsys translate_on
+   XORCY I_36_291 (.CI(C7), .LI(Q[7]), .O(TQ7));
+   MUXCY I_36_298 (.CI(C7), .DI(XLXN_1), .S(Q[7]), .O(CO));
+   // synthesis attribute RLOC of I_36_298 is "R0C0.S0"
+   GND I_36_886 (.G(XLXN_1));
+endmodule

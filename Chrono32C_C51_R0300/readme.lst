@@ -1,0 +1,259 @@
+C51 COMPILER V6.11.4C,  README                    06/07/113  08:53:08  PAGE  1
+
+QCW(0x00002D1A)
+
+WIN32 C51 COMPILER V6.11.4C, COMPILATION OF MODULE README    
+OBJECT MODULE PLACED IN c:\documents and settings\sajjad hussain\desktop\chrono3
+            -2c_c51_r3\readme.obj
+COMPILER INVOKED BY: C51.EXE C:\DOCUMENTS AND SETTINGS\SAJJAD HUSSAIN\DESKTOP\CH
+            -RONO32C_C51_R3\README.C OBJECT(C:\DOCUMENTS AND SETTINGS\SAJJAD HUS
+            -SAIN\DESKTOP\CHRONO32C_C51_R3\README.OBJ) PIN(C:\FSI\INC) NOAM PR(C
+            -:\DOCUMENTS AND SETTINGS\SAJJAD HUSSAIN\DESKTOP\CHRONO32C_C51_R3\RE
+            -ADME.LST) CD SB OE(1) SM FP(NOFLOAT) PW(80) 
+
+stmt level    source
+   1          /*================================================================
+            -=========================
+   2          Update: 15-05-2013	Auto-print; offset of 10 Removed; Stop Vernier 
+            -trigger after valid start
+   3          Update: 09-05-2013	Screen and Printing problem
+   4          Update: 30-11-2012
+   5          	New SMD PCB; 'Chrono32C_MC_R1' against quotation No.Q-SmartPCBs/6
+            -049 dated 19-09-2012
+   6          Update: 15-02-2011
+   7          
+   8          Date: 25-05-2009
+   9          FPGAs = 4;
+  10          For New Version of TDC; with changed UART interface;
+  11          
+  12          Components:		
+  13          		1. Microctroller AT8051RC2
+  14          		2. Crystal 22.1184 MHz
+  15          		3. Graphic LCD CFAG160128ATMITZ
+  16          		4. Keypad 4x3 399-1280 Lightend Keys
+  17          		5. KeyPad Encoder 74C922
+  18          		6. Real Time Clock DS1302
+  19          		7. Quart Crystal 32.768KHz
+  20          		8. Serial Printer (19200 Buadrate)
+  21          		9. TDC32 chanal (19200 Buadrate)
+  22          		10. AT24C256 EEPROM
+  23          Features:
+  24          		01. Serial Transmit (Polling) Serial Recieving (Interrupt)
+  25          		02. Serial Software Handshaking Implimented (XOFF/XON) for Print
+            -er
+  26          		03. Interrupt 0 for Keypad Data Available Interrupt
+  27          		04. Interrupt 1 for Start Pulse Inverted.
+  28          		05. Buffer for Serial Data is expanded to rxBuff[256]
+  29          		06. Offset for each channel is handled using Offset[32];
+  30          		07. Display the Time in Decimal and Hexadecimal Format; 8 channe
+            -ls at a time
+  31          		08. Displays the Status of TDC,Printer, EEPROM
+  32          		09. Save 10 Readings automatically, and clears afterwards.
+  33          		10. LED's for Start, Stop, Ready, and Printer
+  34          		11. Switch to select PC/UC.
+  35          		12. Jitter Calculations
+  36          		13. Time value Handled, only Integer Part is Converted to Ascii,
+            -Decimal is Printed manually.
+  37          		14. Counter 3rd Byte Handled, Can be taken to 4 Bytes.
+  38          		15. Time of Experiment is also saved and Printed.
+  39          		16. Time can be printed with and without the Jitter.
+  40          		17. Real Time Clock Settings
+  41          		18. EEPROM page write; and 256Bytes Custom page write function.
+
+            -  42          		
+  43          		Dated: 20-09-2008
+  44          		19. Serial Interface is entirely changed.
+  45          		20. System ID inclded in LCD and print
+  46          		21. Jitter Calculation w.r.t any channel
+  47          		22. With "+" or "-" sign
+  48          		23. Stop Printing during execution
+  49          		24. fractional part ".33" or ".66" converted to ".5"
+  50          		25. Counter 4th byte include for the range 671 milli sec (671088
+            -640 nsec)
+  51          		26. the pulse occuring indication is either by start or by stop
+
+            -  52          
+  53          +---+---+---+
+  54          | 3 | 7 | B |
+  55          +---+---+---+
+  56          | 0 | 4 | 8 |
+  57          +---+---+---+
+  58          | 1 | 5 | 9 |
+  59          +---+---+---+
+  60          | 2 | 6 | A |
+  61          +---+---+---+
+  62          
+  63          //				E  E  P  R  O  M			
+  64          
+  65          Packets of 512 are written at a byte
+  66          
+  67          Addresses	Description
+  68          00 - 31		8 Measurements at FPGA1 (4Bytes Each)
+  69          32 - 63		8 Measurements at FPGA2 (4Bytes Each)
+  70          64 - 95		8 Measurements at FPGA3 (4Bytes Each)
+  71          96 - 127		8 Measurements at FPGA4 (4Bytes Each)
+  72           ...			........
+  73          352-384		8 Measurements at FPGA12 (4Bytes Each)
+  74          384			StopTh1
+  75          385			StartTh2
+  76          386			Time[0]
+  77          387			Time[1]
+  78          388			Time[2]
+  79          389			Time[3]
+  80          390			Time[4]
+  81          391			Time[5]
+  82          392			Time[6]
+  83          393-396		Minimum Value
+  84          ==================================================================
+            -=======================*/
+  85          
+  86          
+  87          
+  88          
+  89          
+  90          
+  91          
+  92          
+  93          
+  94          
+  95          
+  96          
+  97          
+  98          
+  99          
+ 100          
+ 101          
+ 102          
+ 103          
+ 104          
+ 105          
+ 106          
+ 107          
+ 108          
+ 109          
+ 110          
+ 111          
+ 112          
+ 113          
+ 114          
+ 115          
+ 116          
+ 117          
+ 118          
+ 119          
+ 120          
+ 121          
+ 122          
+ 123          
+ 124          
+ 125          
+ 126          
+ 127          
+ 128          
+ 129          
+ 130          
+ 131          
+ 132          
+ 133          
+ 134          
+ 135          
+ 136          
+ 137          
+ 138          
+ 139          
+ 140          
+ 141          
+ 142          
+ 143          
+ 144          
+ 145          
+ 146          
+ 147          
+ 148          
+ 149          
+ 150          
+ 151          
+ 152          
+ 153          
+ 154          
+ 155          
+ 156          
+ 157          
+ 158          
+ 159          
+ 160          
+ 161          
+ 162          
+ 163          
+ 164          
+ 165          
+ 166          
+ 167          
+ 168          
+ 169          
+ 170          
+ 171          
+ 172          
+ 173          
+ 174          
+ 175          
+ 176          
+ 177          
+ 178          
+ 179          
+ 180          
+ 181          
+ 182          
+ 183          
+ 184          
+ 185          
+ 186          
+ 187          
+ 188          
+ 189          
+ 190          
+ 191          
+ 192          
+ 193          
+ 194          
+ 195          
+ 196          
+ 197          
+ 198          
+ 199          
+ 200          
+ 201          
+ 202          
+ 203          
+ 204          
+ 205          
+ 206          
+ 207          
+ 208          
+ 209          
+ 210          
+ 211          
+C51 COMPILER V6.11.4C,  README                    06/07/113  08:53:08  PAGE  2
+
+ASSEMBLY LISTING OF GENERATED OBJECT CODE
+
+C51 COMPILER V6.11.4C,  README                    06/07/113  08:53:08  PAGE  3
+
+NAME                                    CLASS   MSPACE  TYPE    OFFSET  SIZE
+====                                    =====   ======  ====    ======  ====
+
+C51 COMPILER V6.11.4C,  README                    06/07/113  08:53:08  PAGE  4
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILATION COMPLETE.  0 WARNING,  0 ERROR

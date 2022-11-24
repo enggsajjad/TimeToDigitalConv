@@ -1,0 +1,1073 @@
+C51 COMPILER V6.11.4C,  T693                      06/07/113  08:53:08  PAGE  1
+
+QCW(0x00002D1A)
+
+WIN32 C51 COMPILER V6.11.4C, COMPILATION OF MODULE T693      
+OBJECT MODULE PLACED IN c:\documents and settings\sajjad hussain\desktop\chrono3
+            -2c_c51_r3\t693.obj
+COMPILER INVOKED BY: C51.EXE C:\DOCUMENTS AND SETTINGS\SAJJAD HUSSAIN\DESKTOP\CH
+            -RONO32C_C51_R3\T693.C OBJECT(C:\DOCUMENTS AND SETTINGS\SAJJAD HUSSA
+            -IN\DESKTOP\CHRONO32C_C51_R3\T693.OBJ) PIN(C:\FSI\INC) NOAM PR(C:\DO
+            -CUMENTS AND SETTINGS\SAJJAD HUSSAIN\DESKTOP\CHRONO32C_C51_R3\T693.L
+            -ST) CD SB OE(1) SM FP(NOFLOAT) PW(80) 
+
+stmt level    source
+   1          #include "t693.h"
+   2          //====== 		G R A P H I C S 	L C D 	F U N C T I O N 		D E F I N I T
+            - I O N S			=======
+   3          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -   4          //Description: Read the Status of the Graphic LCD
+   5          //Return:		 Status Byte
+   6          
+   7          unsigned char gReadStatus(void)
+   8          {
+   9   1      	unsigned char gStatus;
+  10   1      	gWR = 1;
+  11   1      	gCD = 1;
+  12   1      	gBus = 0xFF;
+  13   1      	gCE = 0;
+  14   1      	gRD = 0;
+  15   1      	gRD = 0;
+  16   1      	gRD = 0;
+  17   1      	gStatus = gBus;
+  18   1      	gRD = 1;
+  19   1      	gCE = 1;	
+  20   1      	return(gStatus);	
+  21   1      }
+  22          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  23          //Description: Read the Data from the Graphic LCD
+  24          //Return:		 Data Byte
+  25          unsigned char gReadData(void)
+  26          {
+  27   1      	unsigned char gStatus;
+  28   1      	gWR = 1;
+  29   1      	gCD = 0;
+  30   1      	gBus = 0xFF;
+  31   1      	gCE = 0;
+  32   1      	gRD = 0;
+  33   1      	gRD = 0;
+  34   1      	gRD = 0;
+  35   1      	gStatus = gBus;
+  36   1      	gRD = 1;
+  37   1      	gCE = 1;	
+  38   1      	return(gStatus);	
+  39   1      }
+  40          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  41          //Description: Write data to the Graphic LCD
+  42          //Argument:		Data Byte
+  43          void gWriteData(unsigned char d)
+  44          {
+  45   1      	unsigned char gTemp;
+  46   1      	do{
+  47   2      		gTemp=gReadStatus();	
+  48   2      	}while((gTemp & 0x03) != 0x03);
+  49   1         
+  50   1      	gRD = 1;
+  51   1      	gCD = 0;
+  52   1      	gBus = d;
+  53   1      	gCE = 0;
+  54   1      	gWR = 0;
+  55   1      	gWR = 0;
+  56   1      	gWR = 1;
+  57   1      	gCE = 1;	
+  58   1      	gBus = 0xFF;
+  59   1      }
+  60          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  61          //Description: Write Command to the Graphic LCD
+  62          //Argument:		Command Byte
+  63          void gWriteCommand(unsigned char c)
+  64          {
+  65   1      	unsigned char gTemp;
+  66   1      	do{
+  67   2      		gTemp=gReadStatus();	
+  68   2      	}while((gTemp & 0x03) != 0x03);
+  69   1      	
+  70   1      	gRD = 1;
+  71   1      	gCD = 1;
+  72   1      	gBus = c;
+  73   1      	gCE = 0;
+  74   1      	gWR = 0;
+  75   1      	gWR = 0;
+  76   1      	gWR = 1;
+  77   1      	gCE = 1;	
+  78   1      	gBus = 0xFF;
+  79   1      }
+  80          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  81          //Description: Initializes the Graphic LCD
+  82          void gInitialize(void)
+  83          {
+  84   1      	 gCE = 1;				// set chip select high off output
+  85   1      	 //gRST = 1;				// set gRST signal high off output
+  86   1      	 gCD = 0;				// set the gCD line low as output 
+  87   1      	 gRD = 1;				// set RD line high as output
+  88   1      	 gWR = 1;		   	// set WR line high as output
+  89   1      	 //gFS = 0;				// force font select line low
+  90   1      	 //gRST = 0;
+  91   1      	 
+  92   1      	 //CHRONO32C
+  93   1       	 gBLT = 0;
+  94   1      	 
+  95   1      	 
+  96   1      	 
+  97   1      	 //CHRONO32B
+  98   1       	 //gBLT = 1;
+  99   1      	 
+ 100   1      	 
+ 101   1      	 //Delay5ms();//Insert some delay
+ 102   1      	 	
+ 103   1      	 //gRST = 1; 
+ 104   1      	 
+ 105   1          //Set Char Gen Up 
+ 106   1          gWriteCommand(CG_OR_MODE);
+ 107   1          
+ 108   1          //Set Graphic Home Address
+ 109   1          gWriteData(GR_HOME);
+ 110   1          gWriteData(GR_HOME >> 8);
+ 111   1          gWriteCommand(GR_HOM_SET);
+ 112   1          
+ 113   1          //Set Graphic Area
+ 114   1          gWriteData(GR_AREA); //Width of 20 Chars
+ 115   1          gWriteData(0x00);
+ 116   1          gWriteCommand(GR_ARA_SET);
+ 117   1          
+ 118   1          //Set Text Home Address
+ 119   1          gWriteData(TX_HOME);
+ 120   1          gWriteData(TX_HOME >> 8);
+ 121   1          gWriteCommand(TX_HOM_SET);
+ 122   1          
+ 123   1          //Set Text Area
+ 124   1          gWriteData(TX_AREA); //Width of 20 Chars
+ 125   1          gWriteData(0x0);
+ 126   1          gWriteCommand(TX_ARA_SET);
+ 127   1      }
+ 128          
+ 129          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            - 130          //Description: Writes a character on the graphic LCD
+
+            - 131          //Argument:		Character to be written As 'A'=0x42=65  
+            - 
+ 132          void gPutc(unsigned char c)
+ 133          {
+ 134   1      	gWriteData(c-0x20);
+ 135   1      	gWriteCommand(WR_AUT_INC);
+ 136   1      }
+ 137          
+ 138          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            - 139          //Description: Writes a string on the graphic LCD
+ 140          //Argument:		String to be written
+ 141          void gPutStr(char *ch)
+ 142          {
+ 143   1      	while(*ch)
+ 144   1      	{
+ 145   2      		gPutc(*ch);
+ 146   2      		ch++;
+ 147   2      	}
+ 148   1      }
+ 149          
+ 150          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            - 151          //Description: Moves LCD Cursor on the text ram
+ 152          //Argument:		Row,Column positions
+ 153          void gGotoXY(unsigned char y, unsigned char x)
+ 154          {
+ 155   1      	 unsigned int gAddr;
+ 156   1          gAddr = (y * TX_AREA) + x + TX_HOME;
+ 157   1          gWriteData(gAddr & 0xff);
+ 158   1          gWriteData(gAddr >> 0x08);
+ 159   1          gWriteCommand(GR_PTR_SET);
+ 160   1      }
+ 161          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            - 162          //Description: Clear graphic and text areas of graphi
+            -cal LCD
+ 163          //Arguments:    ram=0  TEXT RAM
+ 164          //					 ram=1  GRAPHICS RAM
+ 165          void gClear(bit ram)
+ 166          {
+ 167   1          unsigned int gAddr;
+ 168   1          
+ 169   1          if (ram)
+ 170   1          {
+ 171   2      	    gAddr = GR_HOME;	
+ 172   2          	 gWriteData(0x00);
+ 173   2      	    gWriteData(0x0C);
+ 174   2         	 gWriteCommand(GR_PTR_SET);
+ 175   2         	 while (gAddr < 0x1800)
+ 176   2          	 {
+ 177   3             	 gWriteData(0x00);
+ 178   3              	 gWriteCommand(WR_AUT_INC);
+ 179   3              	 gAddr = gAddr + 1;
+ 180   3      		 }     		    
+ 181   2          }
+ 182   1          else
+ 183   1          {
+ 184   2      	    gAddr = TX_HOME;	
+ 185   2          	 gWriteData(0x00);
+ 186   2      	    gWriteData(0x00);
+ 187   2         	 gWriteCommand(GR_PTR_SET);
+ 188   2         	 while (gAddr < 0x0C00)
+ 189   2          	 {
+ 190   3             	 gWriteData(0x00);
+ 191   3              	 gWriteCommand(WR_AUT_INC);
+ 192   3              	 gAddr = gAddr + 1;
+ 193   3      		 }     		
+ 194   2        	 }
+ 195   1      }
+ 196          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            - 197          //Description: set single pixel in 240x64 array
+ 198          //Arguments:    ROW and COLUMN pixels, Set Value 0/1
+ 199          void gSetPixel(unsigned char row, unsigned char column,bit set)
+ 200          {
+ 201   1      	unsigned int gAddr;       // memory address of byte containing pi
+            -xel to write
+ 202   1        	gAddr =  0xC00 + (row*20)  + (column/8);
+ 203   1        	gWriteData(gAddr & 0xff);
+ 204   1         gWriteData(gAddr >> 0x08);
+ 205   1         gWriteCommand(GR_PTR_SET);
+ 206   1        	if(set)
+ 207   1        		gWriteCommand(0xf8 | ((7-column%8)) );  // set bit-within-byte
+            - command
+ 208   1        	else
+ 209   1        		gWriteCommand(0xf0 | ((7-column%8)) );  // Reset bit-within-by
+            -te command
+ 210   1      }
+ 211          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            - 212          //Description: set pixel at the specified location
+ 213          //Arguments:    ROW and COLUMN pixels
+ 214          void gGotoPixel(unsigned char row, unsigned char column)
+ 215          {
+ 216   1      	unsigned int gAddr;       // memory address of byte containing pi
+            -xel to write
+ 217   1        	gAddr =  0xC00 + (row*20)  + (column/8);
+ 218   1        	gWriteData(gAddr & 0xff);
+ 219   1         gWriteData(gAddr >> 0x08);
+ 220   1         gWriteCommand(GR_PTR_SET);
+ 221   1      }
+ 222          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            - 223          //Description: Write a Character in Text Area or Draw
+            - a byte paterrn in Graphics Area.
+ 224          //Arguments:    the Byte
+ 225          void gWriteByte(unsigned char ch)
+ 226          {
+ 227   1        	gWriteData(ch);
+ 228   1        	gWriteCommand(WR_AUT_INC);
+ 229   1      }
+ 230          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            - 231          //Description: Draw Horizontal, Vertical Lines or Rec
+            -tangular Box
+ 232          //Arguments:   Top Left Cornor (r1,c1); Bottom Right Cornor (r2,c2
+            -)
+ 233          void gDrawRect(unsigned char r1,unsigned char c1,unsigned char r2,
+            -unsigned char c2, bit set)
+ 234          {
+ 235   1       unsigned char pxl;
+ 236   1       if(r1==r2)//horizontal line
+ 237   1       {
+ 238   2        	for(pxl=c1;pxl<=c2;pxl++)
+ 239   2        		gSetPixel(r1,pxl,set);
+ 240   2       }
+ 241   1       else if(c1==c2)//vertical line
+ 242   1       {
+ 243   2        	for(pxl=r1;pxl<=r2;pxl++)
+ 244   2        		gSetPixel(pxl,c1,set); 
+ 245   2       }
+ 246   1       else//Rectangular Box
+ 247   1       {
+ 248   2        	for(pxl=c1;pxl<=c2;pxl++)//top
+ 249   2        		gSetPixel(r1,pxl,set);
+ 250   2        	for(pxl=r1;pxl<=r2;pxl++)//right
+ 251   2        		gSetPixel(pxl,c2,set); 
+ 252   2        	for(pxl=c1;pxl<=c2;pxl++)//bottom
+ 253   2        		gSetPixel(r2,pxl,set);
+ 254   2        	for(pxl=r1;pxl<=r2;pxl++)//left
+ 255   2        		gSetPixel(pxl,c1,set); 	  		  		 
+ 256   2       }
+ 257   1       
+ 258   1      }
+ 259          
+ 260          
+ 261          
+ 262          
+ 263          
+ 264          
+ 265          
+ 266          
+ 267          
+ 268          
+ 269          
+ 270          
+ 271          
+ 272          
+ 273          
+ 274          
+ 275          
+ 276          
+ 277          
+ 278          
+ 279          
+ 280          
+ 281          
+ 282          
+ 283          
+ 284          
+ 285          
+ 286          
+ 287          
+ 288          
+ 289          
+ 290          
+ 291          
+ 292          
+ 293          
+ 294          
+ 295          
+ 296          
+ 297          
+ 298          
+ 299          
+ 300          
+ 301          
+ 302          
+ 303          
+ 304          
+ 305          
+ 306          
+ 307          
+ 308          
+ 309          
+ 310          
+ 311          
+ 312          
+ 313          
+ 314          
+ 315          
+ 316          
+ 317          
+ 318          
+ 319          
+ 320          
+ 321          
+ 322          
+ 323          
+ 324          
+ 325          
+ 326          
+ 327          
+ 328          
+ 329          
+ 330          
+ 331          
+ 332          
+ 333          
+ 334          
+ 335          
+ 336          
+ 337          
+ 338          
+ 339          
+ 340          
+ 341          
+ 342          
+ 343          
+ 344          
+ 345          
+ 346          
+ 347          
+ 348          
+ 349          
+ 350          
+ 351          
+ 352          
+ 353          
+ 354          
+ 355          
+ 356          
+ 357          
+ 358          
+ 359          
+ 360          
+ 361          
+ 362          
+ 363          
+ 364          
+ 365          
+ 366          
+ 367          
+ 368          
+ 369          
+ 370          
+ 371          
+ 372          
+ 373          
+ 374          
+ 375          
+ 376          
+ 377          
+ 378          
+ 379          
+ 380          
+ 381          
+ 382          
+ 383          
+ 384          
+C51 COMPILER V6.11.4C,  T693                      06/07/113  08:53:08  PAGE  2
+
+ASSEMBLY LISTING OF GENERATED OBJECT CODE
+
+            ; FUNCTION gReadStatus (BEGIN)
+                                           ; SOURCE LINE # 10 
+0000 D2B4           SETB   gWR
+                                           ; SOURCE LINE # 11 
+0002 D2B7           SETB   gCD
+                                           ; SOURCE LINE # 12 
+0004 75A0FF         MOV    P2,#0FFH
+                                           ; SOURCE LINE # 13 
+0007 C2B6           CLR    gCE
+                                           ; SOURCE LINE # 14 
+0009 C2B5           CLR    gRD
+                                           ; SOURCE LINE # 15 
+000B C2B5           CLR    gRD
+                                           ; SOURCE LINE # 16 
+000D C2B5           CLR    gRD
+              ; R6 is assigned to gStatus
+                                           ; SOURCE LINE # 17 
+000F AEA0           MOV    R6,P2
+0011 8E07           MOV    AR7,R6
+                                           ; SOURCE LINE # 18 
+0013 D2B5           SETB   gRD
+                                           ; SOURCE LINE # 19 
+0015 D2B6           SETB   gCE
+                                           ; SOURCE LINE # 20 
+0017 22             RET    
+
+            ; FUNCTION gReadStatus (END)
+
+            ; FUNCTION gReadData (BEGIN)
+                                           ; SOURCE LINE # 28 
+0000 D2B4           SETB   gWR
+                                           ; SOURCE LINE # 29 
+0002 C2B7           CLR    gCD
+                                           ; SOURCE LINE # 30 
+0004 75A0FF         MOV    P2,#0FFH
+                                           ; SOURCE LINE # 31 
+0007 C2B6           CLR    gCE
+                                           ; SOURCE LINE # 32 
+0009 C2B5           CLR    gRD
+                                           ; SOURCE LINE # 33 
+000B C2B5           CLR    gRD
+                                           ; SOURCE LINE # 34 
+000D C2B5           CLR    gRD
+              ; R6 is assigned to gStatus
+                                           ; SOURCE LINE # 35 
+000F AEA0           MOV    R6,P2
+0011 8E07           MOV    AR7,R6
+                                           ; SOURCE LINE # 36 
+0013 D2B5           SETB   gRD
+                                           ; SOURCE LINE # 37 
+0015 D2B6           SETB   gCE
+                                           ; SOURCE LINE # 38 
+0017 22             RET    
+
+            ; FUNCTION gReadData (END)
+
+            ; FUNCTION _gWriteData (BEGIN)
+              ; Register R5 is assigned to parameter d
+                                           ; SOURCE LINE # 58 
+0000 8F05           MOV    AR5,R7
+              ; R4 is assigned to gTemp
+0002         ?DO1:
+                                           ; SOURCE LINE # 47 
+0002 120000  R      LCALL  gReadStatus
+0005 EF             MOV    A,R7
+0006 5403           ANL    A,#003H
+0008 6403           XRL    A,#003H
+000A 70F6           JNZ    ?DO1
+                                           ; SOURCE LINE # 50 
+000C D2B5           SETB   gRD
+                                           ; SOURCE LINE # 51 
+000E C2B7           CLR    gCD
+                                           ; SOURCE LINE # 52 
+0010 8DA0           MOV    P2,R5
+                                           ; SOURCE LINE # 53 
+0012 C2B6           CLR    gCE
+                                           ; SOURCE LINE # 54 
+0014 C2B4           CLR    gWR
+                                           ; SOURCE LINE # 55 
+0016 C2B4           CLR    gWR
+                                           ; SOURCE LINE # 56 
+0018 D2B4           SETB   gWR
+                                           ; SOURCE LINE # 57 
+001A D2B6           SETB   gCE
+                                           ; SOURCE LINE # 58 
+001C 75A0FF         MOV    P2,#0FFH
+001F 22             RET    
+
+            ; FUNCTION _gWriteData (END)
+
+            ; FUNCTION _gWriteCommand (BEGIN)
+              ; Register R5 is assigned to parameter c
+                                           ; SOURCE LINE # 78 
+0000 8F05           MOV    AR5,R7
+              ; R4 is assigned to gTemp
+0002         ?DO3:
+                                           ; SOURCE LINE # 67 
+0002 120000  R      LCALL  gReadStatus
+0005 EF             MOV    A,R7
+0006 5403           ANL    A,#003H
+0008 6403           XRL    A,#003H
+000A 70F6           JNZ    ?DO3
+                                           ; SOURCE LINE # 70 
+000C D2B5           SETB   gRD
+                                           ; SOURCE LINE # 71 
+000E D2B7           SETB   gCD
+                                           ; SOURCE LINE # 72 
+0010 8DA0           MOV    P2,R5
+                                           ; SOURCE LINE # 73 
+0012 C2B6           CLR    gCE
+                                           ; SOURCE LINE # 74 
+0014 C2B4           CLR    gWR
+                                           ; SOURCE LINE # 75 
+0016 C2B4           CLR    gWR
+                                           ; SOURCE LINE # 76 
+0018 D2B4           SETB   gWR
+                                           ; SOURCE LINE # 77 
+001A D2B6           SETB   gCE
+                                           ; SOURCE LINE # 78 
+001C 75A0FF         MOV    P2,#0FFH
+001F 22             RET    
+
+            ; FUNCTION _gWriteCommand (END)
+
+            ; FUNCTION gInitialize (BEGIN)
+                                           ; SOURCE LINE # 84 
+0000 D2B6           SETB   gCE
+                                           ; SOURCE LINE # 86 
+0002 C2B7           CLR    gCD
+                                           ; SOURCE LINE # 87 
+0004 D2B5           SETB   gRD
+                                           ; SOURCE LINE # 88 
+0006 D2B4           SETB   gWR
+                                           ; SOURCE LINE # 93 
+0008 C280           CLR    gBLT
+                                           ; SOURCE LINE # 106 
+000A 7F80           MOV    R7,#080H
+000C 120000  R      LCALL  _gWriteCommand
+                                           ; SOURCE LINE # 109 
+000F E4             CLR    A
+0010 FF             MOV    R7,A
+0011 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 110 
+0014 7F0C           MOV    R7,#00CH
+0016 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 111 
+0019 7F42           MOV    R7,#042H
+001B 120000  R      LCALL  _gWriteCommand
+                                           ; SOURCE LINE # 114 
+001E 7F14           MOV    R7,#014H
+0020 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 115 
+0023 E4             CLR    A
+0024 FF             MOV    R7,A
+0025 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 116 
+0028 7F43           MOV    R7,#043H
+002A 120000  R      LCALL  _gWriteCommand
+                                           ; SOURCE LINE # 119 
+002D E4             CLR    A
+002E FF             MOV    R7,A
+002F 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 120 
+0032 E4             CLR    A
+0033 FF             MOV    R7,A
+0034 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 121 
+0037 7F40           MOV    R7,#040H
+0039 120000  R      LCALL  _gWriteCommand
+                                           ; SOURCE LINE # 124 
+003C 7F14           MOV    R7,#014H
+003E 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 125 
+0041 E4             CLR    A
+0042 FF             MOV    R7,A
+0043 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 126 
+0046 7F41           MOV    R7,#041H
+0048 120000  R      LCALL  _gWriteCommand
+004B 22             RET    
+
+            ; FUNCTION gInitialize (END)
+
+            ; FUNCTION _gPutc (BEGIN)
+                                           ; SOURCE LINE # 135 
+0000 8F00    R      MOV    c,R7
+                                           ; SOURCE LINE # 134 
+0002 EF             MOV    A,R7
+0003 24E0           ADD    A,#0E0H
+0005 FF             MOV    R7,A
+0006 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 135 
+0009 7FC0           MOV    R7,#0C0H
+000B 120000  R      LCALL  _gWriteCommand
+000E 22             RET    
+
+            ; FUNCTION _gPutc (END)
+
+            ; FUNCTION _gPutStr (BEGIN)
+                                           ; SOURCE LINE # 146 
+0000 8B00    R      MOV    ch,R3
+0002 8A00    R      MOV    ch+01H,R2
+0004 8900    R      MOV    ch+02H,R1
+0006         ?WHILE1:
+                                           ; SOURCE LINE # 143 
+0006 AB00    R      MOV    R3,ch
+0008 AA00    R      MOV    R2,ch+01H
+000A A900    R      MOV    R1,ch+02H
+000C 120000  R      LCALL  IPGN1?C
+000F 6011           JZ     ?NXT5
+                                           ; SOURCE LINE # 145 
+0011 120000  R      LCALL  IPGN1?C
+0014 FF             MOV    R7,A
+0015 120000  R      LCALL  _gPutc
+                                           ; SOURCE LINE # 146 
+0018 0500    R      INC    ch+02H
+001A E500    R      MOV    A,ch+02H
+001C 70E8           JNZ    ?WHILE1
+001E 0500    R      INC    ch+01H
+0020 80E4           SJMP   ?WHILE1
+0022         ?NXT5:
+0022 22             RET    
+
+            ; FUNCTION _gPutStr (END)
+
+            ; FUNCTION _gGotoXY (BEGIN)
+                                           ; SOURCE LINE # 159 
+0000 8F00    R      MOV    y,R7
+0002 8D00    R      MOV    x,R5
+                                           ; SOURCE LINE # 156 
+0004 75F014         MOV    B,#014H
+0007 E500    R      MOV    A,y
+0009 A4             MUL    AB
+000A 2500    R      ADD    A,x
+000C F500    R      MOV    gAddr+01H,A
+000E E4             CLR    A
+000F 35F0           ADDC   A,B
+0011 F500    R      MOV    gAddr,A
+                                           ; SOURCE LINE # 157 
+0013 AF00    R      MOV    R7,gAddr+01H
+0015 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 158 
+0018 AF00    R      MOV    R7,gAddr
+001A 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 159 
+001D 7F24           MOV    R7,#024H
+001F 120000  R      LCALL  _gWriteCommand
+0022 22             RET    
+
+            ; FUNCTION _gGotoXY (END)
+
+            ; FUNCTION _gClear (BEGIN)
+                                           ; SOURCE LINE # 169 
+0000 300032  R      JNB    ram,?ELSE1
+                                           ; SOURCE LINE # 171 
+0003 75000C  R      MOV    gAddr,#00CH
+0006 E4             CLR    A
+0007 FF             MOV    R7,A
+0008 F500    R      MOV    gAddr+01H,A
+                                           ; SOURCE LINE # 172 
+000A 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 173 
+000D 7F0C           MOV    R7,#00CH
+000F 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 174 
+0012 7F24           MOV    R7,#024H
+0014 120000  R      LCALL  _gWriteCommand
+0017         ?WHILE4:
+                                           ; SOURCE LINE # 175 
+0017 E500    R      MOV    A,gAddr
+0019 B41802         CJNE   A,#018H,?LAB25
+001C E500    R      MOV    A,gAddr+01H
+001E         ?LAB25:
+001E 5014           JNC    ?NXT10
+                                           ; SOURCE LINE # 177 
+0020 E4             CLR    A
+0021 FF             MOV    R7,A
+0022 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 178 
+0025 7FC0           MOV    R7,#0C0H
+0027 120000  R      LCALL  _gWriteCommand
+                                           ; SOURCE LINE # 179 
+002A 0500    R      INC    gAddr+01H
+002C E500    R      MOV    A,gAddr+01H
+002E 70E7           JNZ    ?WHILE4
+0030 0500    R      INC    gAddr
+0032 80E3           SJMP   ?WHILE4
+0034         ?NXT10:
+0034 22             RET    
+0035         ?ELSE1:
+                                           ; SOURCE LINE # 184 
+0035 E4             CLR    A
+0036 FF             MOV    R7,A
+0037 F500    R      MOV    gAddr,A
+0039 F500    R      MOV    gAddr+01H,A
+                                           ; SOURCE LINE # 185 
+003B 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 186 
+003E E4             CLR    A
+003F FF             MOV    R7,A
+0040 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 187 
+0043 7F24           MOV    R7,#024H
+0045 120000  R      LCALL  _gWriteCommand
+0048         ?WHILE5:
+                                           ; SOURCE LINE # 188 
+0048 E500    R      MOV    A,gAddr
+004A B40C02         CJNE   A,#00CH,?LAB28
+004D E500    R      MOV    A,gAddr+01H
+004F         ?LAB28:
+004F 5014           JNC    ?NXT9
+                                           ; SOURCE LINE # 190 
+0051 E4             CLR    A
+0052 FF             MOV    R7,A
+0053 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 191 
+0056 7FC0           MOV    R7,#0C0H
+0058 120000  R      LCALL  _gWriteCommand
+                                           ; SOURCE LINE # 192 
+005B 0500    R      INC    gAddr+01H
+005D E500    R      MOV    A,gAddr+01H
+005F 70E7           JNZ    ?WHILE5
+0061 0500    R      INC    gAddr
+0063 80E3           SJMP   ?WHILE5
+0065         ?NXT9:
+0065 22             RET    
+
+            ; FUNCTION _gClear (END)
+
+            ; FUNCTION _gSetPixel (BEGIN)
+                                           ; SOURCE LINE # 209 
+0000 8F00    R      MOV    row,R7
+0002 8D00    R      MOV    column,R5
+                                           ; SOURCE LINE # 202 
+0004 75F014         MOV    B,#014H
+0007 E500    R      MOV    A,row
+0009 A4             MUL    AB
+000A 2400           ADD    A,#000H
+000C FB             MOV    R3,A
+000D E5F0           MOV    A,B
+000F 340C           ADDC   A,#00CH
+0011 FA             MOV    R2,A
+0012 E500    R      MOV    A,column
+0014 03             RR     A
+0015 03             RR     A
+0016 03             RR     A
+0017 541F           ANL    A,#01FH
+0019 FF             MOV    R7,A
+001A EB             MOV    A,R3
+001B 2F             ADD    A,R7
+001C F500    R      MOV    gAddr+01H,A
+001E E4             CLR    A
+001F 3A             ADDC   A,R2
+0020 F500    R      MOV    gAddr,A
+                                           ; SOURCE LINE # 203 
+0022 AF00    R      MOV    R7,gAddr+01H
+0024 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 204 
+0027 AF00    R      MOV    R7,gAddr
+0029 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 205 
+002C 7F24           MOV    R7,#024H
+002E 120000  R      LCALL  _gWriteCommand
+                                           ; SOURCE LINE # 206 
+0031 300010  R      JNB    set,?ELSE3
+                                           ; SOURCE LINE # 207 
+0034 E500    R      MOV    A,column
+0036 5407           ANL    A,#007H
+0038 FA             MOV    R2,A
+0039 7407           MOV    A,#007H
+003B C3             CLR    C
+003C 9A             SUBB   A,R2
+003D 44F8           ORL    A,#0F8H
+003F FF             MOV    R7,A
+0040 120000  R      LCALL  _gWriteCommand
+0043 22             RET    
+0044         ?ELSE3:
+                                           ; SOURCE LINE # 209 
+0044 E500    R      MOV    A,column
+0046 5407           ANL    A,#007H
+0048 FA             MOV    R2,A
+0049 7407           MOV    A,#007H
+004B C3             CLR    C
+004C 9A             SUBB   A,R2
+004D 44F0           ORL    A,#0F0H
+004F FF             MOV    R7,A
+0050 120000  R      LCALL  _gWriteCommand
+0053 22             RET    
+
+            ; FUNCTION _gSetPixel (END)
+
+            ; FUNCTION _gGotoPixel (BEGIN)
+                                           ; SOURCE LINE # 220 
+0000 8F00    R      MOV    row,R7
+0002 8D00    R      MOV    column,R5
+                                           ; SOURCE LINE # 217 
+0004 75F014         MOV    B,#014H
+0007 E500    R      MOV    A,row
+0009 A4             MUL    AB
+000A 2400           ADD    A,#000H
+000C FB             MOV    R3,A
+000D E5F0           MOV    A,B
+000F 340C           ADDC   A,#00CH
+0011 FA             MOV    R2,A
+0012 E500    R      MOV    A,column
+0014 03             RR     A
+0015 03             RR     A
+0016 03             RR     A
+0017 541F           ANL    A,#01FH
+0019 FF             MOV    R7,A
+001A EB             MOV    A,R3
+001B 2F             ADD    A,R7
+001C F500    R      MOV    gAddr+01H,A
+001E E4             CLR    A
+001F 3A             ADDC   A,R2
+0020 F500    R      MOV    gAddr,A
+                                           ; SOURCE LINE # 218 
+0022 AF00    R      MOV    R7,gAddr+01H
+0024 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 219 
+0027 AF00    R      MOV    R7,gAddr
+0029 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 220 
+002C 7F24           MOV    R7,#024H
+002E 120000  R      LCALL  _gWriteCommand
+0031 22             RET    
+
+            ; FUNCTION _gGotoPixel (END)
+
+            ; FUNCTION _gWriteByte (BEGIN)
+                                           ; SOURCE LINE # 228 
+0000 8F00    R      MOV    ch,R7
+                                           ; SOURCE LINE # 227 
+0002 120000  R      LCALL  _gWriteData
+                                           ; SOURCE LINE # 228 
+0005 7FC0           MOV    R7,#0C0H
+0007 120000  R      LCALL  _gWriteCommand
+000A 22             RET    
+
+            ; FUNCTION _gWriteByte (END)
+
+            ; FUNCTION _gDrawRect (BEGIN)
+                                           ; SOURCE LINE # 255 
+0000 8F00    R      MOV    r1,R7
+0002 8D00    R      MOV    c1,R5
+0004 8B00    R      MOV    r2,R3
+                                           ; SOURCE LINE # 236 
+0006 EF             MOV    A,R7
+0007 B5031A         CJNE   A,AR3,?ELSE6
+                                           ; SOURCE LINE # 238 
+000A 8D00    R      MOV    pxl,R5
+000C         ?FOR6:
+000C E500    R      MOV    A,pxl
+000E B50001  R      CJNE   A,c2,?LAB51
+0011 D3             SETB   C
+0012         ?LAB51:
+0012 500F           JNC    ?NXT29
+                                           ; SOURCE LINE # 239 
+0014 A200    R      MOV    C,set
+0016 9200    R      MOV    _gSetPixel?BIT,C
+0018 AF00    R      MOV    R7,r1
+001A AD00    R      MOV    R5,pxl
+001C 120000  R      LCALL  _gSetPixel
+                                           ; SOURCE LINE # 238 
+001F 0500    R      INC    pxl
+0021 80E9           SJMP   ?FOR6
+0023         ?NXT29:
+0023 22             RET    
+0024         ?ELSE6:
+                                           ; SOURCE LINE # 241 
+0024 E500    R      MOV    A,c1
+0026 B5001B  R      CJNE   A,c2,?ELSE7
+                                           ; SOURCE LINE # 243 
+0029 850000  R      MOV    pxl,r1
+002C         ?FOR7:
+002C E500    R      MOV    A,pxl
+002E B50001  R      CJNE   A,r2,?LAB53
+0031 D3             SETB   C
+0032         ?LAB53:
+0032 500F           JNC    ?NXT32
+                                           ; SOURCE LINE # 244 
+0034 A200    R      MOV    C,set
+0036 9200    R      MOV    _gSetPixel?BIT,C
+0038 AF00    R      MOV    R7,pxl
+003A AD00    R      MOV    R5,c1
+003C 120000  R      LCALL  _gSetPixel
+                                           ; SOURCE LINE # 238 
+003F 0500    R      INC    pxl
+0041 80E9           SJMP   ?FOR7
+0043         ?NXT32:
+0043 22             RET    
+0044         ?ELSE7:
+                                           ; SOURCE LINE # 248 
+0044 850000  R      MOV    pxl,c1
+0047         ?FOR8:
+0047 E500    R      MOV    A,pxl
+0049 B50001  R      CJNE   A,c2,?LAB55
+004C D3             SETB   C
+004D         ?LAB55:
+004D 500F           JNC    ?NXT34
+                                           ; SOURCE LINE # 249 
+004F A200    R      MOV    C,set
+0051 9200    R      MOV    _gSetPixel?BIT,C
+0053 AF00    R      MOV    R7,r1
+0055 AD00    R      MOV    R5,pxl
+0057 120000  R      LCALL  _gSetPixel
+                                           ; SOURCE LINE # 238 
+005A 0500    R      INC    pxl
+005C 80E9           SJMP   ?FOR8
+005E         ?NXT34:
+                                           ; SOURCE LINE # 250 
+005E 850000  R      MOV    pxl,r1
+0061         ?FOR9:
+0061 E500    R      MOV    A,pxl
+0063 B50001  R      CJNE   A,r2,?LAB57
+0066 D3             SETB   C
+0067         ?LAB57:
+0067 500F           JNC    ?NXT36
+                                           ; SOURCE LINE # 251 
+0069 A200    R      MOV    C,set
+006B 9200    R      MOV    _gSetPixel?BIT,C
+006D AF00    R      MOV    R7,pxl
+006F AD00    R      MOV    R5,c2
+0071 120000  R      LCALL  _gSetPixel
+                                           ; SOURCE LINE # 238 
+0074 0500    R      INC    pxl
+0076 80E9           SJMP   ?FOR9
+0078         ?NXT36:
+                                           ; SOURCE LINE # 252 
+0078 850000  R      MOV    pxl,c1
+007B         ?FOR10:
+007B E500    R      MOV    A,pxl
+007D B50001  R      CJNE   A,c2,?LAB59
+0080 D3             SETB   C
+0081         ?LAB59:
+0081 500F           JNC    ?NXT38
+                                           ; SOURCE LINE # 253 
+0083 A200    R      MOV    C,set
+0085 9200    R      MOV    _gSetPixel?BIT,C
+0087 AF00    R      MOV    R7,r2
+0089 AD00    R      MOV    R5,pxl
+008B 120000  R      LCALL  _gSetPixel
+                                           ; SOURCE LINE # 238 
+008E 0500    R      INC    pxl
+0090 80E9           SJMP   ?FOR10
+0092         ?NXT38:
+                                           ; SOURCE LINE # 254 
+0092 850000  R      MOV    pxl,r1
+0095         ?FOR11:
+0095 E500    R      MOV    A,pxl
+0097 B50001  R      CJNE   A,r2,?LAB61
+009A D3             SETB   C
+009B         ?LAB61:
+009B 500F           JNC    ?NXT28
+                                           ; SOURCE LINE # 255 
+009D A200    R      MOV    C,set
+009F 9200    R      MOV    _gSetPixel?BIT,C
+00A1 AF00    R      MOV    R7,pxl
+00A3 AD00    R      MOV    R5,c1
+00A5 120000  R      LCALL  _gSetPixel
+                                           ; SOURCE LINE # 238 
+00A8 0500    R      INC    pxl
+00AA 80E9           SJMP   ?FOR11
+00AC         ?NXT28:
+00AC 22             RET    
+
+            ; FUNCTION _gDrawRect (END)
+
+C51 COMPILER V6.11.4C,  T693                      06/07/113  08:53:08  PAGE  3
+
+NAME                                    CLASS   MSPACE  TYPE    OFFSET  SIZE
+====                                    =====   ======  ====    ======  ====
+
+gReadStatus. . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+gStatus?061. . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+gReadData. . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+gStatus?063. . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+gWriteData . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  d?064. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  d?064. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+gTemp?065. . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+gWriteCommand. . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  c?066. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  c?066. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+gTemp?067. . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+gInitialize. . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+gPutc. . . . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  c?069. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  c?069. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+gPutStr. . . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  ch?070 . . . . . . . . . . . . . . .  PARAM   DATA    PTR     0000H   3    
+  ch?070 . . . . . . . . . . . . . . .  PARAM   DATA    PTR     0000H   3    
+gGotoXY. . . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  y?071. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  x?072. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0001H   1    
+  y?071. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  x?072. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0001H   1    
+gAddr?073. . . . . . . . . . . . . . .  PUBLIC  DATA    U_INT  0002H   2    
+gClear . . . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  ram?074. . . . . . . . . . . . . . .  PARAM   DATA    BIT     0000H   1    
+  ram?074. . . . . . . . . . . . . . .  PARAM   DATA    BIT     0000H   1    
+gAddr?075. . . . . . . . . . . . . . .  PUBLIC  DATA    U_INT  0000H   2    
+gSetPixel. . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  row?076. . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  column?077 . . . . . . . . . . . . .  PARAM   DATA    BASE    0001H   1    
+  set?078. . . . . . . . . . . . . . .  PARAM   DATA    BIT     0000H   1    
+  row?076. . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  column?077 . . . . . . . . . . . . .  PARAM   DATA    BASE    0001H   1    
+  set?078. . . . . . . . . . . . . . .  PARAM   DATA    BIT     0000H   1    
+gAddr?079. . . . . . . . . . . . . . .  PUBLIC  DATA    U_INT  0002H   2    
+gGotoPixel . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  row?080. . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  column?081 . . . . . . . . . . . . .  PARAM   DATA    BASE    0001H   1    
+  row?080. . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  column?081 . . . . . . . . . . . . .  PARAM   DATA    BASE    0001H   1    
+gAddr?082. . . . . . . . . . . . . . .  PUBLIC  DATA    U_INT  0002H   2    
+gWriteByte . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  ch?083 . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  ch?083 . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+gDrawRect. . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  r1?084 . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0001H   1    
+  c1?085 . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0002H   1    
+  r2?086 . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0003H   1    
+  c2?087 . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  set?088. . . . . . . . . . . . . . .  PARAM   DATA    BIT     0000H   1    
+  r1?084 . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0001H   1    
+  c1?085 . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0002H   1    
+  r2?086 . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0003H   1    
+  c2?087 . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  set?088. . . . . . . . . . . . . . .  PARAM   DATA    BIT     0000H   1    
+pxl?089. . . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0004H   1    
+C51 COMPILER V6.11.4C,  T693                      06/07/113  08:53:08  PAGE  4
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    693    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      14
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----       3
+END OF MODULE INFORMATION.
+
+C51 COMPILATION COMPLETE.  0 WARNING,  0 ERROR

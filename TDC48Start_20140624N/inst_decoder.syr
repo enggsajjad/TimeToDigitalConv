@@ -1,0 +1,338 @@
+Release 6.1i - xst G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to __projnav
+CPU : 0.00 / 0.16 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.16 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: inst_decoder.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : inst_decoder.prj
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+Verilog Include Directory          : 
+
+---- Target Parameters
+Output File Name                   : inst_decoder
+Output Format                      : NGC
+Target Device                      : xc2s200-6-pq208
+
+---- Source Options
+Top Module Name                    : inst_decoder
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Equivalent register Removal        : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+Global Optimization                : AllClockNets
+RTL Output                         : Yes
+Write Timing Constraints           : NO
+Hierarchy Separator                : _
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : inst_decoder.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+Optimize Instantiated Primitives   : NO
+
+=========================================================================
+
+WARNING:Xst:1885 - LSO file is empty, default list of libraries is used
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling source file "inst_decoder.v"
+Module <inst_decoder> compiled
+No errors in compilation
+Analysis of file <inst_decoder.prj> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <inst_decoder>.
+Module <inst_decoder> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <inst_decoder>.
+    Related source file is inst_decoder.v.
+WARNING:Xst:646 - Signal <data_reg<5>> is assigned but never used.
+WARNING:Xst:646 - Signal <shift<5>> is assigned but never used.
+    Found finite state machine <FSM_0> for signal <cstate>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 20                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | res (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000000001                                    |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit register for signal <pkt_addr>.
+    Found 4-bit comparator equal for signal <$n0025> created at line 210.
+    Found 8-bit register for signal <data_reg>.
+    Found 4-bit register for signal <dev_addr_reg>.
+    Found 6-bit register for signal <shift>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <inst_decoder> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# FSMs                             : 1
+# Registers                        : 9
+  1-bit register                   : 6
+  8-bit register                   : 1
+  4-bit register                   : 1
+  5-bit register                   : 1
+# Comparators                      : 1
+  4-bit comparator equal           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Selecting encoding for FSM_0 ...
+Optimizing FSM <FSM_0> on signal <cstate> with one-hot encoding.
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1291 - FF/Latch <data_reg_5> is unconnected in block <inst_decoder>.
+
+Optimizing unit <inst_decoder> ...
+Loading device for application Xst from file 'v200.nph' in environment C:/Xilinx.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block inst_decoder, actual ratio is 0.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : inst_decoder.ngr
+Top Level Output File Name         : inst_decoder
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 35
+
+Macro Statistics :
+# Registers                        : 7
+#      1-bit register              : 4
+#      4-bit register              : 1
+#      5-bit register              : 1
+#      8-bit register              : 1
+# Comparators                      : 1
+#      4-bit comparator equal      : 1
+
+Cell Usage :
+# BELS                             : 21
+#      GND                         : 1
+#      LUT2                        : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 6
+#      LUT4                        : 9
+#      LUT4_L                      : 2
+#      VCC                         : 1
+# FlipFlops/Latches                : 31
+#      FDC                         : 14
+#      FDCE                        : 16
+#      FDP                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 33
+#      IBUF                        : 13
+#      OBUF                        : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2s200pq208-6 
+
+ Number of Slices:                      20  out of   2352     0%  
+ Number of Slice Flip Flops:            31  out of   4704     0%  
+ Number of 4 input LUTs:                19  out of   4704     0%  
+ Number of bonded IOBs:                 33  out of    144    22%  
+ Number of GCLKs:                        1  out of      4    25%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 31    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: 6.142ns (Maximum Frequency: 162.813MHz)
+   Minimum input arrival time before clock: 2.520ns
+   Maximum output required time after clock: 10.127ns
+   Maximum combinational path delay: 9.647ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+-------------------------------------------------------------------------
+Timing constraint: Default period analysis for Clock 'clk'
+Delay:               6.142ns (Levels of Logic = 3)
+  Source:            cstate_FFd7 (FF)
+  Destination:       cstate_FFd11 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cstate_FFd7 to cstate_FFd11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   1.085   1.566  cstate_FFd7 (cstate_FFd7)
+     LUT4:I2->O            1   0.549   1.035  cstate_FFd11-In4 (CHOICE138)
+     LUT4_L:I1->LO         1   0.549   0.100  cstate_FFd11-In7 (CHOICE140)
+     LUT4_L:I0->LO         1   0.549   0.000  cstate_FFd11-In68 (cstate_FFd11-In)
+     FDP:D                     0.709          cstate_FFd11
+    ----------------------------------------
+    Total                      6.142ns (3.441ns logic, 2.701ns route)
+                                       (56.0% logic, 44.0% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+Offset:              2.520ns (Levels of Logic = 1)
+  Source:            din<7> (PAD)
+  Destination:       data_reg_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: din<7> to data_reg_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.776   1.035  din_7_IBUF (din_7_IBUF)
+     FDCE:D                    0.709          data_reg_7
+    ----------------------------------------
+    Total                      2.520ns (1.485ns logic, 1.035ns route)
+                                       (58.9% logic, 41.1% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+Offset:              10.127ns (Levels of Logic = 3)
+  Source:            dev_addr_reg_1 (FF)
+  Destination:       cmd_dev_sel (PAD)
+  Source Clock:      clk rising
+
+  Data Path: dev_addr_reg_1 to cmd_dev_sel
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   1.085   1.206  dev_addr_reg_1 (dev_addr_reg_1)
+     LUT4:I1->O            1   0.549   1.035  Mcompar__n0025_AEB26 (CHOICE123)
+     LUT2:I0->O            1   0.549   1.035  Mcompar__n0025_AEB54 (cmd_dev_sel_OBUF)
+     OBUF:I->O                 4.668          cmd_dev_sel_OBUF (cmd_dev_sel)
+    ----------------------------------------
+    Total                     10.127ns (6.851ns logic, 3.276ns route)
+                                       (67.7% logic, 32.3% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default path analysis
+Delay:               9.647ns (Levels of Logic = 4)
+  Source:            dev_addr<1> (PAD)
+  Destination:       cmd_dev_sel (PAD)
+
+  Data Path: dev_addr<1> to cmd_dev_sel
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.776   1.035  dev_addr_1_IBUF (dev_addr_1_IBUF)
+     LUT4:I0->O            1   0.549   1.035  Mcompar__n0025_AEB26 (CHOICE123)
+     LUT2:I0->O            1   0.549   1.035  Mcompar__n0025_AEB54 (cmd_dev_sel_OBUF)
+     OBUF:I->O                 4.668          cmd_dev_sel_OBUF (cmd_dev_sel)
+    ----------------------------------------
+    Total                      9.647ns (6.542ns logic, 3.105ns route)
+                                       (67.8% logic, 32.2% route)
+
+=========================================================================
+CPU : 1.11 / 1.44 s | Elapsed : 1.00 / 1.00 s
+ 
+--> 
+
+Total memory usage is 58784 kilobytes
+
+

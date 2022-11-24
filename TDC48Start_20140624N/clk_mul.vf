@@ -1,0 +1,42 @@
+// Verilog model created from clk_mul.sch - Thu Jul 03 13:54:46 2014
+
+`timescale 1ns / 1ps
+
+module clk_mul(clk, clkdiv, clk4x);
+
+    input clk;
+   output clkdiv;
+   output clk4x;
+   
+   wire clk2x;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_25;
+   wire XLXN_26;
+   wire XLXN_27;
+   
+   CLKDLL XLXI_1 (.CLKFB(clk2x), .CLKIN(clkdiv), .RST(XLXN_26), .CLKDV(),
+         .CLK0(), .CLK2X(XLXN_5), .CLK90(), .CLK180(), .CLK270(),
+         .LOCKED(XLXN_25));
+   // synthesis attribute LOC of XLXI_1 is "dll0"
+   // synthesis attribute CLKDV_DIVIDE of XLXI_1 is "16.000000"
+   // synthesis attribute DUTY_CYCLE_CORRECTION of XLXI_1 is "true"
+   // synopsys translate_off
+   defparam XLXI_1.CLKDV_DIVIDE = 16.000000;
+   // synopsys translate_on
+   CLKDLL XLXI_2 (.CLKFB(clk4x), .CLKIN(clk2x), .RST(XLXN_27), .CLKDV(),
+         .CLK0(), .CLK2X(XLXN_6), .CLK90(), .CLK180(), .CLK270(), .LOCKED());
+   // synthesis attribute LOC of XLXI_2 is "dll1"
+   // synthesis attribute CLKDV_DIVIDE of XLXI_2 is "16.000000"
+   // synthesis attribute DUTY_CYCLE_CORRECTION of XLXI_2 is "true"
+   // synopsys translate_off
+   defparam XLXI_2.CLKDV_DIVIDE = 16.000000;
+   // synopsys translate_on
+   IBUFG XLXI_3 (.I(clk), .O(clkdiv));
+   BUFG XLXI_4 (.I(XLXN_5), .O(clk2x));
+   // synthesis attribute LOC of XLXI_4 is "gclkbuf0"
+   BUFG XLXI_5 (.I(XLXN_6), .O(clk4x));
+   // synthesis attribute LOC of XLXI_5 is "gclkbuf1"
+   GND XLXI_6 (.G(XLXN_26));
+   INV XLXI_9 (.I(XLXN_25), .O(XLXN_27));
+endmodule

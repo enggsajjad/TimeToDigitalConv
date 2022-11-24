@@ -1,0 +1,150 @@
+WIN32 L51 CODE BANKING LINKER/LOCATOR V4.08.06,  INVOKED BY: 
+L51.EXE c:\documents and settings\sajjad hussain\desktop\chrono32c_c51_r3\t693.OBJ,c:\documents and settings\sajjad hussain\desktop\chrono32c_c51_r3\readme.OBJ, c:\documents and settings\sajjad hussain\desktop\chrono32c_c51_r3\misc.OBJ,c:\documents and settings\sajjad hussain\desktop\chrono32c_c51_r3\main.OBJ, c:\documents and settings\sajjad hussain\desktop\chrono32c_c51_r3\eeprom.OBJ,c:\documents and settings\sajjad hussain\desktop\chrono32c_c51_r3\ds1302.OBJ  to  C:\DOCUMENTS AND SETTINGS\SAJJAD HUSSAIN\DESKTOP\CHRONO32C_C51_R3\CHRONO32C_R3.ABS PR(C:\DOCUMENTS AND SETTINGS\SAJJAD HUSSAIN\DESKTOP\CHRONO32C_C51_R3\CHRONO32C_R3.M51) SN(1066142959415E46769E694) PW(80) RS(256) ix 
+
+INTER-MODULE CROSS-REFERENCE LISTING
+------------------------------------
+
+    NAME. . . . . . . . USAGE   MODULE NAMES
+    ----------------------------------------
+    ?C_CMPL . . . . . . CODE    [CMPL]:  MAIN, MISC 
+    ?C_CMPLS  . . . . . CODE    [CMPL]:  MAIN 
+    ?C_DECDPTR  . . . . CODE    [_C_DECDP]:  MAIN 
+    ?C_IMUL . . . . . . CODE    [MULS]:  DS1302, MAIN 
+    ?C_IMULX  . . . . . CODE    [MULS]: 
+    ?C_INITSEGSTART . . CODE    [_C_INITD]:  C1S 
+    ?C_LADD . . . . . . CODE    [LADD]:  MAIN 
+    ?C_LANL . . . . . . CODE    [LANL]:  MAIN 
+    ?C_LMOD_SP  . . . . CODE    [LONG_UNSIGNED_MOD_SPEED_OPTIMIZED]:  MAIN 
+    ?C_LMUL . . . . . . CODE    [MULL]:  MAIN, MISC 
+    ?C_LOP  . . . . . . CODE    [COML]:  LSUB, LADD, LANL 
+    ?C_LSHL . . . . . . CODE    [SHIFT_L]:  MAIN 
+    ?C_LSSHR  . . . . . CODE    [SHIFT_LS]:  MAIN 
+    ?C_LSUB . . . . . . CODE    [LSUB]:  MAIN, MISC 
+    ?C_SIDIV  . . . . . CODE    [DIVS]:  DS1302, MAIN 
+    ?C_SLDIV_SP . . . . CODE    [LONG_SIGNED_DIV_SPEED_OPTIMIZED]:  MAIN 
+    ?C_START1 . . . . . CODE    [C1S]:  MAIN 
+    ?C_UIDIV  . . . . . CODE    [DIVS]:  EEPROM, MAIN 
+    ?C_ULDIV  . . . . . CODE    [LONG_UNSIGNED_DIV]: 
+    ?C_ULDIV_SP . . . . CODE    [LONG_UNSIGNED_DIV_SPEED_OPTIMIZED]:  LONG_UNSIGNED_MOD_SPEED_OPTIMIZED, MAIN, MISC 
+    ?DIV_STORE_Q_SZ . . CODE    [LONG_UNSIGNED_DIV]:  LONG_UNSIGNED_DIV_SPEED_OPTIMIZED 
+    ?LOOP_DIV_SZ  . . . CODE    [LONG_UNSIGNED_DIV]:  LONG_UNSIGNED_DIV_SPEED_OPTIMIZED 
+    ALLSTOPS  . . . . . BIT     [MAIN]: 
+    AUTOPRINT . . . . . BIT     [MAIN]: 
+    BEEPCNT . . . . . . DATA    [MAIN]: 
+    BEEPLMT . . . . . . DATA    [MAIN]: 
+    COUNTER . . . . . . DATA    [MAIN]: 
+    CPL_R4R5  . . . . . CODE    [DIVS]: 
+    CPL_R6R7  . . . . . CODE    [DIVS]: 
+    CURCOL  . . . . . . DATA    [MAIN]: 
+    DELAY25MS . . . . . CODE    [MISC]:  MAIN 
+    DELAY5MS  . . . . . CODE    [MISC]:  EEPROM, MAIN 
+    DELAYHALFSEC  . . . CODE    [MISC]:  MAIN 
+    DIGITKEY  . . . . . DATA    [MAIN]: 
+    DIVL?C_1  . . . . . CODE    [LONG_UNSIGNED_DIV]:  LONG_UNSIGNED_DIV_SPEED_OPTIMIZED 
+    DIVL?C_1_SP . . . . CODE    [LONG_UNSIGNED_DIV_SPEED_OPTIMIZED]:  LONG_SIGNED_DIV_SPEED_OPTIMIZED 
+    DIV_2 . . . . . . . CODE    [DIVS]: 
+    ESTJTR  . . . . . . DATA    [MAIN]: 
+    FPGA  . . . . . . . DATA    [MAIN]: 
+    GESI?C  . . . . . . CODE    [GESI]:  LONG_SIGNED_DIV_SPEED_OPTIMIZED, LONG_UNSIGNED_DIV 
+    GINITIALIZE . . . . CODE    [T693]:  MAIN 
+    GREADDATA . . . . . CODE    [T693]: 
+    GREADSTATUS . . . . CODE    [T693]: 
+    I2C_NOACK . . . . . CODE    [EEPROM]: 
+    I2C_READ  . . . . . CODE    [EEPROM]: 
+    I2C_START . . . . . CODE    [EEPROM]:  MAIN 
+    I2C_STOP  . . . . . CODE    [EEPROM]:  MAIN 
+    IDATALEN  . . . . .         [_C_IDATALEN]:  C1S 
+    INITIALIZE  . . . . CODE    [MAIN]: 
+    INTERVAL  . . . . . XDATA   [MAIN]: 
+    IPGN1?C . . . . . . CODE    [IPGN1]:  DS1302, MAIN, MISC, T693 
+    ISINIT  . . . . . . BIT     [MAIN]: 
+    JTRCH . . . . . . . DATA    [MAIN]: 
+    KEY . . . . . . . . DATA    [MAIN]: 
+    KEYINT  . . . . . . CODE    [MAIN]: 
+    LAST  . . . . . . . DATA    [MAIN]: 
+    MAIN  . . . . . . . CODE    [MAIN]:  C1S 
+    MAX . . . . . . . . DATA    [MAIN]: 
+    MIN . . . . . . . . DATA    [MAIN]: 
+    MSTR  . . . . . . . DATA    [MAIN]: 
+    MULTI . . . . . . . BIT     [MAIN]: 
+    MV4_CS2XD?C . . . . CODE    [MV_CS2XD4]:  MAIN 
+    MV4_XD2RG?C . . . . CODE    [MV_XD2RG4]:  MAIN 
+    MV4_XD2SN?C . . . . CODE    [MV_XD2SN4]:  MAIN 
+    MV_CODE1?C  . . . . CODE    [MV_CODE1]:  MV_PTR2C1 
+    MV_IDATA1?C . . . . CODE    [MV_IDATA1]:  MV_PTR2C1 
+    MV_PDATA1?C . . . . CODE    [MV_PDATA1]:  MV_PTR2C1 
+    MV_PTR2C1?C . . . . CODE    [MV_PTR2C1]:  MAIN 
+    MV_XDATA1?C . . . . CODE    [MV_XDATA1]:  MV_PTR2C1 
+    NEXT  . . . . . . . DATA    [MAIN]: 
+    OFFSET  . . . . . . XDATA   [MAIN]: 
+    P . . . . . . . . . DATA    [MAIN]: 
+    PRNTCH  . . . . . . DATA    [MAIN]: 
+    QHITS . . . . . . . DATA    [MAIN]: 
+    QPTR  . . . . . . . DATA    [MAIN]: 
+    QREADINGS . . . . . DATA    [MAIN]: 
+    QREAR . . . . . . . DATA    [MAIN]: 
+    RST_STK4?C  . . . . CODE    [RST_STK]:  CMPL, LONG_UNSIGNED_MOD_SPEED_OPTIMIZED, LSUB, LADD, LANL, LONG_UNSIGNED_DIV, MULL 
+    RST_STK6?C  . . . . CODE    [RST_STK]: 
+    RST_STK7?C  . . . . CODE    [RST_STK]: 
+    RST_STK?C . . . . . CODE    [RST_STK]: 
+    RTC_PROBLEM . . . . BIT     [MAIN]: 
+    RUN . . . . . . . . BIT     [MAIN]: 
+    RXBUF . . . . . . . XDATA   [MAIN]: 
+    RXCHR . . . . . . . XDATA   [MAIN]: 
+    RXCNT . . . . . . . DATA    [MAIN]: 
+    RXFLAG  . . . . . . BIT     [MAIN]: 
+    RXSTATE . . . . . . DATA    [MAIN]: 
+    SCRN  . . . . . . . DATA    [MAIN]: 
+    SENDFORMATEDDATA  . CODE    [MAIN]: 
+    SERIAL  . . . . . . CODE    [MAIN]: 
+    START . . . . . . . DATA    [MAIN]: 
+    STARTINT  . . . . . CODE    [MAIN]: 
+    STARTTH2  . . . . . DATA    [MAIN]: 
+    STATE . . . . . . . DATA    [MAIN]: 
+    STOP  . . . . . . . DATA    [MAIN]: 
+    STOPTH1 . . . . . . DATA    [MAIN]: 
+    SYSTEM  . . . . . . DATA    [MAIN]: 
+    TIME  . . . . . . . XDATA   [MAIN]: 
+    TIMER1_ONESEC . . . CODE    [MAIN]: 
+    TSAVE . . . . . . . XDATA   [MAIN]: 
+    WHOLE . . . . . . . DATA    [MAIN]: 
+    XPGN1?C . . . . . . CODE    [XPGN1]:  DS1302 
+    _BCD2BINARY . . . . CODE    [DS1302]: 
+    _BINARY2BCD . . . . CODE    [DS1302]: 
+    _CALCULATE  . . . . CODE    [MAIN]: 
+    _DISPLAY  . . . . . CODE    [MAIN]: 
+    _DISPLAY?BYTE . . . DATA    [MAIN]: 
+    _GCLEAR . . . . . . CODE    [T693]:  MAIN 
+    _GCLEAR?BIT . . . . BIT     [T693]:  MAIN 
+    _GDRAWRECT  . . . . CODE    [T693]:  MAIN 
+    _GDRAWRECT?BIT  . . BIT     [T693]:  MAIN 
+    _GDRAWRECT?BYTE . . DATA    [T693]:  MAIN 
+    _GGOTOPIXEL . . . . CODE    [T693]: 
+    _GGOTOXY  . . . . . CODE    [T693]:  MAIN 
+    _GPUTC  . . . . . . CODE    [T693]:  MAIN, MISC 
+    _GPUTSTR  . . . . . CODE    [T693]:  MAIN 
+    _GSETPIXEL  . . . . CODE    [T693]: 
+    _GSETPIXEL?BIT  . . BIT     [T693]: 
+    _GWRITEBYTE . . . . CODE    [T693]: 
+    _GWRITECOMMAND  . . CODE    [T693]:  MAIN 
+    _GWRITEDATA . . . . CODE    [T693]: 
+    _I2C_WRITE  . . . . CODE    [EEPROM]:  MAIN 
+    _INITP2?  . . . . .         [_C_IDATALEN]:  C1S 
+    _LONGTOASCII  . . . CODE    [MISC]:  MAIN 
+    _LONGTOASCII?BIT  . BIT     [MISC]:  MAIN 
+    _MV_CS2XD_0 . . . . CODE    [MV_CS2XD4]: 
+    _MV_XD2SN_0 . . . . CODE    [MV_XD2SN4]: 
+    _PRINT  . . . . . . CODE    [MAIN]: 
+    _PRINT?BYTE . . . . DATA    [MAIN]: 
+    _PRINTSTRING  . . . CODE    [MISC]:  MAIN 
+    _RBRSTREADCLK . . . CODE    [DS1302]:  MAIN 
+    _RDISP_DATE . . . . CODE    [MAIN]:  MAIN 
+    _RDISP_TIME . . . . CODE    [MAIN]:  MAIN 
+    _ROM_READ . . . . . CODE    [EEPROM]:  MAIN 
+    _ROM_WRITE  . . . . CODE    [EEPROM]:  MAIN 
+    _ROM_WRITEPAGE  . . CODE    [MAIN]: 
+    _RPRINT_TIME  . . . CODE    [MAIN]: 
+    _RWRITECLK  . . . . CODE    [DS1302]:  MAIN 
+    _SELECTLINES  . . . CODE    [MAIN]: 
+    _SENDCHAR . . . . . CODE    [MISC]:  MAIN, MISC 
+    _STACK  . . . . . . IDATA   [T693]:  C1S 

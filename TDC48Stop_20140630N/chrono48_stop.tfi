@@ -1,0 +1,21 @@
+// Verilog instantiation template created from schematic chrono48_stop.sch - Wed Jul 02 10:27:45 2014
+//
+// Notes: 
+// To use this template to instantiate this component, cut-and-paste and then edit
+//
+// Instantiate the UUT
+   chrono48_stop UUT (
+		.cmd_rst_dac(    ), 
+		.cmd_inc_dac(    ), 
+		.cmd_reset(    ), 
+		.dev_addr(    ), 
+		.cmd_dev_sel(    ), 
+		.cmd_rst_test(    ), 
+		.DACout(    ), 
+		.rx_uc(    ), 
+		.tx_uc(    ), 
+		.clk(    ), 
+		.stop_pulses(    ), 
+		.start_clk_sync(    ), 
+		.teststop(    )
+   );

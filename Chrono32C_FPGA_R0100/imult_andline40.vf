@@ -1,0 +1,17 @@
+// Verilog model created from imult_andline40.sch - Tue Jun 04 14:59:52 2013
+
+`timescale 1ns / 1ps
+
+module imult_andline40(Vin, Vout);
+
+    input Vin;
+   output [39:0] Vout;
+   
+   
+   imult_andline16 andline_a (.Vin(Vin), .Vout(Vout[15:0]));
+   // synthesis attribute RLOC of andline_a is "R0C0"
+   imult_andline16 andline_b (.Vin(Vout[15]), .Vout(Vout[31:16]));
+   // synthesis attribute RLOC of andline_b is "R0C8"
+   imult_andline8 andline_c (.Vin(Vout[31]), .Vout(Vout[39:32]));
+   // synthesis attribute RLOC of andline_c is "R0C16"
+endmodule

@@ -1,0 +1,526 @@
+************************************************************************************
+*                                                                                  *
+* Component List (Generic)                                                         *
+*                                                                                  *
+* E:\MUSHTAQ PCB\SAJJAD HUSSAIN\CHRONO32C\CHRONO-32C-TDC_R0\TDC_16CHANNELN-61.MAX  *
+* Mon Oct 08 13:51:06 2012                                                         *
+*                                                                                  *
+************************************************************************************
+
+ REF DES    VALUE            PACKAGE          FOOTPRINT                      X LOC      Y LOC      ROTATION
+------------------------------------------------------------------------------------------------------------
+420                                          MTHOLE                          454.00 m   6413.00 m 0       
+421                                          MTHOLE                          454.00 m   3402.00 m 0       
+424                                          MTHOLE                          16455.0..  6413.00 m 0       
+425                                          MTHOLE                          16451.0..  3401.00 m 0       
+426                                          MTHOLE                          8826.00 m  6414.00 m 0       
+427                                          MTHOLE                          8431.00 m  6414.00 m 0       
+428                                          MTHOLE                          4210.00 m  6414.00 m 0       
+429                                          MTHOLE                          4011.00 m  394.00 m  0       
+430                                          MTHOLE                          7892.00 m  394.00 m  0       
+431                                          MTHOLE                          12742.0..  394.00 m  0       
+432                                          MTHOLE                          8037.00 m  6414.00 m 0       
+433                                          MTHOLE                          12655.0..  6414.00 m 0       
+455                                          MTHOLE350                       15031.0..  4992.00 m 0       
+456                                          MTHOLE350                       15734.0..  4510.00 m 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+BOARD ST..                                   BOARD STACKUP                   -13166...  -1345.0.. 0       
+C3         1uF              CAP              CASEA_POLAR                     12169.0..  3499.00 m 90      
+C4         1uF              CAP              CASEA_POLAR                     12649.0..  3531.00 m 90      
+C5         1uF              CAP              CASEA_POLAR                     12016.0..  3580.00 m 90      
+C6         1uF              CAP              CASEA_POLAR                     4828.00 m  3674.00 m 90      
+C7         100uF            CAP_POL          CASEC_POLAR                     15470.0..  5670.00 m 180     
+C9         0.01uF           CAP_NP           SM/C_0805                       13917.0..  3973.00 m 0       
+C10        0.01uF           CAP_NP           SM/C_0805                       14997.0..  4306.00 m 180     
+C11        1uF              CAP              CASEA_POLAR                     4355.00 m  3627.00 m 90      
+C12        1uF              CAP              CASEA_POLAR                     4194.00 m  3724.00 m 90      
+C15        0.1uF            CAP_NP           SM/C_0805                       11840.0..  4797.00 m 0       
+C17        0.1uF            CAP_NP           SM/C_0805                       11556.0..  4872.00 m 180     
+C18        0.1uF            CAP_NP           SM/C_0805                       11823.0..  5163.00 m 90      
+C19        0.1uF            CAP_NP           SM/C_0805                       12118.0..  5152.00 m 90      
+C20        0.1uF            CAP_NP           SM/C_0805                       12573.0..  4891.00 m 0       
+C21        0.1uF            CAP_NP           SM/C_0805                       12586.0..  4596.00 m 0       
+C22        0.1uF            CAP_NP           SM/C_0805                       12585.0..  4413.00 m 0       
+C23        0.1uF            CAP_NP           SM/C_0805                       12279.0..  5150.00 m 90      
+C24        0.1uF            CAP_NP           SM/C_0805                       12286.0..  4138.00 m 270     
+C25        0.1uF            CAP_NP           SM/C_0805                       12115.0..  4135.00 m 270     
+C26        0.1uF            CAP_NP           SM/C_0805                       11846.0..  4137.00 m 270     
+C27        0.1uF            CAP_NP           SM/C_0805                       11754.0..  4140.00 m 270     
+C28        0.1uF            CAP_NP           SM/C_0805                       12025.0..  4134.00 m 270     
+C29        0.1uF            CAP_NP           SM/C_0805                       12374.0..  4139.00 m 270     
+C30        0.1uF            CAP_NP           SM/C_0805                       12373.0..  5150.00 m 90      
+C31        0.1uF            CAP_NP           SM/C_0805                       12585.0..  4322.00 m 0       
+C32        0.1uF            CAP_NP           SM/C_0805                       12586.0..  4689.00 m 0       
+C33        0.1uF            CAP_NP           SM/C_0805                       12573.0..  4986.00 m 0       
+C34        0.1uF            CAP_NP           SM/C_0805                       12024.0..  5150.00 m 90      
+C35        0.1uF            CAP_NP           SM/C_0805                       11731.0..  5164.00 m 90      
+C36        0.1uF            CAP_NP           SM/C_0805                       11567.0..  5163.00 m 90      
+C37        0.1uF            CAP_NP           SM/C_0805                       11557.0..  4959.00 m 180     
+C38        0.1uF            CAP_NP           SM/C_0805                       11556.0..  4329.00 m 180     
+C39        0.1uF            CAP_NP           SM/C_0805                       11552.0..  4143.00 m 180     
+C40        0.1uF            CAP_NP           SM/C_0805                       12584.0..  4143.00 m 0       
+C41        0.1uF            CAP_NP           SM/C_0805                       12572.0..  5164.00 m 90      
+C42        0.1uF            CAP_NP           SM/C_0805                       11554.0..  4577.00 m 180     
+C43        0.1uF            CAP_NP           SM/C_0805                       11555.0..  4675.00 m 180     
+C44        0.1uF            CAP_NP           SM/C_0805                       11555.0..  4422.00 m 180     
+C45        47uF             CAP              SM/C_1206_POLAR                 12325.0..  5437.00 m 0       
+C46        47uF             CAP              SM/C_1206_POLAR                 11309.0..  4928.00 m 90      
+C47        47uF             CAP              SM/C_1206_POLAR                 12828.0..  4380.00 m 270     
+C48        47uF             CAP              SM/C_1206_POLAR                 11803.0..  3869.00 m 90      
+C49        47uF             CAP              SM/C_1206_POLAR                 11823.0..  5401.00 m 0       
+C50        47uF             CAP              SM/C_1206_POLAR                 11312.0..  4577.00 m 90      
+C51        47uF             CAP              SM/C_1206_POLAR                 12815.0..  4895.00 m 90      
+C52        47uF             CAP              SM/C_1206_POLAR                 12137.0..  3895.00 m 0       
+C53        4.7uF            CAP              CASEA_POLAR                     15407.0..  5285.00 m 180     
+C54        10uF             CAP              CASEA_POLAR                     15057.0..  5901.00 m 0       
+C55        100uF            CAP              CASEC_POLAR                     15482.0..  5458.00 m 180     
+C56        100uF            CAP_POL          CASEC_POLAR                     10972.0..  4166.00 m 270     
+C57        100uF            CAP_POL          CASEC_POLAR                     3602.00 m  4302.00 m 270     
+C58        0.1uF            CAP_NP           SM/C_0805                       4335.00 m  4772.00 m 0       
+C59        0.1uF            CAP_NP           SM/C_0805                       4371.00 m  4137.00 m 270     
+C60        0.1uF            CAP_NP           SM/C_0805                       4648.00 m  4140.00 m 270     
+C61        0.1uF            CAP_NP           SM/C_0805                       4796.00 m  4139.00 m 270     
+C62        0.1uF            CAP_NP           SM/C_0805                       5067.00 m  4466.00 m 0       
+C63        0.1uF            CAP_NP           SM/C_0805                       5067.00 m  4596.00 m 0       
+C64        0.1uF            CAP_NP           SM/C_0805                       4284.00 m  4137.00 m 270     
+C65        0.1uF            CAP_NP           SM/C_0805                       4559.00 m  4141.00 m 270     
+C66        0.1uF            CAP_NP           SM/C_0805                       4887.00 m  4142.00 m 270     
+C67        0.1uF            CAP_NP           SM/C_0805                       5074.00 m  4144.00 m 0       
+C68        0.1uF            CAP_NP           SM/C_0805                       5067.00 m  4379.00 m 0       
+C69        0.1uF            CAP_NP           SM/C_0805                       5068.00 m  4686.00 m 0       
+C70        0.1uF            CAP_NP           SM/C_0805                       5072.00 m  4941.00 m 0       
+C71        0.1uF            CAP_NP           SM/C_0805                       5071.00 m  5167.00 m 90      
+C72        0.1uF            CAP_NP           SM/C_0805                       4834.00 m  5147.00 m 90      
+C73        0.1uF            CAP_NP           SM/C_0805                       4529.00 m  5149.00 m 90      
+C74        0.1uF            CAP_NP           SM/C_0805                       4304.00 m  5142.75 m 90      
+C75        0.1uF            CAP_NP           SM/C_0805                       4067.00 m  5143.00 m 90      
+C76        0.1uF            CAP_NP           SM/C_0805                       4742.00 m  5148.00 m 90      
+C77        0.1uF            CAP_NP           SM/C_0805                       4618.00 m  5149.00 m 90      
+C78        0.1uF            CAP_NP           SM/C_0805                       4399.00 m  5144.00 m 90      
+C79        0.1uF            CAP_NP           SM/C_0805                       4061.00 m  4803.00 m 180     
+C80        0.1uF            CAP_NP           SM/C_0805                       4062.00 m  4527.00 m 180     
+C81        0.1uF            CAP_NP           SM/C_0805                       4062.00 m  4380.00 m 180     
+C82        0.1uF            CAP_NP           SM/C_0805                       4062.00 m  4891.00 m 180     
+C83        0.1uF            CAP_NP           SM/C_0805                       4063.00 m  4616.00 m 180     
+C84        0.1uF            CAP_NP           SM/C_0805                       4062.00 m  4289.00 m 180     
+C85        0.1uF            CAP_NP           SM/C_0805                       4049.00 m  4143.00 m 180     
+C86        0.1uF            CAP_NP           SM/C_0805                       5070.00 m  4850.00 m 0       
+C87        47uF             CAP              SM/C_1206_POLAR                 4659.00 m  5393.00 m 0       
+C88        47uF             CAP              SM/C_1206_POLAR                 3809.00 m  4872.00 m 90      
+C89        47uF             CAP              SM/C_1206_POLAR                 4303.00 m  3898.00 m 0       
+C90        47uF             CAP              SM/C_1206_POLAR                 5340.00 m  4579.00 m 90      
+C91        47uF             CAP              SM/C_1206_POLAR                 4303.00 m  5393.00 m 0       
+C92        47uF             CAP              SM/C_1206_POLAR                 3813.00 m  4522.00 m 90      
+C93        47uF             CAP              SM/C_1206_POLAR                 4810.00 m  3900.00 m 180     
+C94        47uF             CAP              SM/C_1206_POLAR                 5331.00 m  4936.00 m 90      
+C96        33pF             CAP_NP           SM/C_0805                       16277.0..  2825.00 m 0       
+C98        100pF            CAP_NP           SM/C_0805                       16399.0..  2361.00 m 0       
+C99        33pF             CAP_NP           SM/C_0805                       11292.0..  2850.00 m 0       
+C100       100pF            CAP_NP           SM/C_0805                       11412.0..  2347.00 m 0       
+C101       0.1uF            CAP_NP           SM/C_0805                       14935.0..  2495.00 m 270     
+C102       0.1uF            CAP_NP           SM/C_0805                       16032.0..  2489.00 m 270     
+C103       33pF             CAP_NP           SM/C_0805                       15159.0..  2843.00 m 0       
+C104       100pF            CAP_NP           SM/C_0805                       15307.0..  2364.00 m 0       
+C105       33pF             CAP_NP           SM/C_0805                       10316.0..  2856.00 m 0       
+C106       100pF            CAP_NP           SM/C_0805                       10434.0..  2363.00 m 0       
+C107       0.1uF            CAP_NP           SM/C_0805                       13924.0..  2494.00 m 270     
+C108       0.1uF            CAP_NP           SM/C_0805                       9101.00 m  2494.00 m 270     
+C109       33pF             CAP_NP           SM/C_0805                       14196.0..  2841.00 m 0       
+C110       100pF            CAP_NP           SM/C_0805                       14311.0..  2371.00 m 0       
+C111       33pF             CAP_NP           SM/C_0805                       9351.00 m  2842.00 m 0       
+C112       100pF            CAP_NP           SM/C_0805                       9497.00 m  2351.00 m 0       
+C113       0.1uF            CAP_NP           SM/C_0805                       12957.0..  2496.00 m 270     
+C114       0.1uF            CAP_NP           SM/C_0805                       8092.00 m  2497.00 m 270     
+C115       33pF             CAP_NP           SM/C_0805                       13218.0..  2829.00 m 0       
+C116       100pF            CAP_NP           SM/C_0805                       13343.0..  2354.00 m 0       
+C117       33pF             CAP_NP           SM/C_0805                       8373.00 m  2859.00 m 180     
+C118       100pF            CAP_NP           SM/C_0805                       8530.00 m  2360.00 m 0       
+C119       0.1uF            CAP_NP           SM/C_0805                       11994.0..  2497.00 m 270     
+C120       33pF             CAP_NP           SM/C_0805                       12252.0..  2860.00 m 0       
+C121       100pF            CAP_NP           SM/C_0805                       12374.0..  2357.00 m 0       
+C122       0.1uF            CAP_NP           SM/C_0805                       16478.0..  2264.00 m 180     
+C123       0.1uF            CAP_NP           SM/C_0805                       15391.0..  2254.00 m 180     
+C124       33pF             CAP_NP           SM/C_0805                       7413.00 m  2847.00 m 0       
+C125       33pF             CAP_NP           SM/C_0805                       3523.00 m  2847.00 m 0       
+C126       100pF            CAP_NP           SM/C_0805                       7549.00 m  2375.00 m 0       
+C127       100pF            CAP_NP           SM/C_0805                       3657.00 m  2353.00 m 0       
+C128       0.1uF            CAP_NP           SM/C_0805                       14394.0..  2267.00 m 180     
+C129       0.1uF            CAP_NP           SM/C_0805                       13427.0..  2257.00 m 180     
+C130       33pF             CAP_NP           SM/C_0805                       6433.00 m  2837.00 m 0       
+C131       33pF             CAP_NP           SM/C_0805                       2559.00 m  2836.00 m 0       
+C132       100pF            CAP_NP           SM/C_0805                       6544.00 m  2356.00 m 0       
+C133       100pF            CAP_NP           SM/C_0805                       2677.00 m  2349.00 m 0       
+C134       0.1uF            CAP_NP           SM/C_0805                       12457.0..  2255.00 m 180     
+C135       0.1uF            CAP_NP           SM/C_0805                       11495.0..  2255.00 m 180     
+C136       33pF             CAP_NP           SM/C_0805                       5462.00 m  2834.00 m 0       
+C137       33pF             CAP_NP           SM/C_0805                       1591.00 m  2845.00 m 0       
+C138       100pF            CAP_NP           SM/C_0805                       5620.00 m  2361.00 m 0       
+C139       100pF            CAP_NP           SM/C_0805                       1728.00 m  2339.00 m 0       
+C140       0.1uF            CAP_NP           SM/C_0805                       10519.0..  2266.00 m 180     
+C141       0.1uF            CAP_NP           SM/C_0805                       9581.00 m  2251.00 m 180     
+C142       33pF             CAP_NP           SM/C_0805                       4496.00 m  2855.00 m 0       
+C143       33pF             CAP_NP           SM/C_0805                       624.00 m   2846.00 m 0       
+C144       100pF            CAP_NP           SM/C_0805                       756.00 m   2348.00 m 0       
+C145       100pF            CAP_NP           SM/C_0805                       4638.00 m  2347.00 m 0       
+C146       100uF            CAP_POL          CASEC_POLAR                     13556.0..  5341.00 m 90      
+C147       4.7uF            CAP              CASEA_POLAR                     13917.0..  3837.00 m 0       
+C148       0.1uF            CAP_NP           SM/C_0805                       8614.00 m  2266.00 m 180     
+C149       4.7uF            CAP              CASEA_POLAR                     14997.0..  4436.00 m 180     
+C150       0.1uF            CAP_NP           SM/C_0805                       7633.00 m  2283.00 m 180     
+C151       0.1uF            CAP_NP           SM/C_0805                       6630.00 m  2261.00 m 180     
+C152       33pF             CAP_NP           SM/C_0805                       14031.0..  2784.00 m 180     
+C153       0.1uF            CAP_NP           SM/C_0805                       5704.00 m  2234.00 m 180     
+C154       0.1uF            CAP_NP           SM/C_0805                       4723.00 m  2254.00 m 180     
+C155       0.1uF            CAP_NP           SM/C_0805                       3741.00 m  2255.00 m 180     
+C156       0.1uF            CAP_NP           SM/C_0805                       2761.00 m  2255.00 m 180     
+C157       0.1uF            CAP_NP           SM/C_0805                       1812.00 m  2252.00 m 180     
+C158       0.1uF            CAP_NP           SM/C_0805                       841.00 m   2256.00 m 180     
+C159       33pF             CAP_NP           SM/C_0805                       14998.0..  2765.00 m 180     
+C160       33pF             CAP_NP           SM/C_0805                       16107.0..  2798.00 m 180     
+C161       100pF            CAP_NP           SM/C_0805                       2640.00 m  375.00 m  0       
+C162       100pF            CAP_NP           SM/C_0805                       3610.00 m  380.00 m  0       
+C163       100pF            CAP_NP           SM/C_0805                       1670.00 m  380.00 m  0       
+C164       100pF            CAP_NP           SM/C_0805                       700.00 m   385.00 m  0       
+C165       100pF            CAP_NP           SM/C_0805                       4580.00 m  380.00 m  0       
+C166       100pF            CAP_NP           SM/C_0805                       5550.00 m  380.00 m  0       
+C167       100pF            CAP_NP           SM/C_0805                       6520.00 m  385.00 m  0       
+C168       100pF            CAP_NP           SM/C_0805                       7490.00 m  369.00 m  0       
+C169       100pF            CAP_NP           SM/C_0805                       16355.0..  377.00 m  0       
+C170       100pF            CAP_NP           SM/C_0805                       15250.0..  390.00 m  0       
+C171       100pF            CAP_NP           SM/C_0805                       14280.0..  385.00 m  0       
+C172       100pF            CAP_NP           SM/C_0805                       13315.0..  385.00 m  0       
+C173       100pF            CAP_NP           SM/C_0805                       12340.0..  395.00 m  0       
+C174       100pF            CAP_NP           SM/C_0805                       8462.00 m  377.00 m  0       
+C175       100pF            CAP_NP           SM/C_0805                       9430.00 m  380.00 m  0       
+C176       100pF            CAP_NP           SM/C_0805                       10400.0..  385.00 m  0       
+C177       100pF            CAP_NP           SM/C_0805                       11370.0..  390.00 m  0       
+C178       0.1uF            CAP_NP           SM/C_0805                       11036.0..  2496.00 m 270     
+C179       0.1uF            CAP_NP           SM/C_0805                       10055.0..  2495.00 m 270     
+C180       33pF             CAP_NP           SM/C_0805                       13034.0..  2807.00 m 180     
+C181       0.1uF            CAP_NP           SM/C_0805                       7159.00 m  2494.00 m 270     
+C182       0.1uF            CAP_NP           SM/C_0805                       6165.00 m  2494.00 m 270     
+C183       0.1uF            CAP_NP           SM/C_0805                       5192.00 m  2496.00 m 270     
+C184       0.1uF            CAP_NP           SM/C_0805                       4245.00 m  2493.00 m 270     
+C185       100pF            CAP_NP           SM/C_0805                       15030.0..  2411.00 m 90      
+C186       100pF            CAP_NP           SM/C_0805                       16138.0..  2405.00 m 90      
+C187       33pF             CAP_NP           SM/C_0805                       12089.0..  2826.00 m 180     
+C188       33pF             CAP_NP           SM/C_0805                       11111.0..  2839.00 m 180     
+C189       33pF             CAP_NP           SM/C_0805                       10154.0..  2815.00 m 180     
+C190       33pF             CAP_NP           SM/C_0805                       9170.00 m  2797.00 m 180     
+C191       33pF             CAP_NP           SM/C_0805                       8196.00 m  2810.00 m 180     
+C192       33pF             CAP_NP           SM/C_0805                       7232.00 m  2778.00 m 180     
+C193       33pF             CAP_NP           SM/C_0805                       6214.00 m  2783.00 m 180     
+C194       33pF             CAP_NP           SM/C_0805                       5284.00 m  2819.00 m 180     
+C195       33pF             CAP_NP           SM/C_0805                       4339.00 m  2792.00 m 180     
+C196       33pF             CAP_NP           SM/C_0805                       453.00 m   2779.00 m 180     
+C197       33pF             CAP_NP           SM/C_0805                       1428.00 m  2839.00 m 180     
+C198       33pF             CAP_NP           SM/C_0805                       2379.00 m  2841.00 m 180     
+C199       33pF             CAP_NP           SM/C_0805                       3340.00 m  2845.00 m 180     
+C212       0.1uf            C                SM/C_0805                       10663.0..  3819.00 m 180     
+C213       0.1uf            C                SM/C_0805                       10294.0..  3806.00 m 0       
+C214       0.1uf            C                SM/C_0805                       14317.0..  5493.00 m 180     
+C215       0.1uf            C                SM/C_0805                       14367.0..  5193.00 m 0       
+C216       0.1uf            C                SM/C_0805                       2986.00 m  4007.00 m 90      
+C217       0.1uf            C                SM/C_0805                       2860.00 m  4335.00 m 270     
+C218       1nF              C                SM/C_0805                       10665.0..  3920.00 m 180     
+C219       1nF              C                SM/C_0805                       14233.0..  5583.00 m 0       
+C220       1nF              C                SM/C_0805                       3082.00 m  4007.00 m 90      
+C232       4.7uF            CAP              CASEA_POLAR                     14817.0..  2493.00 m 270     
+C233       100pF            CAP_NP           SM/C_0805                       14044.0..  2410.00 m 90      
+C234       4.7uF            CAP              CASEA_POLAR                     13792.0..  2495.00 m 270     
+C235       100pF            CAP_NP           SM/C_0805                       13059.0..  2413.00 m 90      
+C236       4.7uF            CAP              CASEA_POLAR                     12838.0..  2496.00 m 270     
+C237       100pF            CAP_NP           SM/C_0805                       12093.0..  2414.00 m 90      
+C238       4.7uF            CAP              CASEA_POLAR                     11868.0..  2495.00 m 270     
+C239       100pF            CAP_NP           SM/C_0805                       11135.0..  2412.00 m 90      
+C240       4.7uF            CAP              CASEA_POLAR                     10912.0..  2496.00 m 270     
+C241       100pF            CAP_NP           SM/C_0805                       10165.0..  2411.00 m 90      
+C242       4.7uF            CAP              CASEA_POLAR                     9923.00 m  2495.00 m 270     
+C243       100pF            CAP_NP           SM/C_0805                       9208.00 m  2411.00 m 90      
+C244       4.7uF            CAP              CASEA_POLAR                     8972.00 m  2495.00 m 270     
+C245       100pF            CAP_NP           SM/C_0805                       8198.00 m  2414.00 m 90      
+C246       4.7uF            CAP              CASEA_POLAR                     7964.00 m  2497.00 m 270     
+C249       100pF            CAP_NP           SM/C_0805                       7257.00 m  2411.00 m 90      
+C250       4.7uF            CAP              CASEA_POLAR                     7041.00 m  2493.00 m 270     
+C251       100pF            CAP_NP           SM/C_0805                       6273.00 m  2410.00 m 90      
+C252       4.7uF            CAP              CASEA_POLAR                     6044.00 m  2494.00 m 270     
+C253       100pF            CAP_NP           SM/C_0805                       5294.00 m  2411.00 m 90      
+C254       4.7uF            CAP              CASEA_POLAR                     5073.00 m  2496.00 m 270     
+C255       100pF            CAP_NP           SM/C_0805                       4343.00 m  2409.00 m 90      
+C256       4.7uF            CAP              CASEA_POLAR                     4123.00 m  2494.00 m 270     
+C257       100pF            CAP_NP           SM/C_0805                       3379.00 m  2415.00 m 90      
+C258       0.1uF            CAP_NP           SM/C_0805                       3279.00 m  2499.00 m 270     
+C259       4.7uF            CAP              CASEA_POLAR                     3155.00 m  2498.00 m 270     
+C260       100pF            CAP_NP           SM/C_0805                       2398.00 m  2415.00 m 90      
+C261       0.1uF            CAP_NP           SM/C_0805                       2297.00 m  2496.00 m 270     
+C262       4.7uF            CAP              CASEA_POLAR                     2181.00 m  2496.00 m 270     
+C263       100pF            CAP_NP           SM/C_0805                       1443.00 m  2411.00 m 90      
+C264       0.1uF            CAP_NP           SM/C_0805                       1337.00 m  2495.00 m 270     
+C265       4.7uF            CAP              CASEA_POLAR                     1217.00 m  2496.00 m 270     
+C266       100pF            CAP_NP           SM/C_0805                       480.00 m   2412.00 m 90      
+C267       0.1uF            CAP_NP           SM/C_0805                       377.00 m   2495.00 m 270     
+C268       4.7uF            CAP              CASEA_POLAR                     257.00 m   2496.00 m 270     
+C294       4.7uF            CAP              CASEA_POLAR                     15908.0..  2489.00 m 270     
+D2         POWER DIODE      DIODE            DIODE_SMA_D0_214AC              15555.0..  5675.00 m 180     
+D3         DIODE            DIODE            DIODE_SOD_80                    16277.0..  1330.00 m 0       
+D5         DIODE            DIODE            DIODE_SOD_80                    11292.0..  1330.00 m 0       
+D6         DIODE            DIODE            DIODE_SOD_80                    16397.0..  1487.00 m 180     
+D8         DIODE            DIODE            DIODE_SOD_80                    11412.0..  1491.00 m 180     
+D9         DIODE            DIODE            DIODE_SOD_80                    15155.0..  1330.00 m 0       
+D10        DIODE            DIODE            DIODE_SOD_80                    10317.0..  1330.00 m 0       
+D13        DIODE            DIODE            DIODE_SOD_80                    15278.0..  1489.00 m 180     
+D14        DIODE            DIODE            DIODE_SOD_80                    10437.0..  1481.00 m 180     
+D15        DIODE            DIODE            DIODE_SOD_80                    14198.0..  1330.00 m 0       
+D16        DIODE            DIODE            DIODE_SOD_80                    9350.00 m  1330.00 m 0       
+D19        DIODE            DIODE            DIODE_SOD_80                    14317.0..  1481.00 m 180     
+D20        DIODE            DIODE            DIODE_SOD_80                    9470.00 m  1503.00 m 180     
+D21        DIODE            DIODE            DIODE_SOD_80                    13225.0..  1330.00 m 0       
+D22        DIODE            DIODE            DIODE_SOD_80                    8377.00 m  1330.00 m 0       
+D25        DIODE            DIODE            DIODE_SOD_80                    13346.0..  1481.00 m 180     
+D26        DIODE            DIODE            DIODE_SOD_80                    8497.00 m  1482.00 m 180     
+D27        DIODE            DIODE            DIODE_SOD_80                    12253.0..  1330.00 m 0       
+D29        DIODE            DIODE            DIODE_SOD_80                    12373.0..  1492.00 m 180     
+D30        DIODE            DIODE            DIODE_SOD_80                    3527.00 m  1330.00 m 0       
+D31        DIODE            DIODE            DIODE_SOD_80                    7406.00 m  1330.00 m 0       
+D34        DIODE            DIODE            DIODE_SOD_80                    7526.00 m  1490.00 m 180     
+D35        DIODE            DIODE            DIODE_SOD_80                    3647.00 m  1489.00 m 180     
+D36        DIODE            DIODE            DIODE_SOD_80                    6436.00 m  1330.00 m 0       
+D37        DIODE            DIODE            DIODE_SOD_80                    2559.00 m  1330.00 m 0       
+D40        DIODE            DIODE            DIODE_SOD_80                    6556.00 m  1492.00 m 180     
+D41        DIODE            DIODE            DIODE_SOD_80                    2679.00 m  1483.00 m 180     
+D42        DIODE            DIODE            DIODE_SOD_80                    5466.00 m  1330.00 m 0       
+D43        DIODE            DIODE            DIODE_SOD_80                    1587.00 m  1330.00 m 0       
+D46        DIODE            DIODE            DIODE_SOD_80                    5586.00 m  1479.00 m 180     
+D47        DIODE            DIODE            DIODE_SOD_80                    1711.00 m  1479.00 m 180     
+D48        DIODE            DIODE            DIODE_SOD_80                    4498.00 m  1330.00 m 0       
+D49        DIODE            DIODE            DIODE_SOD_80                    623.00 m   1339.00 m 0       
+D52        DIODE            DIODE            DIODE_SOD_80                    4618.00 m  1483.00 m 180     
+D53        DIODE            DIODE            DIODE_SOD_80                    743.00 m   1470.00 m 180     
+J4         sma              HEADER_5         RF/SMA/V                        13951.0..  4934.00 m 90      
+J6         sma              HEADER_5         RF/SMA/V                        14418.0..  4735.00 m 0       
+J7         POWER HEADER     HEADER_3         3PIN_CON1_200                   15395.0..  6487.00 m 0       
+J8         sma              HEADER_5         RF/SMA/V                        15691.0..  3947.00 m 0       
+J9         CON6             CON6             FPGA_PROG_CONN                  11249.0..  3792.00 m 0       
+J10        sma              HEADER_5         RF/SMA/V                        15682.0..  3525.00 m 0       
+J12        HEADER 2         HEADER_2         2PIN_CON                        10240.0..  4903.00 m 90      
+J14        JUMPER4          JUMPER4          DIP_SMD_REV3                    12566.0..  5692.00 m 0       
+J17        JUMPER4          JUMPER4          DIP_SMD_REV4                    4943.00 m  5523.00 m 0       
+J18        HEADER 2         HEADER_2         2PIN_CON                        3357.00 m  4938.00 m 90      
+J21        CON6             CON6             FPGA_PROG_CONN                  3613.37 m  3899.37 m 0       
+J22        BNC              BNC              BNC                             16272.0..  485.00 m  0       
+J23        BNC              BNC              BNC                             11287.0..  485.00 m  0       
+J24        BNC              BNC              BNC                             15167.0..  485.00 m  0       
+J25        BNC              BNC              BNC                             10317.0..  485.00 m  0       
+J26        BNC              BNC              BNC                             14197.0..  485.00 m  0       
+J27        BNC              BNC              BNC                             9347.00 m  485.00 m  0       
+J28        BNC              BNC              BNC                             13227.0..  485.00 m  0       
+J29        BNC              BNC              BNC                             8377.00 m  485.00 m  0       
+J30        BNC              BNC              BNC                             12257.0..  485.00 m  0       
+J31        BNC              BNC              BNC                             7407.00 m  485.00 m  0       
+J32        BNC              BNC              BNC                             3527.00 m  485.00 m  0       
+J33        BNC              BNC              BNC                             6437.00 m  485.00 m  0       
+J34        BNC              BNC              BNC                             2557.00 m  485.00 m  0       
+J35        BNC              BNC              BNC                             5467.00 m  485.00 m  0       
+J36        BNC              BNC              BNC                             1587.00 m  485.00 m  0       
+J37        BNC              BNC              BNC                             4497.00 m  485.00 m  0       
+J38        BNC              BNC              BNC                             617.00 m   485.00 m  0       
+J49        CONN PLUG 1      CONN_PLUG_1      TEST_POINT1                     7600.00 m  3895.00 m 0       
+J50        CONN PLUG 1      CONN_PLUG_1      TEST_POINT1                     13278.0..  6228.00 m 0       
+J51        CONN PLUG 1      CONN_PLUG_1      TEST_POINT1                     6145.00 m  5279.00 m 0       
+J52        CON14A           CON14A           CONN_14PIN                      10073.0..  6380.00 m 0       
+J53        CONN PLUG 1      CONN_PLUG_1      TEST_POINT1                     16100.0..  5933.00 m 0       
+J54        CONN PLUG 1      CONN_PLUG_1      TEST_POINT1                     1227.00 m  6701.00 m 0       
+J55        CONN PLUG 1      CONN_PLUG_1      TEST_POINT1                     16100.0..  5740.00 m 0       
+J60        CONN PLUG 1      CONN_PLUG_1      TEST_POINT1                     1081.00 m  6250.00 m 0       
+J63        CONN PLUG 1      CONN_PLUG_1      TEST_POINT1                     16101.0..  5338.00 m 0       
+J64        CONN PLUG 1      CONN_PLUG_1      TEST_POINT1                     9140.00 m  5250.00 m 0       
+J65        CONN PLUG 1      CONN_PLUG_1      TEST_POINT1                     5914.00 m  4974.00 m 0       
+J66        CONN PLUG 1      CONN_PLUG_1      TEST_POINT1                     300.00 m   4640.00 m 0       
+LED1       LED              LED              SM/LED_0805                     13040.0..  5233.00 m 0       
+LED2       LED              LED              SM/LED_0805                     5703.00 m  5145.00 m 0       
+POWER1     LED              LED              SM/LED_0805                     14464.0..  5755.00 m 180     
+R1         510R             R                SM/R_0805                       14599.0..  5755.00 m 270     
+R5         330R             RESISTOR         SM/R_0805                       12789.0..  5147.00 m 0       
+R6         10R              R                SM/R_0805                       15795.0..  5720.00 m 270     
+R8         100R             R                SM/R_0805                       13614.0..  4935.00 m 180     
+R9         100R             R                SM/C_0805                       11334.0..  4735.00 m 180     
+R12        4.7k             R                SM/C_0805                       12368.0..  4676.00 m 0       
+R13        4.7K             RESISTOR         SM/C_0805                       12369.0..  4590.00 m 0       
+R14        10K              R                SM/R_0805                       5242.00 m  5795.00 m 90      
+R15        10K              R                SM/R_0805                       5143.00 m  5795.00 m 90      
+R16        10K              R                SM/R_0805                       5044.00 m  5795.00 m 90      
+R17        10K              R                SM/R_0805                       4943.00 m  5794.00 m 90      
+R18        10K              R                SM/R_0805                       12866.0..  5955.00 m 90      
+R19        10K              R                SM/R_0805                       12765.0..  5956.00 m 90      
+R20        10K              R                SM/R_0805                       12664.0..  5955.00 m 90      
+R21        10K              R                SM/R_0805                       12567.0..  5956.00 m 90      
+R23        2.2k             R                SM/C_0805                       10378.0..  4115.00 m 270     
+R24        330R             RESISTOR         SM/R_0805                       5380.00 m  5145.00 m 0       
+R25        100R             RESISTOR         SM/C_0805                       13071.0..  4499.00 m 180     
+R26        4.7k             R                SM/C_0805                       4852.00 m  4664.00 m 0       
+R27        4.7K             RESISTOR         SM/C_0805                       4851.00 m  4575.00 m 0       
+R28        510R             R                SM/R_0805                       16277.0..  1015.00 m 270     
+R29        56R              R                SM/R_0805                       16277.0..  1935.00 m 0       
+R30        56R              R                SM/R_0805                       16277.0..  1175.00 m 0       
+R31        56R              R                SM/R_0805                       16360.0..  695.00 m  180     
+R32        510R             R                SM/R_0805                       11287.0..  1021.00 m 270     
+R33        100R             R                SM/C_0805                       16276.0..  3092.00 m 270     
+R34        56R              R                SM/R_0805                       11293.0..  1939.00 m 0       
+R35        100R             R                SM/C_0805                       16279.0..  2159.00 m 270     
+R36        56R              R                SM/R_0805                       11292.0..  1193.00 m 0       
+R37        56R              R                SM/R_0805                       11370.0..  695.00 m  180     
+R38        100R             R                SM/C_0805                       11292.0..  2162.00 m 270     
+R39        510R             R                SM/R_0805                       15163.0..  1016.00 m 270     
+R40        510R             R                SM/R_0805                       10317.0..  1021.00 m 270     
+R41        56R              R                SM/R_0805                       15158.0..  1940.00 m 0       
+R42        56R              R                SM/R_0805                       15157.0..  1176.00 m 0       
+R43        56R              R                SM/R_0805                       15250.0..  695.00 m  180     
+R44        56R              R                SM/R_0805                       10400.0..  695.00 m  180     
+R45        56R              R                SM/R_0805                       10317.0..  1943.00 m 0       
+R46        56R              R                SM/R_0805                       10317.0..  1176.00 m 0       
+R47        100R             R                SM/C_0805                       15158.0..  2173.00 m 270     
+R48        100R             R                SM/C_0805                       10316.0..  2164.00 m 270     
+R49        510R             R                SM/R_0805                       14197.0..  1015.00 m 270     
+R50        510R             R                SM/R_0805                       9348.00 m  1017.00 m 270     
+R51        56R              R                SM/R_0805                       14195.0..  1940.00 m 0       
+R52        56R              R                SM/R_0805                       14280.0..  695.00 m  180     
+R53        56R              R                SM/R_0805                       14198.0..  1178.00 m 0       
+R54        56R              R                SM/R_0805                       9350.00 m  1932.00 m 0       
+R55        56R              R                SM/R_0805                       9350.00 m  1178.00 m 0       
+R56        56R              R                SM/R_0805                       9430.00 m  695.00 m  180     
+R57        100R             R                SM/C_0805                       14195.0..  2162.00 m 270     
+R58        100R             R                SM/C_0805                       9350.00 m  2163.00 m 270     
+R59        510R             R                SM/R_0805                       13225.0..  1018.00 m 270     
+R60        510R             R                SM/R_0805                       8377.00 m  1018.00 m 270     
+R61        56R              R                SM/R_0805                       13228.0..  1941.00 m 0       
+R62        56R              R                SM/R_0805                       13225.0..  1175.00 m 0       
+R63        56R              R                SM/R_0805                       13310.0..  695.00 m  180     
+R64        56R              R                SM/R_0805                       8377.00 m  1944.00 m 0       
+R65        56R              R                SM/R_0805                       8460.00 m  695.00 m  180     
+R66        56R              R                SM/R_0805                       8377.00 m  1178.00 m 0       
+R67        100R             R                SM/C_0805                       13219.0..  2162.00 m 270     
+R68        100R             R                SM/C_0805                       8373.00 m  2163.00 m 270     
+R69        510R             R                SM/R_0805                       12256.0..  1016.00 m 270     
+R70        56R              R                SM/R_0805                       12252.0..  1954.00 m 0       
+R71        56R              R                SM/R_0805                       12253.0..  1184.00 m 0       
+R72        56R              R                SM/R_0805                       12340.0..  700.00 m  180     
+R73        100R             R                SM/C_0805                       12253.0..  2159.00 m 270     
+R74        510R             R                SM/R_0805                       7407.00 m  1017.00 m 270     
+R75        510R             R                SM/R_0805                       3527.00 m  1020.00 m 270     
+R76        56R              R                SM/R_0805                       7405.00 m  1938.00 m 0       
+R77        56R              R                SM/R_0805                       7406.00 m  1189.00 m 0       
+R78        56R              R                SM/R_0805                       7490.00 m  695.00 m  180     
+R79        56R              R                SM/R_0805                       3524.00 m  1944.00 m 0       
+R80        56R              R                SM/R_0805                       3527.00 m  1178.00 m 0       
+R81        56R              R                SM/R_0805                       3610.00 m  695.00 m  180     
+R82        100R             R                SM/C_0805                       7405.00 m  2164.00 m 270     
+R83        100R             R                SM/C_0805                       3524.00 m  2163.00 m 270     
+R84        510R             R                SM/R_0805                       6436.00 m  1019.00 m 270     
+R85        510R             R                SM/R_0805                       2558.00 m  1024.00 m 270     
+R86        56R              R                SM/R_0805                       6436.00 m  1940.00 m 0       
+R87        56R              R                SM/R_0805                       6436.00 m  1179.00 m 0       
+R88        56R              R                SM/R_0805                       6520.00 m  700.00 m  180     
+R89        56R              R                SM/R_0805                       2558.00 m  1944.00 m 0       
+R90        56R              R                SM/R_0805                       2559.00 m  1197.00 m 0       
+R91        56R              R                SM/R_0805                       2640.00 m  690.00 m  180     
+R92        100R             R                SM/C_0805                       6433.00 m  2165.00 m 270     
+R93        100R             R                SM/C_0805                       2557.00 m  2169.00 m 270     
+R94        510R             R                SM/R_0805                       5466.00 m  1017.00 m 270     
+R95        510R             R                SM/R_0805                       1587.00 m  1018.00 m 270     
+R96        56R              R                SM/R_0805                       5466.00 m  1938.00 m 0       
+R97        56R              R                SM/R_0805                       5466.00 m  1179.00 m 0       
+R98        56R              R                SM/R_0805                       5550.00 m  700.00 m  180     
+R99        56R              R                SM/R_0805                       1591.00 m  1937.00 m 0       
+R100       56R              R                SM/R_0805                       1587.00 m  1178.00 m 0       
+R101       56R              R                SM/R_0805                       1670.00 m  695.00 m  180     
+R102       100R             R                SM/C_0805                       5463.00 m  2161.00 m 270     
+R103       100R             R                SM/C_0805                       1591.00 m  2163.00 m 270     
+R104       510R             R                SM/R_0805                       4498.00 m  1017.00 m 270     
+R105       510R             R                SM/R_0805                       623.00 m   1016.00 m 270     
+R106       56R              R                SM/R_0805                       4496.00 m  1942.00 m 0       
+R107       56R              R                SM/R_0805                       4498.00 m  1178.00 m 0       
+R108       56R              R                SM/R_0805                       4580.00 m  695.00 m  180     
+R109       56R              R                SM/R_0805                       623.00 m   1937.00 m 0       
+R110       56R              R                SM/R_0805                       623.00 m   1179.00 m 0       
+R111       56R              R                SM/R_0805                       707.00 m   695.00 m  180     
+R112       100R             R                SM/C_0805                       4494.00 m  2162.00 m 270     
+R113       100R             R                SM/C_0805                       624.00 m   2163.00 m 270     
+R114       100R             RESISTOR         SM/C_0805                       11174.0..  4418.00 m 180     
+R115       330R             R                SM/C_0805                       12999.0..  4675.00 m 0       
+R116       2.2k             R                SM/R_0805                       14452.0..  5382.00 m 270     
+R117       2.2k             R                SM/R_0805                       3044.00 m  4251.00 m 180     
+R121       100R             R                SM/C_0805                       15162.0..  3055.00 m 270     
+R124       100R             R                SM/C_0805                       14197.0..  3055.00 m 270     
+R125       100R             R                SM/C_0805                       13217.0..  3055.00 m 270     
+R126       100R             R                SM/C_0805                       12252.0..  3055.00 m 270     
+R130       100R             R                SM/C_0805                       8589.00 m  2864.00 m 180     
+R131       100R             R                SM/C_0805                       9352.00 m  3055.00 m 270     
+R132       100R             R                SM/C_0805                       10317.0..  3055.00 m 270     
+R133       100R             R                SM/C_0805                       11292.0..  3055.00 m 270     
+R134       100R             R                SM/C_0805                       7412.00 m  3055.00 m 270     
+R135       100R             R                SM/C_0805                       6432.00 m  3055.00 m 270     
+R136       100R             R                SM/C_0805                       5462.00 m  3055.00 m 270     
+R137       100R             R                SM/C_0805                       4497.00 m  3055.00 m 270     
+R138       100R             R                SM/C_0805                       629.00 m   3055.00 m 270     
+R139       100R             R                SM/C_0805                       1592.00 m  3055.00 m 270     
+R140       100R             R                SM/C_0805                       2557.00 m  3055.00 m 270     
+R141       100R             R                SM/C_0805                       3522.00 m  3055.00 m 270     
+R151       100R             R                SM/R_0805                       11642.0..  5481.00 m 270     
+R152       100R             R                SM/R_0805                       11740.0..  5482.00 m 270     
+R153       100R             R                SM/R_0805                       11842.0..  5485.00 m 270     
+R154       100R             R                SM/R_0805                       11940.0..  5485.00 m 270     
+R155       100R             R                SM/C_0805                       12029.0..  5402.00 m 90      
+R156       100R             R                SM/C_0805                       12217.0..  5430.00 m 90      
+R157       100R             R                SM/C_0805                       12303.0..  5516.00 m 270     
+R158       100R             R                SM/C_0805                       12134.0..  5510.00 m 270     
+R159       100R             R                SM/C_0805                       12399.0..  5528.00 m 270     
+R160       1k               R                SM/C_0805                       11112.0..  4302.00 m 270     
+R161       1k               R                SM/C_0805                       3834.00 m  4300.00 m 180     
+R162       100R             R                SM/C_0805                       4754.00 m  5488.00 m 270     
+R163       1K               R                SM/C_0805                       13359.0..  5050.00 m 0       
+R164       100R             R                SM/C_0805                       4660.00 m  5486.00 m 270     
+R165       100R             R                SM/C_0805                       4846.00 m  5491.00 m 270     
+R166       100R             R                SM/C_0805                       15454.0..  3525.00 m 180     
+TP8        TEST POINT       TEST_POINT       TEST_POINT1                     13132.0..  5540.00 m 0       
+TP9        TEST POINT       TEST_POINT       TEST_POINT1                     12975.0..  4354.00 m 0       
+TP10       TEST POINT       TEST_POINT       TEST_POINT1                     10662.0..  5367.00 m 0       
+TP11       TEST POINT       TEST_POINT       TEST_POINT1                     16100.0..  5540.00 m 0       
+TP12       TEST POINT       TEST_POINT       TEST_POINT1                     5447.00 m  4929.00 m 0       
+TP17       TEST POINT       TEST_POINT       TEST_POINT1                     300.00 m   4339.00 m 0       
+TP18       TEST POINT       TEST_POINT       TEST_POINT1                     7600.00 m  3605.00 m 0       
+TP19       TEST POINT       TEST_POINT       TEST_POINT1                     7885.00 m  3000.00 m 0       
+TP20       TEST POINT       TEST_POINT       TEST_POINT1                     7550.00 m  3000.00 m 0       
+U2         LP2966           LP2966           REG_LP2966                      12527.0..  3580.00 m 90      
+U3         Xilinx FPGA ( .. XC2S150_XILINX   FPGA                            11567.0..  4055.00 m 0       
+U4         XCF02S_Flash     XCFXXS_FLASH     EPROM_XCF02S                    12183.0..  4797.00 m 90      
+U5         LP2966           LP2966           REG_LP2966                      4716.00 m  3724.00 m 90      
+U6         Xilinx FPGA ( .. XC2S150_XILINX   FPGA                            4067.00 m  4055.00 m 0       
+U7         XCF02S_Flash     XCFXXS_FLASH     EPROM_XCF02S                    4684.50 m  4797.50 m 90      
+U8         AD8611ARZ        LT1016_1         SOG.050/8/WG.244/L.350          16227.0..  2489.00 m 0       
+U9         AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          11242.0..  2496.00 m 0       
+U10        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          15109.0..  2495.00 m 0       
+U11        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          10266.0..  2495.00 m 0       
+U12        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          14146.0..  2494.00 m 0       
+U13        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          9300.00 m  2495.00 m 0       
+U14        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          13167.0..  2497.00 m 0       
+U15        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          8323.00 m  2498.00 m 0       
+U16        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          12202.0..  2499.00 m 0       
+U17        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          7363.00 m  2495.00 m 0       
+U18        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          3474.00 m  2499.00 m 0       
+U19        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          6383.00 m  2494.00 m 0       
+U20        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          2509.00 m  2499.00 m 0       
+U21        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          5412.00 m  2495.00 m 0       
+U22        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          1540.00 m  2495.00 m 0       
+U23        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          4445.00 m  2493.00 m 0       
+U24        AD8611ARZ        LT1016           SOG.050/8/WG.244/L.350          575.00 m   2495.00 m 0       
+U30        BNX002           BNX002           BNX002                          14794.7..  5458.15 m 0       
+U34        LM358            LM358            SOG.050/8/WG.275/L.250          10803.0..  4066.00 m 90      
+U35        LM358            LM358            SOG.050/8/WG.275/L.250          13880.0..  5439.00 m 270     
+U36        LM358            LM358            SOG.050/8/WG.275/L.250          3393.00 m  4201.00 m 90      
+Y4         XTL              XTL_0            XTL_OSC_COMP4                   14400.0..  3836.00 m 90      

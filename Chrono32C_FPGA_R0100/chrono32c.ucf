@@ -1,0 +1,48 @@
+# Clock input
+NET "clk" 				LOC = "p80";
+# Clock for 3rd FPGA on 2nd Board
+NET "clkout1" 			LOC = "p88";
+# Clock for 2nd FPGA on Same Board
+NET "clkout2" 			LOC = "p178";
+# Threshold for Stop Channels
+#NET "DAC1_stop" 		LOC = "p162"; #Chrono-32B
+NET "DAC1_stop" 		LOC = "p200"; #Chrono-32C
+# Threshold for Start Channel
+NET "DAC2_start" 		LOC = "p99";
+# Address of the FPGA
+NET "fpgasel<0>" 		LOC = "p109";
+NET "fpgasel<1>" 		LOC = "p111";
+NET "fpgasel<2>" 		LOC = "p113";
+# Recieve from PC
+NET "rx_pc" 			LOC = "p148";
+# Recieve from Printer
+NET "rx_pr" 			LOC = "p136";
+# Recieve from Microcontroller
+NET "rx_uc" 			LOC = "p127";
+# Transmit to PC
+NET "tx_pc" 			LOC = "p150";
+# Transmit to Printer
+NET "tx_pr" 			LOC = "p139";
+# Transmit to Microcontroller
+NET "tx_uc" 			LOC = "p133";
+# Select Lines for the Multiplexer
+NET "sel0" 				LOC = "p134";
+NET "sel1" 				LOC = "p122";
+# Start Pulse
+NET "start_pulse" 	LOC = "p58";
+# Start Pulse for 2nd FPGA on Same Board
+#NET "startout2" 		LOC = "p206";	#Chrono-32B
+NET "startout2" 		LOC = "p194";	#Chrono-32C
+# Start Pulse for 3rd FPGA on 2nd Board
+NET "startout1" 		LOC = "p71";
+# Interrupt Signal when Start/Stop pulse occur
+NET "intr" 				LOC = "p120";
+#Stop Pulses
+NET "stop_pulses<0>" LOC = "p48"; 
+NET "stop_pulses<1>" LOC = "p44"; 
+NET "stop_pulses<2>" LOC = "p37"; 
+NET "stop_pulses<3>" LOC = "p33"; 
+NET "stop_pulses<4>" LOC = "p29"; 
+NET "stop_pulses<5>" LOC = "p22"; 
+NET "stop_pulses<6>" LOC = "p18"; 
+NET "stop_pulses<7>" LOC = "p14"; 

@@ -1,0 +1,33 @@
+// Verilog model created from cntr_registers.sch - Wed Jul 02 08:49:05 2014
+
+`timescale 1ns / 1ps
+
+module cntr_registers(clk, din, load1, load2, load3, load4, reset,
+      cntr1_val_reg, cntr2_val_reg, cntr3_val_reg, cntr4_val_reg);
+
+    input clk;
+    input [26:0] din;
+    input load1;
+    input load2;
+    input load3;
+    input load4;
+    input reset;
+   output [26:0] cntr1_val_reg;
+   output [26:0] cntr2_val_reg;
+   output [26:0] cntr3_val_reg;
+   output [26:0] cntr4_val_reg;
+   
+   
+   dff_26bits XLXI_37 (.clock(clk), .din(din[26:0]), .load(load1),
+         .reset(reset), .dout(cntr1_val_reg[26:0]));
+   // synthesis attribute RLOC of XLXI_37 is "R0C0"
+   dff_26bits XLXI_38 (.clock(clk), .din(din[26:0]), .load(load2),
+         .reset(reset), .dout(cntr2_val_reg[26:0]));
+   // synthesis attribute RLOC of XLXI_38 is "R1C0"
+   dff_26bits XLXI_39 (.clock(clk), .din(din[26:0]), .load(load3),
+         .reset(reset), .dout(cntr3_val_reg[26:0]));
+   // synthesis attribute RLOC of XLXI_39 is "R2C0"
+   dff_26bits XLXI_40 (.clock(clk), .din(din[26:0]), .load(load4),
+         .reset(reset), .dout(cntr4_val_reg[26:0]));
+   // synthesis attribute RLOC of XLXI_40 is "R3C0"
+endmodule

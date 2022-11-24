@@ -1,0 +1,3 @@
+set ADucfFile {chrono32c.ucf}
+set AD {}
+set ADcdcFile {}

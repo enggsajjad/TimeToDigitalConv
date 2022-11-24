@@ -1,0 +1,548 @@
+C51 COMPILER V6.11.4C,  DS1302                    06/07/113  08:53:08  PAGE  1
+
+QCW(0x00002D1A)
+
+WIN32 C51 COMPILER V6.11.4C, COMPILATION OF MODULE DS1302    
+OBJECT MODULE PLACED IN c:\documents and settings\sajjad hussain\desktop\chrono3
+            -2c_c51_r3\ds1302.obj
+COMPILER INVOKED BY: C51.EXE C:\DOCUMENTS AND SETTINGS\SAJJAD HUSSAIN\DESKTOP\CH
+            -RONO32C_C51_R3\DS1302.C OBJECT(C:\DOCUMENTS AND SETTINGS\SAJJAD HUS
+            -SAIN\DESKTOP\CHRONO32C_C51_R3\DS1302.OBJ) PIN(C:\FSI\INC) NOAM PR(C
+            -:\DOCUMENTS AND SETTINGS\SAJJAD HUSSAIN\DESKTOP\CHRONO32C_C51_R3\DS
+            -1302.LST) CD SB OE(1) SM FP(NOFLOAT) PW(80) 
+
+stmt level    source
+   1          #include "ds1302.h"
+   2          //====== 		R E A L 	T I M E 	C L O C K 	F U N C T I O N 	D E F I N
+            - I T I O N S	=======
+   3          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -   4          //Description:	Writes data to DS1302
+   5          //Argument 1:	Address of Time and Date Registers
+   6          //Argument 2:	Value to be written
+   7          void rWriteClk(unsigned char cmd,unsigned char ch)
+   8          {
+   9   1      	unsigned char rCount;
+  10   1      	rSCLK=0;
+  11   1      	rRST=1;
+  12   1      	
+  13   1      	for(rCount=0;rCount<16;rCount++)
+  14   1      	{
+  15   2      		rIO=0;
+  16   2      		if(cmd&0x01)
+  17   2      			rIO=1;
+  18   2      		rSCLK=1;
+  19   2      		cmd >>=1;
+  20   2      		if(rCount==7)
+  21   2      			cmd=ch;
+  22   2      		rSCLK=0;
+  23   2      	}
+  24   1       
+  25   1      	rRST=0;
+  26   1      	rSCLK=1;
+  27   1      	rIO=1;	
+  28   1      }
+  29          //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            -  30          //Description: Read the DS1302 in burst mode
+  31          //Argument:	 array of 7 bytes holding 0,MINUTE,HOUR,DATE,MONTH,DAY
+            -,YEAR
+  32          void rBrstReadClk(unsigned char *ch)
+  33          {
+  34   1      	unsigned char rbCount,wrd,ir;
+  35   1      	rWriteClk(0x8E,0x00);//Disable Write Protect
+  36   1      	rRST=1;
+  37   1      	
+  38   1      	wrd=0xBF;
+  39   1      	for(rbCount=0;rbCount<8;rbCount++)
+  40   1      	{   
+  41   2      		rIO=0;
+  42   2      		if(wrd&0x01)
+  43   2      			rIO=1;
+  44   2      		rSCLK=1;
+  45   2      		wrd >>=1;
+  46   2      		rSCLK=0;
+  47   2      	}
+  48   1       
+  49   1      	for(rbCount=0;rbCount<8;rbCount++)
+  50   1      	{
+  51   2      		*ch = 0x00;
+  52   2      		for(ir=0;ir<8;ir++)
+  53   2      		{
+  54   3      			wrd = (unsigned char)rIO;
+  55   3      			rSCLK=1;
+  56   3      			wrd=wrd<<ir;
+  57   3      			*ch = (*ch) | wrd;
+  58   3      			rSCLK=0;
+  59   3      		}
+  60   2      		*ch++;
+  61   2      	}
+  62   1      	rWriteClk(0x8E,0x80); //Enable Write Protect
+  63   1      	rRST=0;
+  64   1      	rSCLK=1;
+  65   1      	rIO=1;
+  66   1      }
+  67          
+  68          
+  69          char Binary2BCD(char a)
+  70          {
+  71   1         int t1, t2;
+  72   1         t1 = a%10;
+  73   1         t1 = t1 & 0x0F;
+  74   1         a = a/10;
+  75   1         t2 = a%10;
+  76   1         t2 = 0x0F & t2;
+  77   1         t2 = t2 << 4;
+  78   1         t2 = 0xF0 & t2;
+  79   1         t1 = t1 | t2;
+  80   1         return t1;
+  81   1      }
+  82          char BCD2Binary(char a)
+  83          {
+  84   1         int r,t;
+  85   1         t = a & 0x0F;
+  86   1         r = t;
+  87   1         a = 0xF0 & a;
+  88   1         t = a >> 4;
+  89   1         t = 0x0F & t;
+  90   1         r = t*10 + r;
+  91   1         return r;
+  92   1      }
+  93          
+  94          
+  95          
+  96          
+  97          
+  98          
+  99          
+ 100          
+ 101          
+ 102          
+ 103          
+ 104          
+ 105          
+ 106          
+ 107          
+ 108          
+ 109          
+ 110          
+ 111          
+ 112          
+ 113          
+ 114          
+ 115          
+ 116          
+ 117          
+ 118          
+ 119          
+ 120          
+ 121          
+ 122          
+ 123          
+ 124          
+ 125          
+ 126          
+ 127          
+ 128          
+ 129          
+ 130          
+ 131          
+ 132          
+ 133          
+ 134          
+ 135          
+ 136          
+ 137          
+ 138          
+ 139          
+ 140          
+ 141          
+ 142          
+ 143          
+ 144          
+ 145          
+ 146          
+ 147          
+ 148          
+ 149          
+ 150          
+ 151          
+ 152          
+ 153          
+ 154          
+ 155          
+ 156          
+ 157          
+ 158          
+ 159          
+ 160          
+ 161          
+ 162          
+ 163          
+ 164          
+ 165          
+ 166          
+ 167          
+ 168          
+ 169          
+ 170          
+ 171          
+ 172          
+ 173          
+ 174          
+ 175          
+ 176          
+ 177          
+ 178          
+ 179          
+ 180          
+ 181          
+ 182          
+ 183          
+ 184          
+ 185          
+ 186          
+ 187          
+ 188          
+ 189          
+ 190          
+ 191          
+ 192          
+ 193          
+ 194          
+ 195          
+ 196          
+ 197          
+ 198          
+ 199          
+ 200          
+ 201          
+C51 COMPILER V6.11.4C,  DS1302                    06/07/113  08:53:08  PAGE  2
+
+ASSEMBLY LISTING OF GENERATED OBJECT CODE
+
+            ; FUNCTION _rWriteClk (BEGIN)
+              ; Register R7 is assigned to parameter cmd
+              ; Register R5 is assigned to parameter ch
+                                           ; SOURCE LINE # 10 
+0000 C295           CLR    rSCLK
+                                           ; SOURCE LINE # 11 
+0002 D297           SETB   rRST
+              ; R4 is assigned to rCount
+                                           ; SOURCE LINE # 13 
+0004 7C00           MOV    R4,#000H
+0006         ?FOR1:
+                                           ; SOURCE LINE # 15 
+0006 C296           CLR    rIO
+                                           ; SOURCE LINE # 16 
+0008 EF             MOV    A,R7
+0009 30E002         JNB    ACC.0,?NXT6
+                                           ; SOURCE LINE # 17 
+000C D296           SETB   rIO
+000E         ?NXT6:
+                                           ; SOURCE LINE # 18 
+000E D295           SETB   rSCLK
+                                           ; SOURCE LINE # 19 
+0010 EF             MOV    A,R7
+0011 C3             CLR    C
+0012 13             RRC    A
+0013 FF             MOV    R7,A
+                                           ; SOURCE LINE # 20 
+0014 BC0702         CJNE   R4,#007H,?NXT7
+                                           ; SOURCE LINE # 21 
+0017 8D07           MOV    AR7,R5
+0019         ?NXT7:
+                                           ; SOURCE LINE # 22 
+0019 C295           CLR    rSCLK
+                                           ; SOURCE LINE # 13 
+001B 0C             INC    R4
+001C BC10E7         CJNE   R4,#010H,?FOR1
+                                           ; SOURCE LINE # 25 
+001F C297           CLR    rRST
+                                           ; SOURCE LINE # 26 
+0021 D295           SETB   rSCLK
+                                           ; SOURCE LINE # 27 
+0023 D296           SETB   rIO
+0025 22             RET    
+
+            ; FUNCTION _rWriteClk (END)
+
+            ; FUNCTION _rBrstReadClk (BEGIN)
+                                           ; SOURCE LINE # 65 
+0000 8B00    R      MOV    ch,R3
+0002 8A00    R      MOV    ch+01H,R2
+0004 8900    R      MOV    ch+02H,R1
+                                           ; SOURCE LINE # 35 
+0006 7F8E           MOV    R7,#08EH
+0008 E4             CLR    A
+0009 FD             MOV    R5,A
+000A 120000  R      LCALL  _rWriteClk
+                                           ; SOURCE LINE # 36 
+000D D297           SETB   rRST
+              ; R7 is assigned to wrd
+                                           ; SOURCE LINE # 38 
+000F 7FBF           MOV    R7,#0BFH
+              ; R6 is assigned to rbCount
+                                           ; SOURCE LINE # 39 
+0011 7E00           MOV    R6,#000H
+0013         ?FOR5:
+                                           ; SOURCE LINE # 41 
+0013 C296           CLR    rIO
+                                           ; SOURCE LINE # 42 
+0015 EF             MOV    A,R7
+0016 30E002         JNB    ACC.0,?NXT17
+                                           ; SOURCE LINE # 43 
+0019 D296           SETB   rIO
+001B         ?NXT17:
+                                           ; SOURCE LINE # 44 
+001B D295           SETB   rSCLK
+                                           ; SOURCE LINE # 45 
+001D EF             MOV    A,R7
+001E C3             CLR    C
+001F 13             RRC    A
+0020 FF             MOV    R7,A
+                                           ; SOURCE LINE # 46 
+0021 C295           CLR    rSCLK
+                                           ; SOURCE LINE # 39 
+0023 0E             INC    R6
+0024 BE08EC         CJNE   R6,#008H,?FOR5
+              ; R6 is assigned to rbCount
+              ; R5 is assigned to ir
+                                           ; SOURCE LINE # 49 
+0027 7E00           MOV    R6,#000H
+0029         ?FOR6:
+                                           ; SOURCE LINE # 51 
+0029 AB00    R      MOV    R3,ch
+002B AA00    R      MOV    R2,ch+01H
+002D A900    R      MOV    R1,ch+02H
+002F E4             CLR    A
+0030 120000  R      LCALL  XPGN1?C
+                                           ; SOURCE LINE # 52 
+0033 FD             MOV    R5,A
+0034         ?FOR7:
+                                           ; SOURCE LINE # 54 
+0034 E4             CLR    A
+0035 309601         JNB    rIO,?LAB14
+0038 04             INC    A
+0039         ?LAB14:
+0039 FF             MOV    R7,A
+                                           ; SOURCE LINE # 55 
+003A D295           SETB   rSCLK
+                                           ; SOURCE LINE # 56 
+003C 8D04           MOV    AR4,R5
+003E 0C             INC    R4
+003F 8002           SJMP   ?LAB15
+0041         ?LAB16:
+0041 C3             CLR    C
+0042 33             RLC    A
+0043         ?LAB15:
+0043 DCFC           DJNZ   R4,?LAB16
+0045 FF             MOV    R7,A
+                                           ; SOURCE LINE # 57 
+0046 AB00    R      MOV    R3,ch
+0048 AA00    R      MOV    R2,ch+01H
+004A A900    R      MOV    R1,ch+02H
+004C 120000  R      LCALL  IPGN1?C
+004F 4F             ORL    A,R7
+0050 120000  R      LCALL  XPGN1?C
+                                           ; SOURCE LINE # 58 
+0053 C295           CLR    rSCLK
+                                           ; SOURCE LINE # 52 
+0055 0D             INC    R5
+0056 BD08DB         CJNE   R5,#008H,?FOR7
+                                           ; SOURCE LINE # 60 
+0059 0500    R      INC    ch+02H
+005B E500    R      MOV    A,ch+02H
+005D 7002           JNZ    ?NXT19
+005F 0500    R      INC    ch+01H
+0061         ?NXT19:
+                                           ; SOURCE LINE # 39 
+0061 0E             INC    R6
+0062 BE08C4         CJNE   R6,#008H,?FOR6
+                                           ; SOURCE LINE # 62 
+0065 7F8E           MOV    R7,#08EH
+0067 7D80           MOV    R5,#080H
+0069 120000  R      LCALL  _rWriteClk
+                                           ; SOURCE LINE # 63 
+006C C297           CLR    rRST
+                                           ; SOURCE LINE # 64 
+006E D295           SETB   rSCLK
+                                           ; SOURCE LINE # 65 
+0070 D296           SETB   rIO
+0072 22             RET    
+
+            ; FUNCTION _rBrstReadClk (END)
+
+            ; FUNCTION _Binary2BCD (BEGIN)
+              ; Register R2 is assigned to parameter a
+                                           ; SOURCE LINE # 80 
+0000 8F02           MOV    AR2,R7
+                                           ; SOURCE LINE # 72 
+0002 EF             MOV    A,R7
+0003 33             RLC    A
+0004 95E0           SUBB   A,ACC
+0006 FE             MOV    R6,A
+0007 E4             CLR    A
+0008 FC             MOV    R4,A
+0009 7D0A           MOV    R5,#00AH
+000B 120000  R      LCALL  ?C_SIDIV
+000E 8C00    R      MOV    t1,R4
+0010 8D00    R      MOV    t1+01H,R5
+                                           ; SOURCE LINE # 73 
+0012 E500    R      MOV    A,t1+01H
+0014 540F           ANL    A,#00FH
+0016 F500    R      MOV    t1+01H,A
+0018 E4             CLR    A
+0019 F500    R      MOV    t1,A
+                                           ; SOURCE LINE # 74 
+001B EA             MOV    A,R2
+001C FF             MOV    R7,A
+001D 33             RLC    A
+001E 95E0           SUBB   A,ACC
+0020 FE             MOV    R6,A
+0021 E4             CLR    A
+0022 FC             MOV    R4,A
+0023 7D0A           MOV    R5,#00AH
+0025 120000  R      LCALL  ?C_SIDIV
+                                           ; SOURCE LINE # 75 
+0028 EF             MOV    A,R7
+0029 33             RLC    A
+002A 95E0           SUBB   A,ACC
+002C FE             MOV    R6,A
+002D E4             CLR    A
+002E FC             MOV    R4,A
+002F 7D0A           MOV    R5,#00AH
+0031 120000  R      LCALL  ?C_SIDIV
+0034 8C00    R      MOV    t2,R4
+0036 8D00    R      MOV    t2+01H,R5
+                                           ; SOURCE LINE # 76 
+0038 E500    R      MOV    A,t2+01H
+003A 540F           ANL    A,#00FH
+003C F500    R      MOV    t2+01H,A
+003E E4             CLR    A
+003F F500    R      MOV    t2,A
+                                           ; SOURCE LINE # 77 
+0041 E500    R      MOV    A,t2+01H
+0043 AA00    R      MOV    R2,t2
+0045 75F004         MOV    B,#004H
+0048         ?LAB21:
+0048 C3             CLR    C
+0049 33             RLC    A
+004A CA             XCH    A,R2
+004B 33             RLC    A
+004C CA             XCH    A,R2
+004D D5F0F8         DJNZ   B,?LAB21
+0050 8A00    R      MOV    t2,R2
+0052 F500    R      MOV    t2+01H,A
+                                           ; SOURCE LINE # 78 
+0054 E500    R      MOV    A,t2+01H
+0056 54F0           ANL    A,#0F0H
+0058 F500    R      MOV    t2+01H,A
+005A E4             CLR    A
+005B F500    R      MOV    t2,A
+                                           ; SOURCE LINE # 79 
+005D E500    R      MOV    A,t2+01H
+005F 4500    R      ORL    A,t1+01H
+0061 F500    R      MOV    t1+01H,A
+0063 E500    R      MOV    A,t2
+0065 4500    R      ORL    A,t1
+0067 F500    R      MOV    t1,A
+                                           ; SOURCE LINE # 80 
+0069 AF00    R      MOV    R7,t1+01H
+006B 22             RET    
+
+            ; FUNCTION _Binary2BCD (END)
+
+            ; FUNCTION _BCD2Binary (BEGIN)
+              ; Register R7 is assigned to parameter a
+                                           ; SOURCE LINE # 85 
+0000 EF             MOV    A,R7
+0001 33             RLC    A
+0002 EF             MOV    A,R7
+0003 540F           ANL    A,#00FH
+0005 F500    R      MOV    t+01H,A
+0007 E4             CLR    A
+0008 F500    R      MOV    t,A
+                                           ; SOURCE LINE # 86 
+000A 850000  R      MOV    r,t
+000D 850000  R      MOV    r+01H,t+01H
+                                           ; SOURCE LINE # 87 
+0010 EF             MOV    A,R7
+0011 54F0           ANL    A,#0F0H
+                                           ; SOURCE LINE # 88 
+0013 75F004         MOV    B,#004H
+0016         ?LAB25:
+0016 A2E7           MOV    C,ACC.7
+0018 13             RRC    A
+0019 D5F0FA         DJNZ   B,?LAB25
+001C FB             MOV    R3,A
+001D 33             RLC    A
+001E 95E0           SUBB   A,ACC
+0020 F500    R      MOV    t,A
+0022 8B00    R      MOV    t+01H,R3
+                                           ; SOURCE LINE # 89 
+0024 E500    R      MOV    A,t+01H
+0026 540F           ANL    A,#00FH
+0028 F500    R      MOV    t+01H,A
+002A E4             CLR    A
+002B FE             MOV    R6,A
+002C F500    R      MOV    t,A
+                                           ; SOURCE LINE # 90 
+002E AC00    R      MOV    R4,t
+0030 AD00    R      MOV    R5,t+01H
+0032 7F0A           MOV    R7,#00AH
+0034 120000  R      LCALL  ?C_IMUL
+0037 EF             MOV    A,R7
+0038 2500    R      ADD    A,r+01H
+003A F500    R      MOV    r+01H,A
+003C EE             MOV    A,R6
+003D 3500    R      ADDC   A,r
+003F F500    R      MOV    r,A
+                                           ; SOURCE LINE # 91 
+0041 AF00    R      MOV    R7,r+01H
+0043 22             RET    
+
+            ; FUNCTION _BCD2Binary (END)
+
+C51 COMPILER V6.11.4C,  DS1302                    06/07/113  08:53:08  PAGE  3
+
+NAME                                    CLASS   MSPACE  TYPE    OFFSET  SIZE
+====                                    =====   ======  ====    ======  ====
+
+rWriteClk. . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  cmd?045. . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  ch?046 . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0001H   1    
+  cmd?045. . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  ch?046 . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0001H   1    
+rCount?047 . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+rBrstReadClk . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  ch?048 . . . . . . . . . . . . . . .  PARAM   DATA    PTR     0000H   3    
+  ch?048 . . . . . . . . . . . . . . .  PARAM   DATA    PTR     0000H   3    
+rbCount?049. . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+wrd?050. . . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+ir?051 . . . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+Binary2BCD . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  a?052. . . . . . . . . . . . . . . .  PARAM   DATA    CHAR    0000H   1    
+  a?052. . . . . . . . . . . . . . . .  PARAM   DATA    CHAR    0000H   1    
+t1?053 . . . . . . . . . . . . . . . .  PUBLIC  DATA    INT     0000H   2    
+t2?054 . . . . . . . . . . . . . . . .  PUBLIC  DATA    INT     0002H   2    
+BCD2Binary . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  a?055. . . . . . . . . . . . . . . .  PARAM   DATA    CHAR    0000H   1    
+  a?055. . . . . . . . . . . . . . . .  PARAM   DATA    CHAR    0000H   1    
+r?056. . . . . . . . . . . . . . . . .  PUBLIC  DATA    INT     0002H   2    
+t?057. . . . . . . . . . . . . . . . .  PUBLIC  DATA    INT     0000H   2    
+C51 COMPILER V6.11.4C,  DS1302                    06/07/113  08:53:08  PAGE  4
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    329    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      12
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILATION COMPLETE.  0 WARNING,  0 ERROR

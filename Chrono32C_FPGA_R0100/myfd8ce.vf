@@ -1,0 +1,62 @@
+// Verilog model created from myfd8ce.sch - Tue Jun 04 14:59:59 2013
+
+`timescale 1ns / 1ps
+
+module myfd8ce(C, CE, CLR, D, Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [7:0] D;
+   output [7:0] Q;
+   
+   
+   FDCE I_Q0 (.C(C), .CE(CE), .CLR(CLR), .D(D[0]), .Q(Q[0]));
+   // synthesis attribute RLOC of I_Q0 is "R0C0.S1"
+   // synthesis attribute INIT of I_Q0 is "0"
+   // synopsys translate_off
+   defparam I_Q0.INIT = 1'b0;
+   // synopsys translate_on
+   FDCE I_Q1 (.C(C), .CE(CE), .CLR(CLR), .D(D[1]), .Q(Q[1]));
+   // synthesis attribute RLOC of I_Q1 is "R0C0.S0"
+   // synthesis attribute INIT of I_Q1 is "0"
+   // synopsys translate_off
+   defparam I_Q1.INIT = 1'b0;
+   // synopsys translate_on
+   FDCE I_Q2 (.C(C), .CE(CE), .CLR(CLR), .D(D[2]), .Q(Q[2]));
+   // synthesis attribute RLOC of I_Q2 is "R0C1.S1"
+   // synthesis attribute INIT of I_Q2 is "0"
+   // synopsys translate_off
+   defparam I_Q2.INIT = 1'b0;
+   // synopsys translate_on
+   FDCE I_Q3 (.C(C), .CE(CE), .CLR(CLR), .D(D[3]), .Q(Q[3]));
+   // synthesis attribute RLOC of I_Q3 is "R0C1.S0"
+   // synthesis attribute INIT of I_Q3 is "0"
+   // synopsys translate_off
+   defparam I_Q3.INIT = 1'b0;
+   // synopsys translate_on
+   FDCE I_Q4 (.C(C), .CE(CE), .CLR(CLR), .D(D[4]), .Q(Q[4]));
+   // synthesis attribute RLOC of I_Q4 is "R0C2.S1"
+   // synthesis attribute INIT of I_Q4 is "0"
+   // synopsys translate_off
+   defparam I_Q4.INIT = 1'b0;
+   // synopsys translate_on
+   FDCE I_Q5 (.C(C), .CE(CE), .CLR(CLR), .D(D[5]), .Q(Q[5]));
+   // synthesis attribute RLOC of I_Q5 is "R0C2.S0"
+   // synthesis attribute INIT of I_Q5 is "0"
+   // synopsys translate_off
+   defparam I_Q5.INIT = 1'b0;
+   // synopsys translate_on
+   FDCE I_Q6 (.C(C), .CE(CE), .CLR(CLR), .D(D[6]), .Q(Q[6]));
+   // synthesis attribute RLOC of I_Q6 is "R0C3.S1"
+   // synthesis attribute INIT of I_Q6 is "0"
+   // synopsys translate_off
+   defparam I_Q6.INIT = 1'b0;
+   // synopsys translate_on
+   FDCE I_Q7 (.C(C), .CE(CE), .CLR(CLR), .D(D[7]), .Q(Q[7]));
+   // synthesis attribute RLOC of I_Q7 is "R0C3.S0"
+   // synthesis attribute INIT of I_Q7 is "0"
+   // synopsys translate_off
+   defparam I_Q7.INIT = 1'b0;
+   // synopsys translate_on
+endmodule

@@ -1,0 +1,73 @@
+JDF G
+// Created by Project Navigator ver 1.0
+PROJECT Chrono48_start
+DESIGN 48v1stop
+DEVFAM spartan2
+DEVFAMTIME 0
+DEVICE xc2s200
+DEVICETIME 1166507210
+DEVPKG pq208
+DEVPKGTIME 1221632903
+DEVSPEED -6
+DEVSPEEDTIME 0
+DEVTOPLEVELMODULETYPE HDL
+TOPLEVELMODULETYPETIME 0
+DEVSYNTHESISTOOL XST (VHDL/Verilog)
+SYNTHESISTOOLTIME 0
+DEVSIMULATOR Other
+SIMULATORTIME 0
+DEVGENERATEDSIMULATIONMODEL Verilog
+GENERATEDSIMULATIONMODELTIME 0
+SOURCE sel_vernier.v
+SOURCE start_channel.sch
+SOURCE testcounter.v
+SOURCE clk_mul.sch
+SOURCE cc8ce1.sch
+SOURCE cc24ce.sch
+SOURCE router.v
+SOURCE gen_sel_signals.v
+STIMULUS gen_sel_signals_tf.v
+SOURCE fpga_addr_out.v
+SOURCE DAC.v
+SOURCE priority_encoder.v
+SOURCE counter32bit.sch
+SOURCE synclogic.sch
+SOURCE andline8.sch
+SOURCE vernier_40_gates.sch
+SOURCE andline16.sch
+SOURCE andline40.sch
+SOURCE xorcy_dline8.sch
+SOURCE xorcy_dline40.sch
+SOURCE xorcy_dline16.sch
+SOURCE ildceline8.sch
+SOURCE ildceline40.sch
+SOURCE ildceline16.sch
+SOURCE MainCount4Channel.sch
+SOURCE cntr_reg_interface.v
+SOURCE cntr_registers.sch
+SOURCE DFF_26bits.sch
+SOURCE myfd8ce.sch
+SOURCE four_stop_channels.sch
+SOURCE stop_channel.sch
+SOURCE uart_tx.v
+SOURCE uart_rx.v
+SOURCE inst_decoder.v
+SOURCE uart_baud.v
+SOURCE Chrono48_stop3.sch
+STIMULUS chrono48_stop_tf.v
+DEPASSOC chrono48_stop3 chrono48_stop.ucf
+[Normal]
+p_xstEquivRegRemoval=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+p_xstSlicePacking=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+p_xstUseSynthConstFile=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+p_xstVerilog2001=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+xilxMapPackRegInto=xstvlg, spartan2, Implementation.t_placeAndRouteDes, 1405658933, For Inputs and Outputs
+xilxSynthAddIObuf=xstvlg, spartan2, Schematic.t_synthesize, 1405658802, True
+xilxSynthRegDuplication=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, True
+xilxTriStateBuffTXMode=xstvlg, spartan2, Implementation.t_placeAndRouteDes, 1169534455, On
+_SynthOpt=xstvlg, spartan2, Schematic.t_synthesize, 1299484462, Speed
+[STATUS-ALL]
+cc24ce.vfModel=WARNINGS,1404799734
+inst_decoder.ngcFile=WARNINGS,1405659280
+[STRATEGY-LIST]
+Normal=True

@@ -1,0 +1,37 @@
+// Verilog model created from counter32bit.sch - Tue Jul 08 11:08:53 2014
+
+`timescale 1ns / 1ps
+
+module counter32bit(clk, enb, reset, cntr, ovf24_intr);
+
+    input clk;
+    input enb;
+    input reset;
+   output [31:0] cntr;
+   output ovf24_intr;
+   
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_13;
+   wire XLXN_17;
+   wire XLXN_20;
+   wire XLXN_25;
+   
+   cc24ce XLXI_1 (.ce(XLXN_17), .clk(clk), .res(reset), .CO(), .ovf24(XLXN_10),
+         .Q(cntr[31:0]));
+   // synthesis attribute RLOC of XLXI_1 is "R0C0"
+   AND2B1 XLXI_4 (.I0(XLXN_13), .I1(enb), .O(XLXN_17));
+   FDCE XLXI_5 (.C(clk), .CE(XLXN_10), .CLR(reset), .D(XLXN_9), .Q(XLXN_13));
+   // synthesis attribute INIT of XLXI_5 is "0"
+   // synopsys translate_off
+   defparam XLXI_5.INIT = 1'b0;
+   // synopsys translate_on
+   VCC XLXI_6 (.P(XLXN_9));
+   INV XLXI_7 (.I(XLXN_25), .O(ovf24_intr));
+   FDCE XLXI_9 (.C(clk), .CE(XLXN_13), .CLR(reset), .D(XLXN_20), .Q(XLXN_25));
+   // synthesis attribute INIT of XLXI_9 is "0"
+   // synopsys translate_off
+   defparam XLXI_9.INIT = 1'b0;
+   // synopsys translate_on
+   VCC XLXI_10 (.P(XLXN_20));
+endmodule

@@ -1,0 +1,9 @@
+[Inputs]
+clk
+rst
+[Outputs]
+enable
+[BiDir]
+[ATTRIBUTES]
+VeriModel uart_baud
+

@@ -1,0 +1,11 @@
+# Output products list for <drom>
+drom.asy
+drom.edn
+drom.mif
+drom.v
+drom.veo
+drom.vhd
+drom.vho
+drom.xco
+drom.xcp
+drom.sym
